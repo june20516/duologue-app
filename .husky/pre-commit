@@ -1,0 +1,7 @@
+echo "Running TypeScript compiler..."
+npx tsc --noEmit
+
+echo "Running ESLint..."
+yarn lint
+
+echo "Pre-commit checks passed!"
