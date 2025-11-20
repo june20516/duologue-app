@@ -9,6 +9,7 @@ import Animated, {
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useThemeColor } from '@/hooks/use-theme-color';
+import { tokens } from '@/styles/tokens';
 
 const HEADER_HEIGHT = 250;
 
@@ -74,5 +75,6 @@ const styles = StyleSheet.create({
     padding: 32,
     gap: 16,
     overflow: 'hidden',
+    backgroundColor: tokens.color.offWhite,
   },
 });

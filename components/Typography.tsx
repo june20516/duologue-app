@@ -1,60 +1,79 @@
-import { StyleSheet, Text, type TextProps } from 'react-native';
+import React from 'react';
+import { Text, TextProps as TamaguiTextProps } from 'tamagui';
 
-import { useThemeColor } from '@/hooks/use-theme-color';
+type TypographyVariant =
+  | 'regular'
+  | 'title'
+  | 'subtitle'
+  | 'heading'
+  | 'semiBold'
+  | 'caption'
+  | 'tag'
+  | 'link';
 
-export type TypographyProps = TextProps & {
-  lightColor?: string;
-  darkColor?: string;
-  type?: 'default' | 'title' | 'defaultSemiBold' | 'subtitle' | 'link';
-};
+interface CustomTypographyProps {
+  type?: TypographyVariant;
+  children: React.ReactNode;
+}
 
-export const Typography = ({
-  style,
-  lightColor,
-  darkColor,
-  type = 'default',
-  ...rest
-}: TypographyProps) => {
-  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'text');
+export type TypographyProps = TamaguiTextProps & CustomTypographyProps;
 
-  return (
-    <Text
-      style={[
-        { color },
-        type === 'default' ? styles.default : undefined,
-        type === 'title' ? styles.title : undefined,
-        type === 'defaultSemiBold' ? styles.defaultSemiBold : undefined,
-        type === 'subtitle' ? styles.subtitle : undefined,
-        type === 'link' ? styles.link : undefined,
-        style,
-      ]}
-      {...rest}
-    />
-  );
-};
-
-const styles = StyleSheet.create({
-  default: {
-    fontSize: 16,
-    lineHeight: 24,
+const variantProps: Record<TypographyVariant, TamaguiTextProps> = {
+  // Body text
+  regular: {
+    fontSize: '$4',
+    lineHeight: '$4',
+    color: '$color',
   },
-  defaultSemiBold: {
-    fontSize: 16,
-    lineHeight: 24,
+  semiBold: {
+    fontSize: '$4',
+    lineHeight: '$4',
     fontWeight: '600',
+    color: '$color',
   },
+
   title: {
-    fontSize: 32,
+    fontSize: '$9',
     fontWeight: 'bold',
-    lineHeight: 32,
+    lineHeight: '$9',
+    color: '$color',
   },
   subtitle: {
-    fontSize: 20,
+    fontSize: '$6',
     fontWeight: 'bold',
+    color: '$color',
   },
+  heading: {
+    fontSize: '$5',
+    fontWeight: '600',
+    lineHeight: '$5',
+    color: '$color',
+  },
+
+  caption: {
+    fontSize: '$3',
+    lineHeight: '$3',
+    color: '$colorSoft',
+  },
+  tag: {
+    fontSize: '$2',
+    lineHeight: '$2',
+    color: '$color',
+  },
+
+  // Link
   link: {
-    lineHeight: 30,
-    fontSize: 16,
-    color: '#0a7ea4',
+    fontSize: '$4',
+    lineHeight: '$6',
+    color: '$secondary',
+    textDecorationLine: 'underline',
   },
-});
+};
+
+export const Typography: React.FC<TypographyProps> = ({ type = 'regular', children, ...rest }) => {
+  return (
+    <Text {...rest} {...variantProps[type]}>
+      {children}
+    </Text>
+  );
+};

@@ -4,11 +4,10 @@
   "version": "1.0.0",
   "packageManager": "yarn@1.22.22",
   "scripts": {
-    "start": "expo start",
-    "reset-project": "node ./scripts/reset-project.js",
+    "start": "expo start --port 8088",
     "android:dev": "expo run:android",
     "android:prod": "expo run:android",
-    "ios:dev": "expo run:ios",
+    "ios:dev": "expo run:ios --port 8088",
     "ios:prod": "expo run:ios",
     "web": "expo start --web",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",

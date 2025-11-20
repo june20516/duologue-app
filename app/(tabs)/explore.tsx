@@ -4,8 +4,8 @@ import { Platform, StyleSheet, View } from 'react-native';
 import { ExternalLink } from '@/components/external-link';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { Typography } from '@/components/Typography';
-import { Collapsible } from '@/components/ui/collapsible';
-import { IconSymbol } from '@/components/ui/icon-symbol';
+import { Collapsible } from '@/components/ui/Collapsible';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Fonts } from '@/constants/theme';
 
 const ExploreScreen = () => {
@@ -27,13 +27,12 @@ const ExploreScreen = () => {
       <Typography>This app includes example code to help you get started.</Typography>
       <Collapsible title="File-based routing">
         <Typography>
-          This app has two screens:{' '}
-          <Typography type="defaultSemiBold">app/(tabs)/index.tsx</Typography> and{' '}
-          <Typography type="defaultSemiBold">app/(tabs)/explore.tsx</Typography>
+          This app has two screens: <Typography type="semiBold">app/(tabs)/index.tsx</Typography>{' '}
+          and <Typography type="semiBold">app/(tabs)/explore.tsx</Typography>
         </Typography>
         <Typography>
-          The layout file in <Typography type="defaultSemiBold">app/(tabs)/_layout.tsx</Typography>{' '}
-          sets up the tab navigator.
+          The layout file in <Typography type="semiBold">app/(tabs)/_layout.tsx</Typography> sets up
+          the tab navigator.
         </Typography>
         <ExternalLink href="https://docs.expo.dev/router/introduction">
           <Typography type="link">Learn more</Typography>
@@ -42,14 +41,14 @@ const ExploreScreen = () => {
       <Collapsible title="Android, iOS, and web support">
         <Typography>
           You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <Typography type="defaultSemiBold">w</Typography> in the terminal running this project.
+          <Typography type="semiBold">w</Typography> in the terminal running this project.
         </Typography>
       </Collapsible>
       <Collapsible title="Images">
         <Typography>
-          For static images, you can use the <Typography type="defaultSemiBold">@2x</Typography> and{' '}
-          <Typography type="defaultSemiBold">@3x</Typography> suffixes to provide files for
-          different screen densities
+          For static images, you can use the <Typography type="semiBold">@2x</Typography> and{' '}
+          <Typography type="semiBold">@3x</Typography> suffixes to provide files for different
+          screen densities
         </Typography>
         <Image
           source={require('@/assets/images/react-logo.png')}
@@ -62,8 +61,8 @@ const ExploreScreen = () => {
       <Collapsible title="Light and dark mode components">
         <Typography>
           This template has light and dark mode support. The{' '}
-          <Typography type="defaultSemiBold">useColorScheme()</Typography> hook lets you inspect
-          what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
+          <Typography type="semiBold">useColorScheme()</Typography> hook lets you inspect what the
+          user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
         </Typography>
         <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
           <Typography type="link">Learn more</Typography>
@@ -72,9 +71,9 @@ const ExploreScreen = () => {
       <Collapsible title="Animations">
         <Typography>
           This template includes an example of an animated component. The{' '}
-          <Typography type="defaultSemiBold">components/HelloWave.tsx</Typography> component uses
-          the powerful{' '}
-          <Typography type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
+          <Typography type="semiBold">components/HelloWave.tsx</Typography> component uses the
+          powerful{' '}
+          <Typography type="semiBold" style={{ fontFamily: Fonts.mono }}>
             react-native-reanimated
           </Typography>{' '}
           library to create a waving hand animation.
@@ -82,7 +81,7 @@ const ExploreScreen = () => {
         {Platform.select({
           ios: (
             <Typography>
-              The <Typography type="defaultSemiBold">components/ParallaxScrollView.tsx</Typography>{' '}
+              The <Typography type="semiBold">components/ParallaxScrollView.tsx</Typography>{' '}
               component provides a parallax effect for the header image.
             </Typography>
           ),

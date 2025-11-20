@@ -26,113 +26,128 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 ### 포함 사항
 
 #### 1. 환경 설정
-- [ ] Tamagui 패키지 설치
-- [ ] tamagui.config.ts 생성
-- [ ] app.config.ts 업데이트 (다크모드 지원)
-- [ ] Babel 플러그인 설정
-- [ ] TamaguiProvider 추가 (app/_layout.tsx)
-- [ ] 폰트 설정
-- [ ] 캐시 클리어 후 첫 실행 확인
+- [x] Tamagui 패키지 설치
+- [x] tamagui.config.ts 생성
+- [x] app.config.ts 업데이트 (다크모드 지원)
+- [x] Babel 플러그인 설정
+- [x] TamaguiProvider 추가 (app/_layout.tsx)
+- [x] 폰트 설정
+- [x] 캐시 클리어 후 첫 실행 확인
 
 #### 2. 디자인 토큰 정의
-- [ ] 컬러 팔레트 정의 (constants/theme.ts)
-  - [ ] Primary colors (라임, 보라)
-  - [ ] Semantic colors (success, error, warning, info)
-  - [ ] Neutral colors (배경, 텍스트, 경계선)
-  - [ ] 라이트/다크 모드별 variation
-- [ ] 타이포그래피 정의
-  - [ ] 폰트 크기 스케일
-  - [ ] 폰트 weight
-  - [ ] Line height
-- [ ] 스페이싱 스케일 정의
-- [ ] Border radius 정의
-- [ ] 타입 정의 (types/theme.ts)
+- [x] 컬러 팔레트 정의 (styles/tokens.ts)
+  - [x] Primary colors (라임, 보라)
+  - [x] Semantic colors (success, error, warning, info)
+  - [x] Neutral colors (배경, 텍스트, 경계선)
+  - [x] 라이트/다크 모드별 variation (tamagui.config.ts)
+- [x] 타이포그래피 정의
+  - [x] 폰트 크기 스케일
+  - [x] 폰트 weight
+  - [x] Line height
+- [x] 스페이싱 스케일 정의
+- [x] Border radius 정의
 
 #### 3. Button 컴포넌트
-- [ ] 기본 Button 구조 생성 (components/ui/Button.tsx)
-- [ ] Variant 구현
-  - [ ] primary (라임색 배경)
-  - [ ] secondary (보라색 배경)
-  - [ ] outline (테두리만)
-  - [ ] ghost (배경 없음)
-- [ ] Size 구현 (sm, md, lg)
-- [ ] 상태 구현
-  - [ ] default
-  - [ ] pressed
-  - [ ] disabled
-  - [ ] loading (스피너 포함)
-- [ ] 접근성 추가 (accessibilityLabel, accessibilityRole)
-- [ ] Props 타입 정의
-- [ ] Storybook/테스트 화면에서 확인
+- [x] 기본 Button 구조 생성 (components/ui/Button.tsx)
+- [x] Variant 구현
+  - [x] filled (primary/secondary)
+  - [x] outline (primary/secondary)
+  - [x] ghost (primary/secondary)
+- [x] Size 구현 (sm, md, lg)
+- [x] 상태 구현
+  - [x] default
+  - [x] pressed
+  - [x] disabled
+  - [x] loading (스피너 포함)
+- [x] Props 타입 정의
+- [x] 테스트 화면에서 확인 (app/(tabs)/ui.tsx)
 
 #### 4. Input 컴포넌트
-- [ ] 기본 Input 구조 생성 (components/ui/Input.tsx)
-- [ ] Type 지원 (text, email, password, number)
-- [ ] 상태 구현
-  - [ ] default
-  - [ ] focused
-  - [ ] error
-  - [ ] disabled
-- [ ] UI 요소
-  - [ ] Label
-  - [ ] Placeholder
-  - [ ] Helper text
-  - [ ] Error message
-  - [ ] 좌측 아이콘 슬롯
-  - [ ] 우측 아이콘 슬롯 (password visibility toggle)
-- [ ] 접근성 추가
-- [ ] Props 타입 정의
-- [ ] 테스트 화면에서 확인
+- [x] 기본 Input 구조 생성 (components/ui/Input.tsx)
+- [x] Type 지원 (text, email, password, number)
+- [x] 상태 구현
+  - [x] default
+  - [x] focused
+  - [x] error
+  - [x] disabled
+- [x] UI 요소
+  - [x] Label
+  - [x] Placeholder
+  - [x] Helper text
+  - [x] Error message
+  - [x] 좌측 아이콘 슬롯
+  - [x] 우측 아이콘 슬롯
+- [x] Props 타입 정의
+- [x] 테스트 화면에서 확인
 
 #### 5. Card 컴포넌트
-- [ ] 기본 Card 구조 생성 (components/ui/Card.tsx)
-- [ ] Variant 구현
-  - [ ] default (그림자 있음)
-  - [ ] outlined (테두리만)
-  - [ ] elevated (더 큰 그림자)
-- [ ] Pressable 지원
-- [ ] 라이트/다크 모드 대응
-- [ ] Props 타입 정의
-- [ ] 테스트 화면에서 확인
+- [x] 기본 Card 구조 생성 (components/ui/Card.tsx)
+- [x] Variant 구현
+  - [x] default (그림자 있음)
+  - [x] outlined (테두리만)
+  - [x] elevated (더 큰 그림자)
+- [x] Pressable 지원
+- [x] Compound components (Card.Header, Card.Footer)
+- [x] 라이트/다크 모드 대응
+- [x] Props 타입 정의
+- [x] 테스트 화면에서 확인
 
 #### 6. Modal 컴포넌트
-- [ ] 기본 Modal 구조 생성 (components/ui/Modal.tsx)
-- [ ] 하단 슬라이드업 애니메이션
-- [ ] Backdrop 구현 (터치 시 닫기)
-- [ ] 커스텀 슬롯
-  - [ ] Header 슬롯
-  - [ ] Content 슬롯
-  - [ ] Footer 슬롯
-- [ ] close 함수 제공
-- [ ] Props 타입 정의
-- [ ] 테스트 화면에서 확인
+- [x] 기본 Modal 구조 생성 (components/ui/Modal.tsx)
+- [x] Variant 구현
+  - [x] adaptive (Dialog/Sheet 자동 전환)
+  - [x] dialog (항상 Dialog)
+  - [x] sheet (항상 Sheet)
+- [x] Sheet 애니메이션 (스프링 제거, timing으로 변경)
+- [x] Backdrop 구현 (오버레이 클릭 시 닫기)
+- [x] snapPoints 외부 주입 가능
+- [x] 조건부 타입으로 variant별 props 제한
+- [x] Props 타입 정의 (제네릭 사용)
+- [x] 테스트 화면에서 확인
 
 #### 7. Spinner 컴포넌트
-- [ ] 기본 Spinner 구조 생성 (components/ui/Spinner.tsx)
-- [ ] Size 옵션 (sm, md, lg)
-- [ ] Color 커스터마이징 지원
-- [ ] 회전 애니메이션 (react-native-reanimated)
-- [ ] Props 타입 정의
-- [ ] 테스트 화면에서 확인
+- [x] 기본 Spinner 구조 생성 (components/ui/Spinner.tsx)
+- [x] Size 옵션 (small, medium, large)
+- [x] Color 커스터마이징 지원
+- [x] Props 타입 정의
+- [x] 테스트 화면에서 확인
 
 #### 8. Toast 컴포넌트
-- [ ] 기본 Toast 구조 생성 (components/ui/Toast.tsx)
-- [ ] Variant 구현
-  - [ ] success (라임 강조)
-  - [ ] error (빨간색)
-  - [ ] warning (노란색)
-  - [ ] info (파란색)
-- [ ] 자동 dismiss (3초, 커스터마이징 가능)
-- [ ] 최상단 표시 (Portal 사용)
-- [ ] 슬라이드 인/아웃 애니메이션
-- [ ] useToast hook 생성
-- [ ] Props 타입 정의
-- [ ] 테스트 화면에서 확인
+- [x] 기본 Toast 구조 생성 (components/ui/Toast.tsx)
+- [x] Type 구현
+  - [x] success (초록색)
+  - [x] error (빨간색)
+  - [x] warning (노란색)
+  - [x] info (파란색)
+- [x] 자동 dismiss (3초, 커스터마이징 가능)
+- [x] 애니메이션 구현
+  - [x] 나타날 때: 위→아래 슬라이드
+  - [x] 사라질 때: 아래→위 슬라이드 (timeout 시에도 애니메이션 적용)
+- [x] 제스처 지원
+  - [x] 위로 스와이프하면 닫기
+  - [x] 탭하면 닫기
+- [x] useToast hook 생성
+- [x] ToastProvider 설정
+- [x] Props 타입 정의
+- [x] 테스트 화면에서 확인
 
-#### 9. Export 및 문서화
-- [ ] components/ui/index.ts에서 모든 컴포넌트 export
-- [ ] 간단한 사용 예시 주석 추가
-- [ ] 테스트 화면 생성 (app/test-ui.tsx)
+#### 9. Typography 컴포넌트
+- [x] 기본 Typography 구조 생성 (components/Typography.tsx)
+- [x] Variant 구현
+  - [x] regular (기본 본문)
+  - [x] semiBold (강조 본문)
+  - [x] title (페이지 제목)
+  - [x] subtitle (섹션 제목)
+  - [x] heading (카드/컴포넌트 제목)
+  - [x] caption (작은 설명)
+  - [x] tag (작은 레이블/태그)
+  - [x] link (링크)
+- [x] Props 타입 정의
+- [x] 테스트 화면에서 확인
+
+#### 10. Export 및 문서화
+- [x] components/ui/index.ts에서 모든 컴포넌트 export
+- [x] 테스트 화면 생성 (app/(tabs)/ui.tsx)
 
 ### 제외 사항
 - 복잡한 비즈니스 컴포넌트

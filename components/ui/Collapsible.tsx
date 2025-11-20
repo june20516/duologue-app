@@ -1,7 +1,7 @@
 import { PropsWithChildren, useState } from 'react';
 import { StyleSheet, TouchableOpacity, View } from 'react-native';
 
-import { IconSymbol } from '@/components/ui/icon-symbol';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
@@ -25,7 +25,7 @@ export const Collapsible = ({ children, title }: PropsWithChildren & { title: st
           style={{ transform: [{ rotate: isOpen ? '90deg' : '0deg' }] }}
         />
 
-        <Typography type="defaultSemiBold">{title}</Typography>
+        <Typography type="semiBold">{title}</Typography>
       </TouchableOpacity>
       {isOpen && <View style={styles.content}>{children}</View>}
     </View>
