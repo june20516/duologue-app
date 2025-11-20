@@ -14,6 +14,7 @@
 ## 작업 개요
 
 Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
+
 - 컬러 팔레트, 타이포그래피 정의
 - 재사용 가능한 기본 UI 컴포넌트 제작
 
@@ -26,15 +27,17 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 ### 포함 사항
 
 #### 1. 환경 설정
+
 - [x] Tamagui 패키지 설치
 - [x] tamagui.config.ts 생성
 - [x] app.config.ts 업데이트 (다크모드 지원)
 - [x] Babel 플러그인 설정
-- [x] TamaguiProvider 추가 (app/_layout.tsx)
+- [x] TamaguiProvider 추가 (app/\_layout.tsx)
 - [x] 폰트 설정
 - [x] 캐시 클리어 후 첫 실행 확인
 
 #### 2. 디자인 토큰 정의
+
 - [x] 컬러 팔레트 정의 (styles/tokens.ts)
   - [x] Primary colors (라임, 보라)
   - [x] Semantic colors (success, error, warning, info)
@@ -48,6 +51,7 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] Border radius 정의
 
 #### 3. Button 컴포넌트
+
 - [x] 기본 Button 구조 생성 (components/ui/Button.tsx)
 - [x] Variant 구현
   - [x] filled (primary/secondary)
@@ -63,6 +67,7 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인 (app/(tabs)/ui.tsx)
 
 #### 4. Input 컴포넌트
+
 - [x] 기본 Input 구조 생성 (components/ui/Input.tsx)
 - [x] Type 지원 (text, email, password, number)
 - [x] 상태 구현
@@ -81,6 +86,7 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인
 
 #### 5. Card 컴포넌트
+
 - [x] 기본 Card 구조 생성 (components/ui/Card.tsx)
 - [x] Variant 구현
   - [x] default (그림자 있음)
@@ -93,12 +99,13 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인
 
 #### 6. Modal 컴포넌트
+
 - [x] 기본 Modal 구조 생성 (components/ui/Modal.tsx)
 - [x] Variant 구현
   - [x] adaptive (Dialog/Sheet 자동 전환)
   - [x] dialog (항상 Dialog)
   - [x] sheet (항상 Sheet)
-- [x] Sheet 애니메이션 (스프링 제거, timing으로 변경)
+- [x] Sheet 애니메이션
 - [x] Backdrop 구현 (오버레이 클릭 시 닫기)
 - [x] snapPoints 외부 주입 가능
 - [x] 조건부 타입으로 variant별 props 제한
@@ -106,6 +113,7 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인
 
 #### 7. Spinner 컴포넌트
+
 - [x] 기본 Spinner 구조 생성 (components/ui/Spinner.tsx)
 - [x] Size 옵션 (small, medium, large)
 - [x] Color 커스터마이징 지원
@@ -113,6 +121,7 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인
 
 #### 8. Toast 컴포넌트
+
 - [x] 기본 Toast 구조 생성 (components/ui/Toast.tsx)
 - [x] Type 구현
   - [x] success (초록색)
@@ -132,6 +141,7 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인
 
 #### 9. Typography 컴포넌트
+
 - [x] 기본 Typography 구조 생성 (components/Typography.tsx)
 - [x] Variant 구현
   - [x] regular (기본 본문)
@@ -146,10 +156,12 @@ Tamagui 설치 및 디자인 시스템 구축, 공통 컴포넌트 개발
 - [x] 테스트 화면에서 확인
 
 #### 10. Export 및 문서화
+
 - [x] components/ui/index.ts에서 모든 컴포넌트 export
 - [x] 테스트 화면 생성 (app/(tabs)/ui.tsx)
 
 ### 제외 사항
+
 - 복잡한 비즈니스 컴포넌트
 - 화면별 특수 컴포넌트
 - 복잡한 애니메이션 (기본만)
@@ -189,19 +201,23 @@ duologue-app/
 ### 구현 단계
 
 #### 1. 환경 설정
+
 - Tamagui 및 Babel 플러그인 설치
 - `tamagui.config.ts`, `babel.config.js` 생성
 - `app/_layout.tsx`에 TamaguiProvider 추가
 - 캐시 클리어 후 첫 실행 (`npx expo start -c`)
 
 #### 2. 디자인 토큰 정의
+
 - `constants/theme.ts`: 컬러, 타이포그래피, 스페이싱, radius, shadows
 - `types/theme.ts`: TypeScript 타입 정의
 
 #### 3. 컴포넌트 구현
+
 각 컴포넌트별 체크리스트는 "작업 범위 > 포함 사항" 참조
 
 #### 4. Export 및 테스트
+
 - `components/ui/index.ts`에서 모든 컴포넌트 export
 - `app/test-ui.tsx`에서 테스트
 
@@ -223,22 +239,24 @@ duologue-app/
 
 ### 수동 확인
 
-- [ ] Button 모든 variant 정상 표시
-- [ ] Button press 애니메이션 동작
-- [ ] Input 포커스/blur 상태 정상
-- [ ] Input 에러 상태 빨간색 표시
-- [ ] Card 그림자 효과 확인
-- [ ] Modal 열기/닫기 애니메이션 부드러움
-- [ ] Spinner 회전 애니메이션 확인
-- [ ] Toast 자동 dismiss 동작
-- [ ] 라이트/다크 모드 전환 확인
+- [x] Button 모든 variant 정상 표시
+- [x] Button press 애니메이션 동작
+- [x] Input 포커스/blur 상태 정상
+- [x] Input 에러 상태 빨간색 표시
+- [x] Card 그림자 효과 확인
+- [x] Modal 열기/닫기 애니메이션 부드러움
+- [x] Spinner 회전 애니메이션 확인
+- [x] Toast 자동 dismiss 동작
+- [x] 라이트/다크 모드 전환 확인
 
 ## 의존성
 
 ### 선행 작업
+
 - Phase 0-1: 프로젝트 초기 설정 완료
 
 ### 후속 작업
+
 - Phase 0-3: 네비게이션 구조
 - 이후 모든 Phase에서 이 컴포넌트 사용
 
@@ -263,3 +281,19 @@ duologue-app/
 ### [2025-11-19] 작업 문서 작성
 
 - Phase 0-2 작업 문서 작성 완료
+
+### [2025-11-20] Phase 0-2 완료
+
+- Tamagui v4 설치 및 설정 완료
+- 디자인 토큰 정의 완료 (styles/tokens.ts, tamagui.config.ts)
+- 8개 UI 컴포넌트 개발 완료
+  - Button (filled, outline, ghost / primary, secondary / sm, md, lg)
+  - Input (label, helper text, error state, disabled)
+  - Card (default, outlined, elevated, pressable)
+  - Modal (adaptive, dialog, sheet / 제네릭 타입 / snapPoints 주입)
+  - Spinner (small, medium, large)
+  - Toast (success, error, warning, info / 애니메이션 / 제스처)
+  - Typography (8 variants: regular, semiBold, title, subtitle, heading, caption, tag, link)
+- app/(tabs)/ui.tsx에서 모든 컴포넌트 showcase 완료
+- 타입 안전성 검증 완료
+- Light/Dark 모드 지원 확인
