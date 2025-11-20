@@ -1,10 +1,9 @@
 import { Image } from 'expo-image';
-import { Platform, StyleSheet } from 'react-native';
+import { Platform, StyleSheet, View } from 'react-native';
 
 import { ExternalLink } from '@/components/external-link';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { Typography } from '@/components/Typography';
 import { Collapsible } from '@/components/ui/collapsible';
 import { IconSymbol } from '@/components/ui/icon-symbol';
 import { Fonts } from '@/constants/theme';
@@ -13,86 +12,79 @@ const ExploreScreen = () => {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
-      headerImage={
-        <IconSymbol
-          size={310}
-          color="#808080"
-          name="chevron.left.forwardslash.chevron.right"
-          style={styles.headerImage}
-        />
-      }
+      headerImage={<IconSymbol size={310} color="#808080" name="Code" style={styles.headerImage} />}
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText
+      <View style={styles.titleContainer}>
+        <Typography
           type="title"
           style={{
             fontFamily: Fonts.rounded,
           }}
         >
           Explore
-        </ThemedText>
-      </ThemedView>
-      <ThemedText>This app includes example code to help you get started.</ThemedText>
+        </Typography>
+      </View>
+      <Typography>This app includes example code to help you get started.</Typography>
       <Collapsible title="File-based routing">
-        <ThemedText>
+        <Typography>
           This app has two screens:{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">app/(tabs)/explore.tsx</ThemedText>
-        </ThemedText>
-        <ThemedText>
-          The layout file in <ThemedText type="defaultSemiBold">app/(tabs)/_layout.tsx</ThemedText>{' '}
+          <Typography type="defaultSemiBold">app/(tabs)/index.tsx</Typography> and{' '}
+          <Typography type="defaultSemiBold">app/(tabs)/explore.tsx</Typography>
+        </Typography>
+        <Typography>
+          The layout file in <Typography type="defaultSemiBold">app/(tabs)/_layout.tsx</Typography>{' '}
           sets up the tab navigator.
-        </ThemedText>
+        </Typography>
         <ExternalLink href="https://docs.expo.dev/router/introduction">
-          <ThemedText type="link">Learn more</ThemedText>
+          <Typography type="link">Learn more</Typography>
         </ExternalLink>
       </Collapsible>
       <Collapsible title="Android, iOS, and web support">
-        <ThemedText>
+        <Typography>
           You can open this project on Android, iOS, and the web. To open the web version, press{' '}
-          <ThemedText type="defaultSemiBold">w</ThemedText> in the terminal running this project.
-        </ThemedText>
+          <Typography type="defaultSemiBold">w</Typography> in the terminal running this project.
+        </Typography>
       </Collapsible>
       <Collapsible title="Images">
-        <ThemedText>
-          For static images, you can use the <ThemedText type="defaultSemiBold">@2x</ThemedText> and{' '}
-          <ThemedText type="defaultSemiBold">@3x</ThemedText> suffixes to provide files for
+        <Typography>
+          For static images, you can use the <Typography type="defaultSemiBold">@2x</Typography> and{' '}
+          <Typography type="defaultSemiBold">@3x</Typography> suffixes to provide files for
           different screen densities
-        </ThemedText>
+        </Typography>
         <Image
           source={require('@/assets/images/react-logo.png')}
           style={{ width: 100, height: 100, alignSelf: 'center' }}
         />
         <ExternalLink href="https://reactnative.dev/docs/images">
-          <ThemedText type="link">Learn more</ThemedText>
+          <Typography type="link">Learn more</Typography>
         </ExternalLink>
       </Collapsible>
       <Collapsible title="Light and dark mode components">
-        <ThemedText>
+        <Typography>
           This template has light and dark mode support. The{' '}
-          <ThemedText type="defaultSemiBold">useColorScheme()</ThemedText> hook lets you inspect
+          <Typography type="defaultSemiBold">useColorScheme()</Typography> hook lets you inspect
           what the user&apos;s current color scheme is, and so you can adjust UI colors accordingly.
-        </ThemedText>
+        </Typography>
         <ExternalLink href="https://docs.expo.dev/develop/user-interface/color-themes/">
-          <ThemedText type="link">Learn more</ThemedText>
+          <Typography type="link">Learn more</Typography>
         </ExternalLink>
       </Collapsible>
       <Collapsible title="Animations">
-        <ThemedText>
+        <Typography>
           This template includes an example of an animated component. The{' '}
-          <ThemedText type="defaultSemiBold">components/HelloWave.tsx</ThemedText> component uses
+          <Typography type="defaultSemiBold">components/HelloWave.tsx</Typography> component uses
           the powerful{' '}
-          <ThemedText type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
+          <Typography type="defaultSemiBold" style={{ fontFamily: Fonts.mono }}>
             react-native-reanimated
-          </ThemedText>{' '}
+          </Typography>{' '}
           library to create a waving hand animation.
-        </ThemedText>
+        </Typography>
         {Platform.select({
           ios: (
-            <ThemedText>
-              The <ThemedText type="defaultSemiBold">components/ParallaxScrollView.tsx</ThemedText>{' '}
+            <Typography>
+              The <Typography type="defaultSemiBold">components/ParallaxScrollView.tsx</Typography>{' '}
               component provides a parallax effect for the header image.
-            </ThemedText>
+            </Typography>
           ),
         })}
       </Collapsible>

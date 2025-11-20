@@ -1,13 +1,22 @@
 import { Image } from 'expo-image';
 import { Link } from 'expo-router';
-import { Platform, StyleSheet } from 'react-native';
+import { useState } from 'react';
+import { Platform, StyleSheet, View } from 'react-native';
+import { Text, XStack, YStack } from 'tamagui';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { ThemedText } from '@/components/themed-text';
-import { ThemedView } from '@/components/themed-view';
+import { Typography } from '@/components/Typography';
+import { Button } from '@/components/ui';
 
 const HomeScreen = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handleLoadingTest = () => {
+    setLoading(true);
+    setTimeout(() => setLoading(false), 2000);
+  };
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -18,29 +27,86 @@ const HomeScreen = () => {
         />
       }
     >
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
+      <View style={styles.titleContainer}>
+        <Typography type="title">Welcome!</Typography>
         <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 1: Try it</ThemedText>
-        <ThemedText>
-          Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
+      </View>
+
+      <YStack paddingBlock="$4" gap="$4">
+        <Text fontSize="$6" fontWeight="bold" color="$color">
+          Button Component Test
+        </Text>
+
+        <YStack gap="$3">
+          <Text fontSize="$4" fontWeight="600">
+            Variants
+          </Text>
+          <XStack gap="$2" flexWrap="wrap">
+            <Button variant="primary" onPress={() => alert('Primary')}>
+              Primary
+            </Button>
+            <Button variant="secondary" onPress={() => alert('Secondary')}>
+              Secondary
+            </Button>
+            <Button variant="outline" onPress={() => alert('Outline')}>
+              Outline
+            </Button>
+            <Button variant="ghost" onPress={() => alert('Ghost')}>
+              Ghost
+            </Button>
+          </XStack>
+        </YStack>
+
+        <YStack gap="$3">
+          <Text fontSize="$4" fontWeight="600">
+            Sizes
+          </Text>
+          <XStack gap="$2" items="center" flex={1} flexWrap="wrap">
+            <Button size="sm" variant="primary" onPress={() => alert('Small')}>
+              Small
+            </Button>
+            <Button size="md" variant="primary" onPress={() => alert('Medium')}>
+              Medium
+            </Button>
+            <Button size="lg" variant="primary" onPress={() => alert('Large')}>
+              Large
+            </Button>
+          </XStack>
+        </YStack>
+
+        <YStack gap="$3">
+          <Text fontSize="$4" fontWeight="600">
+            States
+          </Text>
+          <XStack gap="$2" flexWrap="wrap">
+            <Button variant="primary" disabled>
+              Disabled
+            </Button>
+            <Button variant="primary" loading={loading} onPress={handleLoadingTest}>
+              {loading ? 'Loading...' : 'Click to Load'}
+            </Button>
+          </XStack>
+        </YStack>
+      </YStack>
+      <View style={styles.stepContainer}>
+        <Typography type="subtitle">Step 1: Try it</Typography>
+        <Typography>
+          Edit <Typography type="defaultSemiBold">app/(tabs)/index.tsx</Typography> to see changes.
           Press{' '}
-          <ThemedText type="defaultSemiBold">
+          <Typography type="defaultSemiBold">
             {Platform.select({
               ios: 'cmd + d',
               android: 'cmd + m',
               web: 'F12',
             })}
-          </ThemedText>{' '}
+          </Typography>{' '}
           to open developer tools.
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
+        </Typography>
+      </View>
+      <View style={styles.stepContainer}>
         <Link href="/modal">
           <Link.Trigger>
-            <ThemedText type="subtitle">Step 2: Explore</ThemedText>
+            <Typography type="subtitle">Step 2: Explore</Typography>
           </Link.Trigger>
           <Link.Preview />
           <Link.Menu>
@@ -61,20 +127,20 @@ const HomeScreen = () => {
           </Link.Menu>
         </Link>
 
-        <ThemedText>
+        <Typography>
           {`Tap the Explore tab to learn more about what's included in this starter app.`}
-        </ThemedText>
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
-        <ThemedText type="subtitle">Step 3: Get a fresh start</ThemedText>
-        <ThemedText>
+        </Typography>
+      </View>
+      <View style={styles.stepContainer}>
+        <Typography type="subtitle">Step 3: Get a fresh start</Typography>
+        <Typography>
           {`When you're ready, run `}
-          <ThemedText type="defaultSemiBold">npm run reset-project</ThemedText> to get a fresh{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> directory. This will move the current{' '}
-          <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
-          <ThemedText type="defaultSemiBold">app-example</ThemedText>.
-        </ThemedText>
-      </ThemedView>
+          <Typography type="defaultSemiBold">npm run reset-project</Typography> to get a fresh{' '}
+          <Typography type="defaultSemiBold">app</Typography> directory. This will move the current{' '}
+          <Typography type="defaultSemiBold">app</Typography> to{' '}
+          <Typography type="defaultSemiBold">app-example</Typography>.
+        </Typography>
+      </View>
     </ParallaxScrollView>
   );
 };
