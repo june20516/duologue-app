@@ -4,7 +4,7 @@ import { Platform, StyleSheet, View } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { Typography } from '@/components/Typography';
+import { Typography } from '@/components/ui/Typography';
 
 const HomeScreen = () => {
   return (

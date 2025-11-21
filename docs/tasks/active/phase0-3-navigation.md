@@ -14,6 +14,7 @@
 ## 작업 개요
 
 커스텀 탭 네비게이션 구현 및 인증 가드 구현
+
 - 파일 기반 라우팅 구조 정립
 - Pan Gesture 기반 커스텀 탭 네비게이션 컴포넌트 개발
 - 인증 상태에 따른 화면 접근 제어 (로그인 페이지로 리다이렉트)
@@ -25,6 +26,7 @@
 ## 작업 범위
 
 ### 포함 사항
+
 - [ ] Zustand 설치 및 인증 스토어 생성
 - [ ] 커스텀 탭 네비게이션 컴포넌트 구현
   - [ ] Pan Gesture 기반 좌우 스와이프
@@ -38,6 +40,7 @@
   - [ ] 메인 앱 화면 구조
 
 ### 제외 사항
+
 - 실제 로그인 로직 구현 (Phase 1)
 - 복잡한 딥링킹 로직
 - 화면별 세부 내용 구현
@@ -79,24 +82,29 @@ app/
 ### 구현 단계
 
 #### 1. Zustand 설치
+
 - `yarn add zustand` 실행
 
 #### 2. 인증 스토어 생성
+
 - `stores/authStore.ts` 생성
 - 기본 인증 상태 관리 (isAuthenticated, accessToken)
 - 간단한 setter 함수
 
 #### 3. 인증 가드 구현
+
 - `app/index.tsx` 수정
 - 인증 상태 확인 후 적절한 페이지로 리다이렉트
   - 인증됨: `/(tabs)` 이동
   - 미인증: `/login` 이동
 
 #### 4. 로그인 화면 생성
+
 - `app/login.tsx` 생성
 - 빈 화면 (간단한 텍스트만)
 
 #### 5. 커스텀 탭 네비게이션 컴포넌트 개발
+
 - `components/navigation/TabNavigator.tsx` 생성
 - Pan Gesture Handler로 좌우 스와이프 구현
 - Reanimated로 탭 전환 애니메이션
@@ -104,6 +112,7 @@ app/
 - 탭 목록 props로 받기
 
 #### 6. 탭 레이아웃 수정
+
 - `app/(tabs)/_layout.tsx` 수정
 - Expo Router 기본 Tabs 제거
 - 커스텀 TabNavigator 컴포넌트 사용
@@ -139,10 +148,12 @@ app/
 ## 의존성
 
 ### 선행 작업
+
 - Phase 0-1: 프로젝트 초기 설정 완료
 - Phase 0-2: UI 라이브러리 설정 완료 (TamaguiProvider 필요)
 
 ### 후속 작업
+
 - Phase 1: 인증 화면 실제 구현
 - 모든 Phase에서 네비게이션 활용
 

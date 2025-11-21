@@ -1,14 +1,10 @@
 import type { PropsWithChildren, ReactElement } from 'react';
 import { StyleSheet, View } from 'react-native';
-import Animated, {
-  interpolate,
-  useAnimatedRef,
-  useAnimatedStyle,
-  useScrollOffset,
-} from 'react-native-reanimated';
+import Animated, { interpolate, useAnimatedStyle, useScrollOffset } from 'react-native-reanimated';
 
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { useThemeColor } from '@/hooks/use-theme-color';
+import { useScrollTabVisibilityRef } from '@/hooks/useScrollTabVisibilityRef';
 import { tokens } from '@/styles/tokens';
 
 const HEADER_HEIGHT = 250;
@@ -21,7 +17,8 @@ type Props = PropsWithChildren<{
 const ParallaxScrollView = ({ children, headerImage, headerBackgroundColor }: Props) => {
   const backgroundColor = useThemeColor({}, 'background');
   const colorScheme = useColorScheme() ?? 'light';
-  const scrollRef = useAnimatedRef<Animated.ScrollView>();
+  const scrollRef = useScrollTabVisibilityRef();
+  // const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollOffset(scrollRef);
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {

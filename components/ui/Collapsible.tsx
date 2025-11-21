@@ -5,7 +5,7 @@ import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-import { Typography } from '../Typography';
+import { Typography } from './Typography';
 
 export const Collapsible = ({ children, title }: PropsWithChildren & { title: string }) => {
   const [isOpen, setIsOpen] = useState(false);

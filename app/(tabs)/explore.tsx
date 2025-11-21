@@ -3,9 +3,9 @@ import { Platform, StyleSheet, View } from 'react-native';
 
 import { ExternalLink } from '@/components/external-link';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { Typography } from '@/components/Typography';
 import { Collapsible } from '@/components/ui/Collapsible';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import { Typography } from '@/components/ui/Typography';
 import { Fonts } from '@/constants/theme';
 
 const ExploreScreen = () => {
