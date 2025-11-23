@@ -67,19 +67,19 @@ const darkTheme = {
 
   shadowColor: tokens.color.gray800,
 
-  primary: tokens.color.lime,
-  primaryHover: tokens.color.lime600,
-  primaryPress: tokens.color.lime700,
-  primarySurface: tokens.color.lime50,
-  primarySurfaceHover: tokens.color.lime100,
-  primarySurfacePress: tokens.color.lime200,
+  primary: tokens.color.purple,
+  primaryHover: tokens.color.purple600,
+  primaryPress: tokens.color.purple700,
+  primarySurface: tokens.color.purple50,
+  primarySurfaceHover: tokens.color.purple100,
+  primarySurfacePress: tokens.color.purple200,
 
-  secondary: tokens.color.purple,
-  secondaryHover: tokens.color.purple600,
-  secondaryPress: tokens.color.purple700,
-  secondarySurface: tokens.color.purple50,
-  secondarySurfaceHover: tokens.color.purple100,
-  secondarySurfacePress: tokens.color.purple200,
+  secondary: tokens.color.lime,
+  secondaryHover: tokens.color.lime600,
+  secondaryPress: tokens.color.lime700,
+  secondarySurface: tokens.color.lime50,
+  secondarySurfaceHover: tokens.color.lime100,
+  secondarySurfacePress: tokens.color.lime200,
 
   // Border/Divider
   borderColor: tokens.color.gray700,

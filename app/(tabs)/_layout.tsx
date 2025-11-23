@@ -1,6 +1,7 @@
 import { Tabs } from 'expo-router';
 
-import TabBar from '@/components/layout/TabBar';
+// import TabBar from '@/components/layout/TabBar';
+import DynamicTabBar from '@/components/layout/DynamicTabBar';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
@@ -10,7 +11,7 @@ const TabLayout = () => {
 
   return (
     <Tabs
-      tabBar={(props) => <TabBar {...props} />}
+      tabBar={(props) => <DynamicTabBar {...props} />}
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
@@ -20,7 +21,6 @@ const TabLayout = () => {
         name="index"
         options={{
           title: 'Home',
-
           tabBarIcon: ({ color, size }) => <IconSymbol size={size} name="House" color={color} />,
         }}
       />
