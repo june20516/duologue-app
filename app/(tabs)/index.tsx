@@ -1,12 +1,38 @@
 import { Image } from 'expo-image';
-import { Link } from 'expo-router';
-import { Platform, StyleSheet, View } from 'react-native';
+import { Link, router } from 'expo-router';
+import { StyleSheet, View, Alert } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { Typography } from '@/components/ui/Typography';
+import { Button, Typography } from '@/components/ui';
+import { useAppStore } from '@/stores/appStore';
+import { useAuthStore } from '@/stores/authStore';
+import { useUiStore } from '@/stores/uiStore';
+import { useUserStore } from '@/stores/userStore';
 
 const HomeScreen = () => {
+  const resetApp = useAppStore((state) => state.reset);
+  const resetAuth = useAuthStore((state) => state.clearAuth);
+  const resetUser = useUserStore((state) => state.reset);
+  const resetUi = useUiStore((state) => state.resetTabBar);
+
+  const handleResetAll = () => {
+    Alert.alert('데이터 초기화', '모든 앱 데이터가 삭제됩니다. 계속하시겠습니까?', [
+      { text: '취소', style: 'cancel' },
+      {
+        text: '초기화',
+        style: 'destructive',
+        onPress: () => {
+          resetApp();
+          resetAuth();
+          resetUser();
+          resetUi();
+          router.replace('/');
+        },
+      },
+    ]);
+  };
+
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -23,17 +49,12 @@ const HomeScreen = () => {
       </View>
 
       <View style={styles.stepContainer}>
-        <Typography type="subtitle">Step 1: Try it</Typography>
-        <Typography>
-          Edit <Typography type="semiBold">app/(tabs)/index.tsx</Typography> to see changes. Press{' '}
-          <Typography type="semiBold">
-            {Platform.select({
-              ios: 'cmd + d',
-              android: 'cmd + m',
-              web: 'F12',
-            })}
-          </Typography>{' '}
-          to open developer tools.
+        <Typography type="subtitle">개발 도구</Typography>
+        <Button onPress={handleResetAll} size="lg">
+          모든 앱 데이터 초기화
+        </Button>
+        <Typography color="$colorSoft" fontSize="$2">
+          워크스루, 로그인, 프로필 등 모든 데이터가 삭제됩니다.
         </Typography>
       </View>
       <View style={styles.stepContainer}>

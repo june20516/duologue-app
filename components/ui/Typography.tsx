@@ -70,10 +70,12 @@ const variantProps: Record<TypographyVariant, TamaguiTextProps> = {
   },
 };
 
-export const Typography: React.FC<TypographyProps> = ({ type = 'regular', children, ...rest }) => {
+const Typography: React.FC<TypographyProps> = ({ type = 'regular', children, ...rest }) => {
   return (
     <Text {...rest} {...variantProps[type]}>
       {children}
     </Text>
   );
 };
+
+export default Typography;

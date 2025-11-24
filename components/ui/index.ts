@@ -20,3 +20,6 @@ export { default as Spinner } from './Spinner';
 export type { SpinnerProps } from './Spinner';
 
 export { ToastProvider, useToast } from './Toast';
+
+export { default as Typography } from './Typography';
+export type { TypographyProps } from './Typography';

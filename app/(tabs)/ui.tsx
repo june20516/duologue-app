@@ -2,8 +2,7 @@ import { useState } from 'react';
 import { XStack, YStack } from 'tamagui';
 
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { Button, Card, Input, Modal, Spinner, useToast } from '@/components/ui';
-import { Typography } from '@/components/ui/Typography';
+import { Button, Card, Input, Modal, Spinner, Typography, useToast } from '@/components/ui';
 
 const UITestScreen = () => {
   const [loading, setLoading] = useState(false);

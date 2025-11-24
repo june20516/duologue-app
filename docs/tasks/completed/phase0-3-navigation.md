@@ -177,6 +177,22 @@ app/
 
 ## 작업 이력
 
+### [2025-11-24] 작업 완료
+
+- ✅ Zustand 설치 및 인증/UI 스토어 생성 완료
+  - `stores/authStore.ts`: 인증 토큰 관리, persist 적용
+  - `stores/uiStore.ts`: 탭바 visibility 상태 관리
+- ✅ 커스텀 탭 네비게이션 컴포넌트 구현 완료
+  - `components/layout/DynamicTabBar/`: 모듈화된 구조
+  - Long press + Pan gesture 기반 인터랙션
+  - Circular 자료구조 (3개 탭 무한 순환)
+  - Sticky effect (배경과 아이콘 크기 동기화)
+  - Tamagui 디자인 시스템 통합
+- ✅ 인증 가드 구현 완료
+  - `app/index.tsx`: 인증 상태 확인 후 리다이렉트
+  - `app/login.tsx`: 임시 로그인 화면
+  - `app/_layout.tsx`: 라우팅 구조 업데이트
+
 ### [2025-11-19] 작업 문서 작성
 
 - Phase 0-3 작업 문서 작성 완료

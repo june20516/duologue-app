@@ -10,8 +10,9 @@ import { useColorScheme } from '@/hooks/use-color-scheme';
 
 import config from '../tamagui.config';
 
+// 인증 가드를 위해 anchor를 index로 변경
 export const unstable_settings = {
-  anchor: '(tabs)',
+  initialRouteName: 'index',
 };
 
 const RootLayout = () => {
@@ -23,6 +24,10 @@ const RootLayout = () => {
         <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
           <ToastProvider>
             <Stack>
+              <Stack.Screen name="index" options={{ headerShown: false }} />
+              <Stack.Screen name="walkthrough" options={{ headerShown: false }} />
+              <Stack.Screen name="login" options={{ headerShown: false }} />
+              <Stack.Screen name="onboarding" options={{ headerShown: false }} />
               <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             </Stack>
             <StatusBar style="auto" />
