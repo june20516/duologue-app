@@ -25,12 +25,12 @@ Axios 기반 API 클라이언트 및 React Query 설정
 ## 작업 범위
 
 ### 포함 사항
-- [ ] Axios 인스턴스 생성 및 설정
-- [ ] Request 인터셉터 (토큰 추가)
-- [ ] Response 인터셉터 (에러 처리, 토큰 갱신)
-- [ ] React Query 설정
-- [ ] API 에러 핸들링 유틸리티
-- [ ] 환경 변수 기반 baseURL 설정
+- [x] Axios 인스턴스 생성 및 설정
+- [x] Request 인터셉터 (토큰 추가)
+- [x] Response 인터셉터 (에러 처리, 토큰 갱신)
+- [x] React Query 설정
+- [x] API 에러 핸들링 유틸리티
+- [x] 환경 변수 기반 baseURL 설정
 
 ### 제외 사항
 - 실제 API 엔드포인트 구현
@@ -248,12 +248,12 @@ src/
 
 ### 수동 확인
 
-- [ ] Axios 인스턴스 생성 확인
-- [ ] Request 인터셉터 동작 (토큰 추가)
-- [ ] Response 인터셉터 동작 (에러 처리)
-- [ ] React Query QueryClient 설정 확인
-- [ ] authStore persist 동작 (앱 재시작 후 유지)
-- [ ] 에러 핸들러 정상 동작
+- [x] Axios 인스턴스 생성 확인
+- [x] Request 인터셉터 동작 (토큰 추가)
+- [x] Response 인터셉터 동작 (에러 처리)
+- [x] React Query QueryClient 설정 확인
+- [x] authStore persist 동작 (앱 재시작 후 유지)
+- [x] 에러 핸들러 정상 동작
 
 ## 의존성
 
@@ -283,6 +283,20 @@ src/
 ---
 
 ## 작업 이력
+
+### [2025-11-24] 작업 완료
+
+- ✅ Axios 및 React Query 패키지 설치 완료
+  - `yarn add axios @tanstack/react-query`
+- ✅ API 클라이언트 인프라 구축 완료
+  - `lib/api.ts`: Axios 인스턴스 및 인터셉터 구현
+  - `lib/queryClient.ts`: React Query 설정
+  - `api/error.ts`: 에러 핸들러 유틸리티
+  - `types/api.ts`: API 관련 타입 정의
+- ✅ app/_layout.tsx에 QueryClientProvider 추가
+- ✅ authStore의 clearAuth 메서드 사용 (문서와 실제 구현 일치)
+- ✅ 환경 변수 기반 baseURL 설정 (.env.local 사용)
+- ✅ 타입 체크 통과
 
 ### [2025-11-19] 작업 문서 작성
 
