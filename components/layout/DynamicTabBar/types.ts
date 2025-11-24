@@ -10,4 +10,5 @@ export interface TabIconProps {
   animatedStyle: any;
   hoveredIndex: SharedValue<number>;
   tabIndex: number;
+  pointerEvents?: 'auto' | 'none' | 'box-none' | 'box-only';
 }

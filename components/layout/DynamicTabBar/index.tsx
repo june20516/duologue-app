@@ -60,25 +60,29 @@ const DynamicTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, naviga
     });
 
   return (
-    <AnimatedContainer style={[tabBarStyle, { height: FULL_HEIGHT, paddingBottom: bottom }]}>
-      <GestureDetector gesture={combinedGesture}>
-        <Content height={TAB_BAR_HEIGHT}>
-          {/* Circular background */}
-          <AnimatedCircularBackground style={backgroundStyle} />
+    <AnimatedContainer
+      style={[tabBarStyle, { height: FULL_HEIGHT, paddingBottom: bottom }]}
+      pointerEvents="box-none"
+    >
+      <Content height={TAB_BAR_HEIGHT} pointerEvents="box-none">
+        {/* Circular background */}
+        <AnimatedCircularBackground style={backgroundStyle} pointerEvents="none" />
 
-          {/* Icons layer */}
-          <IconsContainer>
-            {/* Left icon */}
-            <TabIcon
-              route={leftRoute}
-              isFocused={false}
-              Icon={descriptors[leftRoute.key].options.tabBarIcon}
-              animatedStyle={leftIconStyle}
-              hoveredIndex={hoveredIndex}
-              tabIndex={0}
-            />
+        {/* Icons layer */}
+        <IconsContainer pointerEvents="box-none">
+          {/* Left icon */}
+          <TabIcon
+            route={leftRoute}
+            isFocused={false}
+            Icon={descriptors[leftRoute.key].options.tabBarIcon}
+            animatedStyle={leftIconStyle}
+            hoveredIndex={hoveredIndex}
+            tabIndex={0}
+            pointerEvents="none"
+          />
 
-            {/* Center icon */}
+          {/* Center icon - Gesture starts only from this icon */}
+          <GestureDetector gesture={combinedGesture}>
             <TabIcon
               route={currentRoute}
               isFocused={true}
@@ -86,20 +90,22 @@ const DynamicTabBar: React.FC<BottomTabBarProps> = ({ state, descriptors, naviga
               animatedStyle={centerIconStyle}
               hoveredIndex={hoveredIndex}
               tabIndex={1}
+              pointerEvents="auto"
             />
+          </GestureDetector>
 
-            {/* Right icon */}
-            <TabIcon
-              route={rightRoute}
-              isFocused={false}
-              Icon={descriptors[rightRoute.key].options.tabBarIcon}
-              animatedStyle={rightIconStyle}
-              hoveredIndex={hoveredIndex}
-              tabIndex={2}
-            />
-          </IconsContainer>
-        </Content>
-      </GestureDetector>
+          {/* Right icon */}
+          <TabIcon
+            route={rightRoute}
+            isFocused={false}
+            Icon={descriptors[rightRoute.key].options.tabBarIcon}
+            animatedStyle={rightIconStyle}
+            hoveredIndex={hoveredIndex}
+            tabIndex={2}
+            pointerEvents="none"
+          />
+        </IconsContainer>
+      </Content>
     </AnimatedContainer>
   );
 };

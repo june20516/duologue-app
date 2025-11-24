@@ -14,6 +14,7 @@ export const TabIcon: React.FC<TabIconProps> = ({
   animatedStyle,
   hoveredIndex,
   tabIndex,
+  pointerEvents = 'auto',
 }) => {
   const theme = useTheme();
   const [isHovered, setIsHovered] = useState(false);
@@ -29,7 +30,7 @@ export const TabIcon: React.FC<TabIconProps> = ({
   const color = isHovered ? theme.colorSurface.val : theme.color.val;
 
   return (
-    <AnimatedIconContainer style={animatedStyle}>
+    <AnimatedIconContainer style={animatedStyle} pointerEvents={pointerEvents}>
       {Icon && <Icon focused={isFocused} color={color} size={24} />}
     </AnimatedIconContainer>
   );
