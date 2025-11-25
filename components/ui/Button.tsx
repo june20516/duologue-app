@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Button as TamaguiButton, ButtonProps as TamaguiButtonProps, Spinner, Text } from 'tamagui';
 
 type ButtonVariant = 'filled' | 'outline' | 'ghost';

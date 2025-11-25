@@ -1,4 +1,3 @@
-import React from 'react';
 import { Spinner as TamaguiSpinner, SpinnerProps as TamaguiSpinnerProps, YStack } from 'tamagui';
 
 type SpinnerSize = 'small' | 'medium' | 'large';

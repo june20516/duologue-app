@@ -1,4 +1,3 @@
-import React from 'react';
 import {
   CardBackground as TamaguiCardBackground,
   CardFooter as TamaguiCardFooter,

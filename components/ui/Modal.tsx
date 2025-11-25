@@ -1,4 +1,3 @@
-import React from 'react';
 import { Dialog, Sheet, Adapt, XStack, YStack, Text, DialogContentProps } from 'tamagui';
 
 export type ModalVariant = 'adaptive' | 'dialog' | 'sheet';

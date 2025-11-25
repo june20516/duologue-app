@@ -1,4 +1,3 @@
-import React from 'react';
 import { Text, TextProps as TamaguiTextProps } from 'tamagui';
 
 type TypographyVariant =
