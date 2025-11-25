@@ -16,7 +16,7 @@ const Index = () => {
 
   // 2. 로그인
   if (!isAuthenticated) {
-    return <Redirect href="/login" />;
+    return <Redirect href="/auth" />;
   }
 
   // 3. 프로필 설정 (로그인 후)

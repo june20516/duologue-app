@@ -60,7 +60,7 @@ yarn android
 
 ```bash
 # TypeScript 타입 체크
-yarn type-check
+yarn tsc
 
 # ESLint 검사
 yarn lint
@@ -75,6 +75,7 @@ yarn format
 ### 커밋 전 자동 검사
 
 Husky pre-commit hook이 설정되어 있어 커밋 시 자동으로:
+
 1. TypeScript 타입 체크
 2. ESLint 검사
 
@@ -85,6 +86,7 @@ Husky pre-commit hook이 설정되어 있어 커밋 시 자동으로:
 프로젝트의 모든 코드 작성 규칙은 `.claude-project-rules.md`에 정의되어 있습니다.
 
 **주요 규칙:**
+
 - ⚠️ **패키지 매니저**: 반드시 `yarn` 사용 (`npm` 사용 금지)
 - TypeScript `any` 타입 사용 금지
 - React 컴포넌트는 Arrow Function으로 작성
@@ -110,6 +112,7 @@ duologue-app/
 ## VSCode 설정
 
 프로젝트에 VSCode 설정이 포함되어 있어 파일 저장 시 자동으로:
+
 - Prettier 포맷팅 적용
 - ESLint 자동 수정
 

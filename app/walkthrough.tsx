@@ -1,13 +1,16 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import { YStack } from 'tamagui';
 
 import { Button, Typography } from '@/components/ui';
 import { useAppStore } from '@/stores/appStore';
+import { useCommonStyle } from '@/styles/common';
 
 const Walkthrough = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const setFirstLaunch = useAppStore((state) => state.setFirstLaunch);
+  const { fullscreen } = useCommonStyle();
 
   // TODO: Phase 1에서 실제 워크스루 컨텐츠 추가
   const pages = [
@@ -31,21 +34,25 @@ const Walkthrough = () => {
   };
 
   return (
-    <YStack flex={1} p="$4" justify="space-between" bg="$background">
-      <Button self="flex-end" onPress={handleSkip} variant="ghost" priority="secondary">
-        건너뛰기
-      </Button>
+    <SafeAreaView style={[fullscreen]}>
+      <YStack flex={1} p="$4" justify="space-between" bg="$background">
+        <Button self="flex-end" onPress={handleSkip} variant="ghost" priority="secondary">
+          건너뛰기
+        </Button>
 
-      <YStack flex={1} justify="center" items="center" gap="$4">
-        <Typography type="title">{pages[currentPage].title}</Typography>
-        <Typography type="semiBold">{pages[currentPage].description}</Typography>
-        <Typography>
-          {currentPage + 1} / {pages.length}
-        </Typography>
+        <YStack flex={1} justify="center" items="center" gap="$4">
+          <Typography type="title">{pages[currentPage].title}</Typography>
+          <Typography type="semiBold">{pages[currentPage].description}</Typography>
+          <Typography>
+            {currentPage + 1} / {pages.length}
+          </Typography>
+        </YStack>
+
+        <Button onPress={handleNext}>
+          {currentPage === pages.length - 1 ? '시작하기' : '다음'}
+        </Button>
       </YStack>
-
-      <Button onPress={handleNext}>{currentPage === pages.length - 1 ? '시작하기' : '다음'}</Button>
-    </YStack>
+    </SafeAreaView>
   );
 };
 

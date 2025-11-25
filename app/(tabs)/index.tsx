@@ -1,5 +1,6 @@
 import { Image } from 'expo-image';
-import { Link, router } from 'expo-router';
+import { Link } from 'expo-router';
+import * as Updates from 'expo-updates';
 import { StyleSheet, View, Alert } from 'react-native';
 
 import { HelloWave } from '@/components/hello-wave';
@@ -22,12 +23,12 @@ const HomeScreen = () => {
       {
         text: '초기화',
         style: 'destructive',
-        onPress: () => {
+        onPress: async () => {
           resetApp();
           resetAuth();
           resetUser();
           resetUi();
-          router.replace('/');
+          await Updates.reloadAsync();
         },
       },
     ]);

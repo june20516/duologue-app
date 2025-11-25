@@ -7,7 +7,7 @@ interface FormInputProps<T extends FieldValues> extends Omit<InputProps, 'errorT
   name: Path<T>;
 }
 
-export const FormInput = <T extends FieldValues>({
+const FormInput = <T extends FieldValues>({
   control,
   name,
   ...inputProps

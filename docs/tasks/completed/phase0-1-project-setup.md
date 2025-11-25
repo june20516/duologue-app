@@ -228,7 +228,7 @@ duologue-app/
        "ios": "expo start --ios",
        "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
        "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
-       "type-check": "tsc --noEmit",
+       "tsc": "tsc --noEmit",
        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
      }
    }
@@ -241,7 +241,7 @@ duologue-app/
 
 9. **검증**
    - `yarn lint` 실행
-   - `yarn type-check` 실행
+   - `yarn tsc` 실행
    - iOS/Android 시뮬레이터 실행
 
 ## 검증 방법
@@ -249,7 +249,7 @@ duologue-app/
 ### 테스트 케이스
 
 1. **TypeScript 검증**
-   - 입력: `yarn type-check`
+   - 입력: `yarn tsc`
    - 예상 결과: 컴파일 에러 없음
 
 2. **ESLint 검증**
@@ -338,6 +338,7 @@ duologue-app/
 ### [2025-11-19 17:15] 작업 완료
 
 **완료된 항목:**
+
 - TypeScript 설정 최적화 (strict mode, path alias, exclude)
 - ESLint + Prettier 설정 (Expo flat config 기반)
 - VSCode 설정 (format on save, ESLint 자동 수정)
@@ -347,11 +348,13 @@ duologue-app/
 - README.md 작성 (Yarn 사용, 개발 가이드)
 
 **특이사항:**
+
 - eslint-plugin-react-native의 flat config 호환성 문제로 해당 플러그인은 제외
 - Expo config 기본 설정으로 충분히 동작
-- yarn lint, yarn type-check 모두 정상 동작 확인
+- yarn lint, yarn tsc 모두 정상 동작 확인
 
 **검증 완료:**
-- yarn type-check: 통과
+
+- yarn tsc: 통과
 - yarn lint: 3개 warning (기존 Expo 템플릿 코드의 inline styles)
 - 저장 시 자동 포맷팅 및 ESLint 수정 동작 확인
