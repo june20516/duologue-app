@@ -1,5 +1,6 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { YStack } from 'tamagui';
 
@@ -10,13 +11,23 @@ import { useCommonStyle } from '@/styles/common';
 const Walkthrough = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const setFirstLaunch = useAppStore((state) => state.setFirstLaunch);
-  const { fullscreen } = useCommonStyle();
+  const { fullscreen, defaultBackground } = useCommonStyle();
+  const { t } = useTranslation();
 
   // TODO: Phase 1에서 실제 워크스루 컨텐츠 추가
   const pages = [
-    { title: '환영합니다', description: 'Duologue에 오신 것을 환영합니다' },
-    { title: '대화하세요', description: 'AI와 자연스러운 대화를 나누세요' },
-    { title: '학습하세요', description: '대화를 통해 언어를 배우세요' },
+    {
+      title: t('onboarding.walkthrough.page1.title'),
+      description: t('onboarding.walkthrough.page1.description'),
+    },
+    {
+      title: t('onboarding.walkthrough.page2.title'),
+      description: t('onboarding.walkthrough.page2.description'),
+    },
+    {
+      title: t('onboarding.walkthrough.page3.title'),
+      description: t('onboarding.walkthrough.page3.description'),
+    },
   ];
 
   const handleNext = () => {
@@ -34,8 +45,8 @@ const Walkthrough = () => {
   };
 
   return (
-    <SafeAreaView style={[fullscreen]}>
-      <YStack flex={1} p="$4" justify="space-between" bg="$background">
+    <SafeAreaView style={[fullscreen, defaultBackground]}>
+      <YStack flex={1} p="$4" justify="space-between">
         <Button self="flex-end" onPress={handleSkip} variant="ghost" priority="secondary">
           건너뛰기
         </Button>

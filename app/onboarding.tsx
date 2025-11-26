@@ -3,21 +3,21 @@ import { useState } from 'react';
 import { YStack } from 'tamagui';
 
 import { Button, Input, Typography } from '@/components/ui';
-import { useUserStore } from '@/stores/userStore';
+import { useAuthStore } from '@/stores/authStore';
 
 const Onboarding = () => {
   const [name, setName] = useState('');
   const [age, setAge] = useState('');
-  const setProfile = useUserStore((state) => state.setProfile);
+  const updateProfile = useAuthStore((state) => state.updateProfile);
 
   const handleComplete = () => {
     // TODO: Phase 1에서 실제 프로필 입력 및 검증 추가
-    setProfile({
-      name: name || null,
-      age: age ? parseInt(age, 10) : null,
+    updateProfile({
+      nickname: name || null,
+      gender: age ? 'other' : null, // 임시 - 실제로는 gender 선택 필요
     });
 
-    router.replace('/(tabs)');
+    router.push('/index');
   };
 
   const isValid = name.trim().length > 0 && age.trim().length > 0;

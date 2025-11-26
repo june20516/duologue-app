@@ -1,3 +1,5 @@
+import { AuthMe } from '@/models/user';
+
 import { apiClient } from './client';
 import { handleApiError } from './error';
 
@@ -17,6 +19,10 @@ interface VerifySignupRequest {
 interface TokenResponse {
   access_token: string;
   refresh_token: string;
+}
+
+interface GetMeResponse {
+  user: AuthMe;
 }
 
 export const authApi = {
@@ -61,6 +67,15 @@ export const authApi = {
         code,
       } as VerifySignupRequest);
       return response.data;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  getMe: async (): Promise<AuthMe> => {
+    try {
+      const response = await apiClient.get<GetMeResponse>('/auth/me');
+      return response.data.user;
     } catch (error) {
       throw handleApiError(error);
     }

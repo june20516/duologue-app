@@ -1,0 +1,16 @@
+{
+  "walkthrough": {
+    "page1": {
+      "title": "환영합니다",
+      "description": "Duologue에 오신 것을 환영합니다"
+    },
+    "page2": {
+      "title": "대화하세요",
+      "description": "AI와 자연스러운 대화를 나누세요"
+    },
+    "page3": {
+      "title": "학습하세요",
+      "description": "대화를 통해 언어를 배우세요"
+    }
+  }
+}

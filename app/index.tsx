@@ -2,12 +2,11 @@ import { Redirect } from 'expo-router';
 
 import { useAppStore } from '@/stores/appStore';
 import { useAuthStore } from '@/stores/authStore';
-import { useUserStore } from '@/stores/userStore';
 
 const Index = () => {
   const isFirstLaunch = useAppStore((state) => state.isFirstLaunch);
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);
-  const isProfileComplete = useUserStore((state) => state.isProfileComplete);
+  const isProfileComplete = useAuthStore((state) => state.me?.profileComplete ?? false);
 
   // 1. 워크스루 (최초 실행)
   if (isFirstLaunch) {

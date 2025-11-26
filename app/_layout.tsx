@@ -12,6 +12,7 @@ import { queryClient } from '@/lib/queryClient';
 import { fullscreen } from '@/styles/common';
 
 import config from '../tamagui.config';
+import '@/i18n/config';
 
 // 인증 가드를 위해 anchor를 index로 변경
 export const unstable_settings = {

@@ -9,12 +9,10 @@ import { Button, Typography } from '@/components/ui';
 import { useAppStore } from '@/stores/appStore';
 import { useAuthStore } from '@/stores/authStore';
 import { useUiStore } from '@/stores/uiStore';
-import { useUserStore } from '@/stores/userStore';
 
 const HomeScreen = () => {
   const resetApp = useAppStore((state) => state.reset);
   const resetAuth = useAuthStore((state) => state.clearAuth);
-  const resetUser = useUserStore((state) => state.reset);
   const resetUi = useUiStore((state) => state.resetTabBar);
 
   const handleResetAll = () => {
@@ -26,7 +24,6 @@ const HomeScreen = () => {
         onPress: async () => {
           resetApp();
           resetAuth();
-          resetUser();
           resetUi();
           await Updates.reloadAsync();
         },

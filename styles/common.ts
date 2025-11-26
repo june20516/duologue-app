@@ -7,10 +7,12 @@ export const fullscreen: ViewStyle = {
 
 export const useCommonStyle = () => {
   const theme = useTheme();
-  const backgroundColor = theme.background?.val;
+  const backgroundColor = theme.background.val;
   return {
     fullscreen: {
       ...fullscreen,
+    },
+    defaultBackground: {
       backgroundColor,
     },
   };
