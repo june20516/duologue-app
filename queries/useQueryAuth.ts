@@ -1,13 +1,11 @@
-import { useQueries, UseQueryOptions } from '@tanstack/react-query';
+import { useQueries } from '@tanstack/react-query';
 import { useEffect } from 'react';
 
 import { authApi } from '@/api/auth';
 import { profileApi } from '@/api/profile';
 import { AuthMe, Me, ProfileMe } from '@/models/user';
 import { useAuthStore } from '@/stores/authStore';
-
-export type QueryOptionParams<T, E> = Omit<UseQueryOptions<T, E>, 'queryKey' | 'queryFn'>;
-export type GetQueryOption<T, E> = (options?: QueryOptionParams<T, E>) => UseQueryOptions<T, E>;
+import { GetQueryOption, QueryOptionParams } from '@/types/query';
 
 export const getQueryOptionAuthMe: GetQueryOption<AuthMe, Error> = (options) => {
   return {

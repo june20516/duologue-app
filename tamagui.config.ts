@@ -18,7 +18,7 @@ const lightTheme = {
   backgroundSoft: tokens.color.gray100,
   color: tokens.color.offBlack,
   colorSoft: tokens.color.gray600,
-  colorSurface: tokens.color.white, // 카드 배경
+  colorSurface: tokens.color.offWhite, // 카드 배경
   shadowColor: tokens.color.gray200, // 일반 그림자
 
   // Primary (Lime)
@@ -37,7 +37,7 @@ const lightTheme = {
   secondarySurface: tokens.color.purple50,
   secondarySurfaceHover: tokens.color.purple100,
   secondarySurfacePress: tokens.color.purple200,
-  colorOnSecondary: tokens.color.white, // 보라 위 글자색
+  colorOnSecondary: tokens.color.offWhite, // 보라 위 글자색
 
   // Tertiary (Aqua)
   tertiary: tokens.color.aqua,
@@ -53,7 +53,7 @@ const lightTheme = {
   borderColorHover: tokens.color.lime,
   borderColorFocus: tokens.color.purple,
 
-  inputBackground: tokens.color.white,
+  inputBackground: tokens.color.offWhite,
   inputBackgroundDisabled: tokens.color.gray100,
   placeholderColor: tokens.color.gray400,
 
@@ -84,7 +84,7 @@ const darkTheme = {
   primarySurface: tokens.color.purple900,
   primarySurfaceHover: tokens.color.purple800, // 더 밝아짐 (빛 번짐 효과)
   primarySurfacePress: tokens.color.purple700, // 가장 밝아짐
-  colorOnPrimary: tokens.color.white,
+  colorOnPrimary: tokens.color.offWhite,
 
   // Secondary (Lime in Dark Mode)
   secondary: tokens.color.lime,

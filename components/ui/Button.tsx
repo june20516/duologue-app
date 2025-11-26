@@ -1,5 +1,7 @@
 import { useState } from 'react';
-import { Button as TamaguiButton, ButtonProps as TamaguiButtonProps, Spinner, Text } from 'tamagui';
+import { Button as TamaguiButton, ButtonProps as TamaguiButtonProps, Spinner } from 'tamagui';
+
+import Typography from './Typography';
 
 type ButtonVariant = 'filled' | 'outline' | 'ghost';
 type ButtonPriority = 'primary' | 'secondary';
@@ -131,7 +133,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {!loading &&
         (typeof children === 'string' ? (
-          <Text color={styleProps.color}>{children}</Text>
+          <Typography color={styleProps.color}>{children}</Typography>
         ) : (
           children
         ))}
