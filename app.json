@@ -1,15 +1,16 @@
 {
   "expo": {
-    "name": "Duetivity",
-    "slug": "Duetivity",
+    "name": "Duologue",
+    "slug": "Duologue",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "duetivity",
+    "scheme": "duologue",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.Duologue"
     },
     "android": {
       "adaptiveIcon": {

@@ -1,10 +1,13 @@
 /**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
+ * Legacy Theme Constants
+ *
+ * 기존 Expo 템플릿과의 하위 호환성을 위한 상수들
+ * 새로운 컴포넌트에서는 Tamagui 토큰($lime, $purple 등)을 사용하세요.
  */
 
 import { Platform } from 'react-native';
 
+// Legacy Colors (기존 Expo 템플릿 - 하위 호환성)
 const tintColorLight = '#0a7ea4';
 const tintColorDark = '#fff';
 
@@ -29,13 +32,9 @@ export const Colors = {
 
 export const Fonts = Platform.select({
   ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
     sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
     serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
     rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
     mono: 'ui-monospace',
   },
   default: {

@@ -1,0 +1,16 @@
+{
+  "walkthrough": {
+    "page1": {
+      "title": "환영합니다",
+      "description": "Duologue에 오신 것을 환영합니다"
+    },
+    "page2": {
+      "title": "매칭하세요",
+      "description": "새로운 친구와 매칭되어 게임을 즐기세요"
+    },
+    "page3": {
+      "title": "즐기세요",
+      "description": "다양한 미니게임으로 친밀도를 높이세요"
+    }
+  }
+}

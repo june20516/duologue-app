@@ -1,0 +1,16 @@
+{
+  "walkthrough": {
+    "page1": {
+      "title": "Welcome",
+      "description": "Welcome to Duologue"
+    },
+    "page2": {
+      "title": "Match",
+      "description": "Match with new friends and play games"
+    },
+    "page3": {
+      "title": "Enjoy",
+      "description": "Increase intimacy with various mini-games"
+    }
+  }
+}

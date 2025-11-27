@@ -1,35 +1,45 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
 
-import { HapticTab } from '@/components/haptic-tab';
-import { IconSymbol } from '@/components/ui/icon-symbol';
+// import TabBar from '@/components/layout/TabBar';
+import DynamicTabBar from '@/components/layout/DynamicTabBar';
+import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/theme';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 
-export default function TabLayout() {
+const TabLayout = () => {
   const colorScheme = useColorScheme();
 
   return (
     <Tabs
+      tabBar={(props) => <DynamicTabBar {...props} />}
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
         headerShown: false,
-        tabBarButton: HapticTab,
-      }}>
+      }}
+    >
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color, size }) => <IconSymbol size={size} name="House" color={color} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color, size }) => <IconSymbol size={size} name="Send" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="ui"
+        options={{
+          title: 'UI',
+          tabBarIcon: ({ color, size }) => <IconSymbol size={size} name="Brush" color={color} />,
         }}
       />
     </Tabs>
   );
-}
+};
+
+export default TabLayout;
