@@ -10,7 +10,7 @@ import {
   optionalFieldsSchema,
 } from '@/utils/validation/profileSchemas';
 
-export const useProfileForms = () => {
+const useProfileForms = () => {
   const profileForm = useForm<NicknameGenderFormData>({
     resolver: zodResolver(nicknameGenderSchema),
     mode: 'onChange',
@@ -42,3 +42,5 @@ export const useProfileForms = () => {
     optionalForm,
   };
 };
+
+export default useProfileForms;

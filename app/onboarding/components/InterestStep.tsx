@@ -28,11 +28,11 @@ const InterestStep = ({ form, handleBack, handleSubmit }: InterestStepProps) => 
     if (isSelected) {
       // 선택 해제
       const newIds = currentIds.filter((id) => id !== interestId);
-      form.setValue('interestIds', newIds);
+      form.setValue('interestIds', newIds, { shouldValidate: true });
     } else if (currentIds.length < 5) {
       // 최대 5개까지만 추가
       const newIds = [...currentIds, interestId];
-      form.setValue('interestIds', newIds);
+      form.setValue('interestIds', newIds, { shouldValidate: true });
     }
     // 5개 이상이면 아무 동작도 하지 않음
   };

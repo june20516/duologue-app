@@ -6,6 +6,7 @@ import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TamaguiProvider } from 'tamagui';
 
+import { GlobalErrorModal } from '@/components/GlobalErrorModal';
 import { ToastProvider } from '@/components/ui';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { queryClient } from '@/lib/queryClient';
@@ -35,6 +36,7 @@ const RootLayout = () => {
                 <Stack.Screen name="auth" options={{ headerShown: false }} />
                 <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
               </Stack>
+              <GlobalErrorModal />
               <StatusBar style="auto" />
             </ToastProvider>
           </ThemeProvider>

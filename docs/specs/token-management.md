@@ -181,29 +181,6 @@ apiClient.interceptors.response.use(
 6. **토큰 저장**: authStore의 setTokens 사용
 7. **snake_case 변환**: refresh API 요청 시 body가 snake_case로 변환되는지 확인
 
-## API 스펙 확인 필요
-
-1. **엔드포인트**: `POST /auth/refresh`
-2. **요청 body**:
-   ```json
-   {
-     "refresh_token": "..."
-   }
-   ```
-3. **응답**:
-   ```json
-   {
-     "access_token": "...",
-     "refresh_token": "..."
-   }
-   ```
-4. **에러 응답** (401):
-   ```json
-   {
-     "message": "Token expired" // 또는 "Invalid token"
-   }
-   ```
-
 ## 테스트 시나리오
 
 1. ✅ 단일 요청이 401을 받는 경우

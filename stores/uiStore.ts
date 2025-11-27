@@ -5,12 +5,20 @@ interface TabBarState {
   lastScrollY: number;
 }
 
+interface ErrorModalState {
+  isVisible: boolean;
+  message: string;
+}
+
 interface UiState {
   tabBar: TabBarState;
+  errorModal: ErrorModalState;
   handleTabBarScroll: (currentScrollY: number, previousScrollY?: number) => void;
   showTabBar: () => void;
   hideTabBar: () => void;
   resetTabBar: () => void;
+  showErrorModal: (message: string) => void;
+  hideErrorModal: () => void;
 }
 
 const INITIAL_TAB_BAR_STATE: TabBarState = {
@@ -18,10 +26,16 @@ const INITIAL_TAB_BAR_STATE: TabBarState = {
   lastScrollY: 0,
 };
 
+const INITIAL_ERROR_MODAL_STATE: ErrorModalState = {
+  isVisible: false,
+  message: '',
+};
+
 const SCROLL_THRESHOLD = 5;
 
 export const useUiStore = create<UiState>((set) => ({
   tabBar: INITIAL_TAB_BAR_STATE,
+  errorModal: INITIAL_ERROR_MODAL_STATE,
 
   handleTabBarScroll: (currentScrollY: number, previousScrollY?: number) =>
     set((state) => {
@@ -68,5 +82,18 @@ export const useUiStore = create<UiState>((set) => ({
   resetTabBar: () =>
     set({
       tabBar: INITIAL_TAB_BAR_STATE,
+    }),
+
+  showErrorModal: (message: string) =>
+    set({
+      errorModal: {
+        isVisible: true,
+        message,
+      },
+    }),
+
+  hideErrorModal: () =>
+    set({
+      errorModal: INITIAL_ERROR_MODAL_STATE,
     }),
 }));

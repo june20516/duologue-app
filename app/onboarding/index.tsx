@@ -15,7 +15,7 @@ import {
 import InterestStep from './components/InterestStep';
 import OptionalStep from './components/OptionalStep';
 import ProfileStep from './components/ProfileStep';
-import { useProfileForms } from './hooks/useProfileForms';
+import useProfileForms from './hooks/useProfileForms';
 
 type OnboardingStep = 'profile' | 'interests' | 'optional';
 
