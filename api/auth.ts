@@ -80,4 +80,12 @@ export const authApi = {
       throw handleApiError(error);
     }
   },
+
+  logout: async (): Promise<void> => {
+    try {
+      await apiClient.post('/auth/logout');
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
 };
