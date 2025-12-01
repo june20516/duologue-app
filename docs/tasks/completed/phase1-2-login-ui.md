@@ -33,8 +33,9 @@ Passwordless 방식의 로그인 UI 및 인증 관리 기능 구현
 - [x] authStore 구현 (`stores/authStore.ts`)
 - [x] 로그인 API 연동 (`api/auth.ts`, `queries/useMutationAuth.ts`)
 - [x] AsyncStorage를 통한 토큰 영속화
-
-**참고**: 자동 로그인과 로그아웃 기능은 기본 구조는 구현되었으나 추가 검증 필요
+- [x] 자동 로그인 구현 (AsyncStorage persist)
+- [x] 로그아웃 기능 (`authStore.logout()`)
+- [x] 토큰 자동 갱신 (API 인터셉터, `lib/tokenManager.ts`)
 
 ### 제외 사항
 
@@ -144,11 +145,13 @@ interface AuthStore {
 - [x] 로그인 플로우 정상 동작
 - [x] 인증 가드 정상 동작 (`app/index.tsx`)
 - [x] AsyncStorage를 통한 토큰 영속화
+- [x] 자동 로그인 정상 동작 (AsyncStorage persist)
+- [x] 로그아웃 정상 동작 (`authStore.logout()` 구현됨)
+- [x] 토큰 갱신 자동 동작 (`tokenManager.refresh()` - 중복 방지 포함)
+- [x] Refresh Token 만료 시 로그인 화면으로 이동
+- [x] 401 에러 시 자동 토큰 갱신 및 요청 재시도
+- [x] USER_NOT_FOUND 에러 처리 (즉시 로그아웃 + 에러 모달)
 - [x] 에러 케이스 처리
-- [ ] 자동 로그인 정상 동작 (토큰 갱신 로직 검증 필요)
-- [ ] 로그아웃 정상 동작 (구현 검증 필요)
-- [ ] 토큰 갱신 자동 동작 (API 인터셉터 검증 필요)
-- [ ] Refresh Token 만료 시 로그인 화면으로 이동
 
 ## 의존성
 
@@ -183,20 +186,30 @@ interface AuthStore {
 
 ## 작업 이력
 
-### [2025-12-01] 작업 대부분 완료
+### [2025-12-01] 작업 완료
 
-- 로그인 UI 및 기본 로직 구현 완료
-- 로그인 화면 구현 (`app/auth/signin.tsx`)
-- 인증 가드 구현 (`app/index.tsx`)
+**구현 완료 항목**:
+- 로그인 UI 및 로직 구현 (`app/auth/signin.tsx`)
+- 인증 가드 (`app/index.tsx`)
 - authStore 구현 및 AsyncStorage 영속화
 - 로그인 API 연동
 - 이메일/인증 코드 플로우 (회원가입과 동일)
+- 로그아웃 기능 (`authStore.logout()`, `api/auth.ts`)
+- 자동 로그인 (AsyncStorage persist)
+- 토큰 자동 갱신 (`lib/tokenManager.ts`)
+  - 중복 갱신 방지 로직
+  - 401 에러 시 자동 갱신 및 요청 재시도
+  - Refresh Token 만료 시 자동 로그아웃
+- 에러 처리
+  - USER_NOT_FOUND: 즉시 로그아웃 + 에러 모달
+  - REFRESH_TOKEN_EXPIRED: 자동 로그아웃
+  - 네트워크 에러 처리
 
-**남은 작업**:
-- 자동 로그인 로직 검증
-- 로그아웃 기능 검증
-- API 인터셉터를 통한 토큰 자동 갱신 검증
-- Refresh Token 만료 처리
+**기술 구현 세부사항**:
+- `api/client.ts`: 401 에러 인터셉터로 토큰 자동 갱신
+- `lib/tokenManager.ts`: 싱글톤 패턴으로 중복 갱신 방지
+- `stores/authStore.ts`: Zustand persist로 AsyncStorage 자동 동기화
+- `app/index.tsx`: 인증 상태 기반 라우팅 가드
 
 ### [2025-11-24] 작업 문서 작성
 
