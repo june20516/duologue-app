@@ -20,6 +20,10 @@ interface UpdateProfileResponse {
   profile: ProfileMe;
 }
 
+interface CheckNicknameResponse {
+  available: boolean;
+}
+
 export const profileApi = {
   getMe: async (): Promise<ProfileMe> => {
     try {
@@ -34,6 +38,17 @@ export const profileApi = {
     try {
       const response = await apiClient.patch<UpdateProfileResponse>('/profiles/me', data);
       return response.data.profile;
+    } catch (error) {
+      throw handleApiError(error);
+    }
+  },
+
+  checkNickname: async (nickname: string): Promise<boolean> => {
+    try {
+      const response = await apiClient.get<CheckNicknameResponse>('/profiles/check-nickname', {
+        params: { nickname },
+      });
+      return response.data.available;
     } catch (error) {
       throw handleApiError(error);
     }
