@@ -1,19 +1,20 @@
-import { Interest } from '@/models/user';
+import { create } from '@bufbuild/protobuf';
 
-import { apiClient } from './client';
-import { handleApiError } from './error';
+import { GetInterestsRequestSchema } from '@/gen/duologue/v1/interest_pb';
+import type { Interest } from '@/models/user';
 
-interface GetInterestsResponse {
-  interests: Interest[];
-}
+import { handleConnectError } from './connectError';
+import { mapInterest } from './mappers';
+import { interestClient } from './transport';
 
 export const interestApi = {
   getAll: async (): Promise<Interest[]> => {
     try {
-      const response = await apiClient.get<GetInterestsResponse>('/interests');
-      return response.data.interests;
+      const request = create(GetInterestsRequestSchema, {});
+      const response = await interestClient.getInterests(request);
+      return response.interests.map(mapInterest);
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 };

@@ -1,10 +1,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { parseISO } from 'date-fns';
-import { router } from 'expo-router';
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 
-import { authApi } from '@/api/auth';
 import { Me } from '@/models/user';
 
 interface AuthState {
@@ -20,13 +17,12 @@ interface AuthState {
       Pick<Me, 'nickname' | 'gender' | 'region' | 'shortBio' | 'profileImageUrl' | 'interests'>
     >
   ) => void;
-  logout: () => Promise<void>;
   clearAuth: () => void;
 }
 
 export const useAuthStore = create<AuthState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       isAuthenticated: false,
       accessToken: null,
       refreshToken: null,
@@ -41,16 +37,7 @@ export const useAuthStore = create<AuthState>()(
           isAuthenticated: true,
         }),
 
-      setMe: (me: Me) => {
-        const { me: currentMe } = get();
-        const currentUpdatedAt = currentMe?.updatedAt;
-        if (
-          typeof currentUpdatedAt === 'undefined' ||
-          parseISO(me.updatedAt) > parseISO(currentUpdatedAt)
-        ) {
-          return set({ me });
-        }
-      },
+      setMe: (me: Me) => set({ me }),
 
       updateProfile: (
         data: Partial<
@@ -70,17 +57,6 @@ export const useAuthStore = create<AuthState>()(
             },
           };
         }),
-
-      logout: async () => {
-        try {
-          await authApi.logout();
-        } catch (error) {
-          console.error('Logout API error:', error);
-        } finally {
-          get().clearAuth();
-          router.replace('/');
-        }
-      },
 
       clearAuth: () =>
         set({

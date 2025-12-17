@@ -1,8 +1,9 @@
 import { Image } from 'expo-image';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 import * as Updates from 'expo-updates';
 import { StyleSheet, View, Alert } from 'react-native';
 
+import { authApi } from '@/api/auth';
 import { HelloWave } from '@/components/hello-wave';
 import ParallaxScrollView from '@/components/parallax-scroll-view';
 import { Button, Typography } from '@/components/ui';
@@ -13,7 +14,7 @@ import { useUiStore } from '@/stores/uiStore';
 const HomeScreen = () => {
   const resetApp = useAppStore((state) => state.reset);
   const resetAuth = useAuthStore((state) => state.clearAuth);
-  const logout = useAuthStore((state) => state.logout);
+  const refreshToken = useAuthStore((state) => state.refreshToken);
   const resetUi = useUiStore((state) => state.resetTabBar);
 
   const handleResetAll = () => {
@@ -39,7 +40,16 @@ const HomeScreen = () => {
         text: '로그아웃',
         style: 'destructive',
         onPress: async () => {
-          await logout();
+          try {
+            if (refreshToken) {
+              await authApi.logout(refreshToken);
+            }
+          } catch (error) {
+            console.error('Logout API error:', error);
+          } finally {
+            resetAuth();
+            router.replace('/');
+          }
         },
       },
     ]);

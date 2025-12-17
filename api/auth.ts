@@ -1,91 +1,93 @@
-import { AuthMe } from '@/models/user';
+import { create } from '@bufbuild/protobuf';
 
-import { apiClient } from './client';
-import { handleApiError } from './error';
+import {
+  GetMeRequestSchema,
+  LogoutRequestSchema,
+  RequestLoginRequestSchema,
+  RequestSignupRequestSchema,
+  VerifyLoginRequestSchema,
+  VerifySignupRequestSchema,
+} from '@/gen/duologue/v1/auth_pb';
+import type { AuthMe } from '@/models/user';
 
-interface RequestSignupRequest {
-  email: string;
-}
+import { handleConnectError } from './connectError';
+import { authClient } from './transport';
 
 interface MessageResponse {
   message: string;
 }
 
-interface VerifySignupRequest {
-  email: string;
-  code: string;
-}
-
 interface TokenResponse {
-  access_token: string;
-  refresh_token: string;
-}
-
-interface GetMeResponse {
-  user: AuthMe;
+  accessToken: string;
+  refreshToken: string;
 }
 
 export const authApi = {
   requestSignup: async (email: string): Promise<MessageResponse> => {
     try {
-      const response = await apiClient.post<MessageResponse>('/auth/request-signup', {
-        email,
-      } as RequestSignupRequest);
-      return response.data;
+      const request = create(RequestSignupRequestSchema, { email });
+      const response = await authClient.requestSignup(request);
+      return { message: response.message };
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
   verifySignup: async (email: string, code: string): Promise<TokenResponse> => {
     try {
-      const response = await apiClient.post<TokenResponse>('/auth/verify-signup', {
-        email,
-        code,
-      } as VerifySignupRequest);
-      return response.data;
+      const request = create(VerifySignupRequestSchema, { email, code });
+      const response = await authClient.verifySignup(request);
+      return {
+        accessToken: response.accessToken,
+        refreshToken: response.refreshToken,
+      };
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
   requestLogin: async (email: string): Promise<MessageResponse> => {
     try {
-      const response = await apiClient.post<MessageResponse>('/auth/request-login', {
-        email,
-      } as RequestSignupRequest);
-      return response.data;
+      const request = create(RequestLoginRequestSchema, { email });
+      const response = await authClient.requestLogin(request);
+      return { message: response.message };
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
   verifyLogin: async (email: string, code: string): Promise<TokenResponse> => {
     try {
-      const response = await apiClient.post<TokenResponse>('/auth/verify-login', {
-        email,
-        code,
-      } as VerifySignupRequest);
-      return response.data;
+      const request = create(VerifyLoginRequestSchema, { email, code });
+      const response = await authClient.verifyLogin(request);
+      return {
+        accessToken: response.accessToken,
+        refreshToken: response.refreshToken,
+      };
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
   getMe: async (): Promise<AuthMe> => {
     try {
-      const response = await apiClient.get<GetMeResponse>('/auth/me');
-      return response.data.user;
+      const request = create(GetMeRequestSchema, {});
+      const response = await authClient.getMe(request);
+      return {
+        id: Number(response.userId),
+        email: response.email,
+      };
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
-  logout: async (): Promise<void> => {
+  logout: async (refreshToken: string): Promise<void> => {
     try {
-      await apiClient.post('/auth/logout');
+      const request = create(LogoutRequestSchema, { refreshToken });
+      await authClient.logout(request);
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 };

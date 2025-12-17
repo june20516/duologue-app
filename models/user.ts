@@ -1,10 +1,6 @@
 export interface BaseUser {
   id: number;
   email: string;
-  createdAt: string;
-  lastLoginAt: string;
-  status: string;
-  updatedAt: string;
 }
 
 export interface Interest {
@@ -13,11 +9,9 @@ export interface Interest {
   displayName: string;
   categoryKey: string;
   categoryDisplayName: string;
-  createdAt: string;
-  updatedAt: string;
 }
 
-export interface AuthMe extends BaseUser {}
+export type AuthMe = BaseUser;
 
 export interface ProfileMe {
   userId: number;
@@ -29,8 +23,6 @@ export interface ProfileMe {
   exp: number;
   level: number;
   interests: Interest[];
-  createdAt: string;
-  updatedAt: string;
 }
 
 export interface Me extends AuthMe, ProfileMe {

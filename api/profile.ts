@@ -1,11 +1,15 @@
-import { ProfileMe } from '@/models/user';
+import { create } from '@bufbuild/protobuf';
 
-import { apiClient } from './client';
-import { handleApiError } from './error';
+import {
+  CheckNicknameRequestSchema,
+  GetMyProfileRequestSchema,
+  UpdateMyProfileRequestSchema,
+} from '@/gen/duologue/v1/profile_pb';
+import type { ProfileMe } from '@/models/user';
 
-interface GetMyProfileResponse {
-  profile: ProfileMe;
-}
+import { handleConnectError } from './connectError';
+import { mapProfile } from './mappers';
+import { profileClient } from './transport';
 
 interface UpdateProfileRequest {
   nickname?: string;
@@ -16,41 +20,47 @@ interface UpdateProfileRequest {
   interestIds?: number[];
 }
 
-interface UpdateProfileResponse {
-  profile: ProfileMe;
-}
-
-interface CheckNicknameResponse {
-  available: boolean;
-}
-
 export const profileApi = {
   getMe: async (): Promise<ProfileMe> => {
     try {
-      const response = await apiClient.get<GetMyProfileResponse>('/profiles/me');
-      return response.data.profile;
+      const request = create(GetMyProfileRequestSchema, {});
+      const response = await profileClient.getMyProfile(request);
+      if (!response.profile) {
+        throw new Error('Profile not found');
+      }
+      return mapProfile(response.profile);
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
   updateMe: async (data: UpdateProfileRequest): Promise<ProfileMe> => {
     try {
-      const response = await apiClient.patch<UpdateProfileResponse>('/profiles/me', data);
-      return response.data.profile;
+      const request = create(UpdateMyProfileRequestSchema, {
+        nickname: data.nickname,
+        gender: data.gender,
+        region: data.region,
+        shortBio: data.shortBio,
+        profileImageUrl: data.profileImageUrl,
+        interestIds: data.interestIds?.map((id) => BigInt(id)) ?? [],
+      });
+      const response = await profileClient.updateMyProfile(request);
+      if (!response.profile) {
+        throw new Error('Profile not found');
+      }
+      return mapProfile(response.profile);
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 
   checkNickname: async (nickname: string): Promise<boolean> => {
     try {
-      const response = await apiClient.get<CheckNicknameResponse>('/profiles/check-nickname', {
-        params: { nickname },
-      });
-      return response.data.available;
+      const request = create(CheckNicknameRequestSchema, { nickname });
+      const response = await profileClient.checkNickname(request);
+      return response.available;
     } catch (error) {
-      throw handleApiError(error);
+      throw handleConnectError(error);
     }
   },
 };
