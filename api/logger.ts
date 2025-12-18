@@ -1,4 +1,5 @@
 import type { DescMessage } from '@bufbuild/protobuf';
+import { toJsonString } from '@bufbuild/protobuf';
 import type { UnaryRequest, UnaryResponse } from '@connectrpc/connect';
 import { ConnectError } from '@connectrpc/connect';
 
@@ -36,7 +37,9 @@ class ApiLogger {
     const logData: LogData = {};
 
     if (req.message) {
-      logData.message = req.message;
+      const method = req.method;
+      const jsonString = toJsonString(method.input, req.message);
+      logData.message = JSON.parse(jsonString);
     }
 
     this.log('log', `[RPC Request] ${serviceName}/${methodName}`, logData);
@@ -51,7 +54,9 @@ class ApiLogger {
     const logData: LogData = {};
 
     if (res.message) {
-      logData.message = res.message;
+      const method = req.method;
+      const jsonString = toJsonString(method.output, res.message);
+      logData.message = JSON.parse(jsonString);
     }
 
     this.log('log', `[RPC Response] ${serviceName}/${methodName}`, logData);

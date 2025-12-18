@@ -38,6 +38,7 @@ cp .env.example .env.local
 
 ```env
 EXPO_PUBLIC_SERVER_URL=http://localhost:8080
+EXPO_PUBLIC_SOCKET_URL=ws://localhost:8080
 ```
 
 ### 실행
