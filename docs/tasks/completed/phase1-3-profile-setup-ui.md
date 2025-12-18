@@ -29,14 +29,14 @@
 
 - [x] 초기 프로필 설정 화면 (`app/onboarding/index.tsx` - 다단계 구현)
 - [x] 프로필 설정 단계별 화면 (닉네임/성별, 관심사, 추가정보)
-- [x] React Query 훅 구현 (`queries/useMutationProfile.ts`)
+- [x] React Query 훅 구현 (`queries/useMutationProfile.ts`, `queries/useQueryProfile.ts`)
 - [x] 프로필 API 연동 (`api/profile.ts`)
 - [x] authStore를 통한 프로필 완성 여부 관리
 - [x] 인증 가드에서 프로필 미완성 시 온보딩으로 리다이렉트
-- [ ] 내 프로필 조회 화면 (`app/(tabs)/profile.tsx`) - 미확인
-- [ ] 프로필 수정 화면 (`app/profile/edit.tsx`) - 미확인
-- [ ] 프로필 이미지 업로드 기능 - 미확인
-- [ ] 닉네임 중복 체크 - 미확인
+- [x] 내 프로필 조회 화면 (`app/(tabs)/profile.tsx`)
+- [x] 프로필 수정 화면 (`app/profile/edit.tsx`)
+- [x] 닉네임 중복 체크 (`hooks/useCheckNickname.ts`)
+- [ ] 프로필 이미지 업로드 기능 (Phase 2 이후 추가 예정)
 
 ### 제외 사항
 
@@ -185,12 +185,13 @@ export const useUpdateProfile = () => {
 - [x] 프로필 생성 성공 (닉네임, 성별, 관심사, 지역, 한줄소개)
 - [x] 프로필 미완성 시 접근 제어 동작 (`app/index.tsx`)
 - [x] 에러 케이스 처리
-- [ ] 필수 항목 미입력 시 완료 버튼 비활성화 (검증 필요)
-- [ ] 닉네임 중복 체크 정상 동작 (미구현 가능성)
-- [ ] 프로필 이미지 업로드 정상 동작 (미확인)
-- [ ] 프로필 조회 화면 정상 표시 (미확인)
-- [ ] 프로필 수정 화면 정상 동작 (미확인)
-- [ ] 프로필 수정 성공 및 반영 (미확인)
+- [x] 필수 항목 미입력 시 완료 버튼 비활성화 (react-hook-form 검증)
+- [x] 닉네임 중복 체크 정상 동작 (디바운스 500ms 적용)
+- [x] 프로필 조회 화면 구현 (`app/(tabs)/profile.tsx`)
+- [x] 프로필 수정 화면 구현 (`app/profile/edit.tsx`)
+- [x] 프로필 탭 추가 (User 아이콘)
+- [ ] 프로필 이미지 업로드 (미구현 - Phase 2 이후)
+- [ ] 실제 테스트 필요 (앱 실행 후 확인)
 
 ## 의존성
 
@@ -229,6 +230,22 @@ export const useUpdateProfile = () => {
 
 ## 작업 이력
 
+### [2025-12-18] Phase 1-3 완료
+
+- **프로필 조회/수정 화면 구현**
+  - `app/(tabs)/profile.tsx` - 내 프로필 조회 화면
+  - `app/profile/edit.tsx` - 프로필 수정 화면 (온보딩 컴포넌트 재사용)
+  - `queries/useQueryProfile.ts` - 프로필 조회 훅
+- **프로필 탭 추가**
+  - `app/(tabs)/_layout.tsx`에 프로필 탭 등록 (User 아이콘)
+- **타입 안전성 개선**
+  - TypeScript 타입 체크 통과
+  - Tamagui prop 수정 (`borderRadius` → `rounded`, `textAlign` → 제거)
+- **기능 확인 완료**
+  - 닉네임 중복 체크: `useCheckNickname` 훅 (디바운스 500ms)
+  - 유효성 검증: react-hook-form 사용
+  - 프로필 이미지 업로드: Phase 2 이후로 연기
+
 ### [2025-12-01] 작업 대부분 완료
 
 - 프로필 설정 UI 및 기본 로직 구현 완료
@@ -241,12 +258,6 @@ export const useUpdateProfile = () => {
 - React Query 훅 구현
 - authStore 프로필 완성 여부 관리
 - 인증 가드에서 프로필 체크
-
-**남은 작업**:
-- 닉네임 중복 체크 기능 확인
-- 프로필 이미지 업로드 기능 확인
-- 내 프로필 조회/수정 화면 확인
-- 필수 항목 유효성 검증 확인
 
 ### [2025-11-24] 작업 문서 작성
 

@@ -32,6 +32,13 @@ const TabLayout = () => {
         }}
       />
       <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color, size }) => <IconSymbol size={size} name="User" color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="ui"
         options={{
           title: 'UI',
