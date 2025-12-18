@@ -1,4 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
+import { router } from 'expo-router';
 import { useState, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
 import { useTranslation } from 'react-i18next';
@@ -29,8 +30,8 @@ export const LoginAuthScreen: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isExpired, setIsExpired] = useState(false);
 
-  const requestLoginMutation = useRequestLogin();
-  const verifyLoginMutation = useVerifyLogin();
+  const { mutate: requestLogin, isPending: isRequestingLogin, error: requestLoginError } = useRequestLogin();
+  const { mutate: verifyLogin, isPending: isVerifyingLogin, error: verifyLoginError } = useVerifyLogin();
 
   // Animation
   const codeHeight = useSharedValue(0);
@@ -57,7 +58,7 @@ export const LoginAuthScreen: React.FC = () => {
   });
 
   const handleEmailSubmit = (data: EmailFormData) => {
-    requestLoginMutation.mutate(data.email, {
+    requestLogin(data.email, {
       onSuccess: () => {
         setEmail(data.email);
 
@@ -74,13 +75,20 @@ export const LoginAuthScreen: React.FC = () => {
     (data: VerifyCodeFormData) => {
       if (!email) return;
 
-      verifyLoginMutation.mutate({ email, code: data.code });
+      verifyLogin(
+        { email, code: data.code },
+        {
+          onSuccess: () => {
+            router.replace('/');
+          },
+        }
+      );
     },
-    [email, verifyLoginMutation]
+    [email, verifyLogin]
   );
 
   const handleResend = () => {
-    requestLoginMutation.mutate(email, {
+    requestLogin(email, {
       onSuccess: () => {
         setTimeLeft(TIMER_DURATION);
         setIsExpired(false);
@@ -150,9 +158,9 @@ export const LoginAuthScreen: React.FC = () => {
           autoComplete="email"
           editable={step === 'email'}
         />
-        {step === 'email' && requestLoginMutation.error && (
+        {step === 'email' && requestLoginError && (
           <Typography type="caption" color="$error">
-            {requestLoginMutation.error.message}
+            {requestLoginError.message}
           </Typography>
         )}
       </YStack>
@@ -163,7 +171,7 @@ export const LoginAuthScreen: React.FC = () => {
           priority="primary"
           size="lg"
           disabled={!emailForm.formState.isValid}
-          loading={requestLoginMutation.isPending}
+          loading={isRequestingLogin}
           onPress={emailForm.handleSubmit(handleEmailSubmit)}
         >
           {t('auth.signup.nextButton')}
@@ -194,9 +202,9 @@ export const LoginAuthScreen: React.FC = () => {
               keyboardType="number-pad"
               maxLength={6}
             />
-            {verifyLoginMutation.error && (
+            {verifyLoginError && (
               <Typography type="caption" color="$error">
-                {verifyLoginMutation.error.message}
+                {verifyLoginError.message}
               </Typography>
             )}
           </YStack>
@@ -211,7 +219,7 @@ export const LoginAuthScreen: React.FC = () => {
                 priority="secondary"
                 size="sm"
                 onPress={handleResend}
-                disabled={requestLoginMutation.isPending}
+                disabled={isRequestingLogin}
               >
                 {t('auth.signup.resendButton')}
               </Button>
@@ -225,8 +233,8 @@ export const LoginAuthScreen: React.FC = () => {
             variant="filled"
             priority="primary"
             size="lg"
-            disabled={!codeForm.formState.isValid || isExpired || verifyLoginMutation.isPending}
-            loading={verifyLoginMutation.isPending}
+            disabled={!codeForm.formState.isValid || isExpired || isVerifyingLogin}
+            loading={isVerifyingLogin}
             onPress={codeForm.handleSubmit(handleCodeSubmit)}
           >
             {t('auth.signup.verifyButton')}

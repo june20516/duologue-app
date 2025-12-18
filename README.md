@@ -37,8 +37,8 @@ cp .env.example .env.local
 `.env.local` 파일을 열어 필요한 값을 입력하세요:
 
 ```env
-EXPO_PUBLIC_API_URL=http://localhost:8080/api/v1
-EXPO_PUBLIC_WS_URL=ws://localhost:8080
+EXPO_PUBLIC_SERVER_URL=http://localhost:8080
+EXPO_PUBLIC_SOCKET_URL=ws://localhost:8080
 ```
 
 ### 실행

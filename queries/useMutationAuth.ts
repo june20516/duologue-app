@@ -21,7 +21,7 @@ export const useVerifySignup = () => {
       return tokenResponse;
     },
     onSuccess: async (tokenResponse) => {
-      setTokens(tokenResponse.access_token, tokenResponse.refresh_token);
+      setTokens(tokenResponse.accessToken, tokenResponse.refreshToken);
       queryClient.invalidateQueries({ queryKey: [getQueryOptionAuthMe().queryKey[0]] });
     },
   });
@@ -43,7 +43,7 @@ export const useVerifyLogin = () => {
       return tokenResponse;
     },
     onSuccess: async (tokenResponse) => {
-      setTokens(tokenResponse.access_token, tokenResponse.refresh_token);
+      setTokens(tokenResponse.accessToken, tokenResponse.refreshToken);
       queryClient.invalidateQueries({ queryKey: [getQueryOptionAuthMe().queryKey[0]] });
     },
   });

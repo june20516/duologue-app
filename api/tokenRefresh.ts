@@ -1,21 +1,28 @@
-import axios, { isAxiosError } from 'axios';
+import { create } from '@bufbuild/protobuf';
+import { Code, ConnectError, createClient } from '@connectrpc/connect';
+import { createConnectTransport } from '@connectrpc/connect-web';
 import { router } from 'expo-router';
 
 import { ErrorCode } from '@/constants/errorCodes';
+import { AuthService, RefreshAccessTokenRequestSchema } from '@/gen/duologue/v1/auth_pb';
 import { useAuthStore } from '@/stores/authStore';
 
-interface RefreshTokenResponse {
-  accessToken: string;
+const API_URL = process.env.EXPO_PUBLIC_SERVER_URL;
+
+if (!API_URL) {
+  throw new Error('EXPO_PUBLIC_SERVER_URL is not defined in environment variables');
 }
+
+const refreshTransport = createConnectTransport({
+  baseUrl: API_URL,
+});
+
+const refreshClient = createClient(AuthService, refreshTransport);
 
 class TokenRefreshManager {
   private status: 'idle' | 'refreshing' = 'idle';
   private refreshPromise: Promise<string> | null = null;
 
-  /**
-   * 토큰 갱신을 시도합니다.
-   * 이미 갱신 중이면 진행 중인 promise를 반환하여 중복 갱신을 방지합니다.
-   */
   async refresh(): Promise<string> {
     if (this.status === 'refreshing' && this.refreshPromise) {
       return this.refreshPromise;
@@ -35,37 +42,43 @@ class TokenRefreshManager {
         throw new Error('REFRESH_TOKEN_NOT_FOUND');
       }
 
-      const API_URL = process.env.EXPO_PUBLIC_API_URL;
-      const { data } = await axios.post<RefreshTokenResponse>(`${API_URL}/auth/refresh`, {
-        refresh_token: refreshToken,
+      const request = create(RefreshAccessTokenRequestSchema, {
+        refreshToken,
       });
 
+      const response = await refreshClient.refreshAccessToken(request);
+
       const currentRefreshToken = useAuthStore.getState().refreshToken!;
-      useAuthStore.getState().setTokens(data.accessToken, currentRefreshToken);
+      useAuthStore.getState().setTokens(response.accessToken, currentRefreshToken);
 
       this.reset();
 
-      return data.accessToken;
+      return response.accessToken;
     } catch (error) {
       this.reset();
 
-      if (isAxiosError(error)) {
-        const errorCode = error.response?.data?.error;
+      if (error instanceof ConnectError) {
+        const errorCode = this.extractErrorCode(error);
 
         if (
           errorCode === ErrorCode.INVALID_REFRESH_TOKEN ||
           errorCode === ErrorCode.INVALID_TOKEN ||
           errorCode === ErrorCode.REFRESH_TOKEN_EXPIRED ||
-          errorCode === ErrorCode.USER_NOT_FOUND
+          errorCode === ErrorCode.USER_NOT_FOUND ||
+          error.code === Code.Unauthenticated
         ) {
           useAuthStore.getState().clearAuth();
           router.replace('/');
-          throw new Error(errorCode);
+          throw new Error(errorCode || 'TOKEN_REFRESH_FAILED');
         }
       }
 
       throw error;
     }
+  }
+
+  private extractErrorCode(error: ConnectError): string | undefined {
+    return error.metadata.get('x-error-code') ?? undefined;
   }
 
   reset(): void {
@@ -78,4 +91,4 @@ class TokenRefreshManager {
   }
 }
 
-export const tokenManager = new TokenRefreshManager();
+export const tokenRefreshManager = new TokenRefreshManager();

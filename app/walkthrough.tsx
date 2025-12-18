@@ -35,13 +35,13 @@ const Walkthrough = () => {
       setCurrentPage(currentPage + 1);
     } else {
       setFirstLaunch(false);
-      router.replace('/login');
+      router.replace('/');
     }
   };
 
   const handleSkip = () => {
     setFirstLaunch(false);
-    router.replace('/login');
+    router.replace('/');
   };
 
   return (

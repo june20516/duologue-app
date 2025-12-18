@@ -1,4 +1,7 @@
-import type { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import type { DescMessage } from '@bufbuild/protobuf';
+import { toJsonString } from '@bufbuild/protobuf';
+import type { UnaryRequest, UnaryResponse } from '@connectrpc/connect';
+import { ConnectError } from '@connectrpc/connect';
 
 const isDev = __DEV__;
 
@@ -28,68 +31,51 @@ class ApiLogger {
     }
   }
 
-  logRequest(config: InternalAxiosRequestConfig) {
-    const { method, url, params, data } = config;
+  logConnectRequest(req: UnaryRequest<DescMessage, DescMessage>) {
+    const serviceName = req.service.typeName;
+    const methodName = req.method.name;
     const logData: LogData = {};
 
-    if (params) {
-      logData.params = params;
+    if (req.message) {
+      const method = req.method;
+      const jsonString = toJsonString(method.input, req.message);
+      logData.message = JSON.parse(jsonString);
     }
 
-    if (data) {
-      try {
-        logData.data = typeof data === 'string' ? JSON.parse(data) : data;
-      } catch {
-        logData.data = data;
-      }
-    }
-
-    this.log('log', `[API Request] ${method?.toUpperCase()} ${url}`, logData);
+    this.log('log', `[RPC Request] ${serviceName}/${methodName}`, logData);
   }
 
-  logResponse(response: AxiosResponse) {
-    const { config, status, data } = response;
-    const logData: LogData = {
-      status,
-    };
+  logConnectResponse(
+    req: UnaryRequest<DescMessage, DescMessage>,
+    res: UnaryResponse<DescMessage, DescMessage>
+  ) {
+    const serviceName = req.service.typeName;
+    const methodName = req.method.name;
+    const logData: LogData = {};
 
-    // Response body를 안전하게 복사
-    if (data !== undefined) {
-      try {
-        logData.data = typeof data === 'string' ? JSON.parse(data) : { ...data };
-      } catch {
-        logData.data = data;
-      }
+    if (res.message) {
+      const method = req.method;
+      const jsonString = toJsonString(method.output, res.message);
+      logData.message = JSON.parse(jsonString);
     }
 
-    this.log('log', `[API Response] ${config.method?.toUpperCase()} ${config.url}`, logData);
+    this.log('log', `[RPC Response] ${serviceName}/${methodName}`, logData);
   }
 
-  logError(error: AxiosError) {
-    const { config, response, message } = error;
-    const logData: LogData = {
-      message,
-    };
+  logConnectError(req: UnaryRequest<DescMessage, DescMessage>, error: unknown) {
+    const serviceName = req.service.typeName;
+    const methodName = req.method.name;
+    const logData: LogData = {};
 
-    if (response) {
-      logData.status = response.status;
-
-      // Error response body를 안전하게 복사
-      if (response.data !== undefined) {
-        try {
-          logData.data =
-            typeof response.data === 'string' ? JSON.parse(response.data) : { ...response.data };
-        } catch {
-          logData.data = response.data;
-        }
-      }
+    if (error instanceof ConnectError) {
+      logData.code = error.code;
+      logData.message = error.message;
+      logData.rawMessage = error.rawMessage;
+    } else if (error instanceof Error) {
+      logData.message = error.message;
     }
 
-    this.log(
-      'error',
-      `[API Error] ${config?.method?.toUpperCase()} ${config?.url || 'unknown'}`,
-      logData
-    );
+    this.log('error', `[RPC Error] ${serviceName}/${methodName}`, logData);
   }
 }
 
