@@ -4,7 +4,7 @@ import { Tabs } from 'expo-router';
 import DynamicTabBar from '@/components/layout/DynamicTabBar';
 import { IconSymbol } from '@/components/ui/IconSymbol';
 import { Colors } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useColorScheme } from '@/hooks/useColorScheme';
 
 const TabLayout = () => {
   const colorScheme = useColorScheme();

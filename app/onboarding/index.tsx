@@ -2,11 +2,12 @@ import { router } from 'expo-router';
 
 import { useTranslation } from '@/locales/useTranslation';
 
+import { useProfileFlow, type ProfileFlowStep } from '../../hooks/ui/onboarding/useProfileFlow';
+
 import InterestStep from './_components/InterestStep';
 import OptionalStep from './_components/OptionalStep';
 import ProfileFlowLayout from './_components/ProfileFlowLayout';
 import ProfileStep from './_components/ProfileStep';
-import { useProfileFlow, type ProfileFlowStep } from './_hooks/useProfileFlow';
 
 const Onboarding: React.FC = () => {
   const { t } = useTranslation();

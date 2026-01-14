@@ -4,7 +4,7 @@ import { YStack, XStack, Circle } from 'tamagui';
 import { Typography } from '@/components/ui';
 import { useCommonStyle } from '@/styles/common';
 
-import type { ProfileFlowStep } from '../_hooks/useProfileFlow';
+import type { ProfileFlowStep } from '../../../hooks/ui/onboarding/useProfileFlow';
 
 interface StepInfo {
   key: ProfileFlowStep;

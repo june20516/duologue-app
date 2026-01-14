@@ -8,7 +8,7 @@ import { TamaguiProvider } from 'tamagui';
 
 import { GlobalErrorModal } from '@/components/GlobalErrorModal';
 import { ToastProvider } from '@/components/ui';
-import { useColorScheme } from '@/hooks/use-color-scheme';
+import { useColorScheme } from '@/hooks/useColorScheme';
 import { queryClient } from '@/lib/queryClient';
 import { fullscreen } from '@/styles/common';
 
