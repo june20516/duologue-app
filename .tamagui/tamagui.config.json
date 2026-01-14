@@ -184,10 +184,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "defaultProps": {
               "tag": "span",
@@ -397,10 +397,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             }
           }
         },
@@ -601,6 +601,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -799,10 +805,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             }
           }
         }
@@ -991,10 +997,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "AlertDialogAction",
             "isReactNative": false,
@@ -1184,10 +1190,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "AlertDialogCancel",
             "isReactNative": false,
@@ -1377,10 +1383,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "AlertDialogDescription",
             "isReactNative": false,
@@ -1573,10 +1579,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -1889,10 +1895,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "AlertDialogTitle",
             "isReactNative": false,
@@ -2082,10 +2088,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "AlertDialogTrigger",
             "isReactNative": false,
@@ -2305,6 +2311,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -2511,10 +2523,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Article",
             "isReactNative": false,
@@ -2705,10 +2717,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Aside",
             "isReactNative": false,
@@ -2901,10 +2913,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -3115,10 +3127,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -3328,10 +3340,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -3458,6 +3470,7 @@
               "tag": "button",
               "role": "button",
               "focusable": true,
+              "disableClassName": true,
               "unstyled": false
             },
             "validStyles": {
@@ -3636,10 +3649,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -3815,6 +3828,7 @@
               "tag": "button",
               "role": "button",
               "focusable": true,
+              "disableClassName": true,
               "unstyled": false
             },
             "validStyles": {
@@ -3993,10 +4007,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -4376,6 +4390,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -4585,10 +4605,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -4900,10 +4920,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -5212,10 +5232,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -5528,10 +5548,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -5843,10 +5863,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -6159,10 +6179,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -6510,10 +6530,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -6859,10 +6879,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -7169,10 +7189,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -7473,10 +7493,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "DialogClose",
             "isReactNative": false,
@@ -7670,10 +7690,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -8019,6 +8039,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -8225,10 +8251,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -8544,10 +8570,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -8863,10 +8889,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -8897,7 +8923,8 @@
                     "width": "auto",
                     "height": "auto",
                     "maxHeight": "100vh",
-                    "position": "fixed"
+                    "position": "fixed",
+                    "zIndex": 1
                   }
                 }
               }
@@ -9125,6 +9152,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -9328,10 +9361,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "DialogTrigger",
             "isReactNative": false,
@@ -9545,6 +9578,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -9750,10 +9789,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -9966,10 +10005,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Footer",
             "isReactNative": false,
@@ -10159,10 +10198,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Form",
             "isReactNative": false,
@@ -10354,10 +10393,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Form",
             "isReactNative": false,
@@ -10545,10 +10584,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "FormTrigger",
             "isReactNative": false,
@@ -10741,10 +10780,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -10965,10 +11004,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -11276,10 +11315,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -11617,6 +11656,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -11856,6 +11901,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -12095,6 +12146,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -12334,6 +12391,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -12573,6 +12636,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -12812,6 +12881,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -13019,10 +13094,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -13257,10 +13332,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Header",
             "isReactNative": false,
@@ -13483,6 +13558,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -13841,6 +13922,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -14086,6 +14173,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -14294,10 +14387,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -14631,10 +14724,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -14998,6 +15091,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -15234,6 +15333,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -15470,6 +15575,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -15674,10 +15785,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Main",
             "isReactNative": false,
@@ -15868,10 +15979,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Nav",
             "isReactNative": false,
@@ -16062,10 +16173,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -16412,6 +16523,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -16616,10 +16733,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -16838,10 +16955,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -17150,10 +17267,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -17361,10 +17478,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -17581,10 +17698,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -17895,10 +18012,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -18210,10 +18327,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -18523,10 +18640,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -18835,10 +18952,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -19144,10 +19261,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -19455,10 +19572,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -19765,10 +19882,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -20078,10 +20195,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -20458,10 +20575,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "componentName": "Section",
             "isReactNative": false,
@@ -20652,10 +20769,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -20863,10 +20980,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -21080,10 +21197,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "vertical": {
@@ -21294,10 +21411,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "vertical": {
@@ -21502,10 +21619,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -21739,10 +21856,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -22058,10 +22175,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -22340,6 +22457,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -22547,10 +22670,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -22761,10 +22884,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -23081,10 +23204,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -23400,10 +23523,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -23616,10 +23739,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -23842,10 +23965,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "defaultProps": {
               "tag": "span",
@@ -24057,10 +24180,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -24269,10 +24392,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -24571,10 +24694,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             }
           }
         },
@@ -24763,10 +24886,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -25000,10 +25123,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -25233,10 +25356,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -25549,10 +25672,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -25828,6 +25951,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -26145,10 +26274,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -26444,10 +26573,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -26761,10 +26890,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             }
           }
         },
@@ -26992,6 +27121,12 @@
               "shadowOpacity": true,
               "boxShadow": true,
               "filter": true,
+              "boxSizing": true,
+              "mixBlendMode": true,
+              "outlineColor": true,
+              "outlineSpread": true,
+              "outlineStyle": true,
+              "outlineWidth": true,
               "fontFamily": true,
               "fontSize": true,
               "fontStyle": true,
@@ -27195,10 +27330,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -27505,10 +27640,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -27714,10 +27849,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -28024,10 +28159,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -28233,10 +28368,10 @@
               "filter": true,
               "boxSizing": true,
               "mixBlendMode": true,
-              "outlineWidth": true,
-              "outlineStyle": true,
+              "outlineColor": true,
               "outlineSpread": true,
-              "outlineColor": true
+              "outlineStyle": true,
+              "outlineWidth": true
             },
             "variants": {
               "fullscreen": {
@@ -28446,6 +28581,7 @@
       "usePresence": "Function",
       "ResetPresence": "Function",
       "supportsCSS": true,
+      "classNameAnimation": true,
       "useAnimatedNumber": "Function",
       "useAnimatedNumberReaction": "Function",
       "useAnimatedNumberStyle": "Function",
@@ -28496,46 +28632,7 @@
       }
     },
     "themes": {
-      "light": {
-        "background": "#F9FAFB",
-        "backgroundSoft": "#F1F5F9",
-        "color": "#050505",
-        "colorSoft": "#475569",
-        "colorSurface": "#F9FAFB",
-        "shadowColor": "#E2E8F0",
-        "primary": "#BFFF00",
-        "primaryHover": "#CCFF33",
-        "primaryPress": "#99CC00",
-        "primarySurface": "#F9FFE5",
-        "primarySurfaceHover": "#F2FFCC",
-        "primarySurfacePress": "#E6FF99",
-        "colorOnPrimary": "#050505",
-        "secondary": "#8F00FF",
-        "secondaryHover": "#AE33FF",
-        "secondaryPress": "#7200CC",
-        "secondarySurface": "#F4E5FF",
-        "secondarySurfaceHover": "#E2CCFF",
-        "secondarySurfacePress": "#D199FF",
-        "colorOnSecondary": "#F9FAFB",
-        "tertiary": "#00F3EA",
-        "tertiaryHover": "#33FFF7",
-        "tertiaryPress": "#00C2BB",
-        "tertiarySurface": "#E0FFFE",
-        "tertiarySurfaceHover": "#CCFFFD",
-        "tertiarySurfacePress": "#99FFFB",
-        "colorOnTertiary": "#050505",
-        "borderColor": "#CBD5E1",
-        "borderColorHover": "#BFFF00",
-        "borderColorFocus": "#8F00FF",
-        "inputBackground": "#F9FAFB",
-        "inputBackgroundDisabled": "#F1F5F9",
-        "placeholderColor": "#94A3B8",
-        "success": "#10B981",
-        "successBackground": "#D1FAE5",
-        "error": "#EF4444",
-        "errorBackground": "#FEE2E2",
-        "warning": "#F59E0B",
-        "info": "#3B82F6",
+      "dark": {
         "lime": "#BFFF00",
         "purple": "#8F00FF",
         "aqua": "#00F3EA",
@@ -28569,12 +28666,16 @@
         "aqua700": "#00918C",
         "aqua800": "#00615D",
         "aqua900": "#00302E",
+        "success": "#10B981",
         "successLight": "#D1FAE5",
         "successDark": "#065F46",
+        "error": "#EF4444",
         "errorLight": "#FEE2E2",
         "errorDark": "#991B1B",
+        "warning": "#F59E0B",
         "warningLight": "#FEF3C7",
         "warningDark": "#92400E",
+        "info": "#3B82F6",
         "infoLight": "#DBEAFE",
         "infoDark": "#1E40AF",
         "offWhite": "#F9FAFB",
@@ -28591,9 +28692,6 @@
         "gray700": "#334155",
         "gray800": "#1E293B",
         "gray900": "#0F172A",
-        "id": "light"
-      },
-      "dark": {
         "background": "#050505",
         "backgroundSoft": "#0F172A",
         "color": "#F9FAFB",
@@ -28627,12 +28725,11 @@
         "inputBackground": "#0F172A",
         "inputBackgroundDisabled": "#1E293B",
         "placeholderColor": "#475569",
-        "success": "#10B981",
         "successBackground": "#065F46",
-        "error": "#EF4444",
         "errorBackground": "#991B1B",
-        "warning": "#F59E0B",
-        "info": "#3B82F6",
+        "id": "dark"
+      },
+      "light": {
         "lime": "#BFFF00",
         "purple": "#8F00FF",
         "aqua": "#00F3EA",
@@ -28666,12 +28763,16 @@
         "aqua700": "#00918C",
         "aqua800": "#00615D",
         "aqua900": "#00302E",
+        "success": "#10B981",
         "successLight": "#D1FAE5",
         "successDark": "#065F46",
+        "error": "#EF4444",
         "errorLight": "#FEE2E2",
         "errorDark": "#991B1B",
+        "warning": "#F59E0B",
         "warningLight": "#FEF3C7",
         "warningDark": "#92400E",
+        "info": "#3B82F6",
         "infoLight": "#DBEAFE",
         "infoDark": "#1E40AF",
         "offWhite": "#F9FAFB",
@@ -28688,7 +28789,42 @@
         "gray700": "#334155",
         "gray800": "#1E293B",
         "gray900": "#0F172A",
-        "id": "dark"
+        "background": "#F9FAFB",
+        "backgroundSoft": "#F1F5F9",
+        "color": "#050505",
+        "colorSoft": "#475569",
+        "colorSurface": "#F9FAFB",
+        "shadowColor": "#E2E8F0",
+        "primary": "#BFFF00",
+        "primaryHover": "#CCFF33",
+        "primaryPress": "#99CC00",
+        "primarySurface": "#F9FFE5",
+        "primarySurfaceHover": "#F2FFCC",
+        "primarySurfacePress": "#E6FF99",
+        "colorOnPrimary": "#050505",
+        "secondary": "#8F00FF",
+        "secondaryHover": "#AE33FF",
+        "secondaryPress": "#7200CC",
+        "secondarySurface": "#F4E5FF",
+        "secondarySurfaceHover": "#E2CCFF",
+        "secondarySurfacePress": "#D199FF",
+        "colorOnSecondary": "#F9FAFB",
+        "tertiary": "#00F3EA",
+        "tertiaryHover": "#33FFF7",
+        "tertiaryPress": "#00C2BB",
+        "tertiarySurface": "#E0FFFE",
+        "tertiarySurfaceHover": "#CCFFFD",
+        "tertiarySurfacePress": "#99FFFB",
+        "colorOnTertiary": "#050505",
+        "borderColor": "#CBD5E1",
+        "borderColorHover": "#BFFF00",
+        "borderColorFocus": "#8F00FF",
+        "inputBackground": "#F9FAFB",
+        "inputBackgroundDisabled": "#F1F5F9",
+        "placeholderColor": "#94A3B8",
+        "successBackground": "#D1FAE5",
+        "errorBackground": "#FEE2E2",
+        "id": "light"
       }
     },
     "tokens": {
@@ -29959,6 +30095,419 @@
     "defaultFont": "body",
     "fontSizeTokens": {},
     "specificTokens": {
+      "$color.aqua": {
+        "isVar": true,
+        "key": "$aqua",
+        "name": "c-aqua",
+        "val": "#00F3EA",
+        "variable": ""
+      },
+      "$color.aqua100": {
+        "isVar": true,
+        "key": "$aqua100",
+        "name": "c-aqua100",
+        "val": "#CCFFFD",
+        "variable": ""
+      },
+      "$color.aqua200": {
+        "isVar": true,
+        "key": "$aqua200",
+        "name": "c-aqua200",
+        "val": "#99FFFB",
+        "variable": ""
+      },
+      "$color.aqua300": {
+        "isVar": true,
+        "key": "$aqua300",
+        "name": "c-aqua300",
+        "val": "#66FFF9",
+        "variable": ""
+      },
+      "$color.aqua400": {
+        "isVar": true,
+        "key": "$aqua400",
+        "name": "c-aqua400",
+        "val": "#33FFF7",
+        "variable": ""
+      },
+      "$color.aqua50": {
+        "isVar": true,
+        "key": "$aqua50",
+        "name": "c-aqua50",
+        "val": "#E0FFFE",
+        "variable": ""
+      },
+      "$color.aqua500": {
+        "isVar": true,
+        "key": "$aqua500",
+        "name": "c-aqua500",
+        "val": "#00F3EA",
+        "variable": ""
+      },
+      "$color.aqua600": {
+        "isVar": true,
+        "key": "$aqua600",
+        "name": "c-aqua600",
+        "val": "#00C2BB",
+        "variable": ""
+      },
+      "$color.aqua700": {
+        "isVar": true,
+        "key": "$aqua700",
+        "name": "c-aqua700",
+        "val": "#00918C",
+        "variable": ""
+      },
+      "$color.aqua800": {
+        "isVar": true,
+        "key": "$aqua800",
+        "name": "c-aqua800",
+        "val": "#00615D",
+        "variable": ""
+      },
+      "$color.aqua900": {
+        "isVar": true,
+        "key": "$aqua900",
+        "name": "c-aqua900",
+        "val": "#00302E",
+        "variable": ""
+      },
+      "$color.black": {
+        "isVar": true,
+        "key": "$black",
+        "name": "c-black",
+        "val": "#000000",
+        "variable": ""
+      },
+      "$color.error": {
+        "isVar": true,
+        "key": "$error",
+        "name": "c-error",
+        "val": "#EF4444",
+        "variable": ""
+      },
+      "$color.errorDark": {
+        "isVar": true,
+        "key": "$errorDark",
+        "name": "c-errorDark",
+        "val": "#991B1B",
+        "variable": ""
+      },
+      "$color.errorLight": {
+        "isVar": true,
+        "key": "$errorLight",
+        "name": "c-errorLight",
+        "val": "#FEE2E2",
+        "variable": ""
+      },
+      "$color.gray100": {
+        "isVar": true,
+        "key": "$gray100",
+        "name": "c-gray100",
+        "val": "#F1F5F9",
+        "variable": ""
+      },
+      "$color.gray200": {
+        "isVar": true,
+        "key": "$gray200",
+        "name": "c-gray200",
+        "val": "#E2E8F0",
+        "variable": ""
+      },
+      "$color.gray300": {
+        "isVar": true,
+        "key": "$gray300",
+        "name": "c-gray300",
+        "val": "#CBD5E1",
+        "variable": ""
+      },
+      "$color.gray400": {
+        "isVar": true,
+        "key": "$gray400",
+        "name": "c-gray400",
+        "val": "#94A3B8",
+        "variable": ""
+      },
+      "$color.gray50": {
+        "isVar": true,
+        "key": "$gray50",
+        "name": "c-gray50",
+        "val": "#F8FAFC",
+        "variable": ""
+      },
+      "$color.gray500": {
+        "isVar": true,
+        "key": "$gray500",
+        "name": "c-gray500",
+        "val": "#64748B",
+        "variable": ""
+      },
+      "$color.gray600": {
+        "isVar": true,
+        "key": "$gray600",
+        "name": "c-gray600",
+        "val": "#475569",
+        "variable": ""
+      },
+      "$color.gray700": {
+        "isVar": true,
+        "key": "$gray700",
+        "name": "c-gray700",
+        "val": "#334155",
+        "variable": ""
+      },
+      "$color.gray800": {
+        "isVar": true,
+        "key": "$gray800",
+        "name": "c-gray800",
+        "val": "#1E293B",
+        "variable": ""
+      },
+      "$color.gray900": {
+        "isVar": true,
+        "key": "$gray900",
+        "name": "c-gray900",
+        "val": "#0F172A",
+        "variable": ""
+      },
+      "$color.info": {
+        "isVar": true,
+        "key": "$info",
+        "name": "c-info",
+        "val": "#3B82F6",
+        "variable": ""
+      },
+      "$color.infoDark": {
+        "isVar": true,
+        "key": "$infoDark",
+        "name": "c-infoDark",
+        "val": "#1E40AF",
+        "variable": ""
+      },
+      "$color.infoLight": {
+        "isVar": true,
+        "key": "$infoLight",
+        "name": "c-infoLight",
+        "val": "#DBEAFE",
+        "variable": ""
+      },
+      "$color.lime": {
+        "isVar": true,
+        "key": "$lime",
+        "name": "c-lime",
+        "val": "#BFFF00",
+        "variable": ""
+      },
+      "$color.lime100": {
+        "isVar": true,
+        "key": "$lime100",
+        "name": "c-lime100",
+        "val": "#F2FFCC",
+        "variable": ""
+      },
+      "$color.lime200": {
+        "isVar": true,
+        "key": "$lime200",
+        "name": "c-lime200",
+        "val": "#E6FF99",
+        "variable": ""
+      },
+      "$color.lime300": {
+        "isVar": true,
+        "key": "$lime300",
+        "name": "c-lime300",
+        "val": "#D9FF66",
+        "variable": ""
+      },
+      "$color.lime400": {
+        "isVar": true,
+        "key": "$lime400",
+        "name": "c-lime400",
+        "val": "#CCFF33",
+        "variable": ""
+      },
+      "$color.lime50": {
+        "isVar": true,
+        "key": "$lime50",
+        "name": "c-lime50",
+        "val": "#F9FFE5",
+        "variable": ""
+      },
+      "$color.lime500": {
+        "isVar": true,
+        "key": "$lime500",
+        "name": "c-lime500",
+        "val": "#BFFF00",
+        "variable": ""
+      },
+      "$color.lime600": {
+        "isVar": true,
+        "key": "$lime600",
+        "name": "c-lime600",
+        "val": "#99CC00",
+        "variable": ""
+      },
+      "$color.lime700": {
+        "isVar": true,
+        "key": "$lime700",
+        "name": "c-lime700",
+        "val": "#739900",
+        "variable": ""
+      },
+      "$color.lime800": {
+        "isVar": true,
+        "key": "$lime800",
+        "name": "c-lime800",
+        "val": "#4C6600",
+        "variable": ""
+      },
+      "$color.lime900": {
+        "isVar": true,
+        "key": "$lime900",
+        "name": "c-lime900",
+        "val": "#263300",
+        "variable": ""
+      },
+      "$color.offBlack": {
+        "isVar": true,
+        "key": "$offBlack",
+        "name": "c-offBlack",
+        "val": "#050505",
+        "variable": ""
+      },
+      "$color.offWhite": {
+        "isVar": true,
+        "key": "$offWhite",
+        "name": "c-offWhite",
+        "val": "#F9FAFB",
+        "variable": ""
+      },
+      "$color.purple": {
+        "isVar": true,
+        "key": "$purple",
+        "name": "c-purple",
+        "val": "#8F00FF",
+        "variable": ""
+      },
+      "$color.purple100": {
+        "isVar": true,
+        "key": "$purple100",
+        "name": "c-purple100",
+        "val": "#E2CCFF",
+        "variable": ""
+      },
+      "$color.purple200": {
+        "isVar": true,
+        "key": "$purple200",
+        "name": "c-purple200",
+        "val": "#D199FF",
+        "variable": ""
+      },
+      "$color.purple300": {
+        "isVar": true,
+        "key": "$purple300",
+        "name": "c-purple300",
+        "val": "#BF66FF",
+        "variable": ""
+      },
+      "$color.purple400": {
+        "isVar": true,
+        "key": "$purple400",
+        "name": "c-purple400",
+        "val": "#AE33FF",
+        "variable": ""
+      },
+      "$color.purple50": {
+        "isVar": true,
+        "key": "$purple50",
+        "name": "c-purple50",
+        "val": "#F4E5FF",
+        "variable": ""
+      },
+      "$color.purple500": {
+        "isVar": true,
+        "key": "$purple500",
+        "name": "c-purple500",
+        "val": "#8F00FF",
+        "variable": ""
+      },
+      "$color.purple600": {
+        "isVar": true,
+        "key": "$purple600",
+        "name": "c-purple600",
+        "val": "#7200CC",
+        "variable": ""
+      },
+      "$color.purple700": {
+        "isVar": true,
+        "key": "$purple700",
+        "name": "c-purple700",
+        "val": "#560099",
+        "variable": ""
+      },
+      "$color.purple800": {
+        "isVar": true,
+        "key": "$purple800",
+        "name": "c-purple800",
+        "val": "#390066",
+        "variable": ""
+      },
+      "$color.purple900": {
+        "isVar": true,
+        "key": "$purple900",
+        "name": "c-purple900",
+        "val": "#1D0033",
+        "variable": ""
+      },
+      "$color.success": {
+        "isVar": true,
+        "key": "$success",
+        "name": "c-success",
+        "val": "#10B981",
+        "variable": ""
+      },
+      "$color.successDark": {
+        "isVar": true,
+        "key": "$successDark",
+        "name": "c-successDark",
+        "val": "#065F46",
+        "variable": ""
+      },
+      "$color.successLight": {
+        "isVar": true,
+        "key": "$successLight",
+        "name": "c-successLight",
+        "val": "#D1FAE5",
+        "variable": ""
+      },
+      "$color.warning": {
+        "isVar": true,
+        "key": "$warning",
+        "name": "c-warning",
+        "val": "#F59E0B",
+        "variable": ""
+      },
+      "$color.warningDark": {
+        "isVar": true,
+        "key": "$warningDark",
+        "name": "c-warningDark",
+        "val": "#92400E",
+        "variable": ""
+      },
+      "$color.warningLight": {
+        "isVar": true,
+        "key": "$warningLight",
+        "name": "c-warningLight",
+        "val": "#FEF3C7",
+        "variable": ""
+      },
+      "$color.white": {
+        "isVar": true,
+        "key": "$white",
+        "name": "c-white",
+        "val": "#FFFFFF",
+        "variable": ""
+      },
       "$radius.0": {
         "isVar": true,
         "key": "$0",
@@ -29971,6 +30520,27 @@
         "key": "$1",
         "name": "t-radius-1",
         "val": 3,
+        "variable": ""
+      },
+      "$radius.10": {
+        "isVar": true,
+        "key": "$10",
+        "name": "t-radius-10",
+        "val": 34,
+        "variable": ""
+      },
+      "$radius.11": {
+        "isVar": true,
+        "key": "$11",
+        "name": "t-radius-11",
+        "val": 42,
+        "variable": ""
+      },
+      "$radius.12": {
+        "isVar": true,
+        "key": "$12",
+        "name": "t-radius-12",
+        "val": 50,
         "variable": ""
       },
       "$radius.2": {
@@ -30029,473 +30599,11 @@
         "val": 26,
         "variable": ""
       },
-      "$radius.10": {
-        "isVar": true,
-        "key": "$10",
-        "name": "t-radius-10",
-        "val": 34,
-        "variable": ""
-      },
-      "$radius.11": {
-        "isVar": true,
-        "key": "$11",
-        "name": "t-radius-11",
-        "val": 42,
-        "variable": ""
-      },
-      "$radius.12": {
-        "isVar": true,
-        "key": "$12",
-        "name": "t-radius-12",
-        "val": 50,
-        "variable": ""
-      },
       "$radius.true": {
         "isVar": true,
         "key": "$true",
         "name": "t-radius-true",
         "val": 9,
-        "variable": ""
-      },
-      "$zIndex.0": {
-        "isVar": true,
-        "key": "$0",
-        "name": "t-zIndex-0",
-        "val": 0,
-        "variable": ""
-      },
-      "$zIndex.1": {
-        "isVar": true,
-        "key": "$1",
-        "name": "t-zIndex-1",
-        "val": 100,
-        "variable": ""
-      },
-      "$zIndex.2": {
-        "isVar": true,
-        "key": "$2",
-        "name": "t-zIndex-2",
-        "val": 200,
-        "variable": ""
-      },
-      "$zIndex.3": {
-        "isVar": true,
-        "key": "$3",
-        "name": "t-zIndex-3",
-        "val": 300,
-        "variable": ""
-      },
-      "$zIndex.4": {
-        "isVar": true,
-        "key": "$4",
-        "name": "t-zIndex-4",
-        "val": 400,
-        "variable": ""
-      },
-      "$zIndex.5": {
-        "isVar": true,
-        "key": "$5",
-        "name": "t-zIndex-5",
-        "val": 500,
-        "variable": ""
-      },
-      "$space.0": {
-        "isVar": true,
-        "key": "$0",
-        "name": "t-space-0",
-        "val": 0,
-        "variable": ""
-      },
-      "$space.1": {
-        "isVar": true,
-        "key": "$1",
-        "name": "t-space-1",
-        "val": 2,
-        "variable": ""
-      },
-      "$space.2": {
-        "isVar": true,
-        "key": "$2",
-        "name": "t-space-2",
-        "val": 7,
-        "variable": ""
-      },
-      "$space.3": {
-        "isVar": true,
-        "key": "$3",
-        "name": "t-space-3",
-        "val": 13,
-        "variable": ""
-      },
-      "$space.4": {
-        "isVar": true,
-        "key": "$4",
-        "name": "t-space-4",
-        "val": 18,
-        "variable": ""
-      },
-      "$space.5": {
-        "isVar": true,
-        "key": "$5",
-        "name": "t-space-5",
-        "val": 24,
-        "variable": ""
-      },
-      "$space.6": {
-        "isVar": true,
-        "key": "$6",
-        "name": "t-space-6",
-        "val": 32,
-        "variable": ""
-      },
-      "$space.7": {
-        "isVar": true,
-        "key": "$7",
-        "name": "t-space-7",
-        "val": 39,
-        "variable": ""
-      },
-      "$space.8": {
-        "isVar": true,
-        "key": "$8",
-        "name": "t-space-8",
-        "val": 46,
-        "variable": ""
-      },
-      "$space.9": {
-        "isVar": true,
-        "key": "$9",
-        "name": "t-space-9",
-        "val": 53,
-        "variable": ""
-      },
-      "$space.10": {
-        "isVar": true,
-        "key": "$10",
-        "name": "t-space-10",
-        "val": 60,
-        "variable": ""
-      },
-      "$space.11": {
-        "isVar": true,
-        "key": "$11",
-        "name": "t-space-11",
-        "val": 74,
-        "variable": ""
-      },
-      "$space.12": {
-        "isVar": true,
-        "key": "$12",
-        "name": "t-space-12",
-        "val": 88,
-        "variable": ""
-      },
-      "$space.13": {
-        "isVar": true,
-        "key": "$13",
-        "name": "t-space-13",
-        "val": 102,
-        "variable": ""
-      },
-      "$space.14": {
-        "isVar": true,
-        "key": "$14",
-        "name": "t-space-14",
-        "val": 116,
-        "variable": ""
-      },
-      "$space.15": {
-        "isVar": true,
-        "key": "$15",
-        "name": "t-space-15",
-        "val": 130,
-        "variable": ""
-      },
-      "$space.16": {
-        "isVar": true,
-        "key": "$16",
-        "name": "t-space-16",
-        "val": 144,
-        "variable": ""
-      },
-      "$space.17": {
-        "isVar": true,
-        "key": "$17",
-        "name": "t-space-17",
-        "val": 144,
-        "variable": ""
-      },
-      "$space.18": {
-        "isVar": true,
-        "key": "$18",
-        "name": "t-space-18",
-        "val": 158,
-        "variable": ""
-      },
-      "$space.19": {
-        "isVar": true,
-        "key": "$19",
-        "name": "t-space-19",
-        "val": 172,
-        "variable": ""
-      },
-      "$space.20": {
-        "isVar": true,
-        "key": "$20",
-        "name": "t-space-20",
-        "val": 186,
-        "variable": ""
-      },
-      "$space.0.25": {
-        "isVar": true,
-        "key": "$0.25",
-        "name": "t-space-0--25",
-        "val": 0.5,
-        "variable": ""
-      },
-      "$space.0.5": {
-        "isVar": true,
-        "key": "$0.5",
-        "name": "t-space-0--5",
-        "val": 1,
-        "variable": ""
-      },
-      "$space.0.75": {
-        "isVar": true,
-        "key": "$0.75",
-        "name": "t-space-0--75",
-        "val": 1.5,
-        "variable": ""
-      },
-      "$space.1.5": {
-        "isVar": true,
-        "key": "$1.5",
-        "name": "t-space-1--5",
-        "val": 4,
-        "variable": ""
-      },
-      "$space.2.5": {
-        "isVar": true,
-        "key": "$2.5",
-        "name": "t-space-2--5",
-        "val": 10,
-        "variable": ""
-      },
-      "$space.3.5": {
-        "isVar": true,
-        "key": "$3.5",
-        "name": "t-space-3--5",
-        "val": 16,
-        "variable": ""
-      },
-      "$space.true": {
-        "isVar": true,
-        "key": "$true",
-        "name": "t-space-true",
-        "val": 18,
-        "variable": ""
-      },
-      "$space.4.5": {
-        "isVar": true,
-        "key": "$4.5",
-        "name": "t-space-4--5",
-        "val": 21,
-        "variable": ""
-      },
-      "$space.-0.25": {
-        "isVar": true,
-        "key": "$-0.25",
-        "name": "t-space--0--25",
-        "val": -0.5,
-        "variable": ""
-      },
-      "$space.-0.5": {
-        "isVar": true,
-        "key": "$-0.5",
-        "name": "t-space--0--5",
-        "val": -1,
-        "variable": ""
-      },
-      "$space.-0.75": {
-        "isVar": true,
-        "key": "$-0.75",
-        "name": "t-space--0--75",
-        "val": -1.5,
-        "variable": ""
-      },
-      "$space.-1": {
-        "isVar": true,
-        "key": "$-1",
-        "name": "t-space--1",
-        "val": -2,
-        "variable": ""
-      },
-      "$space.-1.5": {
-        "isVar": true,
-        "key": "$-1.5",
-        "name": "t-space--1--5",
-        "val": -4,
-        "variable": ""
-      },
-      "$space.-2": {
-        "isVar": true,
-        "key": "$-2",
-        "name": "t-space--2",
-        "val": -7,
-        "variable": ""
-      },
-      "$space.-2.5": {
-        "isVar": true,
-        "key": "$-2.5",
-        "name": "t-space--2--5",
-        "val": -10,
-        "variable": ""
-      },
-      "$space.-3": {
-        "isVar": true,
-        "key": "$-3",
-        "name": "t-space--3",
-        "val": -13,
-        "variable": ""
-      },
-      "$space.-3.5": {
-        "isVar": true,
-        "key": "$-3.5",
-        "name": "t-space--3--5",
-        "val": -16,
-        "variable": ""
-      },
-      "$space.-4": {
-        "isVar": true,
-        "key": "$-4",
-        "name": "t-space--4",
-        "val": -18,
-        "variable": ""
-      },
-      "$space.-true": {
-        "isVar": true,
-        "key": "$-true",
-        "name": "t-space--true",
-        "val": -18,
-        "variable": ""
-      },
-      "$space.-4.5": {
-        "isVar": true,
-        "key": "$-4.5",
-        "name": "t-space--4--5",
-        "val": -21,
-        "variable": ""
-      },
-      "$space.-5": {
-        "isVar": true,
-        "key": "$-5",
-        "name": "t-space--5",
-        "val": -24,
-        "variable": ""
-      },
-      "$space.-6": {
-        "isVar": true,
-        "key": "$-6",
-        "name": "t-space--6",
-        "val": -32,
-        "variable": ""
-      },
-      "$space.-7": {
-        "isVar": true,
-        "key": "$-7",
-        "name": "t-space--7",
-        "val": -39,
-        "variable": ""
-      },
-      "$space.-8": {
-        "isVar": true,
-        "key": "$-8",
-        "name": "t-space--8",
-        "val": -46,
-        "variable": ""
-      },
-      "$space.-9": {
-        "isVar": true,
-        "key": "$-9",
-        "name": "t-space--9",
-        "val": -53,
-        "variable": ""
-      },
-      "$space.-10": {
-        "isVar": true,
-        "key": "$-10",
-        "name": "t-space--10",
-        "val": -60,
-        "variable": ""
-      },
-      "$space.-11": {
-        "isVar": true,
-        "key": "$-11",
-        "name": "t-space--11",
-        "val": -74,
-        "variable": ""
-      },
-      "$space.-12": {
-        "isVar": true,
-        "key": "$-12",
-        "name": "t-space--12",
-        "val": -88,
-        "variable": ""
-      },
-      "$space.-13": {
-        "isVar": true,
-        "key": "$-13",
-        "name": "t-space--13",
-        "val": -102,
-        "variable": ""
-      },
-      "$space.-14": {
-        "isVar": true,
-        "key": "$-14",
-        "name": "t-space--14",
-        "val": -116,
-        "variable": ""
-      },
-      "$space.-15": {
-        "isVar": true,
-        "key": "$-15",
-        "name": "t-space--15",
-        "val": -130,
-        "variable": ""
-      },
-      "$space.-16": {
-        "isVar": true,
-        "key": "$-16",
-        "name": "t-space--16",
-        "val": -144,
-        "variable": ""
-      },
-      "$space.-17": {
-        "isVar": true,
-        "key": "$-17",
-        "name": "t-space--17",
-        "val": -144,
-        "variable": ""
-      },
-      "$space.-18": {
-        "isVar": true,
-        "key": "$-18",
-        "name": "t-space--18",
-        "val": -158,
-        "variable": ""
-      },
-      "$space.-19": {
-        "isVar": true,
-        "key": "$-19",
-        "name": "t-space--19",
-        "val": -172,
-        "variable": ""
-      },
-      "$space.-20": {
-        "isVar": true,
-        "key": "$-20",
-        "name": "t-space--20",
-        "val": -186,
         "variable": ""
       },
       "$size.0": {
@@ -30505,6 +30613,27 @@
         "val": 0,
         "variable": ""
       },
+      "$size.0.25": {
+        "isVar": true,
+        "key": "$0.25",
+        "name": "t-size-0--25",
+        "val": 2,
+        "variable": ""
+      },
+      "$size.0.5": {
+        "isVar": true,
+        "key": "$0.5",
+        "name": "t-size-0--5",
+        "val": 4,
+        "variable": ""
+      },
+      "$size.0.75": {
+        "isVar": true,
+        "key": "$0.75",
+        "name": "t-size-0--75",
+        "val": 8,
+        "variable": ""
+      },
       "$size.1": {
         "isVar": true,
         "key": "$1",
@@ -30512,60 +30641,11 @@
         "val": 20,
         "variable": ""
       },
-      "$size.2": {
+      "$size.1.5": {
         "isVar": true,
-        "key": "$2",
-        "name": "t-size-2",
-        "val": 28,
-        "variable": ""
-      },
-      "$size.3": {
-        "isVar": true,
-        "key": "$3",
-        "name": "t-size-3",
-        "val": 36,
-        "variable": ""
-      },
-      "$size.4": {
-        "isVar": true,
-        "key": "$4",
-        "name": "t-size-4",
-        "val": 44,
-        "variable": ""
-      },
-      "$size.5": {
-        "isVar": true,
-        "key": "$5",
-        "name": "t-size-5",
-        "val": 52,
-        "variable": ""
-      },
-      "$size.6": {
-        "isVar": true,
-        "key": "$6",
-        "name": "t-size-6",
-        "val": 64,
-        "variable": ""
-      },
-      "$size.7": {
-        "isVar": true,
-        "key": "$7",
-        "name": "t-size-7",
-        "val": 74,
-        "variable": ""
-      },
-      "$size.8": {
-        "isVar": true,
-        "key": "$8",
-        "name": "t-size-8",
-        "val": 84,
-        "variable": ""
-      },
-      "$size.9": {
-        "isVar": true,
-        "key": "$9",
-        "name": "t-size-9",
-        "val": 94,
+        "key": "$1.5",
+        "name": "t-size-1--5",
+        "val": 24,
         "variable": ""
       },
       "$size.10": {
@@ -30638,39 +30718,11 @@
         "val": 264,
         "variable": ""
       },
-      "$size.20": {
+      "$size.2": {
         "isVar": true,
-        "key": "$20",
-        "name": "t-size-20",
-        "val": 284,
-        "variable": ""
-      },
-      "$size.0.25": {
-        "isVar": true,
-        "key": "$0.25",
-        "name": "t-size-0--25",
-        "val": 2,
-        "variable": ""
-      },
-      "$size.0.5": {
-        "isVar": true,
-        "key": "$0.5",
-        "name": "t-size-0--5",
-        "val": 4,
-        "variable": ""
-      },
-      "$size.0.75": {
-        "isVar": true,
-        "key": "$0.75",
-        "name": "t-size-0--75",
-        "val": 8,
-        "variable": ""
-      },
-      "$size.1.5": {
-        "isVar": true,
-        "key": "$1.5",
-        "name": "t-size-1--5",
-        "val": 24,
+        "key": "$2",
+        "name": "t-size-2",
+        "val": 28,
         "variable": ""
       },
       "$size.2.5": {
@@ -30680,6 +30732,20 @@
         "val": 32,
         "variable": ""
       },
+      "$size.20": {
+        "isVar": true,
+        "key": "$20",
+        "name": "t-size-20",
+        "val": 284,
+        "variable": ""
+      },
+      "$size.3": {
+        "isVar": true,
+        "key": "$3",
+        "name": "t-size-3",
+        "val": 36,
+        "variable": ""
+      },
       "$size.3.5": {
         "isVar": true,
         "key": "$3.5",
@@ -30687,10 +30753,10 @@
         "val": 40,
         "variable": ""
       },
-      "$size.true": {
+      "$size.4": {
         "isVar": true,
-        "key": "$true",
-        "name": "t-size-true",
+        "key": "$4",
+        "name": "t-size-4",
         "val": 44,
         "variable": ""
       },
@@ -30701,417 +30767,487 @@
         "val": 48,
         "variable": ""
       },
-      "$color.lime": {
+      "$size.5": {
         "isVar": true,
-        "key": "$lime",
-        "name": "c-lime",
-        "val": "#BFFF00",
+        "key": "$5",
+        "name": "t-size-5",
+        "val": 52,
         "variable": ""
       },
-      "$color.purple": {
+      "$size.6": {
         "isVar": true,
-        "key": "$purple",
-        "name": "c-purple",
-        "val": "#8F00FF",
+        "key": "$6",
+        "name": "t-size-6",
+        "val": 64,
         "variable": ""
       },
-      "$color.aqua": {
+      "$size.7": {
         "isVar": true,
-        "key": "$aqua",
-        "name": "c-aqua",
-        "val": "#00F3EA",
+        "key": "$7",
+        "name": "t-size-7",
+        "val": 74,
         "variable": ""
       },
-      "$color.lime50": {
+      "$size.8": {
         "isVar": true,
-        "key": "$lime50",
-        "name": "c-lime50",
-        "val": "#F9FFE5",
+        "key": "$8",
+        "name": "t-size-8",
+        "val": 84,
         "variable": ""
       },
-      "$color.lime100": {
+      "$size.9": {
         "isVar": true,
-        "key": "$lime100",
-        "name": "c-lime100",
-        "val": "#F2FFCC",
+        "key": "$9",
+        "name": "t-size-9",
+        "val": 94,
         "variable": ""
       },
-      "$color.lime200": {
+      "$size.true": {
         "isVar": true,
-        "key": "$lime200",
-        "name": "c-lime200",
-        "val": "#E6FF99",
+        "key": "$true",
+        "name": "t-size-true",
+        "val": 44,
         "variable": ""
       },
-      "$color.lime300": {
+      "$space.-0.25": {
         "isVar": true,
-        "key": "$lime300",
-        "name": "c-lime300",
-        "val": "#D9FF66",
+        "key": "$-0.25",
+        "name": "t-space--0--25",
+        "val": -0.5,
         "variable": ""
       },
-      "$color.lime400": {
+      "$space.-0.5": {
         "isVar": true,
-        "key": "$lime400",
-        "name": "c-lime400",
-        "val": "#CCFF33",
+        "key": "$-0.5",
+        "name": "t-space--0--5",
+        "val": -1,
         "variable": ""
       },
-      "$color.lime500": {
+      "$space.-0.75": {
         "isVar": true,
-        "key": "$lime500",
-        "name": "c-lime500",
-        "val": "#BFFF00",
+        "key": "$-0.75",
+        "name": "t-space--0--75",
+        "val": -1.5,
         "variable": ""
       },
-      "$color.lime600": {
+      "$space.-1": {
         "isVar": true,
-        "key": "$lime600",
-        "name": "c-lime600",
-        "val": "#99CC00",
+        "key": "$-1",
+        "name": "t-space--1",
+        "val": -2,
         "variable": ""
       },
-      "$color.lime700": {
+      "$space.-1.5": {
         "isVar": true,
-        "key": "$lime700",
-        "name": "c-lime700",
-        "val": "#739900",
+        "key": "$-1.5",
+        "name": "t-space--1--5",
+        "val": -4,
         "variable": ""
       },
-      "$color.lime800": {
+      "$space.-10": {
         "isVar": true,
-        "key": "$lime800",
-        "name": "c-lime800",
-        "val": "#4C6600",
+        "key": "$-10",
+        "name": "t-space--10",
+        "val": -60,
         "variable": ""
       },
-      "$color.lime900": {
+      "$space.-11": {
         "isVar": true,
-        "key": "$lime900",
-        "name": "c-lime900",
-        "val": "#263300",
+        "key": "$-11",
+        "name": "t-space--11",
+        "val": -74,
         "variable": ""
       },
-      "$color.purple50": {
+      "$space.-12": {
         "isVar": true,
-        "key": "$purple50",
-        "name": "c-purple50",
-        "val": "#F4E5FF",
+        "key": "$-12",
+        "name": "t-space--12",
+        "val": -88,
         "variable": ""
       },
-      "$color.purple100": {
+      "$space.-13": {
         "isVar": true,
-        "key": "$purple100",
-        "name": "c-purple100",
-        "val": "#E2CCFF",
+        "key": "$-13",
+        "name": "t-space--13",
+        "val": -102,
         "variable": ""
       },
-      "$color.purple200": {
+      "$space.-14": {
         "isVar": true,
-        "key": "$purple200",
-        "name": "c-purple200",
-        "val": "#D199FF",
+        "key": "$-14",
+        "name": "t-space--14",
+        "val": -116,
         "variable": ""
       },
-      "$color.purple300": {
+      "$space.-15": {
         "isVar": true,
-        "key": "$purple300",
-        "name": "c-purple300",
-        "val": "#BF66FF",
+        "key": "$-15",
+        "name": "t-space--15",
+        "val": -130,
         "variable": ""
       },
-      "$color.purple400": {
+      "$space.-16": {
         "isVar": true,
-        "key": "$purple400",
-        "name": "c-purple400",
-        "val": "#AE33FF",
+        "key": "$-16",
+        "name": "t-space--16",
+        "val": -144,
         "variable": ""
       },
-      "$color.purple500": {
+      "$space.-17": {
         "isVar": true,
-        "key": "$purple500",
-        "name": "c-purple500",
-        "val": "#8F00FF",
+        "key": "$-17",
+        "name": "t-space--17",
+        "val": -144,
         "variable": ""
       },
-      "$color.purple600": {
+      "$space.-18": {
         "isVar": true,
-        "key": "$purple600",
-        "name": "c-purple600",
-        "val": "#7200CC",
+        "key": "$-18",
+        "name": "t-space--18",
+        "val": -158,
         "variable": ""
       },
-      "$color.purple700": {
+      "$space.-19": {
         "isVar": true,
-        "key": "$purple700",
-        "name": "c-purple700",
-        "val": "#560099",
+        "key": "$-19",
+        "name": "t-space--19",
+        "val": -172,
         "variable": ""
       },
-      "$color.purple800": {
+      "$space.-2": {
         "isVar": true,
-        "key": "$purple800",
-        "name": "c-purple800",
-        "val": "#390066",
+        "key": "$-2",
+        "name": "t-space--2",
+        "val": -7,
         "variable": ""
       },
-      "$color.purple900": {
+      "$space.-2.5": {
         "isVar": true,
-        "key": "$purple900",
-        "name": "c-purple900",
-        "val": "#1D0033",
+        "key": "$-2.5",
+        "name": "t-space--2--5",
+        "val": -10,
         "variable": ""
       },
-      "$color.aqua50": {
+      "$space.-20": {
         "isVar": true,
-        "key": "$aqua50",
-        "name": "c-aqua50",
-        "val": "#E0FFFE",
+        "key": "$-20",
+        "name": "t-space--20",
+        "val": -186,
         "variable": ""
       },
-      "$color.aqua100": {
+      "$space.-3": {
         "isVar": true,
-        "key": "$aqua100",
-        "name": "c-aqua100",
-        "val": "#CCFFFD",
+        "key": "$-3",
+        "name": "t-space--3",
+        "val": -13,
         "variable": ""
       },
-      "$color.aqua200": {
+      "$space.-3.5": {
         "isVar": true,
-        "key": "$aqua200",
-        "name": "c-aqua200",
-        "val": "#99FFFB",
+        "key": "$-3.5",
+        "name": "t-space--3--5",
+        "val": -16,
         "variable": ""
       },
-      "$color.aqua300": {
+      "$space.-4": {
         "isVar": true,
-        "key": "$aqua300",
-        "name": "c-aqua300",
-        "val": "#66FFF9",
+        "key": "$-4",
+        "name": "t-space--4",
+        "val": -18,
         "variable": ""
       },
-      "$color.aqua400": {
+      "$space.-4.5": {
         "isVar": true,
-        "key": "$aqua400",
-        "name": "c-aqua400",
-        "val": "#33FFF7",
+        "key": "$-4.5",
+        "name": "t-space--4--5",
+        "val": -21,
         "variable": ""
       },
-      "$color.aqua500": {
+      "$space.-5": {
         "isVar": true,
-        "key": "$aqua500",
-        "name": "c-aqua500",
-        "val": "#00F3EA",
+        "key": "$-5",
+        "name": "t-space--5",
+        "val": -24,
         "variable": ""
       },
-      "$color.aqua600": {
+      "$space.-6": {
         "isVar": true,
-        "key": "$aqua600",
-        "name": "c-aqua600",
-        "val": "#00C2BB",
+        "key": "$-6",
+        "name": "t-space--6",
+        "val": -32,
         "variable": ""
       },
-      "$color.aqua700": {
+      "$space.-7": {
         "isVar": true,
-        "key": "$aqua700",
-        "name": "c-aqua700",
-        "val": "#00918C",
+        "key": "$-7",
+        "name": "t-space--7",
+        "val": -39,
         "variable": ""
       },
-      "$color.aqua800": {
+      "$space.-8": {
         "isVar": true,
-        "key": "$aqua800",
-        "name": "c-aqua800",
-        "val": "#00615D",
+        "key": "$-8",
+        "name": "t-space--8",
+        "val": -46,
         "variable": ""
       },
-      "$color.aqua900": {
+      "$space.-9": {
         "isVar": true,
-        "key": "$aqua900",
-        "name": "c-aqua900",
-        "val": "#00302E",
+        "key": "$-9",
+        "name": "t-space--9",
+        "val": -53,
         "variable": ""
       },
-      "$color.success": {
+      "$space.-true": {
         "isVar": true,
-        "key": "$success",
-        "name": "c-success",
-        "val": "#10B981",
+        "key": "$-true",
+        "name": "t-space--true",
+        "val": -18,
         "variable": ""
       },
-      "$color.successLight": {
+      "$space.0": {
         "isVar": true,
-        "key": "$successLight",
-        "name": "c-successLight",
-        "val": "#D1FAE5",
+        "key": "$0",
+        "name": "t-space-0",
+        "val": 0,
         "variable": ""
       },
-      "$color.successDark": {
+      "$space.0.25": {
         "isVar": true,
-        "key": "$successDark",
-        "name": "c-successDark",
-        "val": "#065F46",
+        "key": "$0.25",
+        "name": "t-space-0--25",
+        "val": 0.5,
         "variable": ""
       },
-      "$color.error": {
+      "$space.0.5": {
         "isVar": true,
-        "key": "$error",
-        "name": "c-error",
-        "val": "#EF4444",
+        "key": "$0.5",
+        "name": "t-space-0--5",
+        "val": 1,
         "variable": ""
       },
-      "$color.errorLight": {
+      "$space.0.75": {
         "isVar": true,
-        "key": "$errorLight",
-        "name": "c-errorLight",
-        "val": "#FEE2E2",
+        "key": "$0.75",
+        "name": "t-space-0--75",
+        "val": 1.5,
         "variable": ""
       },
-      "$color.errorDark": {
+      "$space.1": {
         "isVar": true,
-        "key": "$errorDark",
-        "name": "c-errorDark",
-        "val": "#991B1B",
+        "key": "$1",
+        "name": "t-space-1",
+        "val": 2,
         "variable": ""
       },
-      "$color.warning": {
+      "$space.1.5": {
         "isVar": true,
-        "key": "$warning",
-        "name": "c-warning",
-        "val": "#F59E0B",
+        "key": "$1.5",
+        "name": "t-space-1--5",
+        "val": 4,
         "variable": ""
       },
-      "$color.warningLight": {
+      "$space.10": {
         "isVar": true,
-        "key": "$warningLight",
-        "name": "c-warningLight",
-        "val": "#FEF3C7",
+        "key": "$10",
+        "name": "t-space-10",
+        "val": 60,
         "variable": ""
       },
-      "$color.warningDark": {
+      "$space.11": {
         "isVar": true,
-        "key": "$warningDark",
-        "name": "c-warningDark",
-        "val": "#92400E",
+        "key": "$11",
+        "name": "t-space-11",
+        "val": 74,
         "variable": ""
       },
-      "$color.info": {
+      "$space.12": {
         "isVar": true,
-        "key": "$info",
-        "name": "c-info",
-        "val": "#3B82F6",
+        "key": "$12",
+        "name": "t-space-12",
+        "val": 88,
         "variable": ""
       },
-      "$color.infoLight": {
+      "$space.13": {
         "isVar": true,
-        "key": "$infoLight",
-        "name": "c-infoLight",
-        "val": "#DBEAFE",
+        "key": "$13",
+        "name": "t-space-13",
+        "val": 102,
         "variable": ""
       },
-      "$color.infoDark": {
+      "$space.14": {
         "isVar": true,
-        "key": "$infoDark",
-        "name": "c-infoDark",
-        "val": "#1E40AF",
+        "key": "$14",
+        "name": "t-space-14",
+        "val": 116,
         "variable": ""
       },
-      "$color.offWhite": {
+      "$space.15": {
         "isVar": true,
-        "key": "$offWhite",
-        "name": "c-offWhite",
-        "val": "#F9FAFB",
+        "key": "$15",
+        "name": "t-space-15",
+        "val": 130,
         "variable": ""
       },
-      "$color.offBlack": {
+      "$space.16": {
         "isVar": true,
-        "key": "$offBlack",
-        "name": "c-offBlack",
-        "val": "#050505",
+        "key": "$16",
+        "name": "t-space-16",
+        "val": 144,
         "variable": ""
       },
-      "$color.white": {
+      "$space.17": {
         "isVar": true,
-        "key": "$white",
-        "name": "c-white",
-        "val": "#FFFFFF",
+        "key": "$17",
+        "name": "t-space-17",
+        "val": 144,
         "variable": ""
       },
-      "$color.black": {
+      "$space.18": {
         "isVar": true,
-        "key": "$black",
-        "name": "c-black",
-        "val": "#000000",
+        "key": "$18",
+        "name": "t-space-18",
+        "val": 158,
         "variable": ""
       },
-      "$color.gray50": {
+      "$space.19": {
         "isVar": true,
-        "key": "$gray50",
-        "name": "c-gray50",
-        "val": "#F8FAFC",
+        "key": "$19",
+        "name": "t-space-19",
+        "val": 172,
         "variable": ""
       },
-      "$color.gray100": {
+      "$space.2": {
         "isVar": true,
-        "key": "$gray100",
-        "name": "c-gray100",
-        "val": "#F1F5F9",
+        "key": "$2",
+        "name": "t-space-2",
+        "val": 7,
         "variable": ""
       },
-      "$color.gray200": {
+      "$space.2.5": {
         "isVar": true,
-        "key": "$gray200",
-        "name": "c-gray200",
-        "val": "#E2E8F0",
+        "key": "$2.5",
+        "name": "t-space-2--5",
+        "val": 10,
         "variable": ""
       },
-      "$color.gray300": {
+      "$space.20": {
         "isVar": true,
-        "key": "$gray300",
-        "name": "c-gray300",
-        "val": "#CBD5E1",
+        "key": "$20",
+        "name": "t-space-20",
+        "val": 186,
         "variable": ""
       },
-      "$color.gray400": {
+      "$space.3": {
         "isVar": true,
-        "key": "$gray400",
-        "name": "c-gray400",
-        "val": "#94A3B8",
+        "key": "$3",
+        "name": "t-space-3",
+        "val": 13,
         "variable": ""
       },
-      "$color.gray500": {
+      "$space.3.5": {
         "isVar": true,
-        "key": "$gray500",
-        "name": "c-gray500",
-        "val": "#64748B",
+        "key": "$3.5",
+        "name": "t-space-3--5",
+        "val": 16,
         "variable": ""
       },
-      "$color.gray600": {
+      "$space.4": {
         "isVar": true,
-        "key": "$gray600",
-        "name": "c-gray600",
-        "val": "#475569",
+        "key": "$4",
+        "name": "t-space-4",
+        "val": 18,
         "variable": ""
       },
-      "$color.gray700": {
+      "$space.4.5": {
         "isVar": true,
-        "key": "$gray700",
-        "name": "c-gray700",
-        "val": "#334155",
+        "key": "$4.5",
+        "name": "t-space-4--5",
+        "val": 21,
         "variable": ""
       },
-      "$color.gray800": {
+      "$space.5": {
         "isVar": true,
-        "key": "$gray800",
-        "name": "c-gray800",
-        "val": "#1E293B",
+        "key": "$5",
+        "name": "t-space-5",
+        "val": 24,
         "variable": ""
       },
-      "$color.gray900": {
+      "$space.6": {
         "isVar": true,
-        "key": "$gray900",
-        "name": "c-gray900",
-        "val": "#0F172A",
+        "key": "$6",
+        "name": "t-space-6",
+        "val": 32,
+        "variable": ""
+      },
+      "$space.7": {
+        "isVar": true,
+        "key": "$7",
+        "name": "t-space-7",
+        "val": 39,
+        "variable": ""
+      },
+      "$space.8": {
+        "isVar": true,
+        "key": "$8",
+        "name": "t-space-8",
+        "val": 46,
+        "variable": ""
+      },
+      "$space.9": {
+        "isVar": true,
+        "key": "$9",
+        "name": "t-space-9",
+        "val": 53,
+        "variable": ""
+      },
+      "$space.true": {
+        "isVar": true,
+        "key": "$true",
+        "name": "t-space-true",
+        "val": 18,
+        "variable": ""
+      },
+      "$zIndex.0": {
+        "isVar": true,
+        "key": "$0",
+        "name": "t-zIndex-0",
+        "val": 0,
+        "variable": ""
+      },
+      "$zIndex.1": {
+        "isVar": true,
+        "key": "$1",
+        "name": "t-zIndex-1",
+        "val": 100,
+        "variable": ""
+      },
+      "$zIndex.2": {
+        "isVar": true,
+        "key": "$2",
+        "name": "t-zIndex-2",
+        "val": 200,
+        "variable": ""
+      },
+      "$zIndex.3": {
+        "isVar": true,
+        "key": "$3",
+        "name": "t-zIndex-3",
+        "val": 300,
+        "variable": ""
+      },
+      "$zIndex.4": {
+        "isVar": true,
+        "key": "$4",
+        "name": "t-zIndex-4",
+        "val": 400,
+        "variable": ""
+      },
+      "$zIndex.5": {
+        "isVar": true,
+        "key": "$5",
+        "name": "t-zIndex-5",
+        "val": 500,
         "variable": ""
       }
     },

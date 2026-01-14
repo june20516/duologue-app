@@ -6,6 +6,7 @@ import { YStack, XStack, ScrollView } from 'tamagui';
 import FormInput from '@/components/form/FormInput';
 import { Button, Typography } from '@/components/ui';
 import { useCheckNickname } from '@/hooks/useCheckNickname';
+import { useTranslation } from '@/locales/useTranslation';
 import { fullscreen } from '@/styles/common';
 import { NicknameGenderFormData } from '@/utils/validation/profileSchemas';
 
@@ -16,6 +17,7 @@ interface ProfileStepProps {
 }
 
 const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) => {
+  const { t } = useTranslation();
   const { field: gender } = useController({
     control: form.control,
     name: 'gender',
@@ -24,10 +26,11 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
   const nickname = form.watch('nickname');
   const [debouncedNickname, setDebouncedNickname] = useState('');
 
-  const { data: isAvailable, isLoading: isCheckingNickname } = useCheckNickname(
-    debouncedNickname,
-    debouncedNickname.length > 0
-  );
+  const {
+    data: isAvailable,
+    isLoading: isCheckingNickname,
+    isError: isNicknameCheckError,
+  } = useCheckNickname(debouncedNickname, debouncedNickname.length > 0);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -39,15 +42,16 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
 
   const getNicknameHelperText = () => {
     if (!debouncedNickname) return null;
-    if (isCheckingNickname) return '확인 중...';
-    if (isAvailable === true) return '사용 가능한 닉네임입니다';
-    if (isAvailable === false) return '이미 사용 중인 닉네임입니다';
+    if (isCheckingNickname) return t('onboarding.profile.nickname.checking');
+    if (isNicknameCheckError) return t('onboarding.profile.nickname.checkFailed');
+    if (isAvailable === true) return t('onboarding.profile.nickname.available');
+    if (isAvailable === false) return t('onboarding.profile.nickname.unavailable');
     return null;
   };
 
   const getNicknameHelperColor = () => {
     if (isAvailable === true) return '$success';
-    if (isAvailable === false) return '$error';
+    if (isAvailable === false || isNicknameCheckError) return '$error';
     return '$gray600';
   };
 
@@ -60,8 +64,8 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
               <FormInput
                 control={form.control}
                 name="nickname"
-                label="닉네임"
-                placeholder="닉네임을 입력하세요"
+                label={t('onboarding.profile.nickname.label')}
+                placeholder={t('onboarding.profile.nickname.placeholder')}
                 autoCapitalize="none"
               />
               {getNicknameHelperText() && (
@@ -72,7 +76,7 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
             </YStack>
 
             <YStack gap="$2">
-              <Typography type="semiBold">성별</Typography>
+              <Typography type="semiBold">{t('onboarding.profile.gender.label')}</Typography>
               <XStack gap="$2">
                 {genderOptions.map((option) => {
                   return (
@@ -101,9 +105,14 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
 
         <Button
           onPress={form.handleSubmit(handleSubmit)}
-          disabled={!form.formState.isValid || isAvailable === false || isCheckingNickname}
+          disabled={
+            !form.formState.isValid ||
+            isAvailable === false ||
+            isCheckingNickname ||
+            isNicknameCheckError
+          }
         >
-          다음
+          {t('onboarding.buttons.next')}
         </Button>
       </YStack>
     </Animated.View>

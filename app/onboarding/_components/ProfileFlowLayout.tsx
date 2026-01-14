@@ -4,7 +4,7 @@ import { YStack, XStack, Circle } from 'tamagui';
 import { Typography } from '@/components/ui';
 import { useCommonStyle } from '@/styles/common';
 
-import type { ProfileFlowStep } from '../hooks/useProfileFlow';
+import type { ProfileFlowStep } from '../_hooks/useProfileFlow';
 
 interface StepInfo {
   key: ProfileFlowStep;
@@ -19,12 +19,7 @@ interface ProfileFlowLayoutProps {
   header?: React.ReactNode;
 }
 
-export const ProfileFlowLayout: React.FC<ProfileFlowLayoutProps> = ({
-  step,
-  steps,
-  children,
-  header,
-}) => {
+const ProfileFlowLayout: React.FC<ProfileFlowLayoutProps> = ({ step, steps, children, header }) => {
   const { fullscreen, defaultBackground } = useCommonStyle();
   const currentStepIndex = steps.findIndex((s) => s.key === step);
   const currentStepInfo = steps[currentStepIndex];
@@ -59,3 +54,5 @@ export const ProfileFlowLayout: React.FC<ProfileFlowLayoutProps> = ({
     </SafeAreaView>
   );
 };
+
+export default ProfileFlowLayout;

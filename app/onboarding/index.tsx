@@ -1,18 +1,33 @@
 import { router } from 'expo-router';
 
-import InterestStep from './components/InterestStep';
-import OptionalStep from './components/OptionalStep';
-import { ProfileFlowLayout } from './components/ProfileFlowLayout';
-import ProfileStep from './components/ProfileStep';
-import { useProfileFlow, type ProfileFlowStep } from './hooks/useProfileFlow';
+import { useTranslation } from '@/locales/useTranslation';
 
-const ONBOARDING_STEPS: { key: ProfileFlowStep; title: string; subtitle: string }[] = [
-  { key: 'profile', title: '프로필 설정', subtitle: '기본 정보를 입력해주세요' },
-  { key: 'interests', title: '관심사 선택', subtitle: '관심있는 주제를 선택해주세요' },
-  { key: 'optional', title: '추가 정보', subtitle: '프로필을 더 풍성하게 만들어보세요' },
-];
+import InterestStep from './_components/InterestStep';
+import OptionalStep from './_components/OptionalStep';
+import ProfileFlowLayout from './_components/ProfileFlowLayout';
+import ProfileStep from './_components/ProfileStep';
+import { useProfileFlow, type ProfileFlowStep } from './_hooks/useProfileFlow';
 
 const Onboarding: React.FC = () => {
+  const { t } = useTranslation();
+
+  const ONBOARDING_STEPS: { key: ProfileFlowStep; title: string; subtitle: string }[] = [
+    {
+      key: 'profile',
+      title: t('onboarding.steps.profile.title'),
+      subtitle: t('onboarding.steps.profile.subtitle'),
+    },
+    {
+      key: 'interests',
+      title: t('onboarding.steps.interests.title'),
+      subtitle: t('onboarding.steps.interests.subtitle'),
+    },
+    {
+      key: 'optional',
+      title: t('onboarding.steps.optional.title'),
+      subtitle: t('onboarding.steps.optional.subtitle'),
+    },
+  ];
   const { step, setStep, forms, handlers, mutation } = useProfileFlow({
     onSuccess: () => router.replace('/(tabs)'),
   });

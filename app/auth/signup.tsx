@@ -2,7 +2,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { router } from 'expo-router';
 import { useState, useEffect, useCallback } from 'react';
 import { useForm } from 'react-hook-form';
-import { useTranslation } from 'react-i18next';
 import { BackHandler } from 'react-native';
 import Animated, { useAnimatedStyle, useSharedValue, withTiming } from 'react-native-reanimated';
 import { scheduleOnRN } from 'react-native-worklets';
@@ -10,6 +9,7 @@ import { Progress, XStack, YStack } from 'tamagui';
 
 import FormInput from '@/components/form/FormInput';
 import { Button, Typography } from '@/components/ui';
+import { useTranslation } from '@/locales/useTranslation';
 import { useRequestSignup, useVerifySignup } from '@/queries/useMutationAuth';
 import {
   emailSchema,
@@ -30,8 +30,16 @@ export const SignupAuthScreen: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState(TIMER_DURATION);
   const [isExpired, setIsExpired] = useState(false);
 
-  const { mutate: requestSignup, isPending: isRequestingSignup, error: requestSignupError } = useRequestSignup();
-  const { mutate: verifySignup, isPending: isVerifyingSignup, error: verifySignupError } = useVerifySignup();
+  const {
+    mutate: requestSignup,
+    isPending: isRequestingSignup,
+    error: requestSignupError,
+  } = useRequestSignup();
+  const {
+    mutate: verifySignup,
+    isPending: isVerifyingSignup,
+    error: verifySignupError,
+  } = useVerifySignup();
 
   // Animation
   const codeHeight = useSharedValue(0);

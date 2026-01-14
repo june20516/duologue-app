@@ -3,6 +3,7 @@ import Animated, { FadeInRight, FadeOutLeft } from 'react-native-reanimated';
 import { ScrollView, XStack, YStack } from 'tamagui';
 
 import { Badge, Button, Spinner, Typography } from '@/components/ui';
+import { useTranslation } from '@/locales/useTranslation';
 import { useQueryInterests } from '@/queries/useQueryInterests';
 import { fullscreen } from '@/styles/common';
 import { InterestsFormData } from '@/utils/validation/profileSchemas';
@@ -13,7 +14,13 @@ interface InterestStepProps {
   handleSubmit: (data: InterestsFormData) => void;
 }
 const InterestStep = ({ form, handleBack, handleSubmit }: InterestStepProps) => {
-  const { data: interests, isLoading: isLoadingInterests } = useQueryInterests();
+  const { t } = useTranslation();
+  const {
+    data: interests,
+    isLoading: isLoadingInterests,
+    isError: isInterestsError,
+    refetch,
+  } = useQueryInterests();
   const { field: selectedInterestIdsField } = useController({
     control: form.control,
     name: 'interestIds',
@@ -53,7 +60,16 @@ const InterestStep = ({ form, handleBack, handleSubmit }: InterestStepProps) => 
     return (
       <YStack flex={1} justify="center" items="center">
         <Spinner size="medium" />
-        <Typography mt="$4">관심사 목록을 불러오는 중...</Typography>
+        <Typography mt="$4">{t('onboarding.interests.loading')}</Typography>
+      </YStack>
+    );
+  }
+
+  if (isInterestsError) {
+    return (
+      <YStack flex={1} justify="center" items="center" gap="$4">
+        <Typography color="$error">{t('onboarding.interests.loadFailed')}</Typography>
+        <Button onPress={() => refetch()}>{t('onboarding.retry')}</Button>
       </YStack>
     );
   }

@@ -4,6 +4,7 @@ import { ScrollView, XStack, YStack } from 'tamagui';
 
 import FormInput from '@/components/form/FormInput';
 import { Button, Typography } from '@/components/ui';
+import { useTranslation } from '@/locales/useTranslation';
 import { fullscreen } from '@/styles/common';
 import { OptionalFieldsFormData } from '@/utils/validation/profileSchemas';
 
@@ -22,6 +23,8 @@ const OptionalStep = ({
   isPending,
   error,
 }: OptionalStepProps) => {
+  const { t } = useTranslation();
+
   return (
     <Animated.View entering={FadeInRight} exiting={FadeOutLeft} style={[fullscreen]}>
       <YStack flex={1} gap="$4">
@@ -31,8 +34,8 @@ const OptionalStep = ({
               <FormInput
                 control={form.control}
                 name="region"
-                label="지역"
-                placeholder="예: 서울특별시"
+                label={t('onboarding.optional.region.label')}
+                placeholder={t('onboarding.optional.region.placeholder')}
               />
             </YStack>
 
@@ -40,8 +43,8 @@ const OptionalStep = ({
               <FormInput
                 control={form.control}
                 name="shortBio"
-                label="한줄소개"
-                placeholder="자신을 소개해주세요"
+                label={t('onboarding.optional.shortBio.label')}
+                placeholder={t('onboarding.optional.shortBio.placeholder')}
                 multiline
                 minH="$8"
               />
@@ -57,7 +60,7 @@ const OptionalStep = ({
 
         <XStack gap="$2">
           <Button flex={1} variant="outline" onPress={handleBack}>
-            이전
+            {t('onboarding.buttons.previous')}
           </Button>
           <Button
             flex={2}
@@ -65,7 +68,7 @@ const OptionalStep = ({
             loading={isPending}
             disabled={isPending}
           >
-            완료
+            {t('onboarding.buttons.complete')}
           </Button>
         </XStack>
       </YStack>

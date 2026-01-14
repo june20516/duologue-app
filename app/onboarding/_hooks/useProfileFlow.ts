@@ -33,10 +33,7 @@ export const useProfileFlow = ({ initialData, onSuccess }: UseProfileFlowOptions
       profileForm.setValue('nickname', initialData.nickname || '');
       profileForm.setValue('gender', initialData.gender || 'male');
 
-      interestsForm.setValue(
-        'interestIds',
-        initialData.interests?.map((i) => i.id) || []
-      );
+      interestsForm.setValue('interestIds', initialData.interests?.map((i) => i.id) || []);
 
       optionalForm.setValue('region', initialData.region || '');
       optionalForm.setValue('shortBio', initialData.shortBio || '');
