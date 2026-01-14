@@ -1,0 +1,21 @@
+{
+  "edit": {
+    "title": "Edit Profile",
+    "cancel": "Cancel",
+    "loading": "Loading profile...",
+    "steps": {
+      "profile": {
+        "title": "Basic Info",
+        "subtitle": "Edit your nickname and gender"
+      },
+      "interests": {
+        "title": "Select Interests",
+        "subtitle": "Choose topics you're interested in"
+      },
+      "optional": {
+        "title": "Additional Info",
+        "subtitle": "Edit your region and bio"
+      }
+    }
+  }
+}

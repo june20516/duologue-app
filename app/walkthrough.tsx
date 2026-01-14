@@ -1,10 +1,10 @@
 import { router } from 'expo-router';
 import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { YStack } from 'tamagui';
 
 import { Button, Typography } from '@/components/ui';
+import { useTranslation } from '@/locales/useTranslation';
 import { useAppStore } from '@/stores/appStore';
 import { useCommonStyle } from '@/styles/common';
 

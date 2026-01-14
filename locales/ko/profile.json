@@ -1,0 +1,21 @@
+{
+  "edit": {
+    "title": "프로필 수정",
+    "cancel": "취소",
+    "loading": "프로필을 불러오는 중...",
+    "steps": {
+      "profile": {
+        "title": "기본 정보",
+        "subtitle": "닉네임과 성별을 수정하세요"
+      },
+      "interests": {
+        "title": "관심사 선택",
+        "subtitle": "관심있는 주제를 선택해주세요"
+      },
+      "optional": {
+        "title": "추가 정보",
+        "subtitle": "지역과 한줄소개를 수정하세요"
+      }
+    }
+  }
+}

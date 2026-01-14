@@ -56,6 +56,7 @@ export const useQueriesMe = (options?: QueryOptionParams<AuthMe | ProfileMe, Err
 
   useEffect(() => {
     if (typeof queriesResult === 'undefined') return;
+    if (queriesResult.isError) return;
     if (!queriesResult.me) return;
     setMe(queriesResult.me);
   }, [queriesResult, setMe]);

@@ -7,17 +7,15 @@
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
   "files.exclude": {
-    "node_modules": true,
-    ".expo": true,
+    ".git": false,
     "dist": true,
-    ".git": false
+    "node_modules": true
   },
   "search.exclude": {
-    "node_modules": true,
-    ".expo": true,
     "dist": true,
-    "yarn.lock": true,
-    "package-lock.json": true
+    "node_modules": true,
+    "package-lock.json": true,
+    "yarn.lock": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "[javascript]": {
@@ -41,5 +39,6 @@
   "i18n-ally.namespace": true,
   "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
   "i18n-ally.sourceLanguage": "ko",
-  "i18n-ally.displayLanguage": "ko"
+  "i18n-ally.displayLanguage": "ko",
+  "search.useIgnoreFiles": false
 }

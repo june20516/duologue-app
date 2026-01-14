@@ -4,21 +4,13 @@ import {
   CheckNicknameRequestSchema,
   GetMyProfileRequestSchema,
   UpdateMyProfileRequestSchema,
+  type UpdateMyProfileRequest,
 } from '@/gen/duologue/v1/profile_pb';
 import type { ProfileMe } from '@/models/user';
 
 import { handleConnectError } from './connectError';
 import { mapProfile } from './mappers';
 import { profileClient } from './transport';
-
-interface UpdateProfileRequest {
-  nickname?: string;
-  gender?: 'male' | 'female' | 'other';
-  region?: string;
-  shortBio?: string;
-  profileImageUrl?: string;
-  interestIds?: number[];
-}
 
 export const profileApi = {
   getMe: async (): Promise<ProfileMe> => {
@@ -34,7 +26,7 @@ export const profileApi = {
     }
   },
 
-  updateMe: async (data: UpdateProfileRequest): Promise<ProfileMe> => {
+  updateMe: async (data: Partial<Omit<UpdateMyProfileRequest, 'interestIds'>> & { interestIds?: number[] }): Promise<ProfileMe> => {
     try {
       const request = create(UpdateMyProfileRequestSchema, {
         nickname: data.nickname,
