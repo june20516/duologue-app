@@ -6,6 +6,8 @@ import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegen
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import type { Timestamp } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Error } from "./common_pb";
+import { file_duologue_v1_common } from "./common_pb";
 import type { PublicProfile } from "./profile_pb";
 import { file_duologue_v1_profile } from "./profile_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -14,7 +16,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file duologue/v1/match.proto.
  */
 export const file_duologue_v1_match: GenFile = /*@__PURE__*/
-  fileDesc("ChdkdW9sb2d1ZS92MS9tYXRjaC5wcm90bxILZHVvbG9ndWUudjEiFQoTR2V0TXlNYXRjaGVzUmVxdWVzdCJBChRHZXRNeU1hdGNoZXNSZXNwb25zZRIpCgdtYXRjaGVzGAEgAygLMhguZHVvbG9ndWUudjEuTWF0Y2hEZXRhaWwiIwoPR2V0TWF0Y2hSZXF1ZXN0EhAKCG1hdGNoX2lkGAEgASgDIjsKEEdldE1hdGNoUmVzcG9uc2USJwoFbWF0Y2gYASABKAsyGC5kdW9sb2d1ZS52MS5NYXRjaERldGFpbCImChJEZWxldGVNYXRjaFJlcXVlc3QSEAoIbWF0Y2hfaWQYASABKAMiFQoTRGVsZXRlTWF0Y2hSZXNwb25zZSLjAQoLTWF0Y2hEZXRhaWwSCgoCaWQYASABKAMSKwoHcGFydG5lchgCIAEoCzIaLmR1b2xvZ3VlLnYxLlB1YmxpY1Byb2ZpbGUSDgoGc3RhdHVzGAMgASgJEhcKD2ludGltYWN5X3N0YXR1cxgEIAEoCRISCgpwbGF5X2NvdW50GAUgASgFEi4KCmNyZWF0ZWRfYXQYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMv4BCgxNYXRjaFNlcnZpY2USUwoMR2V0TXlNYXRjaGVzEiAuZHVvbG9ndWUudjEuR2V0TXlNYXRjaGVzUmVxdWVzdBohLmR1b2xvZ3VlLnYxLkdldE15TWF0Y2hlc1Jlc3BvbnNlEkcKCEdldE1hdGNoEhwuZHVvbG9ndWUudjEuR2V0TWF0Y2hSZXF1ZXN0Gh0uZHVvbG9ndWUudjEuR2V0TWF0Y2hSZXNwb25zZRJQCgtEZWxldGVNYXRjaBIfLmR1b2xvZ3VlLnYxLkRlbGV0ZU1hdGNoUmVxdWVzdBogLmR1b2xvZ3VlLnYxLkRlbGV0ZU1hdGNoUmVzcG9uc2VCRFpCZ2l0aHViLmNvbS9qdW5lMjA1MTYvZHVvbG9ndWUtc2VydmVyL2dlbi9nby9kdW9sb2d1ZS92MTtkdW9sb2d1ZXYxYgZwcm90bzM", [file_google_protobuf_timestamp, file_duologue_v1_profile]);
+  fileDesc("ChdkdW9sb2d1ZS92MS9tYXRjaC5wcm90bxILZHVvbG9ndWUudjEiFQoTR2V0TXlNYXRjaGVzUmVxdWVzdCJ6ChRHZXRNeU1hdGNoZXNSZXNwb25zZRIzCgdzdWNjZXNzGAEgASgLMiAuZHVvbG9ndWUudjEuR2V0TXlNYXRjaGVzU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiQAoTR2V0TXlNYXRjaGVzU3VjY2VzcxIpCgdtYXRjaGVzGAEgAygLMhguZHVvbG9ndWUudjEuTWF0Y2hEZXRhaWwiIwoPR2V0TWF0Y2hSZXF1ZXN0EhAKCG1hdGNoX2lkGAEgASgDInIKEEdldE1hdGNoUmVzcG9uc2USLwoHc3VjY2VzcxgBIAEoCzIcLmR1b2xvZ3VlLnYxLkdldE1hdGNoU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiOgoPR2V0TWF0Y2hTdWNjZXNzEicKBW1hdGNoGAEgASgLMhguZHVvbG9ndWUudjEuTWF0Y2hEZXRhaWwiJgoSRGVsZXRlTWF0Y2hSZXF1ZXN0EhAKCG1hdGNoX2lkGAEgASgDIngKE0RlbGV0ZU1hdGNoUmVzcG9uc2USMgoHc3VjY2VzcxgBIAEoCzIfLmR1b2xvZ3VlLnYxLkRlbGV0ZU1hdGNoU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiFAoSRGVsZXRlTWF0Y2hTdWNjZXNzIuMBCgtNYXRjaERldGFpbBIKCgJpZBgBIAEoAxIrCgdwYXJ0bmVyGAIgASgLMhouZHVvbG9ndWUudjEuUHVibGljUHJvZmlsZRIOCgZzdGF0dXMYAyABKAkSFwoPaW50aW1hY3lfc3RhdHVzGAQgASgJEhIKCnBsYXlfY291bnQYBSABKAUSLgoKY3JlYXRlZF9hdBgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLgoKdXBkYXRlZF9hdBgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAy/gEKDE1hdGNoU2VydmljZRJTCgxHZXRNeU1hdGNoZXMSIC5kdW9sb2d1ZS52MS5HZXRNeU1hdGNoZXNSZXF1ZXN0GiEuZHVvbG9ndWUudjEuR2V0TXlNYXRjaGVzUmVzcG9uc2USRwoIR2V0TWF0Y2gSHC5kdW9sb2d1ZS52MS5HZXRNYXRjaFJlcXVlc3QaHS5kdW9sb2d1ZS52MS5HZXRNYXRjaFJlc3BvbnNlElAKC0RlbGV0ZU1hdGNoEh8uZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hSZXF1ZXN0GiAuZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_google_protobuf_timestamp, file_duologue_v1_common, file_duologue_v1_profile]);
 
 /**
  * @generated from message duologue.v1.GetMyMatchesRequest
@@ -34,9 +36,21 @@ export const GetMyMatchesRequestSchema: GenMessage<GetMyMatchesRequest> = /*@__P
  */
 export type GetMyMatchesResponse = Message<"duologue.v1.GetMyMatchesResponse"> & {
   /**
-   * @generated from field: repeated duologue.v1.MatchDetail matches = 1;
+   * @generated from oneof duologue.v1.GetMyMatchesResponse.result
    */
-  matches: MatchDetail[];
+  result: {
+    /**
+     * @generated from field: duologue.v1.GetMyMatchesSuccess success = 1;
+     */
+    value: GetMyMatchesSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -45,6 +59,23 @@ export type GetMyMatchesResponse = Message<"duologue.v1.GetMyMatchesResponse"> &
  */
 export const GetMyMatchesResponseSchema: GenMessage<GetMyMatchesResponse> = /*@__PURE__*/
   messageDesc(file_duologue_v1_match, 1);
+
+/**
+ * @generated from message duologue.v1.GetMyMatchesSuccess
+ */
+export type GetMyMatchesSuccess = Message<"duologue.v1.GetMyMatchesSuccess"> & {
+  /**
+   * @generated from field: repeated duologue.v1.MatchDetail matches = 1;
+   */
+  matches: MatchDetail[];
+};
+
+/**
+ * Describes the message duologue.v1.GetMyMatchesSuccess.
+ * Use `create(GetMyMatchesSuccessSchema)` to create a new message.
+ */
+export const GetMyMatchesSuccessSchema: GenMessage<GetMyMatchesSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_match, 2);
 
 /**
  * @generated from message duologue.v1.GetMatchRequest
@@ -61,16 +92,28 @@ export type GetMatchRequest = Message<"duologue.v1.GetMatchRequest"> & {
  * Use `create(GetMatchRequestSchema)` to create a new message.
  */
 export const GetMatchRequestSchema: GenMessage<GetMatchRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match, 2);
+  messageDesc(file_duologue_v1_match, 3);
 
 /**
  * @generated from message duologue.v1.GetMatchResponse
  */
 export type GetMatchResponse = Message<"duologue.v1.GetMatchResponse"> & {
   /**
-   * @generated from field: duologue.v1.MatchDetail match = 1;
+   * @generated from oneof duologue.v1.GetMatchResponse.result
    */
-  match?: MatchDetail;
+  result: {
+    /**
+     * @generated from field: duologue.v1.GetMatchSuccess success = 1;
+     */
+    value: GetMatchSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -78,7 +121,24 @@ export type GetMatchResponse = Message<"duologue.v1.GetMatchResponse"> & {
  * Use `create(GetMatchResponseSchema)` to create a new message.
  */
 export const GetMatchResponseSchema: GenMessage<GetMatchResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match, 3);
+  messageDesc(file_duologue_v1_match, 4);
+
+/**
+ * @generated from message duologue.v1.GetMatchSuccess
+ */
+export type GetMatchSuccess = Message<"duologue.v1.GetMatchSuccess"> & {
+  /**
+   * @generated from field: duologue.v1.MatchDetail match = 1;
+   */
+  match?: MatchDetail;
+};
+
+/**
+ * Describes the message duologue.v1.GetMatchSuccess.
+ * Use `create(GetMatchSuccessSchema)` to create a new message.
+ */
+export const GetMatchSuccessSchema: GenMessage<GetMatchSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_match, 5);
 
 /**
  * @generated from message duologue.v1.DeleteMatchRequest
@@ -95,12 +155,28 @@ export type DeleteMatchRequest = Message<"duologue.v1.DeleteMatchRequest"> & {
  * Use `create(DeleteMatchRequestSchema)` to create a new message.
  */
 export const DeleteMatchRequestSchema: GenMessage<DeleteMatchRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match, 4);
+  messageDesc(file_duologue_v1_match, 6);
 
 /**
  * @generated from message duologue.v1.DeleteMatchResponse
  */
 export type DeleteMatchResponse = Message<"duologue.v1.DeleteMatchResponse"> & {
+  /**
+   * @generated from oneof duologue.v1.DeleteMatchResponse.result
+   */
+  result: {
+    /**
+     * @generated from field: duologue.v1.DeleteMatchSuccess success = 1;
+     */
+    value: DeleteMatchSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -108,7 +184,20 @@ export type DeleteMatchResponse = Message<"duologue.v1.DeleteMatchResponse"> & {
  * Use `create(DeleteMatchResponseSchema)` to create a new message.
  */
 export const DeleteMatchResponseSchema: GenMessage<DeleteMatchResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match, 5);
+  messageDesc(file_duologue_v1_match, 7);
+
+/**
+ * @generated from message duologue.v1.DeleteMatchSuccess
+ */
+export type DeleteMatchSuccess = Message<"duologue.v1.DeleteMatchSuccess"> & {
+};
+
+/**
+ * Describes the message duologue.v1.DeleteMatchSuccess.
+ * Use `create(DeleteMatchSuccessSchema)` to create a new message.
+ */
+export const DeleteMatchSuccessSchema: GenMessage<DeleteMatchSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_match, 8);
 
 /**
  * @generated from message duologue.v1.MatchDetail
@@ -155,7 +244,7 @@ export type MatchDetail = Message<"duologue.v1.MatchDetail"> & {
  * Use `create(MatchDetailSchema)` to create a new message.
  */
 export const MatchDetailSchema: GenMessage<MatchDetail> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match, 6);
+  messageDesc(file_duologue_v1_match, 9);
 
 /**
  * @generated from service duologue.v1.MatchService

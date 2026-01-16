@@ -10,7 +10,7 @@ import {
 } from '@/gen/duologue/v1/auth_pb';
 import type { AuthMe } from '@/models/user';
 
-import { handleConnectError } from './connectError';
+import { handleConnectError, unwrap } from './connectError';
 import { authClient } from './transport';
 
 interface MessageResponse {
@@ -27,7 +27,8 @@ export const authApi = {
     try {
       const request = create(RequestSignupRequestSchema, { email });
       const response = await authClient.requestSignup(request);
-      return { message: response.message };
+      const result = unwrap(response);
+      return { message: result.message };
     } catch (error) {
       throw handleConnectError(error);
     }
@@ -37,9 +38,10 @@ export const authApi = {
     try {
       const request = create(VerifySignupRequestSchema, { email, code });
       const response = await authClient.verifySignup(request);
+      const result = unwrap(response);
       return {
-        accessToken: response.accessToken,
-        refreshToken: response.refreshToken,
+        accessToken: result.accessToken,
+        refreshToken: result.refreshToken,
       };
     } catch (error) {
       throw handleConnectError(error);
@@ -50,7 +52,8 @@ export const authApi = {
     try {
       const request = create(RequestLoginRequestSchema, { email });
       const response = await authClient.requestLogin(request);
-      return { message: response.message };
+      const result = unwrap(response);
+      return { message: result.message };
     } catch (error) {
       throw handleConnectError(error);
     }
@@ -60,9 +63,10 @@ export const authApi = {
     try {
       const request = create(VerifyLoginRequestSchema, { email, code });
       const response = await authClient.verifyLogin(request);
+      const result = unwrap(response);
       return {
-        accessToken: response.accessToken,
-        refreshToken: response.refreshToken,
+        accessToken: result.accessToken,
+        refreshToken: result.refreshToken,
       };
     } catch (error) {
       throw handleConnectError(error);
@@ -73,9 +77,10 @@ export const authApi = {
     try {
       const request = create(GetMeRequestSchema, {});
       const response = await authClient.getMe(request);
+      const result = unwrap(response);
       return {
-        id: Number(response.userId),
-        email: response.email,
+        id: Number(result.userId),
+        email: result.email,
       };
     } catch (error) {
       throw handleConnectError(error);
@@ -85,7 +90,8 @@ export const authApi = {
   logout: async (refreshToken: string): Promise<void> => {
     try {
       const request = create(LogoutRequestSchema, { refreshToken });
-      await authClient.logout(request);
+      const response = await authClient.logout(request);
+      unwrap(response);
     } catch (error) {
       throw handleConnectError(error);
     }

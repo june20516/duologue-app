@@ -1,10 +1,11 @@
 import type { DescMessage } from '@bufbuild/protobuf';
 import type { Interceptor, UnaryRequest, UnaryResponse } from '@connectrpc/connect';
-import { Code, ConnectError } from '@connectrpc/connect';
 
 import { useAuthStore } from '@/stores/authStore';
 
-import { ERROR_CODES } from './errorCodes';
+import { ErrorCode } from '../gen/duologue/v1/common_pb';
+
+import { ApplicationError } from './connectError';
 import { apiLogger } from './logger';
 import { tokenRefreshManager } from './tokenRefresh';
 
@@ -41,29 +42,34 @@ export const createAuthInterceptor = (): Interceptor => {
     try {
       return await next(req);
     } catch (error) {
-      if (error instanceof ConnectError && error.code === Code.Unauthenticated) {
-        const errorCode = extractErrorCode(error);
-
-        if (errorCode === ERROR_CODES.PROFILE_NOT_FOUND) {
+      // ApplicationError는 unwrap에서 throw됨
+      if (error instanceof ApplicationError) {
+        // 프로필 없음 에러 처리
+        if (error.code === ErrorCode.PROFILE_NOT_FOUND) {
           await handleProfileNotFound();
           throw error;
         }
 
-        try {
-          const newToken = await tokenRefreshManager.refresh();
-          req.header.set('Authorization', `Bearer ${newToken}`);
-          return await next(req);
-        } catch {
-          throw error;
+        // 인증 에러 시 토큰 갱신 시도
+        if (
+          error.code === ErrorCode.AUTH_ERROR ||
+          error.code === ErrorCode.AUTH_REQUIRED ||
+          error.code === ErrorCode.INVALID_TOKEN
+        ) {
+          try {
+            const newToken = await tokenRefreshManager.refresh();
+            req.header.set('Authorization', `Bearer ${newToken}`);
+            return await next(req);
+          } catch {
+            throw error;
+          }
         }
       }
+
+      // ConnectError(네트워크 오류 등)는 그대로 throw
       throw error;
     }
   };
-};
-
-const extractErrorCode = (error: ConnectError): string | undefined => {
-  return error.metadata.get('x-error-code') ?? undefined;
 };
 
 const handleProfileNotFound = async (): Promise<void> => {

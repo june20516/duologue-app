@@ -6,13 +6,15 @@ import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegen
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
 import type { Timestamp } from "@bufbuild/protobuf/wkt";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
+import type { Error } from "./common_pb";
+import { file_duologue_v1_common } from "./common_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file duologue/v1/ticket.proto.
  */
 export const file_duologue_v1_ticket: GenFile = /*@__PURE__*/
-  fileDesc("ChhkdW9sb2d1ZS92MS90aWNrZXQucHJvdG8SC2R1b2xvZ3VlLnYxIhUKE0dldE15VGlja2V0c1JlcXVlc3QimQEKFEdldE15VGlja2V0c1Jlc3BvbnNlEikKDG1hdGNoX3RpY2tldBgBIAEoCzITLmR1b2xvZ3VlLnYxLlRpY2tldBIoCgtnYW1lX3RpY2tldBgCIAEoCzITLmR1b2xvZ3VlLnYxLlRpY2tldBIsCg9jb250aW51ZV90aWNrZXQYAyABKAsyEy5kdW9sb2d1ZS52MS5UaWNrZXQixAEKBlRpY2tldBIQCghxdWFudGl0eRgBIAEoBRIUCgxtYXhfcXVhbnRpdHkYAiABKAUSMgoObGFzdF9yZWZpbGxfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMmQKDVRpY2tldFNlcnZpY2USUwoMR2V0TXlUaWNrZXRzEiAuZHVvbG9ndWUudjEuR2V0TXlUaWNrZXRzUmVxdWVzdBohLmR1b2xvZ3VlLnYxLkdldE15VGlja2V0c1Jlc3BvbnNlQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_google_protobuf_timestamp]);
+  fileDesc("ChhkdW9sb2d1ZS92MS90aWNrZXQucHJvdG8SC2R1b2xvZ3VlLnYxIhUKE0dldE15VGlja2V0c1JlcXVlc3QiegoUR2V0TXlUaWNrZXRzUmVzcG9uc2USMwoHc3VjY2VzcxgBIAEoCzIgLmR1b2xvZ3VlLnYxLkdldE15VGlja2V0c1N1Y2Nlc3NIABIjCgVlcnJvchgCIAEoCzISLmR1b2xvZ3VlLnYxLkVycm9ySABCCAoGcmVzdWx0IpgBChNHZXRNeVRpY2tldHNTdWNjZXNzEikKDG1hdGNoX3RpY2tldBgBIAEoCzITLmR1b2xvZ3VlLnYxLlRpY2tldBIoCgtnYW1lX3RpY2tldBgCIAEoCzITLmR1b2xvZ3VlLnYxLlRpY2tldBIsCg9jb250aW51ZV90aWNrZXQYAyABKAsyEy5kdW9sb2d1ZS52MS5UaWNrZXQixAEKBlRpY2tldBIQCghxdWFudGl0eRgBIAEoBRIUCgxtYXhfcXVhbnRpdHkYAiABKAUSMgoObGFzdF9yZWZpbGxfYXQYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi4KCnVwZGF0ZWRfYXQYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wMmQKDVRpY2tldFNlcnZpY2USUwoMR2V0TXlUaWNrZXRzEiAuZHVvbG9ndWUudjEuR2V0TXlUaWNrZXRzUmVxdWVzdBohLmR1b2xvZ3VlLnYxLkdldE15VGlja2V0c1Jlc3BvbnNlQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_google_protobuf_timestamp, file_duologue_v1_common]);
 
 /**
  * @generated from message duologue.v1.GetMyTicketsRequest
@@ -32,6 +34,35 @@ export const GetMyTicketsRequestSchema: GenMessage<GetMyTicketsRequest> = /*@__P
  */
 export type GetMyTicketsResponse = Message<"duologue.v1.GetMyTicketsResponse"> & {
   /**
+   * @generated from oneof duologue.v1.GetMyTicketsResponse.result
+   */
+  result: {
+    /**
+     * @generated from field: duologue.v1.GetMyTicketsSuccess success = 1;
+     */
+    value: GetMyTicketsSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message duologue.v1.GetMyTicketsResponse.
+ * Use `create(GetMyTicketsResponseSchema)` to create a new message.
+ */
+export const GetMyTicketsResponseSchema: GenMessage<GetMyTicketsResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_ticket, 1);
+
+/**
+ * @generated from message duologue.v1.GetMyTicketsSuccess
+ */
+export type GetMyTicketsSuccess = Message<"duologue.v1.GetMyTicketsSuccess"> & {
+  /**
    * @generated from field: duologue.v1.Ticket match_ticket = 1;
    */
   matchTicket?: Ticket;
@@ -48,11 +79,11 @@ export type GetMyTicketsResponse = Message<"duologue.v1.GetMyTicketsResponse"> &
 };
 
 /**
- * Describes the message duologue.v1.GetMyTicketsResponse.
- * Use `create(GetMyTicketsResponseSchema)` to create a new message.
+ * Describes the message duologue.v1.GetMyTicketsSuccess.
+ * Use `create(GetMyTicketsSuccessSchema)` to create a new message.
  */
-export const GetMyTicketsResponseSchema: GenMessage<GetMyTicketsResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_ticket, 1);
+export const GetMyTicketsSuccessSchema: GenMessage<GetMyTicketsSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_ticket, 2);
 
 /**
  * @generated from message duologue.v1.Ticket
@@ -89,7 +120,7 @@ export type Ticket = Message<"duologue.v1.Ticket"> & {
  * Use `create(TicketSchema)` to create a new message.
  */
 export const TicketSchema: GenMessage<Ticket> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_ticket, 2);
+  messageDesc(file_duologue_v1_ticket, 3);
 
 /**
  * @generated from service duologue.v1.TicketService

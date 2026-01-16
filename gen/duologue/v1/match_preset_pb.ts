@@ -4,6 +4,7 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { Error } from "./common_pb";
 import { file_duologue_v1_common } from "./common_pb";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -11,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file duologue/v1/match_preset.proto.
  */
 export const file_duologue_v1_match_preset: GenFile = /*@__PURE__*/
-  fileDesc("Ch5kdW9sb2d1ZS92MS9tYXRjaF9wcmVzZXQucHJvdG8SC2R1b2xvZ3VlLnYxIkkKC01hdGNoUHJlc2V0EhgKEHByZWZlcnJlZF9nZW5kZXIYASABKAkSDwoHbWluX2FnZRgCIAEoBRIPCgdtYXhfYWdlGAMgASgFIhcKFUdldE1hdGNoUHJlc2V0UmVxdWVzdCJCChZHZXRNYXRjaFByZXNldFJlc3BvbnNlEigKBnByZXNldBgBIAEoCzIYLmR1b2xvZ3VlLnYxLk1hdGNoUHJlc2V0IlYKGFVwZGF0ZU1hdGNoUHJlc2V0UmVxdWVzdBIYChBwcmVmZXJyZWRfZ2VuZGVyGAEgASgJEg8KB21pbl9hZ2UYAiABKAUSDwoHbWF4X2FnZRgDIAEoBSJFChlVcGRhdGVNYXRjaFByZXNldFJlc3BvbnNlEigKBnByZXNldBgBIAEoCzIYLmR1b2xvZ3VlLnYxLk1hdGNoUHJlc2V0IhoKGERlbGV0ZU1hdGNoUHJlc2V0UmVxdWVzdCIsChlEZWxldGVNYXRjaFByZXNldFJlc3BvbnNlEg8KB21lc3NhZ2UYASABKAkytwIKEk1hdGNoUHJlc2V0U2VydmljZRJZCg5HZXRNYXRjaFByZXNldBIiLmR1b2xvZ3VlLnYxLkdldE1hdGNoUHJlc2V0UmVxdWVzdBojLmR1b2xvZ3VlLnYxLkdldE1hdGNoUHJlc2V0UmVzcG9uc2USYgoRVXBkYXRlTWF0Y2hQcmVzZXQSJS5kdW9sb2d1ZS52MS5VcGRhdGVNYXRjaFByZXNldFJlcXVlc3QaJi5kdW9sb2d1ZS52MS5VcGRhdGVNYXRjaFByZXNldFJlc3BvbnNlEmIKEURlbGV0ZU1hdGNoUHJlc2V0EiUuZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hQcmVzZXRSZXF1ZXN0GiYuZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hQcmVzZXRSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_duologue_v1_common]);
+  fileDesc("Ch5kdW9sb2d1ZS92MS9tYXRjaF9wcmVzZXQucHJvdG8SC2R1b2xvZ3VlLnYxIkkKC01hdGNoUHJlc2V0EhgKEHByZWZlcnJlZF9nZW5kZXIYASABKAkSDwoHbWluX2FnZRgCIAEoBRIPCgdtYXhfYWdlGAMgASgFIhcKFUdldE1hdGNoUHJlc2V0UmVxdWVzdCJ+ChZHZXRNYXRjaFByZXNldFJlc3BvbnNlEjUKB3N1Y2Nlc3MYASABKAsyIi5kdW9sb2d1ZS52MS5HZXRNYXRjaFByZXNldFN1Y2Nlc3NIABIjCgVlcnJvchgCIAEoCzISLmR1b2xvZ3VlLnYxLkVycm9ySABCCAoGcmVzdWx0IkEKFUdldE1hdGNoUHJlc2V0U3VjY2VzcxIoCgZwcmVzZXQYASABKAsyGC5kdW9sb2d1ZS52MS5NYXRjaFByZXNldCJWChhVcGRhdGVNYXRjaFByZXNldFJlcXVlc3QSGAoQcHJlZmVycmVkX2dlbmRlchgBIAEoCRIPCgdtaW5fYWdlGAIgASgFEg8KB21heF9hZ2UYAyABKAUihAEKGVVwZGF0ZU1hdGNoUHJlc2V0UmVzcG9uc2USOAoHc3VjY2VzcxgBIAEoCzIlLmR1b2xvZ3VlLnYxLlVwZGF0ZU1hdGNoUHJlc2V0U3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiRAoYVXBkYXRlTWF0Y2hQcmVzZXRTdWNjZXNzEigKBnByZXNldBgBIAEoCzIYLmR1b2xvZ3VlLnYxLk1hdGNoUHJlc2V0IhoKGERlbGV0ZU1hdGNoUHJlc2V0UmVxdWVzdCKEAQoZRGVsZXRlTWF0Y2hQcmVzZXRSZXNwb25zZRI4CgdzdWNjZXNzGAEgASgLMiUuZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hQcmVzZXRTdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCIrChhEZWxldGVNYXRjaFByZXNldFN1Y2Nlc3MSDwoHbWVzc2FnZRgBIAEoCTK3AgoSTWF0Y2hQcmVzZXRTZXJ2aWNlElkKDkdldE1hdGNoUHJlc2V0EiIuZHVvbG9ndWUudjEuR2V0TWF0Y2hQcmVzZXRSZXF1ZXN0GiMuZHVvbG9ndWUudjEuR2V0TWF0Y2hQcmVzZXRSZXNwb25zZRJiChFVcGRhdGVNYXRjaFByZXNldBIlLmR1b2xvZ3VlLnYxLlVwZGF0ZU1hdGNoUHJlc2V0UmVxdWVzdBomLmR1b2xvZ3VlLnYxLlVwZGF0ZU1hdGNoUHJlc2V0UmVzcG9uc2USYgoRRGVsZXRlTWF0Y2hQcmVzZXQSJS5kdW9sb2d1ZS52MS5EZWxldGVNYXRjaFByZXNldFJlcXVlc3QaJi5kdW9sb2d1ZS52MS5EZWxldGVNYXRjaFByZXNldFJlc3BvbnNlQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_duologue_v1_common]);
 
 /**
  * @generated from message duologue.v1.MatchPreset
@@ -62,9 +63,21 @@ export const GetMatchPresetRequestSchema: GenMessage<GetMatchPresetRequest> = /*
  */
 export type GetMatchPresetResponse = Message<"duologue.v1.GetMatchPresetResponse"> & {
   /**
-   * @generated from field: duologue.v1.MatchPreset preset = 1;
+   * @generated from oneof duologue.v1.GetMatchPresetResponse.result
    */
-  preset?: MatchPreset;
+  result: {
+    /**
+     * @generated from field: duologue.v1.GetMatchPresetSuccess success = 1;
+     */
+    value: GetMatchPresetSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -73,6 +86,23 @@ export type GetMatchPresetResponse = Message<"duologue.v1.GetMatchPresetResponse
  */
 export const GetMatchPresetResponseSchema: GenMessage<GetMatchPresetResponse> = /*@__PURE__*/
   messageDesc(file_duologue_v1_match_preset, 2);
+
+/**
+ * @generated from message duologue.v1.GetMatchPresetSuccess
+ */
+export type GetMatchPresetSuccess = Message<"duologue.v1.GetMatchPresetSuccess"> & {
+  /**
+   * @generated from field: duologue.v1.MatchPreset preset = 1;
+   */
+  preset?: MatchPreset;
+};
+
+/**
+ * Describes the message duologue.v1.GetMatchPresetSuccess.
+ * Use `create(GetMatchPresetSuccessSchema)` to create a new message.
+ */
+export const GetMatchPresetSuccessSchema: GenMessage<GetMatchPresetSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_match_preset, 3);
 
 /**
  * @generated from message duologue.v1.UpdateMatchPresetRequest
@@ -99,16 +129,28 @@ export type UpdateMatchPresetRequest = Message<"duologue.v1.UpdateMatchPresetReq
  * Use `create(UpdateMatchPresetRequestSchema)` to create a new message.
  */
 export const UpdateMatchPresetRequestSchema: GenMessage<UpdateMatchPresetRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match_preset, 3);
+  messageDesc(file_duologue_v1_match_preset, 4);
 
 /**
  * @generated from message duologue.v1.UpdateMatchPresetResponse
  */
 export type UpdateMatchPresetResponse = Message<"duologue.v1.UpdateMatchPresetResponse"> & {
   /**
-   * @generated from field: duologue.v1.MatchPreset preset = 1;
+   * @generated from oneof duologue.v1.UpdateMatchPresetResponse.result
    */
-  preset?: MatchPreset;
+  result: {
+    /**
+     * @generated from field: duologue.v1.UpdateMatchPresetSuccess success = 1;
+     */
+    value: UpdateMatchPresetSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -116,7 +158,24 @@ export type UpdateMatchPresetResponse = Message<"duologue.v1.UpdateMatchPresetRe
  * Use `create(UpdateMatchPresetResponseSchema)` to create a new message.
  */
 export const UpdateMatchPresetResponseSchema: GenMessage<UpdateMatchPresetResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match_preset, 4);
+  messageDesc(file_duologue_v1_match_preset, 5);
+
+/**
+ * @generated from message duologue.v1.UpdateMatchPresetSuccess
+ */
+export type UpdateMatchPresetSuccess = Message<"duologue.v1.UpdateMatchPresetSuccess"> & {
+  /**
+   * @generated from field: duologue.v1.MatchPreset preset = 1;
+   */
+  preset?: MatchPreset;
+};
+
+/**
+ * Describes the message duologue.v1.UpdateMatchPresetSuccess.
+ * Use `create(UpdateMatchPresetSuccessSchema)` to create a new message.
+ */
+export const UpdateMatchPresetSuccessSchema: GenMessage<UpdateMatchPresetSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_match_preset, 6);
 
 /**
  * @generated from message duologue.v1.DeleteMatchPresetRequest
@@ -129,16 +188,28 @@ export type DeleteMatchPresetRequest = Message<"duologue.v1.DeleteMatchPresetReq
  * Use `create(DeleteMatchPresetRequestSchema)` to create a new message.
  */
 export const DeleteMatchPresetRequestSchema: GenMessage<DeleteMatchPresetRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match_preset, 5);
+  messageDesc(file_duologue_v1_match_preset, 7);
 
 /**
  * @generated from message duologue.v1.DeleteMatchPresetResponse
  */
 export type DeleteMatchPresetResponse = Message<"duologue.v1.DeleteMatchPresetResponse"> & {
   /**
-   * @generated from field: string message = 1;
+   * @generated from oneof duologue.v1.DeleteMatchPresetResponse.result
    */
-  message: string;
+  result: {
+    /**
+     * @generated from field: duologue.v1.DeleteMatchPresetSuccess success = 1;
+     */
+    value: DeleteMatchPresetSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -146,7 +217,24 @@ export type DeleteMatchPresetResponse = Message<"duologue.v1.DeleteMatchPresetRe
  * Use `create(DeleteMatchPresetResponseSchema)` to create a new message.
  */
 export const DeleteMatchPresetResponseSchema: GenMessage<DeleteMatchPresetResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_match_preset, 6);
+  messageDesc(file_duologue_v1_match_preset, 8);
+
+/**
+ * @generated from message duologue.v1.DeleteMatchPresetSuccess
+ */
+export type DeleteMatchPresetSuccess = Message<"duologue.v1.DeleteMatchPresetSuccess"> & {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message duologue.v1.DeleteMatchPresetSuccess.
+ * Use `create(DeleteMatchPresetSuccessSchema)` to create a new message.
+ */
+export const DeleteMatchPresetSuccessSchema: GenMessage<DeleteMatchPresetSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_match_preset, 9);
 
 /**
  * @generated from service duologue.v1.MatchPresetService

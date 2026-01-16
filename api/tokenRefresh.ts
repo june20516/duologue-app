@@ -3,9 +3,11 @@ import { Code, ConnectError, createClient } from '@connectrpc/connect';
 import { createConnectTransport } from '@connectrpc/connect-web';
 import { router } from 'expo-router';
 
-import { ErrorCode } from '@/constants/errorCodes';
 import { AuthService, RefreshAccessTokenRequestSchema } from '@/gen/duologue/v1/auth_pb';
+import { ErrorCode } from '@/gen/duologue/v1/common_pb';
 import { useAuthStore } from '@/stores/authStore';
+
+import { unwrap, ApplicationError } from './connectError';
 
 const API_URL = process.env.EXPO_PUBLIC_SERVER_URL;
 
@@ -47,38 +49,41 @@ class TokenRefreshManager {
       });
 
       const response = await refreshClient.refreshAccessToken(request);
+      const result = unwrap(response);
 
       const currentRefreshToken = useAuthStore.getState().refreshToken!;
-      useAuthStore.getState().setTokens(response.accessToken, currentRefreshToken);
+      useAuthStore.getState().setTokens(result.accessToken, currentRefreshToken);
 
       this.reset();
 
-      return response.accessToken;
+      return result.accessToken;
     } catch (error) {
       this.reset();
 
-      if (error instanceof ConnectError) {
-        const errorCode = this.extractErrorCode(error);
-
+      if (error instanceof ApplicationError) {
         if (
-          errorCode === ErrorCode.INVALID_REFRESH_TOKEN ||
-          errorCode === ErrorCode.INVALID_TOKEN ||
-          errorCode === ErrorCode.REFRESH_TOKEN_EXPIRED ||
-          errorCode === ErrorCode.USER_NOT_FOUND ||
-          error.code === Code.Unauthenticated
+          error.code === ErrorCode.INVALID_TOKEN ||
+          error.code === ErrorCode.AUTH_ERROR ||
+          error.code === ErrorCode.AUTH_REQUIRED ||
+          error.code === ErrorCode.PROFILE_NOT_FOUND
         ) {
           useAuthStore.getState().clearAuth();
           router.replace('/');
-          throw new Error(errorCode || 'TOKEN_REFRESH_FAILED');
+          throw error;
+        }
+      }
+
+      // Fallback for Connect errors if needed, though ApplicationError covers protocol errors
+      if (error instanceof ConnectError) {
+        if (error.code === Code.Unauthenticated) {
+          useAuthStore.getState().clearAuth();
+          router.replace('/');
+          throw error;
         }
       }
 
       throw error;
     }
-  }
-
-  private extractErrorCode(error: ConnectError): string | undefined {
-    return error.metadata.get('x-error-code') ?? undefined;
   }
 
   reset(): void {

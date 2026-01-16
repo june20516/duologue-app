@@ -4,6 +4,7 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { Error } from "./common_pb";
 import { file_duologue_v1_common } from "./common_pb";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -11,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file duologue/v1/auth.proto.
  */
 export const file_duologue_v1_auth: GenFile = /*@__PURE__*/
-  fileDesc("ChZkdW9sb2d1ZS92MS9hdXRoLnByb3RvEgtkdW9sb2d1ZS52MSIlChRSZXF1ZXN0U2lnbnVwUmVxdWVzdBINCgVlbWFpbBgBIAEoCSIoChVSZXF1ZXN0U2lnbnVwUmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCSIyChNWZXJpZnlTaWdudXBSZXF1ZXN0Eg0KBWVtYWlsGAEgASgJEgwKBGNvZGUYAiABKAkiQwoUVmVyaWZ5U2lnbnVwUmVzcG9uc2USFAoMYWNjZXNzX3Rva2VuGAEgASgJEhUKDXJlZnJlc2hfdG9rZW4YAiABKAkiJAoTUmVxdWVzdExvZ2luUmVxdWVzdBINCgVlbWFpbBgBIAEoCSInChRSZXF1ZXN0TG9naW5SZXNwb25zZRIPCgdtZXNzYWdlGAEgASgJIjEKElZlcmlmeUxvZ2luUmVxdWVzdBINCgVlbWFpbBgBIAEoCRIMCgRjb2RlGAIgASgJIkIKE1ZlcmlmeUxvZ2luUmVzcG9uc2USFAoMYWNjZXNzX3Rva2VuGAEgASgJEhUKDXJlZnJlc2hfdG9rZW4YAiABKAkiMgoZUmVmcmVzaEFjY2Vzc1Rva2VuUmVxdWVzdBIVCg1yZWZyZXNoX3Rva2VuGAEgASgJIjIKGlJlZnJlc2hBY2Nlc3NUb2tlblJlc3BvbnNlEhQKDGFjY2Vzc190b2tlbhgBIAEoCSImCg1Mb2dvdXRSZXF1ZXN0EhUKDXJlZnJlc2hfdG9rZW4YASABKAkiIQoOTG9nb3V0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCSIOCgxHZXRNZVJlcXVlc3QiLwoNR2V0TWVSZXNwb25zZRIPCgd1c2VyX2lkGAEgASgDEg0KBWVtYWlsGAIgASgJIhYKFERlbGV0ZUFjY291bnRSZXF1ZXN0IigKFURlbGV0ZUFjY291bnRSZXNwb25zZRIPCgdtZXNzYWdlGAEgASgJMqMFCgtBdXRoU2VydmljZRJWCg1SZXF1ZXN0U2lnbnVwEiEuZHVvbG9ndWUudjEuUmVxdWVzdFNpZ251cFJlcXVlc3QaIi5kdW9sb2d1ZS52MS5SZXF1ZXN0U2lnbnVwUmVzcG9uc2USUwoMVmVyaWZ5U2lnbnVwEiAuZHVvbG9ndWUudjEuVmVyaWZ5U2lnbnVwUmVxdWVzdBohLmR1b2xvZ3VlLnYxLlZlcmlmeVNpZ251cFJlc3BvbnNlElMKDFJlcXVlc3RMb2dpbhIgLmR1b2xvZ3VlLnYxLlJlcXVlc3RMb2dpblJlcXVlc3QaIS5kdW9sb2d1ZS52MS5SZXF1ZXN0TG9naW5SZXNwb25zZRJQCgtWZXJpZnlMb2dpbhIfLmR1b2xvZ3VlLnYxLlZlcmlmeUxvZ2luUmVxdWVzdBogLmR1b2xvZ3VlLnYxLlZlcmlmeUxvZ2luUmVzcG9uc2USZQoSUmVmcmVzaEFjY2Vzc1Rva2VuEiYuZHVvbG9ndWUudjEuUmVmcmVzaEFjY2Vzc1Rva2VuUmVxdWVzdBonLmR1b2xvZ3VlLnYxLlJlZnJlc2hBY2Nlc3NUb2tlblJlc3BvbnNlEkEKBkxvZ291dBIaLmR1b2xvZ3VlLnYxLkxvZ291dFJlcXVlc3QaGy5kdW9sb2d1ZS52MS5Mb2dvdXRSZXNwb25zZRI+CgVHZXRNZRIZLmR1b2xvZ3VlLnYxLkdldE1lUmVxdWVzdBoaLmR1b2xvZ3VlLnYxLkdldE1lUmVzcG9uc2USVgoNRGVsZXRlQWNjb3VudBIhLmR1b2xvZ3VlLnYxLkRlbGV0ZUFjY291bnRSZXF1ZXN0GiIuZHVvbG9ndWUudjEuRGVsZXRlQWNjb3VudFJlc3BvbnNlQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_duologue_v1_common]);
+  fileDesc("ChZkdW9sb2d1ZS92MS9hdXRoLnByb3RvEgtkdW9sb2d1ZS52MSIlChRSZXF1ZXN0U2lnbnVwUmVxdWVzdBINCgVlbWFpbBgBIAEoCSJ8ChVSZXF1ZXN0U2lnbnVwUmVzcG9uc2USNAoHc3VjY2VzcxgBIAEoCzIhLmR1b2xvZ3VlLnYxLlJlcXVlc3RTaWdudXBTdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCInChRSZXF1ZXN0U2lnbnVwU3VjY2VzcxIPCgdtZXNzYWdlGAEgASgJIjIKE1ZlcmlmeVNpZ251cFJlcXVlc3QSDQoFZW1haWwYASABKAkSDAoEY29kZRgCIAEoCSJ6ChRWZXJpZnlTaWdudXBSZXNwb25zZRIzCgdzdWNjZXNzGAEgASgLMiAuZHVvbG9ndWUudjEuVmVyaWZ5U2lnbnVwU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiQgoTVmVyaWZ5U2lnbnVwU3VjY2VzcxIUCgxhY2Nlc3NfdG9rZW4YASABKAkSFQoNcmVmcmVzaF90b2tlbhgCIAEoCSIkChNSZXF1ZXN0TG9naW5SZXF1ZXN0Eg0KBWVtYWlsGAEgASgJInoKFFJlcXVlc3RMb2dpblJlc3BvbnNlEjMKB3N1Y2Nlc3MYASABKAsyIC5kdW9sb2d1ZS52MS5SZXF1ZXN0TG9naW5TdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCImChNSZXF1ZXN0TG9naW5TdWNjZXNzEg8KB21lc3NhZ2UYASABKAkiMQoSVmVyaWZ5TG9naW5SZXF1ZXN0Eg0KBWVtYWlsGAEgASgJEgwKBGNvZGUYAiABKAkieAoTVmVyaWZ5TG9naW5SZXNwb25zZRIyCgdzdWNjZXNzGAEgASgLMh8uZHVvbG9ndWUudjEuVmVyaWZ5TG9naW5TdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCJBChJWZXJpZnlMb2dpblN1Y2Nlc3MSFAoMYWNjZXNzX3Rva2VuGAEgASgJEhUKDXJlZnJlc2hfdG9rZW4YAiABKAkiMgoZUmVmcmVzaEFjY2Vzc1Rva2VuUmVxdWVzdBIVCg1yZWZyZXNoX3Rva2VuGAEgASgJIoYBChpSZWZyZXNoQWNjZXNzVG9rZW5SZXNwb25zZRI5CgdzdWNjZXNzGAEgASgLMiYuZHVvbG9ndWUudjEuUmVmcmVzaEFjY2Vzc1Rva2VuU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiMQoZUmVmcmVzaEFjY2Vzc1Rva2VuU3VjY2VzcxIUCgxhY2Nlc3NfdG9rZW4YASABKAkiJgoNTG9nb3V0UmVxdWVzdBIVCg1yZWZyZXNoX3Rva2VuGAEgASgJIm4KDkxvZ291dFJlc3BvbnNlEi0KB3N1Y2Nlc3MYASABKAsyGi5kdW9sb2d1ZS52MS5Mb2dvdXRTdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCIgCg1Mb2dvdXRTdWNjZXNzEg8KB21lc3NhZ2UYASABKAkiDgoMR2V0TWVSZXF1ZXN0ImwKDUdldE1lUmVzcG9uc2USLAoHc3VjY2VzcxgBIAEoCzIZLmR1b2xvZ3VlLnYxLkdldE1lU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiLgoMR2V0TWVTdWNjZXNzEg8KB3VzZXJfaWQYASABKAMSDQoFZW1haWwYAiABKAkiFgoURGVsZXRlQWNjb3VudFJlcXVlc3QifAoVRGVsZXRlQWNjb3VudFJlc3BvbnNlEjQKB3N1Y2Nlc3MYASABKAsyIS5kdW9sb2d1ZS52MS5EZWxldGVBY2NvdW50U3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiJwoURGVsZXRlQWNjb3VudFN1Y2Nlc3MSDwoHbWVzc2FnZRgBIAEoCTKjBQoLQXV0aFNlcnZpY2USVgoNUmVxdWVzdFNpZ251cBIhLmR1b2xvZ3VlLnYxLlJlcXVlc3RTaWdudXBSZXF1ZXN0GiIuZHVvbG9ndWUudjEuUmVxdWVzdFNpZ251cFJlc3BvbnNlElMKDFZlcmlmeVNpZ251cBIgLmR1b2xvZ3VlLnYxLlZlcmlmeVNpZ251cFJlcXVlc3QaIS5kdW9sb2d1ZS52MS5WZXJpZnlTaWdudXBSZXNwb25zZRJTCgxSZXF1ZXN0TG9naW4SIC5kdW9sb2d1ZS52MS5SZXF1ZXN0TG9naW5SZXF1ZXN0GiEuZHVvbG9ndWUudjEuUmVxdWVzdExvZ2luUmVzcG9uc2USUAoLVmVyaWZ5TG9naW4SHy5kdW9sb2d1ZS52MS5WZXJpZnlMb2dpblJlcXVlc3QaIC5kdW9sb2d1ZS52MS5WZXJpZnlMb2dpblJlc3BvbnNlEmUKElJlZnJlc2hBY2Nlc3NUb2tlbhImLmR1b2xvZ3VlLnYxLlJlZnJlc2hBY2Nlc3NUb2tlblJlcXVlc3QaJy5kdW9sb2d1ZS52MS5SZWZyZXNoQWNjZXNzVG9rZW5SZXNwb25zZRJBCgZMb2dvdXQSGi5kdW9sb2d1ZS52MS5Mb2dvdXRSZXF1ZXN0GhsuZHVvbG9ndWUudjEuTG9nb3V0UmVzcG9uc2USPgoFR2V0TWUSGS5kdW9sb2d1ZS52MS5HZXRNZVJlcXVlc3QaGi5kdW9sb2d1ZS52MS5HZXRNZVJlc3BvbnNlElYKDURlbGV0ZUFjY291bnQSIS5kdW9sb2d1ZS52MS5EZWxldGVBY2NvdW50UmVxdWVzdBoiLmR1b2xvZ3VlLnYxLkRlbGV0ZUFjY291bnRSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_duologue_v1_common]);
 
 /**
  * --- Signup ---
@@ -37,9 +38,21 @@ export const RequestSignupRequestSchema: GenMessage<RequestSignupRequest> = /*@_
  */
 export type RequestSignupResponse = Message<"duologue.v1.RequestSignupResponse"> & {
   /**
-   * @generated from field: string message = 1;
+   * @generated from oneof duologue.v1.RequestSignupResponse.result
    */
-  message: string;
+  result: {
+    /**
+     * @generated from field: duologue.v1.RequestSignupSuccess success = 1;
+     */
+    value: RequestSignupSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -48,6 +61,23 @@ export type RequestSignupResponse = Message<"duologue.v1.RequestSignupResponse">
  */
 export const RequestSignupResponseSchema: GenMessage<RequestSignupResponse> = /*@__PURE__*/
   messageDesc(file_duologue_v1_auth, 1);
+
+/**
+ * @generated from message duologue.v1.RequestSignupSuccess
+ */
+export type RequestSignupSuccess = Message<"duologue.v1.RequestSignupSuccess"> & {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message duologue.v1.RequestSignupSuccess.
+ * Use `create(RequestSignupSuccessSchema)` to create a new message.
+ */
+export const RequestSignupSuccessSchema: GenMessage<RequestSignupSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 2);
 
 /**
  * @generated from message duologue.v1.VerifySignupRequest
@@ -69,12 +99,41 @@ export type VerifySignupRequest = Message<"duologue.v1.VerifySignupRequest"> & {
  * Use `create(VerifySignupRequestSchema)` to create a new message.
  */
 export const VerifySignupRequestSchema: GenMessage<VerifySignupRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 2);
+  messageDesc(file_duologue_v1_auth, 3);
 
 /**
  * @generated from message duologue.v1.VerifySignupResponse
  */
 export type VerifySignupResponse = Message<"duologue.v1.VerifySignupResponse"> & {
+  /**
+   * @generated from oneof duologue.v1.VerifySignupResponse.result
+   */
+  result: {
+    /**
+     * @generated from field: duologue.v1.VerifySignupSuccess success = 1;
+     */
+    value: VerifySignupSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message duologue.v1.VerifySignupResponse.
+ * Use `create(VerifySignupResponseSchema)` to create a new message.
+ */
+export const VerifySignupResponseSchema: GenMessage<VerifySignupResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 4);
+
+/**
+ * @generated from message duologue.v1.VerifySignupSuccess
+ */
+export type VerifySignupSuccess = Message<"duologue.v1.VerifySignupSuccess"> & {
   /**
    * @generated from field: string access_token = 1;
    */
@@ -89,11 +148,11 @@ export type VerifySignupResponse = Message<"duologue.v1.VerifySignupResponse"> &
 };
 
 /**
- * Describes the message duologue.v1.VerifySignupResponse.
- * Use `create(VerifySignupResponseSchema)` to create a new message.
+ * Describes the message duologue.v1.VerifySignupSuccess.
+ * Use `create(VerifySignupSuccessSchema)` to create a new message.
  */
-export const VerifySignupResponseSchema: GenMessage<VerifySignupResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 3);
+export const VerifySignupSuccessSchema: GenMessage<VerifySignupSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 5);
 
 /**
  * --- Login ---
@@ -112,16 +171,28 @@ export type RequestLoginRequest = Message<"duologue.v1.RequestLoginRequest"> & {
  * Use `create(RequestLoginRequestSchema)` to create a new message.
  */
 export const RequestLoginRequestSchema: GenMessage<RequestLoginRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 4);
+  messageDesc(file_duologue_v1_auth, 6);
 
 /**
  * @generated from message duologue.v1.RequestLoginResponse
  */
 export type RequestLoginResponse = Message<"duologue.v1.RequestLoginResponse"> & {
   /**
-   * @generated from field: string message = 1;
+   * @generated from oneof duologue.v1.RequestLoginResponse.result
    */
-  message: string;
+  result: {
+    /**
+     * @generated from field: duologue.v1.RequestLoginSuccess success = 1;
+     */
+    value: RequestLoginSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -129,7 +200,24 @@ export type RequestLoginResponse = Message<"duologue.v1.RequestLoginResponse"> &
  * Use `create(RequestLoginResponseSchema)` to create a new message.
  */
 export const RequestLoginResponseSchema: GenMessage<RequestLoginResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 5);
+  messageDesc(file_duologue_v1_auth, 7);
+
+/**
+ * @generated from message duologue.v1.RequestLoginSuccess
+ */
+export type RequestLoginSuccess = Message<"duologue.v1.RequestLoginSuccess"> & {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message duologue.v1.RequestLoginSuccess.
+ * Use `create(RequestLoginSuccessSchema)` to create a new message.
+ */
+export const RequestLoginSuccessSchema: GenMessage<RequestLoginSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 8);
 
 /**
  * @generated from message duologue.v1.VerifyLoginRequest
@@ -151,12 +239,41 @@ export type VerifyLoginRequest = Message<"duologue.v1.VerifyLoginRequest"> & {
  * Use `create(VerifyLoginRequestSchema)` to create a new message.
  */
 export const VerifyLoginRequestSchema: GenMessage<VerifyLoginRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 6);
+  messageDesc(file_duologue_v1_auth, 9);
 
 /**
  * @generated from message duologue.v1.VerifyLoginResponse
  */
 export type VerifyLoginResponse = Message<"duologue.v1.VerifyLoginResponse"> & {
+  /**
+   * @generated from oneof duologue.v1.VerifyLoginResponse.result
+   */
+  result: {
+    /**
+     * @generated from field: duologue.v1.VerifyLoginSuccess success = 1;
+     */
+    value: VerifyLoginSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message duologue.v1.VerifyLoginResponse.
+ * Use `create(VerifyLoginResponseSchema)` to create a new message.
+ */
+export const VerifyLoginResponseSchema: GenMessage<VerifyLoginResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 10);
+
+/**
+ * @generated from message duologue.v1.VerifyLoginSuccess
+ */
+export type VerifyLoginSuccess = Message<"duologue.v1.VerifyLoginSuccess"> & {
   /**
    * @generated from field: string access_token = 1;
    */
@@ -169,11 +286,11 @@ export type VerifyLoginResponse = Message<"duologue.v1.VerifyLoginResponse"> & {
 };
 
 /**
- * Describes the message duologue.v1.VerifyLoginResponse.
- * Use `create(VerifyLoginResponseSchema)` to create a new message.
+ * Describes the message duologue.v1.VerifyLoginSuccess.
+ * Use `create(VerifyLoginSuccessSchema)` to create a new message.
  */
-export const VerifyLoginResponseSchema: GenMessage<VerifyLoginResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 7);
+export const VerifyLoginSuccessSchema: GenMessage<VerifyLoginSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 11);
 
 /**
  * --- Token ---
@@ -192,16 +309,28 @@ export type RefreshAccessTokenRequest = Message<"duologue.v1.RefreshAccessTokenR
  * Use `create(RefreshAccessTokenRequestSchema)` to create a new message.
  */
 export const RefreshAccessTokenRequestSchema: GenMessage<RefreshAccessTokenRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 8);
+  messageDesc(file_duologue_v1_auth, 12);
 
 /**
  * @generated from message duologue.v1.RefreshAccessTokenResponse
  */
 export type RefreshAccessTokenResponse = Message<"duologue.v1.RefreshAccessTokenResponse"> & {
   /**
-   * @generated from field: string access_token = 1;
+   * @generated from oneof duologue.v1.RefreshAccessTokenResponse.result
    */
-  accessToken: string;
+  result: {
+    /**
+     * @generated from field: duologue.v1.RefreshAccessTokenSuccess success = 1;
+     */
+    value: RefreshAccessTokenSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -209,7 +338,24 @@ export type RefreshAccessTokenResponse = Message<"duologue.v1.RefreshAccessToken
  * Use `create(RefreshAccessTokenResponseSchema)` to create a new message.
  */
 export const RefreshAccessTokenResponseSchema: GenMessage<RefreshAccessTokenResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 9);
+  messageDesc(file_duologue_v1_auth, 13);
+
+/**
+ * @generated from message duologue.v1.RefreshAccessTokenSuccess
+ */
+export type RefreshAccessTokenSuccess = Message<"duologue.v1.RefreshAccessTokenSuccess"> & {
+  /**
+   * @generated from field: string access_token = 1;
+   */
+  accessToken: string;
+};
+
+/**
+ * Describes the message duologue.v1.RefreshAccessTokenSuccess.
+ * Use `create(RefreshAccessTokenSuccessSchema)` to create a new message.
+ */
+export const RefreshAccessTokenSuccessSchema: GenMessage<RefreshAccessTokenSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 14);
 
 /**
  * @generated from message duologue.v1.LogoutRequest
@@ -226,16 +372,28 @@ export type LogoutRequest = Message<"duologue.v1.LogoutRequest"> & {
  * Use `create(LogoutRequestSchema)` to create a new message.
  */
 export const LogoutRequestSchema: GenMessage<LogoutRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 10);
+  messageDesc(file_duologue_v1_auth, 15);
 
 /**
  * @generated from message duologue.v1.LogoutResponse
  */
 export type LogoutResponse = Message<"duologue.v1.LogoutResponse"> & {
   /**
-   * @generated from field: string message = 1;
+   * @generated from oneof duologue.v1.LogoutResponse.result
    */
-  message: string;
+  result: {
+    /**
+     * @generated from field: duologue.v1.LogoutSuccess success = 1;
+     */
+    value: LogoutSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -243,7 +401,24 @@ export type LogoutResponse = Message<"duologue.v1.LogoutResponse"> & {
  * Use `create(LogoutResponseSchema)` to create a new message.
  */
 export const LogoutResponseSchema: GenMessage<LogoutResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 11);
+  messageDesc(file_duologue_v1_auth, 16);
+
+/**
+ * @generated from message duologue.v1.LogoutSuccess
+ */
+export type LogoutSuccess = Message<"duologue.v1.LogoutSuccess"> & {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message duologue.v1.LogoutSuccess.
+ * Use `create(LogoutSuccessSchema)` to create a new message.
+ */
+export const LogoutSuccessSchema: GenMessage<LogoutSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 17);
 
 /**
  * --- Me ---
@@ -260,12 +435,41 @@ export type GetMeRequest = Message<"duologue.v1.GetMeRequest"> & {
  * Use `create(GetMeRequestSchema)` to create a new message.
  */
 export const GetMeRequestSchema: GenMessage<GetMeRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 12);
+  messageDesc(file_duologue_v1_auth, 18);
 
 /**
  * @generated from message duologue.v1.GetMeResponse
  */
 export type GetMeResponse = Message<"duologue.v1.GetMeResponse"> & {
+  /**
+   * @generated from oneof duologue.v1.GetMeResponse.result
+   */
+  result: {
+    /**
+     * @generated from field: duologue.v1.GetMeSuccess success = 1;
+     */
+    value: GetMeSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
+};
+
+/**
+ * Describes the message duologue.v1.GetMeResponse.
+ * Use `create(GetMeResponseSchema)` to create a new message.
+ */
+export const GetMeResponseSchema: GenMessage<GetMeResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 19);
+
+/**
+ * @generated from message duologue.v1.GetMeSuccess
+ */
+export type GetMeSuccess = Message<"duologue.v1.GetMeSuccess"> & {
   /**
    * @generated from field: int64 user_id = 1;
    */
@@ -280,11 +484,11 @@ export type GetMeResponse = Message<"duologue.v1.GetMeResponse"> & {
 };
 
 /**
- * Describes the message duologue.v1.GetMeResponse.
- * Use `create(GetMeResponseSchema)` to create a new message.
+ * Describes the message duologue.v1.GetMeSuccess.
+ * Use `create(GetMeSuccessSchema)` to create a new message.
  */
-export const GetMeResponseSchema: GenMessage<GetMeResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 13);
+export const GetMeSuccessSchema: GenMessage<GetMeSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 20);
 
 /**
  * --- Account ---
@@ -299,16 +503,28 @@ export type DeleteAccountRequest = Message<"duologue.v1.DeleteAccountRequest"> &
  * Use `create(DeleteAccountRequestSchema)` to create a new message.
  */
 export const DeleteAccountRequestSchema: GenMessage<DeleteAccountRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 14);
+  messageDesc(file_duologue_v1_auth, 21);
 
 /**
  * @generated from message duologue.v1.DeleteAccountResponse
  */
 export type DeleteAccountResponse = Message<"duologue.v1.DeleteAccountResponse"> & {
   /**
-   * @generated from field: string message = 1;
+   * @generated from oneof duologue.v1.DeleteAccountResponse.result
    */
-  message: string;
+  result: {
+    /**
+     * @generated from field: duologue.v1.DeleteAccountSuccess success = 1;
+     */
+    value: DeleteAccountSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -316,7 +532,24 @@ export type DeleteAccountResponse = Message<"duologue.v1.DeleteAccountResponse">
  * Use `create(DeleteAccountResponseSchema)` to create a new message.
  */
 export const DeleteAccountResponseSchema: GenMessage<DeleteAccountResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_auth, 15);
+  messageDesc(file_duologue_v1_auth, 22);
+
+/**
+ * @generated from message duologue.v1.DeleteAccountSuccess
+ */
+export type DeleteAccountSuccess = Message<"duologue.v1.DeleteAccountSuccess"> & {
+  /**
+   * @generated from field: string message = 1;
+   */
+  message: string;
+};
+
+/**
+ * Describes the message duologue.v1.DeleteAccountSuccess.
+ * Use `create(DeleteAccountSuccessSchema)` to create a new message.
+ */
+export const DeleteAccountSuccessSchema: GenMessage<DeleteAccountSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_auth, 23);
 
 /**
  * @generated from service duologue.v1.AuthService

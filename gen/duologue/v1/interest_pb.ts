@@ -4,13 +4,15 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { Error } from "./common_pb";
+import { file_duologue_v1_common } from "./common_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file duologue/v1/interest.proto.
  */
 export const file_duologue_v1_interest: GenFile = /*@__PURE__*/
-  fileDesc("ChpkdW9sb2d1ZS92MS9pbnRlcmVzdC5wcm90bxILZHVvbG9ndWUudjEibgoISW50ZXJlc3QSCgoCaWQYASABKAUSCwoDa2V5GAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIUCgxjYXRlZ29yeV9rZXkYBCABKAkSHQoVY2F0ZWdvcnlfZGlzcGxheV9uYW1lGAUgASgJIhUKE0dldEludGVyZXN0c1JlcXVlc3QiQAoUR2V0SW50ZXJlc3RzUmVzcG9uc2USKAoJaW50ZXJlc3RzGAEgAygLMhUuZHVvbG9ndWUudjEuSW50ZXJlc3QyZgoPSW50ZXJlc3RTZXJ2aWNlElMKDEdldEludGVyZXN0cxIgLmR1b2xvZ3VlLnYxLkdldEludGVyZXN0c1JlcXVlc3QaIS5kdW9sb2d1ZS52MS5HZXRJbnRlcmVzdHNSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw");
+  fileDesc("ChpkdW9sb2d1ZS92MS9pbnRlcmVzdC5wcm90bxILZHVvbG9ndWUudjEibgoISW50ZXJlc3QSCgoCaWQYASABKAUSCwoDa2V5GAIgASgJEhQKDGRpc3BsYXlfbmFtZRgDIAEoCRIUCgxjYXRlZ29yeV9rZXkYBCABKAkSHQoVY2F0ZWdvcnlfZGlzcGxheV9uYW1lGAUgASgJIhUKE0dldEludGVyZXN0c1JlcXVlc3QiegoUR2V0SW50ZXJlc3RzUmVzcG9uc2USMwoHc3VjY2VzcxgBIAEoCzIgLmR1b2xvZ3VlLnYxLkdldEludGVyZXN0c1N1Y2Nlc3NIABIjCgVlcnJvchgCIAEoCzISLmR1b2xvZ3VlLnYxLkVycm9ySABCCAoGcmVzdWx0Ij8KE0dldEludGVyZXN0c1N1Y2Nlc3MSKAoJaW50ZXJlc3RzGAEgAygLMhUuZHVvbG9ndWUudjEuSW50ZXJlc3QyZgoPSW50ZXJlc3RTZXJ2aWNlElMKDEdldEludGVyZXN0cxIgLmR1b2xvZ3VlLnYxLkdldEludGVyZXN0c1JlcXVlc3QaIS5kdW9sb2d1ZS52MS5HZXRJbnRlcmVzdHNSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_duologue_v1_common]);
 
 /**
  * @generated from message duologue.v1.Interest
@@ -69,9 +71,21 @@ export const GetInterestsRequestSchema: GenMessage<GetInterestsRequest> = /*@__P
  */
 export type GetInterestsResponse = Message<"duologue.v1.GetInterestsResponse"> & {
   /**
-   * @generated from field: repeated duologue.v1.Interest interests = 1;
+   * @generated from oneof duologue.v1.GetInterestsResponse.result
    */
-  interests: Interest[];
+  result: {
+    /**
+     * @generated from field: duologue.v1.GetInterestsSuccess success = 1;
+     */
+    value: GetInterestsSuccess;
+    case: "success";
+  } | {
+    /**
+     * @generated from field: duologue.v1.Error error = 2;
+     */
+    value: Error;
+    case: "error";
+  } | { case: undefined; value?: undefined };
 };
 
 /**
@@ -80,6 +94,23 @@ export type GetInterestsResponse = Message<"duologue.v1.GetInterestsResponse"> &
  */
 export const GetInterestsResponseSchema: GenMessage<GetInterestsResponse> = /*@__PURE__*/
   messageDesc(file_duologue_v1_interest, 2);
+
+/**
+ * @generated from message duologue.v1.GetInterestsSuccess
+ */
+export type GetInterestsSuccess = Message<"duologue.v1.GetInterestsSuccess"> & {
+  /**
+   * @generated from field: repeated duologue.v1.Interest interests = 1;
+   */
+  interests: Interest[];
+};
+
+/**
+ * Describes the message duologue.v1.GetInterestsSuccess.
+ * Use `create(GetInterestsSuccessSchema)` to create a new message.
+ */
+export const GetInterestsSuccessSchema: GenMessage<GetInterestsSuccess> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_interest, 3);
 
 /**
  * @generated from service duologue.v1.InterestService

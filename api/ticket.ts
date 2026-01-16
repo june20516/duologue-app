@@ -3,7 +3,7 @@ import { create } from '@bufbuild/protobuf';
 import { GetMyTicketsRequestSchema } from '@/gen/duologue/v1/ticket_pb';
 import { MyTickets } from '@/models/ticket';
 
-import { handleConnectError } from './connectError';
+import { handleConnectError, unwrap } from './connectError';
 import { mapTicket } from './mappers';
 import { ticketClient } from './transport';
 
@@ -12,11 +12,12 @@ export const ticketApi = {
     try {
       const request = create(GetMyTicketsRequestSchema, {});
       const response = await ticketClient.getMyTickets(request);
+      const result = unwrap(response);
 
       return {
-        matchTicket: mapTicket(response.matchTicket),
-        gameTicket: mapTicket(response.gameTicket),
-        continueTicket: mapTicket(response.continueTicket),
+        matchTicket: mapTicket(result.matchTicket),
+        gameTicket: mapTicket(result.gameTicket),
+        continueTicket: mapTicket(result.continueTicket),
       };
     } catch (error) {
       throw handleConnectError(error);

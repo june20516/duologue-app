@@ -1,10 +1,10 @@
-import expoConfig from "eslint-config-expo/flat/default.js";
-import prettierConfig from "eslint-config-prettier";
-import reactNativePlugin from "eslint-plugin-react-native";
-import { defineConfig } from "eslint/config";
+import expoConfig from 'eslint-config-expo/flat/default.js';
+import prettierConfig from 'eslint-config-prettier';
+import reactNativePlugin from 'eslint-plugin-react-native';
+import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  expoConfig,
+  ...expoConfig,
   prettierConfig,
   {
     ignores: ['dist/*', 'node_modules/*', '.expo/*', 'android/*', 'ios/*'],
@@ -24,16 +24,13 @@ export default defineConfig([
   },
   {
     files: ['**/*.{ts,tsx}'],
-    plugins: {'react-native': reactNativePlugin},
+    plugins: { 'react-native': reactNativePlugin },
     rules: {
       '@typescript-eslint/no-unused-vars': [
         'error',
         { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
       ],
-      'react/function-component-definition': [
-        'error',
-        { namedComponents: 'arrow-function' },
-      ],
+      'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
       'react-native/no-inline-styles': 'warn',
       'react-hooks/rules-of-hooks': 'error',
       'react-hooks/exhaustive-deps': 'warn',

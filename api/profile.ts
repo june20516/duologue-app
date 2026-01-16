@@ -8,7 +8,7 @@ import {
 } from '@/gen/duologue/v1/profile_pb';
 import type { ProfileMe } from '@/models/user';
 
-import { handleConnectError } from './connectError';
+import { handleConnectError, unwrap } from './connectError';
 import { mapProfile } from './mappers';
 import { profileClient } from './transport';
 
@@ -17,16 +17,19 @@ export const profileApi = {
     try {
       const request = create(GetMyProfileRequestSchema, {});
       const response = await profileClient.getMyProfile(request);
-      if (!response.profile) {
+      const result = unwrap(response);
+      if (!result.profile) {
         throw new Error('Profile not found');
       }
-      return mapProfile(response.profile);
+      return mapProfile(result.profile);
     } catch (error) {
       throw handleConnectError(error);
     }
   },
 
-  updateMe: async (data: Partial<Omit<UpdateMyProfileRequest, 'interestIds'>> & { interestIds?: number[] }): Promise<ProfileMe> => {
+  updateMe: async (
+    data: Partial<Omit<UpdateMyProfileRequest, 'interestIds'>> & { interestIds?: number[] }
+  ): Promise<ProfileMe> => {
     try {
       const request = create(UpdateMyProfileRequestSchema, {
         nickname: data.nickname,
@@ -37,10 +40,11 @@ export const profileApi = {
         interestIds: data.interestIds?.map((id) => BigInt(id)) ?? [],
       });
       const response = await profileClient.updateMyProfile(request);
-      if (!response.profile) {
+      const result = unwrap(response);
+      if (!result.profile) {
         throw new Error('Profile not found');
       }
-      return mapProfile(response.profile);
+      return mapProfile(result.profile);
     } catch (error) {
       throw handleConnectError(error);
     }
@@ -50,7 +54,8 @@ export const profileApi = {
     try {
       const request = create(CheckNicknameRequestSchema, { nickname });
       const response = await profileClient.checkNickname(request);
-      return response.available;
+      const result = unwrap(response);
+      return result.available;
     } catch (error) {
       throw handleConnectError(error);
     }

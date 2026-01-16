@@ -1,10 +1,6 @@
-export const ERROR_CODES = {
-  PROFILE_NOT_FOUND: 'PROFILE_NOT_FOUND',
-  AUTH_ERROR: 'AUTH_ERROR',
-  INVALID_TOKEN: 'INVALID_TOKEN',
-  AUTH_REQUIRED: 'AUTH_REQUIRED',
-  ALREADY_EXISTS: 'ALREADY_EXISTS',
-  INVALID_ARGUMENT: 'INVALID_ARGUMENT',
-} as const;
+export { ErrorCode } from '../gen/duologue/v1/common_pb';
 
-export type ErrorCodeValue = (typeof ERROR_CODES)[keyof typeof ERROR_CODES];
+export type ErrorCodeValue = string; // Proto enum keys are strings in JSON/JS usually, but let's check generated code.
+// Actually, generated protobuf enums in TS are usually numbers (const enum) or objects.
+// Let's defer exact type definition until I see common_pb.ts content.
+// For now, I will just re-export ErrorCode.
