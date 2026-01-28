@@ -5,7 +5,7 @@ import { useAuthStore } from '@/stores/authStore';
 
 import { ErrorCode } from '../gen/duologue/v1/common_pb';
 
-import { ApplicationError } from './connectError';
+import { handleConnectError } from './connectError';
 import { apiLogger } from './logger';
 import { tokenRefreshManager } from './tokenRefresh';
 
@@ -41,32 +41,33 @@ export const createAuthInterceptor = (): Interceptor => {
 
     try {
       return await next(req);
-    } catch (error) {
-      // ApplicationError는 unwrap에서 throw됨
-      if (error instanceof ApplicationError) {
-        // 프로필 없음 에러 처리
-        if (error.code === ErrorCode.PROFILE_NOT_FOUND) {
-          await handleProfileNotFound();
-          throw error;
-        }
+    } catch (rawError) {
+      // 에러를 정규화하여 처리
+      const error = handleConnectError(rawError);
 
-        // 인증 에러 시 토큰 갱신 시도
-        if (
-          error.code === ErrorCode.AUTH_ERROR ||
-          error.code === ErrorCode.AUTH_REQUIRED ||
-          error.code === ErrorCode.INVALID_TOKEN
-        ) {
-          try {
-            const newToken = await tokenRefreshManager.refresh();
-            req.header.set('Authorization', `Bearer ${newToken}`);
-            return await next(req);
-          } catch {
-            throw error;
-          }
+      // 프로필 없음 에러 처리
+      if (error.code === ErrorCode.PROFILE_NOT_FOUND) {
+        await handleProfileNotFound();
+        throw error;
+      }
+
+      // 인증 에러 시 토큰 갱신 시도
+      if (
+        error.code === ErrorCode.AUTH_ERROR ||
+        error.code === ErrorCode.AUTH_REQUIRED ||
+        error.code === ErrorCode.INVALID_TOKEN
+      ) {
+        try {
+          const newToken = await tokenRefreshManager.refresh();
+          req.header.set('Authorization', `Bearer ${newToken}`);
+          return await next(req);
+        } catch {
+          // 갱신 실패 시 원래 에러(또는 갱신 에러) throw
+          throw error;
         }
       }
 
-      // ConnectError(네트워크 오류 등)는 그대로 throw
+      // 그 외 에러는 그대로 throw (이미 ApplicationError로 변환됨)
       throw error;
     }
   };

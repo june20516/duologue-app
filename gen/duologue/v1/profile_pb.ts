@@ -4,8 +4,6 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
-import type { Error } from "./common_pb";
-import { file_duologue_v1_common } from "./common_pb";
 import type { Interest } from "./interest_pb";
 import { file_duologue_v1_interest } from "./interest_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -14,7 +12,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file duologue/v1/profile.proto.
  */
 export const file_duologue_v1_profile: GenFile = /*@__PURE__*/
-  fileDesc("ChlkdW9sb2d1ZS92MS9wcm9maWxlLnByb3RvEgtkdW9sb2d1ZS52MSIVChNHZXRNeVByb2ZpbGVSZXF1ZXN0InoKFEdldE15UHJvZmlsZVJlc3BvbnNlEjMKB3N1Y2Nlc3MYASABKAsyIC5kdW9sb2d1ZS52MS5HZXRNeVByb2ZpbGVTdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCI8ChNHZXRNeVByb2ZpbGVTdWNjZXNzEiUKB3Byb2ZpbGUYASABKAsyFC5kdW9sb2d1ZS52MS5Qcm9maWxlIu4BChZVcGRhdGVNeVByb2ZpbGVSZXF1ZXN0EhUKCG5pY2tuYW1lGAEgASgJSACIAQESHgoRcHJvZmlsZV9pbWFnZV91cmwYAiABKAlIAYgBARITCgZnZW5kZXIYAyABKAlIAogBARIWCglzaG9ydF9iaW8YBCABKAlIA4gBARITCgZyZWdpb24YBSABKAlIBIgBARIUCgxpbnRlcmVzdF9pZHMYBiADKANCCwoJX25pY2tuYW1lQhQKEl9wcm9maWxlX2ltYWdlX3VybEIJCgdfZ2VuZGVyQgwKCl9zaG9ydF9iaW9CCQoHX3JlZ2lvbiKAAQoXVXBkYXRlTXlQcm9maWxlUmVzcG9uc2USNgoHc3VjY2VzcxgBIAEoCzIjLmR1b2xvZ3VlLnYxLlVwZGF0ZU15UHJvZmlsZVN1Y2Nlc3NIABIjCgVlcnJvchgCIAEoCzISLmR1b2xvZ3VlLnYxLkVycm9ySABCCAoGcmVzdWx0Ij8KFlVwZGF0ZU15UHJvZmlsZVN1Y2Nlc3MSJQoHcHJvZmlsZRgBIAEoCzIULmR1b2xvZ3VlLnYxLlByb2ZpbGUiKAoVR2V0VXNlclByb2ZpbGVSZXF1ZXN0Eg8KB3VzZXJfaWQYASABKAMifgoWR2V0VXNlclByb2ZpbGVSZXNwb25zZRI1CgdzdWNjZXNzGAEgASgLMiIuZHVvbG9ndWUudjEuR2V0VXNlclByb2ZpbGVTdWNjZXNzSAASIwoFZXJyb3IYAiABKAsyEi5kdW9sb2d1ZS52MS5FcnJvckgAQggKBnJlc3VsdCJEChVHZXRVc2VyUHJvZmlsZVN1Y2Nlc3MSKwoHcHJvZmlsZRgBIAEoCzIaLmR1b2xvZ3VlLnYxLlB1YmxpY1Byb2ZpbGUiKAoUQ2hlY2tOaWNrbmFtZVJlcXVlc3QSEAoIbmlja25hbWUYASABKAkifAoVQ2hlY2tOaWNrbmFtZVJlc3BvbnNlEjQKB3N1Y2Nlc3MYASABKAsyIS5kdW9sb2d1ZS52MS5DaGVja05pY2tuYW1lU3VjY2Vzc0gAEiMKBWVycm9yGAIgASgLMhIuZHVvbG9ndWUudjEuRXJyb3JIAEIICgZyZXN1bHQiKQoUQ2hlY2tOaWNrbmFtZVN1Y2Nlc3MSEQoJYXZhaWxhYmxlGAEgASgIIpMCCgdQcm9maWxlEg8KB3VzZXJfaWQYASABKAMSFQoIbmlja25hbWUYAiABKAlIAIgBARIeChFwcm9maWxlX2ltYWdlX3VybBgDIAEoCUgBiAEBEg0KBWxldmVsGAQgASgFEhMKBmdlbmRlchgFIAEoCUgCiAEBEhYKCXNob3J0X2JpbxgGIAEoCUgDiAEBEhMKBnJlZ2lvbhgHIAEoCUgEiAEBEigKCWludGVyZXN0cxgIIAMoCzIVLmR1b2xvZ3VlLnYxLkludGVyZXN0QgsKCV9uaWNrbmFtZUIUChJfcHJvZmlsZV9pbWFnZV91cmxCCQoHX2dlbmRlckIMCgpfc2hvcnRfYmlvQgkKB19yZWdpb24ipgIKDVB1YmxpY1Byb2ZpbGUSDwoHdXNlcl9pZBgBIAEoAxIVCghuaWNrbmFtZRgCIAEoCUgAiAEBEh4KEXByb2ZpbGVfaW1hZ2VfdXJsGAMgASgJSAGIAQESFgoJc2hvcnRfYmlvGAQgASgJSAKIAQESDQoFbGV2ZWwYBSABKAUSCwoDYWdlGAYgASgFEhMKBmdlbmRlchgHIAEoCUgDiAEBEhMKBnJlZ2lvbhgIIAEoCUgEiAEBEigKCWludGVyZXN0cxgJIAMoCzIVLmR1b2xvZ3VlLnYxLkludGVyZXN0QgsKCV9uaWNrbmFtZUIUChJfcHJvZmlsZV9pbWFnZV91cmxCDAoKX3Nob3J0X2Jpb0IJCgdfZ2VuZGVyQgkKB19yZWdpb24y9gIKDlByb2ZpbGVTZXJ2aWNlElMKDEdldE15UHJvZmlsZRIgLmR1b2xvZ3VlLnYxLkdldE15UHJvZmlsZVJlcXVlc3QaIS5kdW9sb2d1ZS52MS5HZXRNeVByb2ZpbGVSZXNwb25zZRJcCg9VcGRhdGVNeVByb2ZpbGUSIy5kdW9sb2d1ZS52MS5VcGRhdGVNeVByb2ZpbGVSZXF1ZXN0GiQuZHVvbG9ndWUudjEuVXBkYXRlTXlQcm9maWxlUmVzcG9uc2USWQoOR2V0VXNlclByb2ZpbGUSIi5kdW9sb2d1ZS52MS5HZXRVc2VyUHJvZmlsZVJlcXVlc3QaIy5kdW9sb2d1ZS52MS5HZXRVc2VyUHJvZmlsZVJlc3BvbnNlElYKDUNoZWNrTmlja25hbWUSIS5kdW9sb2d1ZS52MS5DaGVja05pY2tuYW1lUmVxdWVzdBoiLmR1b2xvZ3VlLnYxLkNoZWNrTmlja25hbWVSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_duologue_v1_common, file_duologue_v1_interest]);
+  fileDesc("ChlkdW9sb2d1ZS92MS9wcm9maWxlLnByb3RvEgtkdW9sb2d1ZS52MSIVChNHZXRNeVByb2ZpbGVSZXF1ZXN0Ij0KFEdldE15UHJvZmlsZVJlc3BvbnNlEiUKB3Byb2ZpbGUYASABKAsyFC5kdW9sb2d1ZS52MS5Qcm9maWxlIu4BChZVcGRhdGVNeVByb2ZpbGVSZXF1ZXN0EhUKCG5pY2tuYW1lGAEgASgJSACIAQESHgoRcHJvZmlsZV9pbWFnZV91cmwYAiABKAlIAYgBARITCgZnZW5kZXIYAyABKAlIAogBARIWCglzaG9ydF9iaW8YBCABKAlIA4gBARITCgZyZWdpb24YBSABKAlIBIgBARIUCgxpbnRlcmVzdF9pZHMYBiADKANCCwoJX25pY2tuYW1lQhQKEl9wcm9maWxlX2ltYWdlX3VybEIJCgdfZ2VuZGVyQgwKCl9zaG9ydF9iaW9CCQoHX3JlZ2lvbiJAChdVcGRhdGVNeVByb2ZpbGVSZXNwb25zZRIlCgdwcm9maWxlGAEgASgLMhQuZHVvbG9ndWUudjEuUHJvZmlsZSIoChVHZXRVc2VyUHJvZmlsZVJlcXVlc3QSDwoHdXNlcl9pZBgBIAEoAyJFChZHZXRVc2VyUHJvZmlsZVJlc3BvbnNlEisKB3Byb2ZpbGUYASABKAsyGi5kdW9sb2d1ZS52MS5QdWJsaWNQcm9maWxlIigKFENoZWNrTmlja25hbWVSZXF1ZXN0EhAKCG5pY2tuYW1lGAEgASgJIioKFUNoZWNrTmlja25hbWVSZXNwb25zZRIRCglhdmFpbGFibGUYASABKAgikwIKB1Byb2ZpbGUSDwoHdXNlcl9pZBgBIAEoAxIVCghuaWNrbmFtZRgCIAEoCUgAiAEBEh4KEXByb2ZpbGVfaW1hZ2VfdXJsGAMgASgJSAGIAQESDQoFbGV2ZWwYBCABKAUSEwoGZ2VuZGVyGAUgASgJSAKIAQESFgoJc2hvcnRfYmlvGAYgASgJSAOIAQESEwoGcmVnaW9uGAcgASgJSASIAQESKAoJaW50ZXJlc3RzGAggAygLMhUuZHVvbG9ndWUudjEuSW50ZXJlc3RCCwoJX25pY2tuYW1lQhQKEl9wcm9maWxlX2ltYWdlX3VybEIJCgdfZ2VuZGVyQgwKCl9zaG9ydF9iaW9CCQoHX3JlZ2lvbiKmAgoNUHVibGljUHJvZmlsZRIPCgd1c2VyX2lkGAEgASgDEhUKCG5pY2tuYW1lGAIgASgJSACIAQESHgoRcHJvZmlsZV9pbWFnZV91cmwYAyABKAlIAYgBARIWCglzaG9ydF9iaW8YBCABKAlIAogBARINCgVsZXZlbBgFIAEoBRILCgNhZ2UYBiABKAUSEwoGZ2VuZGVyGAcgASgJSAOIAQESEwoGcmVnaW9uGAggASgJSASIAQESKAoJaW50ZXJlc3RzGAkgAygLMhUuZHVvbG9ndWUudjEuSW50ZXJlc3RCCwoJX25pY2tuYW1lQhQKEl9wcm9maWxlX2ltYWdlX3VybEIMCgpfc2hvcnRfYmlvQgkKB19nZW5kZXJCCQoHX3JlZ2lvbjL2AgoOUHJvZmlsZVNlcnZpY2USUwoMR2V0TXlQcm9maWxlEiAuZHVvbG9ndWUudjEuR2V0TXlQcm9maWxlUmVxdWVzdBohLmR1b2xvZ3VlLnYxLkdldE15UHJvZmlsZVJlc3BvbnNlElwKD1VwZGF0ZU15UHJvZmlsZRIjLmR1b2xvZ3VlLnYxLlVwZGF0ZU15UHJvZmlsZVJlcXVlc3QaJC5kdW9sb2d1ZS52MS5VcGRhdGVNeVByb2ZpbGVSZXNwb25zZRJZCg5HZXRVc2VyUHJvZmlsZRIiLmR1b2xvZ3VlLnYxLkdldFVzZXJQcm9maWxlUmVxdWVzdBojLmR1b2xvZ3VlLnYxLkdldFVzZXJQcm9maWxlUmVzcG9uc2USVgoNQ2hlY2tOaWNrbmFtZRIhLmR1b2xvZ3VlLnYxLkNoZWNrTmlja25hbWVSZXF1ZXN0GiIuZHVvbG9ndWUudjEuQ2hlY2tOaWNrbmFtZVJlc3BvbnNlQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_duologue_v1_interest]);
 
 /**
  * @generated from message duologue.v1.GetMyProfileRequest
@@ -34,21 +32,9 @@ export const GetMyProfileRequestSchema: GenMessage<GetMyProfileRequest> = /*@__P
  */
 export type GetMyProfileResponse = Message<"duologue.v1.GetMyProfileResponse"> & {
   /**
-   * @generated from oneof duologue.v1.GetMyProfileResponse.result
+   * @generated from field: duologue.v1.Profile profile = 1;
    */
-  result: {
-    /**
-     * @generated from field: duologue.v1.GetMyProfileSuccess success = 1;
-     */
-    value: GetMyProfileSuccess;
-    case: "success";
-  } | {
-    /**
-     * @generated from field: duologue.v1.Error error = 2;
-     */
-    value: Error;
-    case: "error";
-  } | { case: undefined; value?: undefined };
+  profile?: Profile;
 };
 
 /**
@@ -57,23 +43,6 @@ export type GetMyProfileResponse = Message<"duologue.v1.GetMyProfileResponse"> &
  */
 export const GetMyProfileResponseSchema: GenMessage<GetMyProfileResponse> = /*@__PURE__*/
   messageDesc(file_duologue_v1_profile, 1);
-
-/**
- * @generated from message duologue.v1.GetMyProfileSuccess
- */
-export type GetMyProfileSuccess = Message<"duologue.v1.GetMyProfileSuccess"> & {
-  /**
-   * @generated from field: duologue.v1.Profile profile = 1;
-   */
-  profile?: Profile;
-};
-
-/**
- * Describes the message duologue.v1.GetMyProfileSuccess.
- * Use `create(GetMyProfileSuccessSchema)` to create a new message.
- */
-export const GetMyProfileSuccessSchema: GenMessage<GetMyProfileSuccess> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 2);
 
 /**
  * @generated from message duologue.v1.UpdateMyProfileRequest
@@ -115,41 +84,12 @@ export type UpdateMyProfileRequest = Message<"duologue.v1.UpdateMyProfileRequest
  * Use `create(UpdateMyProfileRequestSchema)` to create a new message.
  */
 export const UpdateMyProfileRequestSchema: GenMessage<UpdateMyProfileRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 3);
+  messageDesc(file_duologue_v1_profile, 2);
 
 /**
  * @generated from message duologue.v1.UpdateMyProfileResponse
  */
 export type UpdateMyProfileResponse = Message<"duologue.v1.UpdateMyProfileResponse"> & {
-  /**
-   * @generated from oneof duologue.v1.UpdateMyProfileResponse.result
-   */
-  result: {
-    /**
-     * @generated from field: duologue.v1.UpdateMyProfileSuccess success = 1;
-     */
-    value: UpdateMyProfileSuccess;
-    case: "success";
-  } | {
-    /**
-     * @generated from field: duologue.v1.Error error = 2;
-     */
-    value: Error;
-    case: "error";
-  } | { case: undefined; value?: undefined };
-};
-
-/**
- * Describes the message duologue.v1.UpdateMyProfileResponse.
- * Use `create(UpdateMyProfileResponseSchema)` to create a new message.
- */
-export const UpdateMyProfileResponseSchema: GenMessage<UpdateMyProfileResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 4);
-
-/**
- * @generated from message duologue.v1.UpdateMyProfileSuccess
- */
-export type UpdateMyProfileSuccess = Message<"duologue.v1.UpdateMyProfileSuccess"> & {
   /**
    * @generated from field: duologue.v1.Profile profile = 1;
    */
@@ -157,11 +97,11 @@ export type UpdateMyProfileSuccess = Message<"duologue.v1.UpdateMyProfileSuccess
 };
 
 /**
- * Describes the message duologue.v1.UpdateMyProfileSuccess.
- * Use `create(UpdateMyProfileSuccessSchema)` to create a new message.
+ * Describes the message duologue.v1.UpdateMyProfileResponse.
+ * Use `create(UpdateMyProfileResponseSchema)` to create a new message.
  */
-export const UpdateMyProfileSuccessSchema: GenMessage<UpdateMyProfileSuccess> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 5);
+export const UpdateMyProfileResponseSchema: GenMessage<UpdateMyProfileResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_profile, 3);
 
 /**
  * @generated from message duologue.v1.GetUserProfileRequest
@@ -178,41 +118,12 @@ export type GetUserProfileRequest = Message<"duologue.v1.GetUserProfileRequest">
  * Use `create(GetUserProfileRequestSchema)` to create a new message.
  */
 export const GetUserProfileRequestSchema: GenMessage<GetUserProfileRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 6);
+  messageDesc(file_duologue_v1_profile, 4);
 
 /**
  * @generated from message duologue.v1.GetUserProfileResponse
  */
 export type GetUserProfileResponse = Message<"duologue.v1.GetUserProfileResponse"> & {
-  /**
-   * @generated from oneof duologue.v1.GetUserProfileResponse.result
-   */
-  result: {
-    /**
-     * @generated from field: duologue.v1.GetUserProfileSuccess success = 1;
-     */
-    value: GetUserProfileSuccess;
-    case: "success";
-  } | {
-    /**
-     * @generated from field: duologue.v1.Error error = 2;
-     */
-    value: Error;
-    case: "error";
-  } | { case: undefined; value?: undefined };
-};
-
-/**
- * Describes the message duologue.v1.GetUserProfileResponse.
- * Use `create(GetUserProfileResponseSchema)` to create a new message.
- */
-export const GetUserProfileResponseSchema: GenMessage<GetUserProfileResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 7);
-
-/**
- * @generated from message duologue.v1.GetUserProfileSuccess
- */
-export type GetUserProfileSuccess = Message<"duologue.v1.GetUserProfileSuccess"> & {
   /**
    * @generated from field: duologue.v1.PublicProfile profile = 1;
    */
@@ -220,11 +131,11 @@ export type GetUserProfileSuccess = Message<"duologue.v1.GetUserProfileSuccess">
 };
 
 /**
- * Describes the message duologue.v1.GetUserProfileSuccess.
- * Use `create(GetUserProfileSuccessSchema)` to create a new message.
+ * Describes the message duologue.v1.GetUserProfileResponse.
+ * Use `create(GetUserProfileResponseSchema)` to create a new message.
  */
-export const GetUserProfileSuccessSchema: GenMessage<GetUserProfileSuccess> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 8);
+export const GetUserProfileResponseSchema: GenMessage<GetUserProfileResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_profile, 5);
 
 /**
  * @generated from message duologue.v1.CheckNicknameRequest
@@ -241,41 +152,12 @@ export type CheckNicknameRequest = Message<"duologue.v1.CheckNicknameRequest"> &
  * Use `create(CheckNicknameRequestSchema)` to create a new message.
  */
 export const CheckNicknameRequestSchema: GenMessage<CheckNicknameRequest> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 9);
+  messageDesc(file_duologue_v1_profile, 6);
 
 /**
  * @generated from message duologue.v1.CheckNicknameResponse
  */
 export type CheckNicknameResponse = Message<"duologue.v1.CheckNicknameResponse"> & {
-  /**
-   * @generated from oneof duologue.v1.CheckNicknameResponse.result
-   */
-  result: {
-    /**
-     * @generated from field: duologue.v1.CheckNicknameSuccess success = 1;
-     */
-    value: CheckNicknameSuccess;
-    case: "success";
-  } | {
-    /**
-     * @generated from field: duologue.v1.Error error = 2;
-     */
-    value: Error;
-    case: "error";
-  } | { case: undefined; value?: undefined };
-};
-
-/**
- * Describes the message duologue.v1.CheckNicknameResponse.
- * Use `create(CheckNicknameResponseSchema)` to create a new message.
- */
-export const CheckNicknameResponseSchema: GenMessage<CheckNicknameResponse> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 10);
-
-/**
- * @generated from message duologue.v1.CheckNicknameSuccess
- */
-export type CheckNicknameSuccess = Message<"duologue.v1.CheckNicknameSuccess"> & {
   /**
    * @generated from field: bool available = 1;
    */
@@ -283,11 +165,11 @@ export type CheckNicknameSuccess = Message<"duologue.v1.CheckNicknameSuccess"> &
 };
 
 /**
- * Describes the message duologue.v1.CheckNicknameSuccess.
- * Use `create(CheckNicknameSuccessSchema)` to create a new message.
+ * Describes the message duologue.v1.CheckNicknameResponse.
+ * Use `create(CheckNicknameResponseSchema)` to create a new message.
  */
-export const CheckNicknameSuccessSchema: GenMessage<CheckNicknameSuccess> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 11);
+export const CheckNicknameResponseSchema: GenMessage<CheckNicknameResponse> = /*@__PURE__*/
+  messageDesc(file_duologue_v1_profile, 7);
 
 /**
  * @generated from message duologue.v1.Profile
@@ -329,8 +211,6 @@ export type Profile = Message<"duologue.v1.Profile"> & {
   region?: string;
 
   /**
-   * CreatedAt, UpdatedAt if needed
-   *
    * @generated from field: repeated duologue.v1.Interest interests = 8;
    */
   interests: Interest[];
@@ -341,7 +221,7 @@ export type Profile = Message<"duologue.v1.Profile"> & {
  * Use `create(ProfileSchema)` to create a new message.
  */
 export const ProfileSchema: GenMessage<Profile> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 12);
+  messageDesc(file_duologue_v1_profile, 8);
 
 /**
  * @generated from message duologue.v1.PublicProfile
@@ -398,7 +278,7 @@ export type PublicProfile = Message<"duologue.v1.PublicProfile"> & {
  * Use `create(PublicProfileSchema)` to create a new message.
  */
 export const PublicProfileSchema: GenMessage<PublicProfile> = /*@__PURE__*/
-  messageDesc(file_duologue_v1_profile, 13);
+  messageDesc(file_duologue_v1_profile, 9);
 
 /**
  * @generated from service duologue.v1.ProfileService

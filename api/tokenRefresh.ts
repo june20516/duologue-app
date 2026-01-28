@@ -1,5 +1,5 @@
 import { create } from '@bufbuild/protobuf';
-import { Code, ConnectError, createClient } from '@connectrpc/connect';
+import { createClient } from '@connectrpc/connect';
 import { createConnectTransport } from '@connectrpc/connect-web';
 import { router } from 'expo-router';
 
@@ -7,7 +7,7 @@ import { AuthService, RefreshAccessTokenRequestSchema } from '@/gen/duologue/v1/
 import { ErrorCode } from '@/gen/duologue/v1/common_pb';
 import { useAuthStore } from '@/stores/authStore';
 
-import { unwrap, ApplicationError } from './connectError';
+import { handleConnectError } from './connectError';
 
 const API_URL = process.env.EXPO_PUBLIC_SERVER_URL;
 
@@ -49,40 +49,30 @@ class TokenRefreshManager {
       });
 
       const response = await refreshClient.refreshAccessToken(request);
-      const result = unwrap(response);
 
       const currentRefreshToken = useAuthStore.getState().refreshToken!;
-      useAuthStore.getState().setTokens(result.accessToken, currentRefreshToken);
+      useAuthStore.getState().setTokens(response.accessToken, currentRefreshToken);
 
       this.reset();
 
-      return result.accessToken;
+      return response.accessToken;
     } catch (error) {
       this.reset();
 
-      if (error instanceof ApplicationError) {
-        if (
-          error.code === ErrorCode.INVALID_TOKEN ||
-          error.code === ErrorCode.AUTH_ERROR ||
-          error.code === ErrorCode.AUTH_REQUIRED ||
-          error.code === ErrorCode.PROFILE_NOT_FOUND
-        ) {
-          useAuthStore.getState().clearAuth();
-          router.replace('/');
-          throw error;
-        }
+      const appError = handleConnectError(error);
+
+      if (
+        appError.code === ErrorCode.INVALID_TOKEN ||
+        appError.code === ErrorCode.AUTH_ERROR ||
+        appError.code === ErrorCode.AUTH_REQUIRED ||
+        appError.code === ErrorCode.PROFILE_NOT_FOUND
+      ) {
+        useAuthStore.getState().clearAuth();
+        router.replace('/');
+        throw appError;
       }
 
-      // Fallback for Connect errors if needed, though ApplicationError covers protocol errors
-      if (error instanceof ConnectError) {
-        if (error.code === Code.Unauthenticated) {
-          useAuthStore.getState().clearAuth();
-          router.replace('/');
-          throw error;
-        }
-      }
-
-      throw error;
+      throw appError;
     }
   }
 

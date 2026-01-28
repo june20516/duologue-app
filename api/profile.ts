@@ -8,7 +8,7 @@ import {
 } from '@/gen/duologue/v1/profile_pb';
 import type { ProfileMe } from '@/models/user';
 
-import { handleConnectError, unwrap } from './connectError';
+import { handleConnectError } from './connectError';
 import { mapProfile } from './mappers';
 import { profileClient } from './transport';
 
@@ -17,11 +17,10 @@ export const profileApi = {
     try {
       const request = create(GetMyProfileRequestSchema, {});
       const response = await profileClient.getMyProfile(request);
-      const result = unwrap(response);
-      if (!result.profile) {
+      if (!response.profile) {
         throw new Error('Profile not found');
       }
-      return mapProfile(result.profile);
+      return mapProfile(response.profile);
     } catch (error) {
       throw handleConnectError(error);
     }
@@ -40,11 +39,10 @@ export const profileApi = {
         interestIds: data.interestIds?.map((id) => BigInt(id)) ?? [],
       });
       const response = await profileClient.updateMyProfile(request);
-      const result = unwrap(response);
-      if (!result.profile) {
+      if (!response.profile) {
         throw new Error('Profile not found');
       }
-      return mapProfile(result.profile);
+      return mapProfile(response.profile);
     } catch (error) {
       throw handleConnectError(error);
     }
@@ -54,8 +52,7 @@ export const profileApi = {
     try {
       const request = create(CheckNicknameRequestSchema, { nickname });
       const response = await profileClient.checkNickname(request);
-      const result = unwrap(response);
-      return result.available;
+      return response.available;
     } catch (error) {
       throw handleConnectError(error);
     }
