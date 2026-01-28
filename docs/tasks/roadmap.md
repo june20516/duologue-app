@@ -28,9 +28,9 @@ Duologue 앱의 프론트엔드 구현 단계를 정의한 문서입니다.
 ### 기술 스택
 - **프레임워크**: React Native 0.81 + Expo ~54.0
 - **라우팅**: Expo Router ~6.0 (파일 기반)
-- **UI**: Tamagui (검토 중)
+- **UI**: Tamagui
 - **상태 관리**: Zustand (글로벌) + React Query (서버)
-- **API**: Axios
+- **API**: ConnectRPC (@connectrpc/connect-web)
 - **실시간**: WebSocket (TBD)
 
 ---
@@ -90,17 +90,17 @@ Duologue 앱의 프론트엔드 구현 단계를 정의한 문서입니다.
 **작업 문서**: `phase0-4-api-client.md`
 
 **구현 내용**:
-- Axios 인스턴스 생성
-- Request/Response 인터셉터
-- 토큰 갱신 로직
+- ConnectRPC 클라이언트 설정
+- Auth + Logging 인터셉터
+- 토큰 갱신 로직 (TokenRefreshManager)
 - React Query 설정
-- API 에러 핸들링
+- ConnectRPC 에러 핸들링 (ApplicationError + ErrorCode)
 
 **검증 기준**:
-- [ ] 프로젝트가 iOS/Android 시뮬레이터에서 정상 실행
-- [ ] Expo Router 네비게이션 동작
-- [ ] 기본 컴포넌트 스토리북/화면에서 확인 가능
-- [ ] API 클라이언트로 더미 요청 테스트 성공
+- [x] 프로젝트가 iOS/Android 시뮬레이터에서 정상 실행
+- [x] Expo Router 네비게이션 동작
+- [x] 기본 컴포넌트 확인 가능
+- [x] ConnectRPC 클라이언트 정상 동작
 
 ---
 
@@ -185,11 +185,11 @@ Duologue 앱의 프론트엔드 구현 단계를 정의한 문서입니다.
 3. 프로필 완성 후 메인 화면으로 이동
 
 **검증 기준**:
-- [ ] 회원가입 플로우 전체 동작
-- [ ] 로그인 플로우 전체 동작
-- [ ] Refresh Token 자동 갱신 동작
-- [ ] 프로필 설정 및 수정 동작
-- [ ] 인증되지 않은 사용자는 메인 화면 접근 불가
+- [x] 회원가입 플로우 전체 동작
+- [x] 로그인 플로우 전체 동작
+- [x] Refresh Token 자동 갱신 동작
+- [x] 프로필 설정 및 수정 동작
+- [x] 인증되지 않은 사용자는 메인 화면 접근 불가
 
 ---
 
@@ -575,9 +575,10 @@ Duologue 앱의 프론트엔드 구현 단계를 정의한 문서입니다.
 
 | Phase | 상태 | 시작일 | 완료일 | 비고 |
 |-------|------|--------|--------|------|
-| Phase 0 | 🟢 진행 중 | 2025-11-19 | - | 프로젝트 기반 |
-| Phase 1 | 🔴 대기 | - | - | Backend Phase 1 완료 대기 |
-| Phase 2 | 🔴 대기 | - | - | Backend Phase 2 완료 대기 |
+| Phase 0 | ✅ 완료 | 2025-11-19 | 2025-01-14 | 프로젝트 기반 |
+| Phase 1 | ✅ 완료 | 2025-01-14 | 2025-01-19 | 인증 및 프로필 |
+| Phase 2-1 | 🔄 진행 중 | 2025-01-28 | - | 티켓 표시 (feat/ticket) |
+| Phase 2 | 🔴 대기 | - | - | 매칭 코어 |
 | Phase 3 | - | - | - | 게임 플레이 |
 | Phase 4 | - | - | - | 소셜 기능 |
 | Phase 5 | - | - | - | 상거래 |
@@ -668,4 +669,4 @@ const api = process.env.EXPO_PUBLIC_USE_MOCK === 'true'
 ---
 
 **최초 작성**: 2025-11-19
-**최종 수정**: 2025-11-19
+**최종 수정**: 2026-01-29
