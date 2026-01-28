@@ -4,24 +4,24 @@
 
 import type { GenFile, GenMessage, GenService } from "@bufbuild/protobuf/codegenv2";
 import { fileDesc, messageDesc, serviceDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenderPreference } from "./common_pb";
+import { file_duologue_v1_common } from "./common_pb";
 import type { Message } from "@bufbuild/protobuf";
 
 /**
  * Describes the file duologue/v1/match_preset.proto.
  */
 export const file_duologue_v1_match_preset: GenFile = /*@__PURE__*/
-  fileDesc("Ch5kdW9sb2d1ZS92MS9tYXRjaF9wcmVzZXQucHJvdG8SC2R1b2xvZ3VlLnYxIkkKC01hdGNoUHJlc2V0EhgKEHByZWZlcnJlZF9nZW5kZXIYASABKAkSDwoHbWluX2FnZRgCIAEoBRIPCgdtYXhfYWdlGAMgASgFIhcKFUdldE1hdGNoUHJlc2V0UmVxdWVzdCJCChZHZXRNYXRjaFByZXNldFJlc3BvbnNlEigKBnByZXNldBgBIAEoCzIYLmR1b2xvZ3VlLnYxLk1hdGNoUHJlc2V0IlYKGFVwZGF0ZU1hdGNoUHJlc2V0UmVxdWVzdBIYChBwcmVmZXJyZWRfZ2VuZGVyGAEgASgJEg8KB21pbl9hZ2UYAiABKAUSDwoHbWF4X2FnZRgDIAEoBSJFChlVcGRhdGVNYXRjaFByZXNldFJlc3BvbnNlEigKBnByZXNldBgBIAEoCzIYLmR1b2xvZ3VlLnYxLk1hdGNoUHJlc2V0IhoKGERlbGV0ZU1hdGNoUHJlc2V0UmVxdWVzdCIsChlEZWxldGVNYXRjaFByZXNldFJlc3BvbnNlEg8KB21lc3NhZ2UYASABKAkytwIKEk1hdGNoUHJlc2V0U2VydmljZRJZCg5HZXRNYXRjaFByZXNldBIiLmR1b2xvZ3VlLnYxLkdldE1hdGNoUHJlc2V0UmVxdWVzdBojLmR1b2xvZ3VlLnYxLkdldE1hdGNoUHJlc2V0UmVzcG9uc2USYgoRVXBkYXRlTWF0Y2hQcmVzZXQSJS5kdW9sb2d1ZS52MS5VcGRhdGVNYXRjaFByZXNldFJlcXVlc3QaJi5kdW9sb2d1ZS52MS5VcGRhdGVNYXRjaFByZXNldFJlc3BvbnNlEmIKEURlbGV0ZU1hdGNoUHJlc2V0EiUuZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hQcmVzZXRSZXF1ZXN0GiYuZHVvbG9ndWUudjEuRGVsZXRlTWF0Y2hQcmVzZXRSZXNwb25zZUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw");
+  fileDesc("Ch5kdW9sb2d1ZS92MS9tYXRjaF9wcmVzZXQucHJvdG8SC2R1b2xvZ3VlLnYxImgKC01hdGNoUHJlc2V0EjcKEHByZWZlcnJlZF9nZW5kZXIYASABKA4yHS5kdW9sb2d1ZS52MS5HZW5kZXJQcmVmZXJlbmNlEg8KB21pbl9hZ2UYAiABKAUSDwoHbWF4X2FnZRgDIAEoBSIXChVHZXRNYXRjaFByZXNldFJlcXVlc3QiQgoWR2V0TWF0Y2hQcmVzZXRSZXNwb25zZRIoCgZwcmVzZXQYASABKAsyGC5kdW9sb2d1ZS52MS5NYXRjaFByZXNldCJ1ChhVcGRhdGVNYXRjaFByZXNldFJlcXVlc3QSNwoQcHJlZmVycmVkX2dlbmRlchgBIAEoDjIdLmR1b2xvZ3VlLnYxLkdlbmRlclByZWZlcmVuY2USDwoHbWluX2FnZRgCIAEoBRIPCgdtYXhfYWdlGAMgASgFIkUKGVVwZGF0ZU1hdGNoUHJlc2V0UmVzcG9uc2USKAoGcHJlc2V0GAEgASgLMhguZHVvbG9ndWUudjEuTWF0Y2hQcmVzZXQiGgoYRGVsZXRlTWF0Y2hQcmVzZXRSZXF1ZXN0IiwKGURlbGV0ZU1hdGNoUHJlc2V0UmVzcG9uc2USDwoHbWVzc2FnZRgBIAEoCTK3AgoSTWF0Y2hQcmVzZXRTZXJ2aWNlElkKDkdldE1hdGNoUHJlc2V0EiIuZHVvbG9ndWUudjEuR2V0TWF0Y2hQcmVzZXRSZXF1ZXN0GiMuZHVvbG9ndWUudjEuR2V0TWF0Y2hQcmVzZXRSZXNwb25zZRJiChFVcGRhdGVNYXRjaFByZXNldBIlLmR1b2xvZ3VlLnYxLlVwZGF0ZU1hdGNoUHJlc2V0UmVxdWVzdBomLmR1b2xvZ3VlLnYxLlVwZGF0ZU1hdGNoUHJlc2V0UmVzcG9uc2USYgoRRGVsZXRlTWF0Y2hQcmVzZXQSJS5kdW9sb2d1ZS52MS5EZWxldGVNYXRjaFByZXNldFJlcXVlc3QaJi5kdW9sb2d1ZS52MS5EZWxldGVNYXRjaFByZXNldFJlc3BvbnNlQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_duologue_v1_common]);
 
 /**
  * @generated from message duologue.v1.MatchPreset
  */
 export type MatchPreset = Message<"duologue.v1.MatchPreset"> & {
   /**
-   * "male", "female", "any"
-   *
-   * @generated from field: string preferred_gender = 1;
+   * @generated from field: duologue.v1.GenderPreference preferred_gender = 1;
    */
-  preferredGender: string;
+  preferredGender: GenderPreference;
 
   /**
    * @generated from field: int32 min_age = 2;
@@ -76,9 +76,9 @@ export const GetMatchPresetResponseSchema: GenMessage<GetMatchPresetResponse> = 
  */
 export type UpdateMatchPresetRequest = Message<"duologue.v1.UpdateMatchPresetRequest"> & {
   /**
-   * @generated from field: string preferred_gender = 1;
+   * @generated from field: duologue.v1.GenderPreference preferred_gender = 1;
    */
-  preferredGender: string;
+  preferredGender: GenderPreference;
 
   /**
    * @generated from field: int32 min_age = 2;

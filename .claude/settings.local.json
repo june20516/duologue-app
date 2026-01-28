@@ -3,7 +3,8 @@
     "allow": [
       "Bash(yarn tsc:*)",
       "Bash(git rev-parse:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(yarn lint:*)"
     ],
     "deny": [],
     "ask": []

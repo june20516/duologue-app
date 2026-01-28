@@ -1,3 +1,5 @@
+import type { Gender } from '@/types/gender';
+
 export interface BaseUser {
   id: number;
   email: string;
@@ -16,7 +18,7 @@ export type AuthMe = BaseUser;
 export interface ProfileMe {
   userId: number;
   nickname: string | null;
-  gender: 'male' | 'female' | 'other' | null;
+  gender: Gender | null;
   region: string | null;
   shortBio: string | null;
   profileImageUrl: string | null;
@@ -33,7 +35,7 @@ export interface Player {
   id: string;
   nickname: string;
   profileImage?: string;
-  gender: 'male' | 'female' | 'other';
+  gender: Gender;
   bio?: string;
   interests: string[];
   location?: string;

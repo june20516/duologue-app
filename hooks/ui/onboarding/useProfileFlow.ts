@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import type { ProfileMe } from '@/models/user';
 import { useUpdateProfile } from '@/queries/useMutationProfile';
+import type { Gender } from '@/types/gender';
 import {
   NicknameGenderFormData,
   InterestsFormData,
@@ -62,7 +63,7 @@ export const useProfileFlow = ({ initialData, onSuccess }: UseProfileFlowOptions
 
     const data: {
       nickname: string;
-      gender: 'male' | 'female' | 'other';
+      gender: Gender;
       interestIds: number[];
       region?: string;
       shortBio?: string;

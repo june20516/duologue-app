@@ -60,6 +60,8 @@ export const useQueriesMe = (options?: QueryOptionParams<AuthMe | ProfileMe, Err
     if (!queriesResult.me) return;
     setMe(queriesResult.me);
   }, [queriesResult, setMe]);
+
+  return queriesResult;
 };
 
 const combineAuthAndProfile = (auth: AuthMe, profile: ProfileMe): Me => {

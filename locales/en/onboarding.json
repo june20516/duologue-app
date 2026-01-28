@@ -40,7 +40,7 @@
       "label": "Gender",
       "male": "Male",
       "female": "Female",
-      "other": "Other"
+      "others": "Others"
     }
   },
   "optional": {

@@ -1,25 +1,21 @@
 import { router } from 'expo-router';
 import { Alert } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { YStack, XStack, ScrollView, Avatar } from 'tamagui';
 
 import { authApi } from '@/api/auth';
+import { HEADER_HEIGHT } from '@/components/layout/header/contstants';
 import { Button, Spinner, Typography } from '@/components/ui';
+import { useGender } from '@/hooks/useGender';
 import { useQueryProfileMe } from '@/queries/useQueryProfile';
 import { useAuthStore } from '@/stores/authStore';
-import { useCommonStyle } from '@/styles/common';
-
-const GENDER_LABELS = {
-  male: '남성',
-  female: '여성',
-  other: '기타',
-};
 
 const ProfileScreen = () => {
   const { data: profile, isLoading } = useQueryProfileMe();
   const refreshToken = useAuthStore((state) => state.refreshToken);
   const clearAuth = useAuthStore((state) => state.clearAuth);
-  const { fullscreen, defaultBackground } = useCommonStyle();
+  const { getGenderLabel } = useGender();
+  const insets = useSafeAreaInsets();
 
   const handleLogout = () => {
     Alert.alert('로그아웃', '로그아웃 하시겠습니까?', [
@@ -49,34 +45,30 @@ const ProfileScreen = () => {
 
   if (isLoading) {
     return (
-      <SafeAreaView style={[fullscreen, defaultBackground]}>
-        <YStack flex={1} justify="center" items="center">
-          <Spinner size="medium" />
-          <Typography mt="$4">프로필을 불러오는 중...</Typography>
-        </YStack>
-      </SafeAreaView>
+      <YStack flex={1} bg="$background" justify="center" items="center">
+        <Spinner size="medium" />
+        <Typography mt="$4">프로필을 불러오는 중...</Typography>
+      </YStack>
     );
   }
 
   if (!profile) {
     return (
-      <SafeAreaView style={[fullscreen, defaultBackground]}>
-        <YStack flex={1} justify="center" items="center" p="$4">
-          <Typography type="title" mb="$2">
-            프로필을 찾을 수 없습니다
-          </Typography>
-          <Typography type="regular" color="$gray600" mb="$4">
-            프로필 설정을 완료해주세요
-          </Typography>
-          <Button onPress={() => router.push('/onboarding')}>프로필 설정하기</Button>
-        </YStack>
-      </SafeAreaView>
+      <YStack flex={1} bg="$background" justify="center" items="center" p="$4">
+        <Typography type="title" mb="$2">
+          프로필을 찾을 수 없습니다
+        </Typography>
+        <Typography type="regular" color="$gray600" mb="$4">
+          프로필 설정을 완료해주세요
+        </Typography>
+        <Button onPress={() => router.push('/onboarding')}>프로필 설정하기</Button>
+      </YStack>
     );
   }
 
   return (
-    <SafeAreaView style={[fullscreen, defaultBackground]} edges={['top']}>
-      <ScrollView flex={1}>
+    <YStack flex={1} bg="$background">
+      <ScrollView flex={1} pt={insets.top + HEADER_HEIGHT}>
         <YStack p="$4" gap="$6">
           {/* 헤더 */}
           <XStack justify="space-between" items="center">
@@ -116,9 +108,7 @@ const ProfileScreen = () => {
               <Typography type="semiBold" color="$gray700">
                 성별
               </Typography>
-              <Typography type="regular">
-                {profile.gender ? GENDER_LABELS[profile.gender] : '미설정'}
-              </Typography>
+              <Typography type="regular">{getGenderLabel(profile.gender)}</Typography>
             </YStack>
 
             {profile.region && (
@@ -137,11 +127,15 @@ const ProfileScreen = () => {
                 </Typography>
                 <XStack gap="$2" flexWrap="wrap">
                   {profile.interests.map((interest) => (
-                    <XStack key={interest.id} bg="$primary" px="$3" py="$2" rounded="$4">
-                      <Typography type="caption" color="$white">
-                        {interest.displayName}
-                      </Typography>
-                    </XStack>
+                    <Button
+                      key={interest.id}
+                      variant="filled"
+                      priority="primary"
+                      size="sm"
+                      readonly
+                    >
+                      {interest.displayName}
+                    </Button>
                   ))}
                 </XStack>
               </YStack>
@@ -152,7 +146,7 @@ const ProfileScreen = () => {
           <Button onPress={handleEditProfile}>프로필 수정</Button>
         </YStack>
       </ScrollView>
-    </SafeAreaView>
+    </YStack>
   );
 };
 

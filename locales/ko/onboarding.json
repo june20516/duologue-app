@@ -40,7 +40,7 @@
       "label": "성별",
       "male": "남성",
       "female": "여성",
-      "other": "기타"
+      "others": "기타"
     }
   },
   "optional": {

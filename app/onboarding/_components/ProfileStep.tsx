@@ -8,11 +8,12 @@ import { Button, Typography } from '@/components/ui';
 import { useCheckNickname } from '@/hooks/useCheckNickname';
 import { useTranslation } from '@/locales/useTranslation';
 import { fullscreen } from '@/styles/common';
+import type { Gender } from '@/types/gender';
 import { NicknameGenderFormData } from '@/utils/validation/profileSchemas';
 
 interface ProfileStepProps {
   form: UseFormReturn<NicknameGenderFormData>;
-  genderOptions: { value: 'male' | 'female' | 'other'; label: string }[];
+  genderOptions: { value: Gender; label: string }[];
   handleSubmit: (data: NicknameGenderFormData) => void;
 }
 

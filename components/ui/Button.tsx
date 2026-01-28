@@ -7,7 +7,7 @@ type ButtonVariant = 'filled' | 'outline' | 'ghost';
 type ButtonPriority = 'primary' | 'secondary';
 type ButtonSize = 'sm' | 'md' | 'lg';
 
-interface CustomButtonProps {
+interface BaseButtonProps {
   variant?: ButtonVariant;
   priority?: ButtonPriority;
   size?: ButtonSize;
@@ -15,18 +15,35 @@ interface CustomButtonProps {
   children: React.ReactNode;
 }
 
-export type ButtonProps = Omit<TamaguiButtonProps, 'size' | 'variant'> & CustomButtonProps;
+type ReadonlyButtonProps = BaseButtonProps & {
+  readonly: true;
+  disabled?: never;
+  onPress?: never;
+};
 
-const Button: React.FC<ButtonProps> = ({
-  variant = 'filled',
-  priority = 'primary',
-  size = 'md',
-  loading = false,
-  disabled = false,
-  children,
-  onPress,
-  ...rest
-}) => {
+type InteractiveButtonProps = BaseButtonProps & {
+  readonly?: false;
+  disabled?: boolean;
+  onPress?: TamaguiButtonProps['onPress'];
+};
+
+export type ButtonProps = Omit<TamaguiButtonProps, 'size' | 'variant' | 'disabled' | 'onPress'> &
+  (ReadonlyButtonProps | InteractiveButtonProps);
+
+const Button: React.FC<ButtonProps> = (props) => {
+  const {
+    variant = 'filled',
+    priority = 'primary',
+    size = 'md',
+    loading = false,
+    children,
+    ...rest
+  } = props;
+
+  const readonly = 'readonly' in props && props.readonly === true;
+  const disabled = 'disabled' in props ? props.disabled ?? false : false;
+  const onPress = 'onPress' in props ? props.onPress : undefined;
+
   // Size 매핑
   const sizeProps: Record<ButtonSize, TamaguiButtonProps> = {
     sm: {
@@ -49,7 +66,11 @@ const Button: React.FC<ButtonProps> = ({
     },
   };
 
-  const getStyleProps = (variant: ButtonVariant, priority: ButtonPriority): TamaguiButtonProps => {
+  const getStyleProps = (
+    variant: ButtonVariant,
+    priority: ButtonPriority,
+    isReadonly: boolean
+  ): TamaguiButtonProps => {
     const mainColor = priority === 'primary' ? '$primary' : '$secondary';
     const textColor = priority === 'primary' ? '$color' : '$colorSurface';
     switch (variant) {
@@ -60,12 +81,8 @@ const Button: React.FC<ButtonProps> = ({
           bg: mainColor,
           color: textColor,
           borderWidth: 0,
-          hoverStyle: {
-            bg: hoverColor,
-          },
-          pressStyle: {
-            bg: pressColor,
-          },
+          hoverStyle: isReadonly ? {} : { bg: hoverColor },
+          pressStyle: isReadonly ? {} : { bg: pressColor },
         };
       }
       case 'outline': {
@@ -78,12 +95,8 @@ const Button: React.FC<ButtonProps> = ({
           color: '$color',
           borderWidth: 1,
           borderColor: '$color',
-          hoverStyle: {
-            bg: hoverColor,
-          },
-          pressStyle: {
-            bg: pressColor,
-          },
+          hoverStyle: isReadonly ? {} : { bg: hoverColor },
+          pressStyle: isReadonly ? {} : { bg: pressColor },
         };
       }
       case 'ghost': {
@@ -95,12 +108,8 @@ const Button: React.FC<ButtonProps> = ({
           bg: 'transparent',
           color: '$color',
           borderWidth: 0,
-          hoverStyle: {
-            bg: hoverColor,
-          },
-          pressStyle: {
-            bg: pressColor,
-          },
+          hoverStyle: isReadonly ? {} : { bg: hoverColor },
+          pressStyle: isReadonly ? {} : { bg: pressColor },
         };
       }
     }
@@ -108,7 +117,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const isDisabled = disabled || loading;
 
-  const styleProps = getStyleProps(variant, priority);
+  const styleProps = getStyleProps(variant, priority, readonly);
 
   const [fixedWidth, setFixedWidth] = useState(rest.width);
 
@@ -117,12 +126,13 @@ const Button: React.FC<ButtonProps> = ({
       {...rest}
       {...sizeProps[size]}
       {...styleProps}
-      disabled={isDisabled}
+      disabled={readonly ? false : isDisabled}
       opacity={isDisabled ? 0.5 : 1}
-      cursor={isDisabled ? 'not-allowed' : 'pointer'}
-      onPress={isDisabled ? undefined : onPress}
+      cursor={readonly ? 'default' : isDisabled ? 'not-allowed' : 'pointer'}
+      onPress={readonly ? undefined : isDisabled ? undefined : onPress}
       role="button"
-      aria-disabled={isDisabled}
+      aria-disabled={readonly ? true : isDisabled}
+      aria-readonly={readonly}
       icon={loading ? <Spinner size="small" color="currentColor" /> : undefined}
       onLayout={(event) => {
         if (typeof fixedWidth !== 'undefined') return;
