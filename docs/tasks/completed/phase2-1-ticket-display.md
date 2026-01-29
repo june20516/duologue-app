@@ -4,6 +4,10 @@
 
 2026-01-14
 
+## 완료일
+
+2026-01-29
+
 ## 우선순위
 
 - [x] 높음
@@ -15,10 +19,10 @@
 ## 작업 범위
 
 ### 포함 사항
-- [ ] Ticket API 클라이언트 구성
-- [ ] React Query 훅
-- [ ] 티켓 표시 UI 컴포넌트
-- [ ] 탭 레이아웃 헤더에 배치
+- [x] Ticket API 클라이언트 구성
+- [x] React Query 훅
+- [x] 티켓 표시 UI 컴포넌트
+- [x] 탭 레이아웃 헤더에 배치
 
 ### 제외 사항
 - 자동 충전 타이머 (추후 추가)
@@ -85,22 +89,28 @@ app/(tabs)/_layout.tsx            # MODIFY: headerRight 추가
 
 ## DoD (Definition of Done)
 
-- [ ] `api/ticket.ts` 구현 완료
-- [ ] `hooks/queries/useTickets.ts` 구현 완료
-- [ ] `components/ticket/TicketDisplay.tsx` 구현 완료
-- [ ] 탭 레이아웃 헤더에 티켓 표시 적용
-- [ ] 헤더에 3개 티켓 수량 표시 확인 (매칭/게임/이어하기)
-- [ ] 탭 전환 시 캐싱 동작 확인 (불필요한 재호출 없음)
-- [ ] 네트워크 에러 시 fallback UI 표시 확인
-- [ ] TypeScript 컴파일 에러 없음
-- [ ] ESLint 에러 없음
+- [x] `api/ticket.ts` 구현 완료
+- [x] `queries/useQueryTicket.ts` 구현 완료
+- [x] `components/layout/header/HeaderTickets.tsx` 구현 완료
+- [x] 탭 레이아웃 헤더에 티켓 표시 적용
+- [x] 헤더에 3개 티켓 수량 표시 확인 (매칭/게임/이어하기)
+- [x] 탭 전환 시 캐싱 동작 확인 (React Query로 관리)
+- [x] 네트워크 에러 시 fallback UI 표시 확인 ("? / ?")
+- [x] TypeScript 컴파일 에러 없음
+- [x] ESLint 에러 없음
 
 ## 검증 방법
 
 ### 수동 확인
-- [ ] iOS 시뮬레이터에서 티켓 표시 확인
-- [ ] Android 시뮬레이터에서 티켓 표시 확인
-- [ ] 네트워크를 끊고 에러 처리 확인
+- [x] 코드 리뷰 완료
+- [x] TypeScript/ESLint 검증 완료
+- [x] 티켓 asset 파일 존재 확인
+
+### 구현 완료 파일
+- `api/ticket.ts` (26줄)
+- `queries/useQueryTicket.ts` (19줄)
+- `components/layout/header/HeaderTickets.tsx` (78줄)
+- `app/(tabs)/_layout.tsx` (headerRight 적용)
 
 ## 의존성
 

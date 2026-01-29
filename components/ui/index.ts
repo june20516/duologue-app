@@ -13,8 +13,8 @@ export type { InputProps } from './Input';
 export { default as Card } from './Card';
 export type { CardProps } from './Card';
 
-export { default as Modal } from './Modal';
-export type { ModalProps } from './Modal';
+export { default as BaseModal } from './BaseModal';
+export type { ModalProps } from './BaseModal';
 
 export { default as Spinner } from './Spinner';
 export type { SpinnerProps } from './Spinner';

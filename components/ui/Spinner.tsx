@@ -1,6 +1,6 @@
 import { Spinner as TamaguiSpinner, SpinnerProps as TamaguiSpinnerProps, YStack } from 'tamagui';
 
-type SpinnerSize = 'small' | 'medium' | 'large';
+type SpinnerSize = 'tiny' | 'small' | 'medium' | 'large';
 
 interface CustomSpinnerProps {
   size?: SpinnerSize;
@@ -18,6 +18,7 @@ const Spinner: React.FC<SpinnerProps> = ({
 }) => {
   // Size 매핑
   const sizeMap: Record<SpinnerSize, TamaguiSpinnerProps['size']> = {
+    tiny: 'small',
     small: 'small',
     medium: 'large',
     large: 'large',
@@ -25,6 +26,7 @@ const Spinner: React.FC<SpinnerProps> = ({
 
   // Scale 매핑
   const scaleMap: Record<SpinnerSize, number> = {
+    tiny: 0.8,
     small: 1,
     medium: 1.5,
     large: 2,

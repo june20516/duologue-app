@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { XStack, YStack } from 'tamagui';
 
 import ParallaxScrollView from '@/components/parallax-scroll-view';
-import { Button, Card, Input, Modal, Spinner, Typography, useToast } from '@/components/ui';
+import { BaseModal, Button, Card, Input, Spinner, Typography, useToast } from '@/components/ui';
 
 const UITestScreen = () => {
   const [loading, setLoading] = useState(false);
@@ -249,7 +249,7 @@ const UITestScreen = () => {
               Automatically switches between Dialog (desktop) and Sheet (mobile)
             </Typography>
             <Button onPress={() => setAdaptiveModalOpen(true)}>Open Adaptive Modal</Button>
-            <Modal
+            <BaseModal
               variant="adaptive"
               open={adaptiveModalOpen}
               onOpenChange={setAdaptiveModalOpen}
@@ -268,14 +268,14 @@ const UITestScreen = () => {
                   <Button onPress={() => setAdaptiveModalOpen(false)}>Confirm</Button>
                 </XStack>
               </YStack>
-            </Modal>
+            </BaseModal>
           </YStack>
 
           <YStack gap="$3">
             <Typography type="subtitle">Dialog Modal</Typography>
             <Typography>Always shows as a centered dialog</Typography>
             <Button onPress={() => setDialogModalOpen(true)}>Open Dialog Modal</Button>
-            <Modal
+            <BaseModal
               variant="dialog"
               open={dialogModalOpen}
               onOpenChange={setDialogModalOpen}
@@ -293,14 +293,14 @@ const UITestScreen = () => {
                   <Button onPress={() => setDialogModalOpen(false)}>Confirm</Button>
                 </XStack>
               </YStack>
-            </Modal>
+            </BaseModal>
           </YStack>
 
           <YStack gap="$3">
             <Typography type="subtitle">Sheet Modal</Typography>
             <Typography>Always shows as a bottom sheet</Typography>
             <Button onPress={() => setSheetModalOpen(true)}>Open Sheet Modal</Button>
-            <Modal
+            <BaseModal
               variant="sheet"
               open={sheetModalOpen}
               onOpenChange={setSheetModalOpen}
@@ -313,7 +313,7 @@ const UITestScreen = () => {
                 </Typography>
                 <Button onPress={() => setSheetModalOpen(false)}>Close</Button>
               </YStack>
-            </Modal>
+            </BaseModal>
           </YStack>
         </YStack>
 

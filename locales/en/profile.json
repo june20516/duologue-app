@@ -1,4 +1,19 @@
 {
+  "view": {
+    "title": "My Profile",
+    "edit": "Edit",
+    "nickname_placeholder": "No nickname",
+    "profile_image_alt": "Profile image",
+    "gender_label": "Gender",
+    "region_label": "Region",
+    "interests_label": "Interests",
+    "logout": "Log out",
+    "logout_confirm_title": "Log out",
+    "logout_confirm_message": "Are you sure you want to log out?",
+    "not_found_title": "Profile not found",
+    "not_found_description": "Please complete your profile setup",
+    "setup_profile": "Set up profile"
+  },
   "edit": {
     "title": "Edit Profile",
     "cancel": "Cancel",

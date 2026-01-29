@@ -1,14 +1,25 @@
-import { Dialog, Sheet, Adapt, XStack, YStack, Text, DialogContentProps } from 'tamagui';
+import {
+  Dialog,
+  Sheet,
+  Adapt,
+  XStack,
+  YStack,
+  Text,
+  DialogContentProps,
+  YStackProps,
+} from 'tamagui';
 
 export type ModalVariant = 'adaptive' | 'dialog' | 'sheet';
 
 interface BaseModalProps {
   open: boolean;
-  onOpenChange: (open: boolean) => void;
+  onOpenChange?: (open: boolean) => void;
   title?: string;
   description?: string;
   children: React.ReactNode;
   dismissOnOverlayPress?: boolean;
+  contentProps?: Partial<DialogContentProps>;
+  sheetFrameProps?: Partial<YStackProps>;
 }
 
 type ModalPropsWithVariant<T extends ModalVariant> = BaseModalProps & {
@@ -99,7 +110,7 @@ const ModalOverlay: React.FC<{
 
 const SheetOverlay: React.FC = () => <Sheet.Overlay {...OVERLAY_PROPS} />;
 
-const Modal: React.FC<ModalProps> = (props) => {
+const BaseModal: React.FC<ModalProps> = (props) => {
   const {
     open,
     onOpenChange,
@@ -108,6 +119,8 @@ const Modal: React.FC<ModalProps> = (props) => {
     description,
     children,
     dismissOnOverlayPress = true,
+    contentProps,
+    sheetFrameProps,
   } = props;
 
   const snapPoints = props.variant !== 'dialog' ? (props.snapPoints ?? [85]) : [];
@@ -132,6 +145,7 @@ const Modal: React.FC<ModalProps> = (props) => {
           bg="$background"
           borderTopLeftRadius="$4"
           borderTopRightRadius="$4"
+          {...sheetFrameProps}
         >
           <Sheet.Handle bg="$borderColor" />
           <ModalHeader title={title} description={description} />
@@ -146,8 +160,11 @@ const Modal: React.FC<ModalProps> = (props) => {
     return (
       <Dialog modal open={open} onOpenChange={onOpenChange}>
         <Dialog.Portal>
-          <ModalOverlay dismissOnOverlayPress={dismissOnOverlayPress} onOpenChange={onOpenChange} />
-          <Dialog.Content key="content" {...DIALOG_CONTENT_PROPS}>
+          <ModalOverlay
+            dismissOnOverlayPress={dismissOnOverlayPress}
+            onOpenChange={onOpenChange || (() => {})}
+          />
+          <Dialog.Content key="content" {...DIALOG_CONTENT_PROPS} {...contentProps}>
             <ModalHeader title={title} description={description} />
             {children}
           </Dialog.Content>
@@ -174,6 +191,7 @@ const Modal: React.FC<ModalProps> = (props) => {
             bg="$background"
             borderTopLeftRadius="$4"
             borderTopRightRadius="$4"
+            {...sheetFrameProps}
           >
             <Adapt.Contents />
           </Sheet.Frame>
@@ -182,8 +200,11 @@ const Modal: React.FC<ModalProps> = (props) => {
       </Adapt>
 
       <Dialog.Portal>
-        <ModalOverlay dismissOnOverlayPress={dismissOnOverlayPress} onOpenChange={onOpenChange} />
-        <Dialog.Content key="content" {...DIALOG_CONTENT_PROPS}>
+        <ModalOverlay
+          dismissOnOverlayPress={dismissOnOverlayPress}
+          onOpenChange={onOpenChange || (() => {})}
+        />
+        <Dialog.Content key="content" {...DIALOG_CONTENT_PROPS} {...contentProps}>
           <ModalHeader title={title} description={description} />
           {children}
         </Dialog.Content>
@@ -192,4 +213,4 @@ const Modal: React.FC<ModalProps> = (props) => {
   );
 };
 
-export default Modal;
+export default BaseModal;

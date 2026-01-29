@@ -1,7 +1,7 @@
 import { useRouter } from 'expo-router';
 import { YStack } from 'tamagui';
 
-import { Button, Modal, Typography } from '@/components/ui';
+import { Button, BaseModal, Typography } from '@/components/ui';
 import { useUiStore } from '@/stores/uiStore';
 
 export const GlobalErrorModal: React.FC = () => {
@@ -15,7 +15,7 @@ export const GlobalErrorModal: React.FC = () => {
   };
 
   return (
-    <Modal
+    <BaseModal
       variant="dialog"
       open={errorModal.isVisible}
       onOpenChange={(open) => {
@@ -30,6 +30,6 @@ export const GlobalErrorModal: React.FC = () => {
         <Typography>{errorModal.message}</Typography>
         <Button onPress={handleConfirm}>확인</Button>
       </YStack>
-    </Modal>
+    </BaseModal>
   );
 };

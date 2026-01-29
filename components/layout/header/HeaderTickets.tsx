@@ -1,6 +1,8 @@
 import { Image } from 'expo-image';
 import { XStack } from 'tamagui';
 
+import { Spinner } from '@/components/ui';
+import { Ticket } from '@/models/ticket';
 import { useQueryTickets } from '@/queries/useQueryTicket';
 
 import Typography from '../../ui/Typography';
@@ -10,25 +12,9 @@ import { TICKET_ICON_SIZE } from './contstants';
 export const HeaderTickets: React.FC = () => {
   const { data, isLoading, isError } = useQueryTickets();
 
-  if (isLoading) {
-    return (
-      <XStack gap="$2" px="$3">
-        <Typography type="caption">...</Typography>
-      </XStack>
-    );
-  }
-
-  if (isError || !data) {
-    return (
-      <XStack gap="$2" px="$3">
-        <Typography type="caption">? / ?</Typography>
-      </XStack>
-    );
-  }
-
   return (
     <XStack gap="$4" px="$3" items="center">
-      <XStack gap="$1" items="center">
+      <XStack gap="$2" items="center">
         <Image
           source={require('@/assets/images/ticket-match-simple-small.png')}
           style={{
@@ -38,12 +24,10 @@ export const HeaderTickets: React.FC = () => {
           }}
           contentFit="contain"
         />
-        <Typography type="caption">
-          {data.matchTicket.quantity}/{data.matchTicket.maxQuantity}
-        </Typography>
+        <TicketTypo isLoading={isLoading} isError={isError} data={data?.matchTicket} />
       </XStack>
 
-      <XStack gap="$1" items="center">
+      <XStack gap="$2" items="center">
         <Image
           source={require('@/assets/images/ticket-game-simple-small.png')}
           style={{
@@ -53,12 +37,10 @@ export const HeaderTickets: React.FC = () => {
           }}
           contentFit="contain"
         />
-        <Typography type="caption">
-          {data.gameTicket.quantity}/{data.gameTicket.maxQuantity}
-        </Typography>
+        <TicketTypo isLoading={isLoading} isError={isError} data={data?.gameTicket} />
       </XStack>
 
-      <XStack gap="$1" items="center">
+      <XStack gap="$2" items="center">
         <Image
           source={require('@/assets/images/ticket-life-simple-small.png')}
           style={{
@@ -68,10 +50,32 @@ export const HeaderTickets: React.FC = () => {
           }}
           contentFit="contain"
         />
-        <Typography type="caption">
-          {data.continueTicket.quantity}/{data.continueTicket.maxQuantity}
-        </Typography>
+        <TicketTypo isLoading={isLoading} isError={isError} data={data?.continueTicket} />
       </XStack>
     </XStack>
+  );
+};
+
+const TicketTypo = ({
+  isLoading,
+  isError,
+  data,
+}: {
+  isLoading: boolean;
+  isError?: boolean;
+  data?: Ticket;
+}) => {
+  if (isLoading) {
+    return <Spinner color="$secondary" size="small" />;
+  }
+
+  if (isError || !data) {
+    return <Typography type="caption">- / -</Typography>;
+  }
+
+  return (
+    <Typography type="caption">
+      {data?.quantity} / {data?.maxQuantity}
+    </Typography>
   );
 };
