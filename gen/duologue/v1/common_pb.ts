@@ -2,8 +2,8 @@
 // @generated from file duologue/v1/common.proto (package duologue.v1, syntax proto3)
 /* eslint-disable */
 
-import type { GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
-import { fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import type { GenEnum, GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
+import { enumDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
 import { file_google_protobuf_timestamp } from "@bufbuild/protobuf/wkt";
 import type { Message } from "@bufbuild/protobuf";
 
@@ -11,7 +11,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file duologue/v1/common.proto.
  */
 export const file_duologue_v1_common: GenFile = /*@__PURE__*/
-  fileDesc("ChhkdW9sb2d1ZS92MS9jb21tb24ucHJvdG8SC2R1b2xvZ3VlLnYxIogBCgVFcnJvchIMCgRjb2RlGAEgASgJEg8KB21lc3NhZ2UYAiABKAkSMAoHZGV0YWlscxgDIAMoCzIfLmR1b2xvZ3VlLnYxLkVycm9yLkRldGFpbHNFbnRyeRouCgxEZXRhaWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJIChFQYWdpbmF0aW9uUmVxdWVzdBIMCgRwYWdlGAEgASgFEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlcKElBhZ2luYXRpb25SZXNwb25zZRITCgt0b3RhbF9jb3VudBgBIAEoBRITCgt0b3RhbF9wYWdlcxgCIAEoBRIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAkiMAoERGF0ZRIMCgR5ZWFyGAEgASgFEg0KBW1vbnRoGAIgASgFEgsKA2RheRgDIAEoBUJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_google_protobuf_timestamp]);
+  fileDesc("ChhkdW9sb2d1ZS92MS9jb21tb24ucHJvdG8SC2R1b2xvZ3VlLnYxIqABCgVFcnJvchIkCgRjb2RlGAEgASgOMhYuZHVvbG9ndWUudjEuRXJyb3JDb2RlEg8KB21lc3NhZ2UYAiABKAkSMAoHZGV0YWlscxgDIAMoCzIfLmR1b2xvZ3VlLnYxLkVycm9yLkRldGFpbHNFbnRyeRouCgxEZXRhaWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJIChFQYWdpbmF0aW9uUmVxdWVzdBIMCgRwYWdlGAEgASgFEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIlcKElBhZ2luYXRpb25SZXNwb25zZRITCgt0b3RhbF9jb3VudBgBIAEoBRITCgt0b3RhbF9wYWdlcxgCIAEoBRIXCg9uZXh0X3BhZ2VfdG9rZW4YAyABKAkiMAoERGF0ZRIMCgR5ZWFyGAEgASgFEg0KBW1vbnRoGAIgASgFEgsKA2RheRgDIAEoBSqiBQoJRXJyb3JDb2RlEhoKFkVSUk9SX0NPREVfVU5TUEVDSUZJRUQQABIfChtFUlJPUl9DT0RFX0lOVkFMSURfUFJPVE9CVUYQARIcChhFUlJPUl9DT0RFX0hBTkRMRVJfRVJST1IQAhIbChdFUlJPUl9DT0RFX0FVVEhfVElNRU9VVBADEhkKFUVSUk9SX0NPREVfQVVUSF9FUlJPUhAEEhwKGEVSUk9SX0NPREVfQVVUSF9SRVFVSVJFRBAFEhwKGEVSUk9SX0NPREVfSU5WQUxJRF9UT0tFThAGEiAKHEVSUk9SX0NPREVfQUxSRUFEWV9DT05ORUNURUQQBxIcChhFUlJPUl9DT0RFX1BST0ZJTEVfRVJST1IQCBIgChxFUlJPUl9DT0RFX1BST0ZJTEVfTk9UX0ZPVU5EEAkSHwobRVJST1JfQ09ERV9BTFJFQURZX0lOX1FVRVVFEAoSGgoWRVJST1JfQ09ERV9RVUVVRV9FUlJPUhALEhsKF0VSUk9SX0NPREVfTk9UX0lOX1FVRVVFEAwSHgoaRVJST1JfQ09ERV9NQVRDSF9OT1RfRk9VTkQQDRIeChpFUlJPUl9DT0RFX05PVF9QQVJUSUNJUEFOVBAOEhsKF0VSUk9SX0NPREVfQUNDRVBUX0VSUk9SEA8SGgoWRVJST1JfQ09ERV9NQVRDSF9FUlJPUhAQEhsKF0VSUk9SX0NPREVfUkVKRUNUX0VSUk9SEBESGwoXRVJST1JfQ09ERV9TWVNURU1fRVJST1IQEhIfChtFUlJPUl9DT0RFX0lOVkFMSURfQVJHVU1FTlQQExIXChNFUlJPUl9DT0RFX0lOVEVSTkFMEBQSHQoZRVJST1JfQ09ERV9BTFJFQURZX0VYSVNUUxAVKlcKBkdlbmRlchIWChJHRU5ERVJfVU5TUEVDSUZJRUQQABIPCgtHRU5ERVJfTUFMRRABEhEKDUdFTkRFUl9GRU1BTEUQAhIRCg1HRU5ERVJfT1RIRVJTEAMqqAEKEEdlbmRlclByZWZlcmVuY2USIQodR0VOREVSX1BSRUZFUkVOQ0VfVU5TUEVDSUZJRUQQABIaChZHRU5ERVJfUFJFRkVSRU5DRV9NQUxFEAESHAoYR0VOREVSX1BSRUZFUkVOQ0VfRkVNQUxFEAISHAoYR0VOREVSX1BSRUZFUkVOQ0VfT1RIRVJTEAMSGQoVR0VOREVSX1BSRUZFUkVOQ0VfQU5ZEARCRFpCZ2l0aHViLmNvbS9qdW5lMjA1MTYvZHVvbG9ndWUtc2VydmVyL2dlbi9nby9kdW9sb2d1ZS92MTtkdW9sb2d1ZXYxYgZwcm90bzM", [file_google_protobuf_timestamp]);
 
 /**
  * Error represents a standardized error response.
@@ -20,9 +20,9 @@ export const file_duologue_v1_common: GenFile = /*@__PURE__*/
  */
 export type Error = Message<"duologue.v1.Error"> & {
   /**
-   * @generated from field: string code = 1;
+   * @generated from field: duologue.v1.ErrorCode code = 1;
    */
-  code: string;
+  code: ErrorCode;
 
   /**
    * @generated from field: string message = 2;
@@ -128,4 +128,192 @@ export type Date = Message<"duologue.v1.Date"> & {
  */
 export const DateSchema: GenMessage<Date> = /*@__PURE__*/
   messageDesc(file_duologue_v1_common, 3);
+
+/**
+ * @generated from enum duologue.v1.ErrorCode
+ */
+export enum ErrorCode {
+  /**
+   * @generated from enum value: ERROR_CODE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: ERROR_CODE_INVALID_PROTOBUF = 1;
+   */
+  INVALID_PROTOBUF = 1,
+
+  /**
+   * @generated from enum value: ERROR_CODE_HANDLER_ERROR = 2;
+   */
+  HANDLER_ERROR = 2,
+
+  /**
+   * @generated from enum value: ERROR_CODE_AUTH_TIMEOUT = 3;
+   */
+  AUTH_TIMEOUT = 3,
+
+  /**
+   * @generated from enum value: ERROR_CODE_AUTH_ERROR = 4;
+   */
+  AUTH_ERROR = 4,
+
+  /**
+   * @generated from enum value: ERROR_CODE_AUTH_REQUIRED = 5;
+   */
+  AUTH_REQUIRED = 5,
+
+  /**
+   * @generated from enum value: ERROR_CODE_INVALID_TOKEN = 6;
+   */
+  INVALID_TOKEN = 6,
+
+  /**
+   * @generated from enum value: ERROR_CODE_ALREADY_CONNECTED = 7;
+   */
+  ALREADY_CONNECTED = 7,
+
+  /**
+   * @generated from enum value: ERROR_CODE_PROFILE_ERROR = 8;
+   */
+  PROFILE_ERROR = 8,
+
+  /**
+   * @generated from enum value: ERROR_CODE_PROFILE_NOT_FOUND = 9;
+   */
+  PROFILE_NOT_FOUND = 9,
+
+  /**
+   * @generated from enum value: ERROR_CODE_ALREADY_IN_QUEUE = 10;
+   */
+  ALREADY_IN_QUEUE = 10,
+
+  /**
+   * @generated from enum value: ERROR_CODE_QUEUE_ERROR = 11;
+   */
+  QUEUE_ERROR = 11,
+
+  /**
+   * @generated from enum value: ERROR_CODE_NOT_IN_QUEUE = 12;
+   */
+  NOT_IN_QUEUE = 12,
+
+  /**
+   * @generated from enum value: ERROR_CODE_MATCH_NOT_FOUND = 13;
+   */
+  MATCH_NOT_FOUND = 13,
+
+  /**
+   * @generated from enum value: ERROR_CODE_NOT_PARTICIPANT = 14;
+   */
+  NOT_PARTICIPANT = 14,
+
+  /**
+   * @generated from enum value: ERROR_CODE_ACCEPT_ERROR = 15;
+   */
+  ACCEPT_ERROR = 15,
+
+  /**
+   * @generated from enum value: ERROR_CODE_MATCH_ERROR = 16;
+   */
+  MATCH_ERROR = 16,
+
+  /**
+   * @generated from enum value: ERROR_CODE_REJECT_ERROR = 17;
+   */
+  REJECT_ERROR = 17,
+
+  /**
+   * @generated from enum value: ERROR_CODE_SYSTEM_ERROR = 18;
+   */
+  SYSTEM_ERROR = 18,
+
+  /**
+   * @generated from enum value: ERROR_CODE_INVALID_ARGUMENT = 19;
+   */
+  INVALID_ARGUMENT = 19,
+
+  /**
+   * @generated from enum value: ERROR_CODE_INTERNAL = 20;
+   */
+  INTERNAL = 20,
+
+  /**
+   * @generated from enum value: ERROR_CODE_ALREADY_EXISTS = 21;
+   */
+  ALREADY_EXISTS = 21,
+}
+
+/**
+ * Describes the enum duologue.v1.ErrorCode.
+ */
+export const ErrorCodeSchema: GenEnum<ErrorCode> = /*@__PURE__*/
+  enumDesc(file_duologue_v1_common, 0);
+
+/**
+ * @generated from enum duologue.v1.Gender
+ */
+export enum Gender {
+  /**
+   * @generated from enum value: GENDER_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: GENDER_MALE = 1;
+   */
+  MALE = 1,
+
+  /**
+   * @generated from enum value: GENDER_FEMALE = 2;
+   */
+  FEMALE = 2,
+
+  /**
+   * @generated from enum value: GENDER_OTHERS = 3;
+   */
+  OTHERS = 3,
+}
+
+/**
+ * Describes the enum duologue.v1.Gender.
+ */
+export const GenderSchema: GenEnum<Gender> = /*@__PURE__*/
+  enumDesc(file_duologue_v1_common, 1);
+
+/**
+ * @generated from enum duologue.v1.GenderPreference
+ */
+export enum GenderPreference {
+  /**
+   * @generated from enum value: GENDER_PREFERENCE_UNSPECIFIED = 0;
+   */
+  UNSPECIFIED = 0,
+
+  /**
+   * @generated from enum value: GENDER_PREFERENCE_MALE = 1;
+   */
+  MALE = 1,
+
+  /**
+   * @generated from enum value: GENDER_PREFERENCE_FEMALE = 2;
+   */
+  FEMALE = 2,
+
+  /**
+   * @generated from enum value: GENDER_PREFERENCE_OTHERS = 3;
+   */
+  OTHERS = 3,
+
+  /**
+   * @generated from enum value: GENDER_PREFERENCE_ANY = 4;
+   */
+  ANY = 4,
+}
+
+/**
+ * Describes the enum duologue.v1.GenderPreference.
+ */
+export const GenderPreferenceSchema: GenEnum<GenderPreference> = /*@__PURE__*/
+  enumDesc(file_duologue_v1_common, 2);
 

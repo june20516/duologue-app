@@ -6,8 +6,8 @@ import InterestStep from '@/app/onboarding/_components/InterestStep';
 import OptionalStep from '@/app/onboarding/_components/OptionalStep';
 import ProfileFlowLayout from '@/app/onboarding/_components/ProfileFlowLayout';
 import ProfileStep from '@/app/onboarding/_components/ProfileStep';
-import { useProfileFlow, type ProfileFlowStep } from '@/app/onboarding/_hooks/useProfileFlow';
 import { Button, Spinner, Typography } from '@/components/ui';
+import { useProfileFlow, type ProfileFlowStep } from '@/hooks/ui/onboarding/useProfileFlow';
 import { useTranslation } from '@/locales/useTranslation';
 import { useQueryProfileMe } from '@/queries/useQueryProfile';
 import { useCommonStyle } from '@/styles/common';
@@ -44,8 +44,7 @@ const EditProfile: React.FC = () => {
     return (
       <SafeAreaView style={[fullscreen, defaultBackground]}>
         <YStack flex={1} justify="center" items="center">
-          <Spinner size="medium" />
-          <Typography mt="$4">{t('profile.edit.loading')}</Typography>
+          <Spinner size="large" />
         </YStack>
       </SafeAreaView>
     );
@@ -58,6 +57,7 @@ const EditProfile: React.FC = () => {
           form={forms.profileForm}
           genderOptions={forms.genderOptions}
           handleSubmit={handlers.handleProfileSubmit}
+          isEditMode
         />
       );
     }
@@ -97,7 +97,7 @@ const EditProfile: React.FC = () => {
   );
 
   return (
-    <ScrollView flex={1} showsVerticalScrollIndicator={false}>
+    <ScrollView flex={1} showsVerticalScrollIndicator={false} bg="$background">
       <ProfileFlowLayout step={step} steps={EDIT_STEPS} header={header}>
         {renderContent()}
       </ProfileFlowLayout>

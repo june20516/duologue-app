@@ -1,11 +1,13 @@
 import { create } from '@bufbuild/protobuf';
-import { Code, ConnectError, createClient } from '@connectrpc/connect';
+import { createClient } from '@connectrpc/connect';
 import { createConnectTransport } from '@connectrpc/connect-web';
 import { router } from 'expo-router';
 
-import { ErrorCode } from '@/constants/errorCodes';
 import { AuthService, RefreshAccessTokenRequestSchema } from '@/gen/duologue/v1/auth_pb';
+import { ErrorCode } from '@/gen/duologue/v1/common_pb';
 import { useAuthStore } from '@/stores/authStore';
+
+import { handleConnectError } from './connectError';
 
 const API_URL = process.env.EXPO_PUBLIC_SERVER_URL;
 
@@ -57,28 +59,21 @@ class TokenRefreshManager {
     } catch (error) {
       this.reset();
 
-      if (error instanceof ConnectError) {
-        const errorCode = this.extractErrorCode(error);
+      const appError = handleConnectError(error);
 
-        if (
-          errorCode === ErrorCode.INVALID_REFRESH_TOKEN ||
-          errorCode === ErrorCode.INVALID_TOKEN ||
-          errorCode === ErrorCode.REFRESH_TOKEN_EXPIRED ||
-          errorCode === ErrorCode.USER_NOT_FOUND ||
-          error.code === Code.Unauthenticated
-        ) {
-          useAuthStore.getState().clearAuth();
-          router.replace('/');
-          throw new Error(errorCode || 'TOKEN_REFRESH_FAILED');
-        }
+      if (
+        appError.code === ErrorCode.INVALID_TOKEN ||
+        appError.code === ErrorCode.AUTH_ERROR ||
+        appError.code === ErrorCode.AUTH_REQUIRED ||
+        appError.code === ErrorCode.PROFILE_NOT_FOUND
+      ) {
+        useAuthStore.getState().clearAuth();
+        router.replace('/');
+        throw appError;
       }
 
-      throw error;
+      throw appError;
     }
-  }
-
-  private extractErrorCode(error: ConnectError): string | undefined {
-    return error.metadata.get('x-error-code') ?? undefined;
   }
 
   reset(): void {

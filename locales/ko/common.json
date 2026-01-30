@@ -11,5 +11,12 @@
     "loading": "로딩 중...",
     "error": "오류가 발생했습니다",
     "success": "성공했습니다"
+  },
+  "gender": {
+    "label": "성별",
+    "male": "남성",
+    "female": "여성",
+    "others": "기타",
+    "unspecified": "미설정"
   }
 }

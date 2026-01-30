@@ -4,6 +4,8 @@
 
 import type { GenEnum, GenFile, GenMessage } from "@bufbuild/protobuf/codegenv2";
 import { enumDesc, fileDesc, messageDesc } from "@bufbuild/protobuf/codegenv2";
+import type { ErrorCode, GenderPreference } from "./common_pb";
+import { file_duologue_v1_common } from "./common_pb";
 import type { PublicProfile } from "./profile_pb";
 import { file_duologue_v1_profile } from "./profile_pb";
 import type { Message } from "@bufbuild/protobuf";
@@ -12,7 +14,7 @@ import type { Message } from "@bufbuild/protobuf";
  * Describes the file duologue/v1/websocket.proto.
  */
 export const file_duologue_v1_websocket: GenFile = /*@__PURE__*/
-  fileDesc("ChtkdW9sb2d1ZS92MS93ZWJzb2NrZXQucHJvdG8SC2R1b2xvZ3VlLnYxIm8KB1dTRXZlbnQSKgoGc3lzdGVtGAEgASgLMhguZHVvbG9ndWUudjEuU3lzdGVtRXZlbnRIABIuCghtYXRjaGluZxgCIAEoCzIaLmR1b2xvZ3VlLnYxLk1hdGNoaW5nRXZlbnRIAEIICgZkb21haW4i9gEKC1N5c3RlbUV2ZW50EjAKDGF1dGhfcmVxdWVzdBgBIAEoCzIYLmR1b2xvZ3VlLnYxLkF1dGhSZXF1ZXN0SAASJgoEcGluZxgCIAEoCzIWLmR1b2xvZ3VlLnYxLlBpbmdFdmVudEgAEjIKDWF1dGhfcmVzcG9uc2UYCiABKAsyGS5kdW9sb2d1ZS52MS5BdXRoUmVzcG9uc2VIABIoCgVlcnJvchgLIAEoCzIXLmR1b2xvZ3VlLnYxLkVycm9yRXZlbnRIABImCgRwb25nGAwgASgLMhYuZHVvbG9ndWUudjEuUG9uZ0V2ZW50SABCBwoFZXZlbnQiHAoLQXV0aFJlcXVlc3QSDQoFdG9rZW4YASABKAkiMAoMQXV0aFJlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgSDwoHbWVzc2FnZRgCIAEoCSJDCgpFcnJvckV2ZW50EiQKBGNvZGUYAyABKA4yFi5kdW9sb2d1ZS52MS5FcnJvckNvZGUSDwoHbWVzc2FnZRgCIAEoCSILCglQaW5nRXZlbnQiCwoJUG9uZ0V2ZW50IsQECg1NYXRjaGluZ0V2ZW50EjMKCmpvaW5fcXVldWUYASABKAsyHS5kdW9sb2d1ZS52MS5Kb2luUXVldWVSZXF1ZXN0SAASNQoLbGVhdmVfcXVldWUYAiABKAsyHi5kdW9sb2d1ZS52MS5MZWF2ZVF1ZXVlUmVxdWVzdEgAEjcKDGFjY2VwdF9tYXRjaBgDIAEoCzIfLmR1b2xvZ3VlLnYxLk1hdGNoQWN0aW9uUmVxdWVzdEgAEjcKDHJlamVjdF9tYXRjaBgEIAEoCzIfLmR1b2xvZ3VlLnYxLk1hdGNoQWN0aW9uUmVxdWVzdEgAEjUKDHF1ZXVlX2pvaW5lZBgKIAEoCzIdLmR1b2xvZ3VlLnYxLlF1ZXVlSm9pbmVkRXZlbnRIABIxCgpxdWV1ZV9sZWZ0GAsgASgLMhsuZHVvbG9ndWUudjEuUXVldWVMZWZ0RXZlbnRIABIzCgttYXRjaF9mb3VuZBgMIAEoCzIcLmR1b2xvZ3VlLnYxLk1hdGNoRm91bmRFdmVudEgAEjUKDG1hdGNoX3N0YXR1cxgNIAEoCzIdLmR1b2xvZ3VlLnYxLk1hdGNoU3RhdHVzRXZlbnRIABI1CgxxdWV1ZV9zdGF0dXMYDiABKAsyHS5kdW9sb2d1ZS52MS5RdWV1ZVN0YXR1c0V2ZW50SAASPwoRZXhwYW5zaW9uX2NoYW5nZWQYDyABKAsyIi5kdW9sb2d1ZS52MS5FeHBhbnNpb25DaGFuZ2VkRXZlbnRIAEIHCgVldmVudCKMAQoQSm9pblF1ZXVlUmVxdWVzdBIUCgdtaW5fYWdlGAEgASgFSACIAQESFAoHbWF4X2FnZRgCIAEoBUgBiAEBEg4KBmdlbmRlchgDIAEoCRIOCgZyZWdpb24YBCABKAkSFAoMaW50ZXJlc3RfaWRzGAUgAygDQgoKCF9taW5fYWdlQgoKCF9tYXhfYWdlIhMKEUxlYXZlUXVldWVSZXF1ZXN0IiYKEk1hdGNoQWN0aW9uUmVxdWVzdBIQCghtYXRjaF9pZBgBIAEoAyISChBRdWV1ZUpvaW5lZEV2ZW50IhAKDlF1ZXVlTGVmdEV2ZW50ImQKD01hdGNoRm91bmRFdmVudBIQCghtYXRjaF9pZBgBIAEoAxIrCgdwYXJ0bmVyGAIgASgLMhouZHVvbG9ndWUudjEuUHVibGljUHJvZmlsZRISCgpleHBpcmVzX2luGAMgASgFIl4KEE1hdGNoU3RhdHVzRXZlbnQSEAoIbWF0Y2hfaWQYASABKAMSKAoGc3RhdHVzGAIgASgOMhguZHVvbG9ndWUudjEuTWF0Y2hTdGF0dXMSDgoGcmVhc29uGAMgASgJIjwKEFF1ZXVlU3RhdHVzRXZlbnQSEAoIcG9zaXRpb24YASABKAUSFgoOZXN0aW1hdGVkX3dhaXQYAiABKAUiiAEKFUV4cGFuc2lvbkNoYW5nZWRFdmVudBIWCg5wcmV2aW91c19sZXZlbBgBIAEoBRIVCg1jdXJyZW50X2xldmVsGAIgASgFEigKBGNvZGUYAyABKA4yGi5kdW9sb2d1ZS52MS5FeHBhbnNpb25Db2RlEhYKDmVzdGltYXRlZF93YWl0GAQgASgFKskECglFcnJvckNvZGUSGgoWRVJST1JfQ09ERV9VTlNQRUNJRklFRBAAEh8KG0VSUk9SX0NPREVfSU5WQUxJRF9QUk9UT0JVRhABEhwKGEVSUk9SX0NPREVfSEFORExFUl9FUlJPUhACEhsKF0VSUk9SX0NPREVfQVVUSF9USU1FT1VUEAMSGQoVRVJST1JfQ09ERV9BVVRIX0VSUk9SEAQSHAoYRVJST1JfQ09ERV9BVVRIX1JFUVVJUkVEEAUSHAoYRVJST1JfQ09ERV9JTlZBTElEX1RPS0VOEAYSIAocRVJST1JfQ09ERV9BTFJFQURZX0NPTk5FQ1RFRBAHEhwKGEVSUk9SX0NPREVfUFJPRklMRV9FUlJPUhAIEiAKHEVSUk9SX0NPREVfUFJPRklMRV9OT1RfRk9VTkQQCRIfChtFUlJPUl9DT0RFX0FMUkVBRFlfSU5fUVVFVUUQChIaChZFUlJPUl9DT0RFX1FVRVVFX0VSUk9SEAsSGwoXRVJST1JfQ09ERV9OT1RfSU5fUVVFVUUQDBIeChpFUlJPUl9DT0RFX01BVENIX05PVF9GT1VORBANEh4KGkVSUk9SX0NPREVfTk9UX1BBUlRJQ0lQQU5UEA4SGwoXRVJST1JfQ09ERV9BQ0NFUFRfRVJST1IQDxIaChZFUlJPUl9DT0RFX01BVENIX0VSUk9SEBASGwoXRVJST1JfQ09ERV9SRUpFQ1RfRVJST1IQERIbChdFUlJPUl9DT0RFX1NZU1RFTV9FUlJPUhASKnkKC01hdGNoU3RhdHVzEhwKGE1BVENIX1NUQVRVU19VTlNQRUNJRklFRBAAEhgKFE1BVENIX1NUQVRVU19TVUNDRVNTEAESFwoTTUFUQ0hfU1RBVFVTX0ZBSUxFRBACEhkKFU1BVENIX1NUQVRVU19SRUpFQ1RFRBADKmcKDUV4cGFuc2lvbkNvZGUSHgoaRVhQQU5TSU9OX0NPREVfVU5TUEVDSUZJRUQQABIaChZFWFBBTlNJT05fQ09ERV9MRVZFTF8yEAESGgoWRVhQQU5TSU9OX0NPREVfTEVWRUxfMxACQkRaQmdpdGh1Yi5jb20vanVuZTIwNTE2L2R1b2xvZ3VlLXNlcnZlci9nZW4vZ28vZHVvbG9ndWUvdjE7ZHVvbG9ndWV2MWIGcHJvdG8z", [file_duologue_v1_profile]);
+  fileDesc("ChtkdW9sb2d1ZS92MS93ZWJzb2NrZXQucHJvdG8SC2R1b2xvZ3VlLnYxIm8KB1dTRXZlbnQSKgoGc3lzdGVtGAEgASgLMhguZHVvbG9ndWUudjEuU3lzdGVtRXZlbnRIABIuCghtYXRjaGluZxgCIAEoCzIaLmR1b2xvZ3VlLnYxLk1hdGNoaW5nRXZlbnRIAEIICgZkb21haW4i9gEKC1N5c3RlbUV2ZW50EjAKDGF1dGhfcmVxdWVzdBgBIAEoCzIYLmR1b2xvZ3VlLnYxLkF1dGhSZXF1ZXN0SAASJgoEcGluZxgCIAEoCzIWLmR1b2xvZ3VlLnYxLlBpbmdFdmVudEgAEjIKDWF1dGhfcmVzcG9uc2UYCiABKAsyGS5kdW9sb2d1ZS52MS5BdXRoUmVzcG9uc2VIABIoCgVlcnJvchgLIAEoCzIXLmR1b2xvZ3VlLnYxLkVycm9yRXZlbnRIABImCgRwb25nGAwgASgLMhYuZHVvbG9ndWUudjEuUG9uZ0V2ZW50SABCBwoFZXZlbnQiHAoLQXV0aFJlcXVlc3QSDQoFdG9rZW4YASABKAkiMAoMQXV0aFJlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgSDwoHbWVzc2FnZRgCIAEoCSJJCgpFcnJvckV2ZW50EiQKBGNvZGUYAyABKA4yFi5kdW9sb2d1ZS52MS5FcnJvckNvZGUSDwoHbWVzc2FnZRgCIAEoCUoECAEQAiILCglQaW5nRXZlbnQiCwoJUG9uZ0V2ZW50IsQECg1NYXRjaGluZ0V2ZW50EjMKCmpvaW5fcXVldWUYASABKAsyHS5kdW9sb2d1ZS52MS5Kb2luUXVldWVSZXF1ZXN0SAASNQoLbGVhdmVfcXVldWUYAiABKAsyHi5kdW9sb2d1ZS52MS5MZWF2ZVF1ZXVlUmVxdWVzdEgAEjcKDGFjY2VwdF9tYXRjaBgDIAEoCzIfLmR1b2xvZ3VlLnYxLk1hdGNoQWN0aW9uUmVxdWVzdEgAEjcKDHJlamVjdF9tYXRjaBgEIAEoCzIfLmR1b2xvZ3VlLnYxLk1hdGNoQWN0aW9uUmVxdWVzdEgAEjUKDHF1ZXVlX2pvaW5lZBgKIAEoCzIdLmR1b2xvZ3VlLnYxLlF1ZXVlSm9pbmVkRXZlbnRIABIxCgpxdWV1ZV9sZWZ0GAsgASgLMhsuZHVvbG9ndWUudjEuUXVldWVMZWZ0RXZlbnRIABIzCgttYXRjaF9mb3VuZBgMIAEoCzIcLmR1b2xvZ3VlLnYxLk1hdGNoRm91bmRFdmVudEgAEjUKDG1hdGNoX3N0YXR1cxgNIAEoCzIdLmR1b2xvZ3VlLnYxLk1hdGNoU3RhdHVzRXZlbnRIABI1CgxxdWV1ZV9zdGF0dXMYDiABKAsyHS5kdW9sb2d1ZS52MS5RdWV1ZVN0YXR1c0V2ZW50SAASPwoRZXhwYW5zaW9uX2NoYW5nZWQYDyABKAsyIi5kdW9sb2d1ZS52MS5FeHBhbnNpb25DaGFuZ2VkRXZlbnRIAEIHCgVldmVudCKrAQoQSm9pblF1ZXVlUmVxdWVzdBIUCgdtaW5fYWdlGAEgASgFSACIAQESFAoHbWF4X2FnZRgCIAEoBUgBiAEBEi0KBmdlbmRlchgDIAEoDjIdLmR1b2xvZ3VlLnYxLkdlbmRlclByZWZlcmVuY2USDgoGcmVnaW9uGAQgASgJEhQKDGludGVyZXN0X2lkcxgFIAMoA0IKCghfbWluX2FnZUIKCghfbWF4X2FnZSITChFMZWF2ZVF1ZXVlUmVxdWVzdCImChJNYXRjaEFjdGlvblJlcXVlc3QSEAoIbWF0Y2hfaWQYASABKAMiEgoQUXVldWVKb2luZWRFdmVudCIQCg5RdWV1ZUxlZnRFdmVudCJkCg9NYXRjaEZvdW5kRXZlbnQSEAoIbWF0Y2hfaWQYASABKAMSKwoHcGFydG5lchgCIAEoCzIaLmR1b2xvZ3VlLnYxLlB1YmxpY1Byb2ZpbGUSEgoKZXhwaXJlc19pbhgDIAEoBSJeChBNYXRjaFN0YXR1c0V2ZW50EhAKCG1hdGNoX2lkGAEgASgDEigKBnN0YXR1cxgCIAEoDjIYLmR1b2xvZ3VlLnYxLk1hdGNoU3RhdHVzEg4KBnJlYXNvbhgDIAEoCSI8ChBRdWV1ZVN0YXR1c0V2ZW50EhAKCHBvc2l0aW9uGAEgASgFEhYKDmVzdGltYXRlZF93YWl0GAIgASgFIogBChVFeHBhbnNpb25DaGFuZ2VkRXZlbnQSFgoOcHJldmlvdXNfbGV2ZWwYASABKAUSFQoNY3VycmVudF9sZXZlbBgCIAEoBRIoCgRjb2RlGAMgASgOMhouZHVvbG9ndWUudjEuRXhwYW5zaW9uQ29kZRIWCg5lc3RpbWF0ZWRfd2FpdBgEIAEoBSp5CgtNYXRjaFN0YXR1cxIcChhNQVRDSF9TVEFUVVNfVU5TUEVDSUZJRUQQABIYChRNQVRDSF9TVEFUVVNfU1VDQ0VTUxABEhcKE01BVENIX1NUQVRVU19GQUlMRUQQAhIZChVNQVRDSF9TVEFUVVNfUkVKRUNURUQQAypnCg1FeHBhbnNpb25Db2RlEh4KGkVYUEFOU0lPTl9DT0RFX1VOU1BFQ0lGSUVEEAASGgoWRVhQQU5TSU9OX0NPREVfTEVWRUxfMhABEhoKFkVYUEFOU0lPTl9DT0RFX0xFVkVMXzMQAkJEWkJnaXRodWIuY29tL2p1bmUyMDUxNi9kdW9sb2d1ZS1zZXJ2ZXIvZ2VuL2dvL2R1b2xvZ3VlL3YxO2R1b2xvZ3VldjFiBnByb3RvMw", [file_duologue_v1_common, file_duologue_v1_profile]);
 
 /**
  * @generated from message duologue.v1.WSEvent
@@ -279,9 +281,9 @@ export type JoinQueueRequest = Message<"duologue.v1.JoinQueueRequest"> & {
   maxAge?: number;
 
   /**
-   * @generated from field: string gender = 3;
+   * @generated from field: duologue.v1.GenderPreference gender = 3;
    */
-  gender: string;
+  gender: GenderPreference;
 
   /**
    * @generated from field: string region = 4;
@@ -468,112 +470,6 @@ export const ExpansionChangedEventSchema: GenMessage<ExpansionChangedEvent> = /*
   messageDesc(file_duologue_v1_websocket, 16);
 
 /**
- * @generated from enum duologue.v1.ErrorCode
- */
-export enum ErrorCode {
-  /**
-   * @generated from enum value: ERROR_CODE_UNSPECIFIED = 0;
-   */
-  UNSPECIFIED = 0,
-
-  /**
-   * @generated from enum value: ERROR_CODE_INVALID_PROTOBUF = 1;
-   */
-  INVALID_PROTOBUF = 1,
-
-  /**
-   * @generated from enum value: ERROR_CODE_HANDLER_ERROR = 2;
-   */
-  HANDLER_ERROR = 2,
-
-  /**
-   * @generated from enum value: ERROR_CODE_AUTH_TIMEOUT = 3;
-   */
-  AUTH_TIMEOUT = 3,
-
-  /**
-   * @generated from enum value: ERROR_CODE_AUTH_ERROR = 4;
-   */
-  AUTH_ERROR = 4,
-
-  /**
-   * @generated from enum value: ERROR_CODE_AUTH_REQUIRED = 5;
-   */
-  AUTH_REQUIRED = 5,
-
-  /**
-   * @generated from enum value: ERROR_CODE_INVALID_TOKEN = 6;
-   */
-  INVALID_TOKEN = 6,
-
-  /**
-   * @generated from enum value: ERROR_CODE_ALREADY_CONNECTED = 7;
-   */
-  ALREADY_CONNECTED = 7,
-
-  /**
-   * @generated from enum value: ERROR_CODE_PROFILE_ERROR = 8;
-   */
-  PROFILE_ERROR = 8,
-
-  /**
-   * @generated from enum value: ERROR_CODE_PROFILE_NOT_FOUND = 9;
-   */
-  PROFILE_NOT_FOUND = 9,
-
-  /**
-   * @generated from enum value: ERROR_CODE_ALREADY_IN_QUEUE = 10;
-   */
-  ALREADY_IN_QUEUE = 10,
-
-  /**
-   * @generated from enum value: ERROR_CODE_QUEUE_ERROR = 11;
-   */
-  QUEUE_ERROR = 11,
-
-  /**
-   * @generated from enum value: ERROR_CODE_NOT_IN_QUEUE = 12;
-   */
-  NOT_IN_QUEUE = 12,
-
-  /**
-   * @generated from enum value: ERROR_CODE_MATCH_NOT_FOUND = 13;
-   */
-  MATCH_NOT_FOUND = 13,
-
-  /**
-   * @generated from enum value: ERROR_CODE_NOT_PARTICIPANT = 14;
-   */
-  NOT_PARTICIPANT = 14,
-
-  /**
-   * @generated from enum value: ERROR_CODE_ACCEPT_ERROR = 15;
-   */
-  ACCEPT_ERROR = 15,
-
-  /**
-   * @generated from enum value: ERROR_CODE_MATCH_ERROR = 16;
-   */
-  MATCH_ERROR = 16,
-
-  /**
-   * @generated from enum value: ERROR_CODE_REJECT_ERROR = 17;
-   */
-  REJECT_ERROR = 17,
-
-  /**
-   * @generated from enum value: ERROR_CODE_SYSTEM_ERROR = 18;
-   */
-  SYSTEM_ERROR = 18,
-}
-
-/**
- * Describes the enum duologue.v1.ErrorCode.
- */
-export const ErrorCodeSchema: GenEnum<ErrorCode> = /*@__PURE__*/
-  enumDesc(file_duologue_v1_websocket, 0);
-
-/**
  * MatchStatus는 매칭 상태를 나타냅니다.
  *
  * @generated from enum duologue.v1.MatchStatus
@@ -604,7 +500,7 @@ export enum MatchStatus {
  * Describes the enum duologue.v1.MatchStatus.
  */
 export const MatchStatusSchema: GenEnum<MatchStatus> = /*@__PURE__*/
-  enumDesc(file_duologue_v1_websocket, 1);
+  enumDesc(file_duologue_v1_websocket, 0);
 
 /**
  * ExpansionCode는 매칭 조건 확장 코드를 나타냅니다.
@@ -636,5 +532,5 @@ export enum ExpansionCode {
  * Describes the enum duologue.v1.ExpansionCode.
  */
 export const ExpansionCodeSchema: GenEnum<ExpansionCode> = /*@__PURE__*/
-  enumDesc(file_duologue_v1_websocket, 2);
+  enumDesc(file_duologue_v1_websocket, 1);
 

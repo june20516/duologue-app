@@ -62,9 +62,6 @@ class ReactNativeDelegate: ExpoReactNativeFactoryDelegate {
 
   override func bundleURL() -> URL? {
 #if DEBUG
-    // Set custom Metro port from environment variable
-    let port = ProcessInfo.processInfo.environment["RCT_METRO_PORT"] ?? "8088"
-    RCTBundleURLProvider.sharedSettings().jsLocation = "localhost:\(port)"
     return RCTBundleURLProvider.sharedSettings().jsBundleURL(forBundleRoot: ".expo/.virtual-metro-entry")
 #else
     return Bundle.main.url(forResource: "main", withExtension: "jsbundle")

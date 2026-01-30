@@ -1,46 +1,45 @@
 import { router } from 'expo-router';
-import { Alert } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { YStack, XStack, ScrollView, Avatar } from 'tamagui';
 
 import { authApi } from '@/api/auth';
+import { HEADER_HEIGHT } from '@/components/layout/header/contstants';
 import { Button, Spinner, Typography } from '@/components/ui';
+import ConfirmModal from '@/components/ui/ConfirmModal';
+import { useGender } from '@/hooks/useGender';
 import { useQueryProfileMe } from '@/queries/useQueryProfile';
 import { useAuthStore } from '@/stores/authStore';
-import { useCommonStyle } from '@/styles/common';
-
-const GENDER_LABELS = {
-  male: '남성',
-  female: '여성',
-  other: '기타',
-};
 
 const ProfileScreen = () => {
+  const { t } = useTranslation();
   const { data: profile, isLoading } = useQueryProfileMe();
+  const [logoutConfirmModalOpen, setLogoutConfirmModalOpen] = useState(false);
   const refreshToken = useAuthStore((state) => state.refreshToken);
   const clearAuth = useAuthStore((state) => state.clearAuth);
-  const { fullscreen, defaultBackground } = useCommonStyle();
+  const { getGenderLabel } = useGender();
+  const insets = useSafeAreaInsets();
 
-  const handleLogout = () => {
-    Alert.alert('로그아웃', '로그아웃 하시겠습니까?', [
-      { text: '취소', style: 'cancel' },
-      {
-        text: '로그아웃',
-        style: 'destructive',
-        onPress: async () => {
-          try {
-            if (refreshToken) {
-              await authApi.logout(refreshToken);
-            }
-          } catch (error) {
-            console.error('Logout error:', error);
-          } finally {
-            clearAuth();
-            router.replace('/');
-          }
-        },
-      },
-    ]);
+  const handleLogoutConfirmModalOpen = () => {
+    setLogoutConfirmModalOpen(true);
+  };
+
+  const handleLogoutConfirmModalClose = () => {
+    setLogoutConfirmModalOpen(false);
+  };
+
+  const handleLogout = async () => {
+    try {
+      if (refreshToken) {
+        await authApi.logout(refreshToken);
+      }
+    } catch (error) {
+      console.error('Logout error:', error);
+    } finally {
+      clearAuth();
+      router.replace('/');
+    }
   };
 
   const handleEditProfile = () => {
@@ -49,40 +48,39 @@ const ProfileScreen = () => {
 
   if (isLoading) {
     return (
-      <SafeAreaView style={[fullscreen, defaultBackground]}>
-        <YStack flex={1} justify="center" items="center">
-          <Spinner size="medium" />
-          <Typography mt="$4">프로필을 불러오는 중...</Typography>
-        </YStack>
-      </SafeAreaView>
+      <YStack flex={1} bg="$background" justify="center" items="center">
+        <Spinner size="large" />
+      </YStack>
     );
   }
 
   if (!profile) {
     return (
-      <SafeAreaView style={[fullscreen, defaultBackground]}>
-        <YStack flex={1} justify="center" items="center" p="$4">
-          <Typography type="title" mb="$2">
-            프로필을 찾을 수 없습니다
-          </Typography>
-          <Typography type="regular" color="$gray600" mb="$4">
-            프로필 설정을 완료해주세요
-          </Typography>
-          <Button onPress={() => router.push('/onboarding')}>프로필 설정하기</Button>
-        </YStack>
-      </SafeAreaView>
+      <YStack flex={1} bg="$background" justify="center" items="center" p="$4">
+        <Typography type="title" mb="$2">
+          {t('profile.view.not_found_title')}
+        </Typography>
+        <Typography type="regular" color="$gray600" mb="$4">
+          {t('profile.view.not_found_description')}
+        </Typography>
+        <Button onPress={() => router.push('/onboarding')}>
+          {t('profile.view.setup_profile')}
+        </Button>
+      </YStack>
     );
   }
 
   return (
-    <SafeAreaView style={[fullscreen, defaultBackground]} edges={['top']}>
-      <ScrollView flex={1}>
+    <YStack flex={1} bg="$background">
+      <ScrollView flex={1} pt={insets.top + HEADER_HEIGHT}>
         <YStack p="$4" gap="$6">
           {/* 헤더 */}
           <XStack justify="space-between" items="center">
-            <Typography type="title">내 프로필</Typography>
-            <Button variant="ghost" priority="secondary" onPress={handleLogout}>
-              로그아웃
+            <Typography type="title">{t('profile.view.title')}</Typography>
+
+            {/* 수정 버튼 */}
+            <Button variant="ghost" onPress={handleEditProfile}>
+              {t('profile.view.edit')}
             </Button>
           </XStack>
 
@@ -91,7 +89,7 @@ const ProfileScreen = () => {
             <Avatar circular size="$12" bg="$gray300">
               <Avatar.Image
                 src={profile.profileImageUrl || undefined}
-                alt={profile.nickname || '프로필 이미지'}
+                alt={profile.nickname || t('profile.view.profile_image_alt')}
               />
               <Avatar.Fallback bg="$gray400">
                 <Typography type="title" color="$white">
@@ -101,7 +99,9 @@ const ProfileScreen = () => {
             </Avatar>
 
             <YStack items="center" gap="$1">
-              <Typography type="title">{profile.nickname || '닉네임 없음'}</Typography>
+              <Typography type="title">
+                {profile.nickname || t('profile.view.nickname_placeholder')}
+              </Typography>
               {profile.shortBio && (
                 <Typography type="regular" color="$gray600" text="center">
                   {profile.shortBio}
@@ -114,17 +114,15 @@ const ProfileScreen = () => {
           <YStack gap="$4" bg="$gray100" p="$4" rounded="$4">
             <YStack gap="$2">
               <Typography type="semiBold" color="$gray700">
-                성별
+                {t('profile.view.gender_label')}
               </Typography>
-              <Typography type="regular">
-                {profile.gender ? GENDER_LABELS[profile.gender] : '미설정'}
-              </Typography>
+              <Typography type="regular">{getGenderLabel(profile.gender)}</Typography>
             </YStack>
 
             {profile.region && (
               <YStack gap="$2">
                 <Typography type="semiBold" color="$gray700">
-                  지역
+                  {t('profile.view.region_label')}
                 </Typography>
                 <Typography type="regular">{profile.region}</Typography>
               </YStack>
@@ -133,26 +131,39 @@ const ProfileScreen = () => {
             {profile.interests && profile.interests.length > 0 && (
               <YStack gap="$2">
                 <Typography type="semiBold" color="$gray700">
-                  관심사
+                  {t('profile.view.interests_label')}
                 </Typography>
                 <XStack gap="$2" flexWrap="wrap">
                   {profile.interests.map((interest) => (
-                    <XStack key={interest.id} bg="$primary" px="$3" py="$2" rounded="$4">
-                      <Typography type="caption" color="$white">
-                        {interest.displayName}
-                      </Typography>
-                    </XStack>
+                    <Button
+                      key={interest.id}
+                      variant="filled"
+                      priority="primary"
+                      size="sm"
+                      readonly
+                    >
+                      {interest.displayName}
+                    </Button>
                   ))}
                 </XStack>
               </YStack>
             )}
           </YStack>
 
-          {/* 수정 버튼 */}
-          <Button onPress={handleEditProfile}>프로필 수정</Button>
+          <Button variant="ghost" priority="secondary" onPress={handleLogoutConfirmModalOpen}>
+            {t('profile.view.logout')}
+          </Button>
+          <ConfirmModal
+            open={logoutConfirmModalOpen}
+            title={t('profile.view.logout_confirm_title')}
+            onConfirm={handleLogout}
+            onCancel={handleLogoutConfirmModalClose}
+          >
+            <Typography>{t('profile.view.logout_confirm_message')}</Typography>
+          </ConfirmModal>
         </YStack>
       </ScrollView>
-    </SafeAreaView>
+    </YStack>
   );
 };
 

@@ -59,8 +59,7 @@ const InterestStep = ({ form, handleBack, handleSubmit }: InterestStepProps) => 
   if (isLoadingInterests) {
     return (
       <YStack flex={1} justify="center" items="center">
-        <Spinner size="medium" />
-        <Typography mt="$4">{t('onboarding.interests.loading')}</Typography>
+        <Spinner size="large" />
       </YStack>
     );
   }
@@ -113,7 +112,7 @@ const InterestStep = ({ form, handleBack, handleSubmit }: InterestStepProps) => 
 
         <XStack gap="$2">
           <Button variant="outline" flex={1} onPress={handleBack}>
-            이전
+            {t('onboarding.buttons.previous')}
           </Button>
           <Button
             flex={2}
@@ -121,7 +120,7 @@ const InterestStep = ({ form, handleBack, handleSubmit }: InterestStepProps) => 
             disabled={!form.formState.isValid}
           >
             <XStack gap="$2" items="center" justify="center">
-              <Typography>다음</Typography>
+              <Typography>{t('onboarding.buttons.next')}</Typography>
               {Boolean(selectedInterestIds?.length) && (
                 <Badge count={selectedInterestIds?.length || 0} color="secondary" />
               )}

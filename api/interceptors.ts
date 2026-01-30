@@ -1,10 +1,11 @@
 import type { DescMessage } from '@bufbuild/protobuf';
 import type { Interceptor, UnaryRequest, UnaryResponse } from '@connectrpc/connect';
-import { Code, ConnectError } from '@connectrpc/connect';
 
 import { useAuthStore } from '@/stores/authStore';
 
-import { ERROR_CODES } from './errorCodes';
+import { ErrorCode } from '../gen/duologue/v1/common_pb';
+
+import { handleConnectError } from './connectError';
 import { apiLogger } from './logger';
 import { tokenRefreshManager } from './tokenRefresh';
 
@@ -40,30 +41,36 @@ export const createAuthInterceptor = (): Interceptor => {
 
     try {
       return await next(req);
-    } catch (error) {
-      if (error instanceof ConnectError && error.code === Code.Unauthenticated) {
-        const errorCode = extractErrorCode(error);
+    } catch (rawError) {
+      // 에러를 정규화하여 처리
+      const error = handleConnectError(rawError);
 
-        if (errorCode === ERROR_CODES.PROFILE_NOT_FOUND) {
-          await handleProfileNotFound();
-          throw error;
-        }
+      // 프로필 없음 에러 처리
+      if (error.code === ErrorCode.PROFILE_NOT_FOUND) {
+        await handleProfileNotFound();
+        throw error;
+      }
 
+      // 인증 에러 시 토큰 갱신 시도
+      if (
+        error.code === ErrorCode.AUTH_ERROR ||
+        error.code === ErrorCode.AUTH_REQUIRED ||
+        error.code === ErrorCode.INVALID_TOKEN
+      ) {
         try {
           const newToken = await tokenRefreshManager.refresh();
           req.header.set('Authorization', `Bearer ${newToken}`);
           return await next(req);
         } catch {
+          // 갱신 실패 시 원래 에러(또는 갱신 에러) throw
           throw error;
         }
       }
+
+      // 그 외 에러는 그대로 throw (이미 ApplicationError로 변환됨)
       throw error;
     }
   };
-};
-
-const extractErrorCode = (error: ConnectError): string | undefined => {
-  return error.metadata.get('x-error-code') ?? undefined;
 };
 
 const handleProfileNotFound = async (): Promise<void> => {

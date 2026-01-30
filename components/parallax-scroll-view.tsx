@@ -2,9 +2,9 @@ import type { PropsWithChildren, ReactElement } from 'react';
 import { StyleSheet, View } from 'react-native';
 import Animated, { interpolate, useAnimatedStyle, useScrollOffset } from 'react-native-reanimated';
 
-import { useColorScheme } from '@/hooks/use-color-scheme';
-import { useThemeColor } from '@/hooks/use-theme-color';
+import { useColorScheme } from '@/hooks/useColorScheme';
 import { useScrollTabVisibilityRef } from '@/hooks/useScrollTabVisibilityRef';
+import { useThemeColor } from '@/hooks/useThemeColor';
 import { tokens } from '@/styles/tokens';
 
 const HEADER_HEIGHT = 250;

@@ -1,10 +1,12 @@
 import { useRouter } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 import { YStack } from 'tamagui';
 
-import { Button, Modal, Typography } from '@/components/ui';
+import { Button, BaseModal, Typography } from '@/components/ui';
 import { useUiStore } from '@/stores/uiStore';
 
 export const GlobalErrorModal: React.FC = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const errorModal = useUiStore((state) => state.errorModal);
   const hideErrorModal = useUiStore((state) => state.hideErrorModal);
@@ -15,7 +17,7 @@ export const GlobalErrorModal: React.FC = () => {
   };
 
   return (
-    <Modal
+    <BaseModal
       variant="dialog"
       open={errorModal.isVisible}
       onOpenChange={(open) => {
@@ -23,13 +25,12 @@ export const GlobalErrorModal: React.FC = () => {
           handleConfirm();
         }
       }}
-      title="로그인 필요"
       dismissOnOverlayPress={false}
     >
       <YStack gap="$4">
         <Typography>{errorModal.message}</Typography>
-        <Button onPress={handleConfirm}>확인</Button>
+        <Button onPress={handleConfirm}>{t('common.button.confirm')}</Button>
       </YStack>
-    </Modal>
+    </BaseModal>
   );
 };
