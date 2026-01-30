@@ -1,5 +1,7 @@
 {
   "walkthrough": {
+    "skip": "Skip",
+    "start": "Get Started",
     "page1": {
       "title": "Welcome",
       "description": "Welcome to Duologue"

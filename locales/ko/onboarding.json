@@ -1,5 +1,7 @@
 {
   "walkthrough": {
+    "skip": "건너뛰기",
+    "start": "시작하기",
     "page1": {
       "title": "환영합니다",
       "description": "Duologue에 오신 것을 환영합니다"

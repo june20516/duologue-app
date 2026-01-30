@@ -48,7 +48,7 @@ const Walkthrough = () => {
     <SafeAreaView style={[fullscreen, defaultBackground]}>
       <YStack flex={1} p="$4" justify="space-between">
         <Button self="flex-end" onPress={handleSkip} variant="ghost" priority="secondary">
-          건너뛰기
+          {t('onboarding.walkthrough.skip')}
         </Button>
 
         <YStack flex={1} justify="center" items="center" gap="$4">
@@ -60,7 +60,9 @@ const Walkthrough = () => {
         </YStack>
 
         <Button onPress={handleNext}>
-          {currentPage === pages.length - 1 ? '시작하기' : '다음'}
+          {currentPage === pages.length - 1
+            ? t('onboarding.walkthrough.start')
+            : t('onboarding.buttons.next')}
         </Button>
       </YStack>
     </SafeAreaView>
