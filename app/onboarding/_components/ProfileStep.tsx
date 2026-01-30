@@ -15,9 +15,10 @@ interface ProfileStepProps {
   form: UseFormReturn<NicknameGenderFormData>;
   genderOptions: { value: Gender; label: string }[];
   handleSubmit: (data: NicknameGenderFormData) => void;
+  isEditMode?: boolean;
 }
 
-const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) => {
+const ProfileStep = ({ form, genderOptions, handleSubmit, isEditMode }: ProfileStepProps) => {
   const { t } = useTranslation();
   const { field: gender } = useController({
     control: form.control,
@@ -27,11 +28,26 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
   const nickname = form.watch('nickname');
   const [debouncedNickname, setDebouncedNickname] = useState('');
 
+  // Edit 모드일 때 초기 닉네임 캡처 (값이 설정된 후에 캡처)
+  const [initialNickname, setInitialNickname] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (isEditMode && initialNickname === null && nickname) {
+      setInitialNickname(nickname);
+    }
+  }, [isEditMode, nickname, initialNickname]);
+
+  // 닉네임이 초기값과 다른지 확인
+  const isNicknameChanged = initialNickname !== null ? nickname !== initialNickname : true;
+
+  // 닉네임이 변경되었을 때만 중복 체크 수행
+  const shouldCheckNickname = isNicknameChanged && debouncedNickname.length > 0;
+
   const {
     data: isAvailable,
     isLoading: isCheckingNickname,
     isError: isNicknameCheckError,
-  } = useCheckNickname(debouncedNickname, debouncedNickname.length > 0);
+  } = useCheckNickname(debouncedNickname, shouldCheckNickname);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -108,9 +124,8 @@ const ProfileStep = ({ form, genderOptions, handleSubmit }: ProfileStepProps) =>
           onPress={form.handleSubmit(handleSubmit)}
           disabled={
             !form.formState.isValid ||
-            isAvailable === false ||
-            isCheckingNickname ||
-            isNicknameCheckError
+            (isNicknameChanged &&
+              (isAvailable === false || isCheckingNickname || isNicknameCheckError))
           }
         >
           {t('onboarding.buttons.next')}

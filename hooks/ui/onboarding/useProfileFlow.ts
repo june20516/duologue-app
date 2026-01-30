@@ -31,13 +31,15 @@ export const useProfileFlow = ({ initialData, onSuccess }: UseProfileFlowOptions
   // 기존 프로필 데이터 로드 (edit 모드)
   useEffect(() => {
     if (initialData) {
-      profileForm.setValue('nickname', initialData.nickname || '');
-      profileForm.setValue('gender', initialData.gender || 'male');
+      profileForm.setValue('nickname', initialData.nickname || '', { shouldValidate: true });
+      profileForm.setValue('gender', initialData.gender || 'male', { shouldValidate: true });
 
-      interestsForm.setValue('interestIds', initialData.interests?.map((i) => i.id) || []);
+      interestsForm.setValue('interestIds', initialData.interests?.map((i) => i.id) || [], {
+        shouldValidate: true,
+      });
 
-      optionalForm.setValue('region', initialData.region || '');
-      optionalForm.setValue('shortBio', initialData.shortBio || '');
+      optionalForm.setValue('region', initialData.region || '', { shouldValidate: true });
+      optionalForm.setValue('shortBio', initialData.shortBio || '', { shouldValidate: true });
     }
   }, [initialData, profileForm, interestsForm, optionalForm]);
 
