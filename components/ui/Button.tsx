@@ -41,7 +41,7 @@ const Button: React.FC<ButtonProps> = (props) => {
   } = props;
 
   const readonly = 'readonly' in props && props.readonly === true;
-  const disabled = 'disabled' in props ? props.disabled ?? false : false;
+  const disabled = 'disabled' in props ? (props.disabled ?? false) : false;
   const onPress = 'onPress' in props ? props.onPress : undefined;
 
   // Size 매핑
@@ -143,7 +143,16 @@ const Button: React.FC<ButtonProps> = (props) => {
     >
       {!loading &&
         (typeof children === 'string' ? (
-          <Typography color={styleProps.color}>{children}</Typography>
+          <Typography
+            color={styleProps.color}
+            style={[
+              {
+                // lineHeight: 14,
+              },
+            ]}
+          >
+            {children}
+          </Typography>
         ) : (
           children
         ))}

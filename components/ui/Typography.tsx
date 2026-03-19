@@ -1,4 +1,11 @@
+import { StyleSheet } from 'react-native';
 import { Text, TextProps as TamaguiTextProps } from 'tamagui';
+
+const styles = StyleSheet.create({
+  text: {
+    includeFontPadding: false,
+  },
+});
 
 type TypographyVariant =
   | 'regular'
@@ -64,7 +71,7 @@ const variantProps: Record<TypographyVariant, TamaguiTextProps> = {
 
 const Typography: React.FC<TypographyProps> = ({ type = 'regular', children, ...rest }) => {
   return (
-    <Text {...variantProps[type]} {...rest}>
+    <Text {...variantProps[type]} {...rest} style={[styles.text, rest.style]}>
       {children}
     </Text>
   );
