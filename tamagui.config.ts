@@ -4,9 +4,35 @@
  * Duologue 디자인 시스템을 Tamagui 토큰으로 정의
  */
 import { defaultConfig } from '@tamagui/config/v4';
-import { createTamagui } from 'tamagui';
+import { createFont, createTamagui } from 'tamagui';
 
 import { injectTokens, tokens } from './styles/tokens';
+
+const pretendardFont = createFont({
+  family: 'Pretendard',
+  size: defaultConfig.fonts?.body?.size ?? {
+    1: 11,
+    2: 12,
+    3: 13,
+    4: 14,
+    5: 16,
+    6: 18,
+    7: 20,
+    8: 23,
+    9: 30,
+    10: 46,
+  },
+  weight: {
+    4: '400',
+    6: '600',
+    7: '700',
+  },
+  face: {
+    400: { normal: 'Pretendard' },
+    600: { normal: 'Pretendard-SemiBold' },
+    700: { normal: 'Pretendard-Bold' },
+  },
+});
 
 // ========================================
 // Themes (Light & Dark)
@@ -129,6 +155,11 @@ const darkTheme = {
 const config = createTamagui({
   ...defaultConfig,
   tokens: injectTokens(defaultConfig),
+  fonts: {
+    ...defaultConfig.fonts,
+    body: pretendardFont,
+    heading: pretendardFont,
+  },
   themes: {
     light: lightTheme,
     dark: darkTheme,

@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { Button as TamaguiButton, ButtonProps as TamaguiButtonProps, Spinner } from 'tamagui';
 
-import Typography from './Typography';
-
 type ButtonVariant = 'filled' | 'outline' | 'ghost';
 type ButtonPriority = 'primary' | 'secondary';
 type ButtonSize = 'sm' | 'md' | 'lg';
@@ -47,22 +45,17 @@ const Button: React.FC<ButtonProps> = (props) => {
   // Size 매핑
   const sizeProps: Record<ButtonSize, TamaguiButtonProps> = {
     sm: {
+      size: '$3',
       px: '$3',
-      py: '$2',
       fontSize: '$3',
-      height: 36,
     },
     md: {
-      px: '$4',
-      py: '$3',
+      size: '$4',
       fontSize: '$4',
-      height: 44,
     },
     lg: {
-      px: '$5',
-      py: '$4',
+      size: '$5',
       fontSize: '$5',
-      height: 52,
     },
   };
 
@@ -119,7 +112,7 @@ const Button: React.FC<ButtonProps> = (props) => {
 
   const styleProps = getStyleProps(variant, priority, readonly);
 
-  const [fixedWidth, setFixedWidth] = useState(rest.width);
+  const [measuredMinWidth, setMeasuredMinWidth] = useState<number | undefined>(undefined);
 
   return (
     <TamaguiButton
@@ -135,27 +128,13 @@ const Button: React.FC<ButtonProps> = (props) => {
       aria-readonly={readonly}
       icon={loading ? <Spinner size="small" color="currentColor" /> : undefined}
       onLayout={(event) => {
-        if (typeof fixedWidth !== 'undefined') return;
+        if (typeof measuredMinWidth !== 'undefined') return;
 
-        setFixedWidth(event.nativeEvent.layout.width);
+        setMeasuredMinWidth(event.nativeEvent.layout.width);
       }}
-      width={rest.width ?? fixedWidth}
+      style={[{ minWidth: measuredMinWidth }, rest.style]}
     >
-      {!loading &&
-        (typeof children === 'string' ? (
-          <Typography
-            color={styleProps.color}
-            style={[
-              {
-                // lineHeight: 14,
-              },
-            ]}
-          >
-            {children}
-          </Typography>
-        ) : (
-          children
-        ))}
+      {!loading && children}
     </TamaguiButton>
   );
 };

@@ -1,8 +1,11 @@
 import { useReactQueryDevTools } from '@dev-plugins/react-query';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { QueryClientProvider } from '@tanstack/react-query';
+import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
+import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
+import { useEffect } from 'react';
 import 'react-native-reanimated';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { TamaguiProvider } from 'tamagui';
@@ -17,6 +20,8 @@ import config from '../tamagui.config';
 
 import '@/i18n/config';
 
+SplashScreen.preventAutoHideAsync();
+
 // 인증 가드를 위해 anchor를 index로 변경
 export const unstable_settings = {
   initialRouteName: 'index',
@@ -25,6 +30,20 @@ export const unstable_settings = {
 const RootLayout = () => {
   const colorScheme = useColorScheme();
   useReactQueryDevTools(queryClient);
+
+  const [fontsLoaded] = useFonts({
+    Pretendard: require('../assets/fonts/Pretendard-Regular.otf'),
+    'Pretendard-SemiBold': require('../assets/fonts/Pretendard-SemiBold.otf'),
+    'Pretendard-Bold': require('../assets/fonts/Pretendard-Bold.otf'),
+  });
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) return null;
 
   return (
     <QueryClientProvider client={queryClient}>
