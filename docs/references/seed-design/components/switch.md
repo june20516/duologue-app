@@ -1,7 +1,7 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/switch
-fetched: 2026-05-08T05:39:16.811Z
+fetched: 2026-05-08T06:20:33.572Z
 -->
 
 [Components](/docs/components)Controls

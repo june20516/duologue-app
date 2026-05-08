@@ -1,7 +1,7 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/foundation/spacing
-fetched: 2026-05-08T05:43:06.793Z
+fetched: 2026-05-08T06:20:32.711Z
 -->
 
 Foundation
