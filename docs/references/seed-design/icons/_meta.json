@@ -1,0 +1,16 @@
+{
+  "package": "@karrotmarket/icon-data",
+  "version": "1.33.0",
+  "source": "https://www.npmjs.com/package/@karrotmarket/icon-data",
+  "fetched": "2026-05-08T05:23:24.181Z",
+  "counts": {
+    "monochrome": 652,
+    "multicolor": 81
+  },
+  "excludedBrandKeywords": [
+    "logo",
+    "karrot",
+    "daangn",
+    "brand"
+  ]
+}
