@@ -1,0 +1,32 @@
+{
+  "components": [
+    "action-button",
+    "action-sheet",
+    "alert-dialog",
+    "bottom-sheet",
+    "callout",
+    "checkbox",
+    "chip",
+    "divider",
+    "field",
+    "inline-banner",
+    "list",
+    "radio",
+    "segmented-control",
+    "skeleton",
+    "snackbar",
+    "switch",
+    "tabs",
+    "text-input",
+    "top-navigation"
+  ],
+  "foundationPages": [
+    "color",
+    "typography",
+    "spacing",
+    "radius",
+    "elevation",
+    "motion",
+    "design-token"
+  ]
+}
