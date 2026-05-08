@@ -21,12 +21,14 @@
     "top-navigation"
   ],
   "foundationPages": [
-    "color",
-    "typography",
-    "spacing",
-    "radius",
+    "design-token",
+    "design-token-reference",
     "elevation",
+    "gradient",
+    "inclusive-design",
+    "international-design",
     "motion",
-    "design-token"
+    "radius",
+    "spacing"
   ]
 }

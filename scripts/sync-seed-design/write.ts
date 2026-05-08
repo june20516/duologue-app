@@ -29,8 +29,15 @@ function renderHeader(opts: WriteOptions['header']): string {
   return body.split('\n').map(l => `# ${l}`).join('\n') + '\n';
 }
 
+function stripHeader(content: string, style: 'html' | 'block' | 'hash'): string {
+  if (style === 'html') return content.replace(/^<!--[\s\S]*?-->\n\n?/, '');
+  if (style === 'block') return content.replace(/^\/\*[\s\S]*?\*\/\n\n?/, '');
+  return content.replace(/^(?:# [^\n]*\n)+\n?/, '');
+}
+
 /**
  * 내용이 동일하면 쓰지 않고 unchanged로 보고. 다르면 written.
+ * 헤더를 포함한 경우, 기존 파일의 헤더를 제외한 body 부분만 비교하여 멱등성을 보장한다.
  */
 export async function writeIfChanged(
   filePath: string,
@@ -41,7 +48,8 @@ export async function writeIfChanged(
   await mkdir(dirname(filePath), { recursive: true });
   if (existsSync(filePath)) {
     const prev = await readFile(filePath, 'utf8');
-    if (prev === final) return { written: [], unchanged: [filePath], removed: [] };
+    const prevBody = opts.header ? stripHeader(prev, opts.header.commentStyle) : prev;
+    if (prevBody === body) return { written: [], unchanged: [filePath], removed: [] };
   }
   await writeFile(filePath, final);
   return { written: [filePath], unchanged: [], removed: [] };
