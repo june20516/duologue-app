@@ -54,20 +54,16 @@
 <main>
   <div id="grid" class="grid"><div class="loading">아이콘 데이터를 가져오는 중입니다…</div></div>
 </main>
+<script src="seed-icons-data.js" onerror="document.getElementById('grid').innerHTML = '<div class=&quot;empty&quot;>seed-icons-data.js 없음.<br>먼저 <code>yarn sync:seed</code>를 실행해 데이터를 생성하세요.</div>';"></script>
 <script>
-const MONO_URL = "../docs/references/seed-design/icons/monochrome.json";
-const MULTI_URL = "../docs/references/seed-design/icons/multicolor.json";
-
 let allItems = [];
 let currentType = "all";
 
-async function load() {
-  const [mono, multi] = await Promise.all([
-    fetch(MONO_URL).then(r => r.json()),
-    fetch(MULTI_URL).then(r => r.json()),
-  ]);
-  const monoArr = Object.entries(mono).map(([name, v]) => ({ name, svg: v.svg, type: "mono" }));
-  const multiArr = Object.entries(multi).map(([name, v]) => ({ name, svg: v.svg, type: "multi" }));
+function load() {
+  const data = window.__SEED_ICONS__;
+  if (!data) return;
+  const monoArr = Object.entries(data.monochrome).map(([name, v]) => ({ name, svg: v.svg, type: "mono" }));
+  const multiArr = Object.entries(data.multicolor).map(([name, v]) => ({ name, svg: v.svg, type: "multi" }));
   allItems = [...monoArr, ...multiArr];
   render();
 }
@@ -108,9 +104,7 @@ document.getElementById("grid").addEventListener("click", e => {
   });
 });
 
-load().catch(err => {
-  document.getElementById("grid").innerHTML = '<div class="empty">로드 실패: ' + err.message + '<br>먼저 <code>yarn sync:seed</code>를 실행해 아이콘 JSON을 생성하세요.</div>';
-});
+load();
 </script>
 </body>
 </html>
