@@ -18,7 +18,10 @@
     "prepare": "husky",
     "android": "expo run:android",
     "ios": "expo run:ios",
-    "clean:ios": "rm -rf .expo && rm -rf ios/Pods && rm -rf ios/build && rm -rf ~/Library/Developer/Xcode/DerivedData/Duologue-*"
+    "clean:ios": "rm -rf .expo && rm -rf ios/Pods && rm -rf ios/build && rm -rf ~/Library/Developer/Xcode/DerivedData/Duologue-*",
+    "sync:seed": "tsx scripts/sync-seed-design/index.ts",
+    "sync:seed:check": "tsx scripts/sync-seed-design/index.ts --check",
+    "preview:icons": "open tools/seed-icons-preview.html"
   },
   "dependencies": {
     "@bufbuild/protobuf": "^2.10.2",
@@ -72,7 +75,9 @@
     "@bufbuild/protoc-gen-es": "^2.10.2",
     "@connectrpc/protoc-gen-connect-es": "^1.7.0",
     "@tamagui/babel-plugin": "^1.138.0",
+    "@types/js-yaml": "^4.0.9",
     "@types/react": "~19.1.0",
+    "@types/turndown": "^5.0.6",
     "@typescript-eslint/eslint-plugin": "^8.47.0",
     "@typescript-eslint/parser": "^8.47.0",
     "eslint": "^9.25.0",
@@ -83,7 +88,10 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-native": "^5.0.0",
     "husky": "^9.1.7",
+    "js-yaml": "^4.1.1",
     "prettier": "^3.6.2",
+    "tsx": "^4.21.0",
+    "turndown": "^7.2.4",
     "typescript": "~5.9.2"
   },
   "private": true
