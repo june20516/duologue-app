@@ -1,6 +1,6 @@
 import { execFileSync } from 'node:child_process';
 import { mkdtempSync, rmSync } from 'node:fs';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -30,9 +30,14 @@ export async function downloadNpmPackage(name: string): Promise<{
   if (!tarballRes.ok) throw new Error(`tarball fetch failed: ${meta.dist.tarball}`);
   const buf = Buffer.from(await tarballRes.arrayBuffer());
   const tmp = mkdtempSync(join(tmpdir(), 'seed-sync-'));
-  const tarPath = join(tmp, 'pkg.tgz');
-  await (await import('node:fs/promises')).writeFile(tarPath, buf);
-  execFileSync('tar', ['-xzf', tarPath, '-C', tmp], { stdio: 'pipe' });
+  try {
+    const tarPath = join(tmp, 'pkg.tgz');
+    await writeFile(tarPath, buf);
+    execFileSync('tar', ['-xzf', tarPath, '-C', tmp], { stdio: 'pipe' });
+  } catch (error) {
+    rmSync(tmp, { recursive: true, force: true });
+    throw error;
+  }
   return {
     dir: join(tmp, 'package'),
     version: meta.version,
