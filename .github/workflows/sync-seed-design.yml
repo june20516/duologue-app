@@ -1,0 +1,62 @@
+name: Sync seed-design references
+
+on:
+  schedule:
+    # 매주 월요일 09:00 KST = 월요일 00:00 UTC
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run sync
+        id: sync
+        run: |
+          yarn sync:seed | tee sync-output.txt
+
+      - name: Compute summary
+        id: summary
+        run: |
+          {
+            echo 'body<<EOF'
+            echo '## seed-design 참조 동기화'
+            echo
+            echo '자동 동기화 결과:'
+            echo
+            echo '```'
+            tail -n 60 sync-output.txt
+            echo '```'
+            echo
+            echo '> 이 PR은 매주 월요일 09:00 KST 자동 생성됩니다.'
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: sync seed-design refs"
+          title: "chore: sync seed-design refs (#${{ github.run_number }})"
+          body: ${{ steps.summary.outputs.body }}
+          branch: chore/sync-seed-design
+          delete-branch: true
+          labels: |
+            dependencies
+            seed-design
+          add-paths: |
+            docs/references/seed-design/**
+            tools/seed-icons-preview.html
