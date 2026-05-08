@@ -7,6 +7,7 @@ import { writeIfChanged, mergeResults, type SyncResult } from './write.js';
 
 const BRAND_KEYWORDS = ['logo', 'karrot', 'daangn', 'brand'];
 const OUT_DIR = 'docs/references/seed-design/icons';
+const PREVIEW_DATA_PATH = 'tools/seed-icons-data.js';
 
 function isBrandIcon(name: string): boolean {
   const n = name.toLowerCase();
@@ -59,10 +60,14 @@ export async function syncIcons(): Promise<SyncResult> {
       excludedBrandKeywords: BRAND_KEYWORDS,
     };
 
+    // 미리보기 HTML이 file:// 환경에서도 동작하도록 JS 변수 형태로도 출력
+    const previewBody = `window.__SEED_ICONS__ = ${JSON.stringify({ monochrome: mono, multicolor: multi })};\n`;
+
     return mergeResults(
       await writeIfChanged(join(OUT_DIR, 'monochrome.json'), JSON.stringify(mono, null, 2)),
       await writeIfChanged(join(OUT_DIR, 'multicolor.json'), JSON.stringify(multi, null, 2)),
       await writeIfChanged(metaPath, JSON.stringify(meta, null, 2)),
+      await writeIfChanged(PREVIEW_DATA_PATH, previewBody),
     );
   } finally {
     pkg.cleanup();
