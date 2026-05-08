@@ -1,0 +1,3 @@
+[submodule "proto"]
+	path = proto
+	url = git@personal.github.com:june20516/duologue-proto.git

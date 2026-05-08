@@ -1,0 +1,68 @@
+{
+  "walkthrough": {
+    "skip": "Skip",
+    "start": "Get Started",
+    "page1": {
+      "title": "Welcome",
+      "description": "Welcome to Duologue"
+    },
+    "page2": {
+      "title": "Match",
+      "description": "Match with new friends and play games"
+    },
+    "page3": {
+      "title": "Enjoy",
+      "description": "Increase intimacy with various mini-games"
+    }
+  },
+  "steps": {
+    "profile": {
+      "title": "Profile Setup",
+      "subtitle": "Please enter your basic information"
+    },
+    "interests": {
+      "title": "Select Interests",
+      "subtitle": "Choose topics you're interested in"
+    },
+    "optional": {
+      "title": "Additional Info",
+      "subtitle": "Make your profile more complete"
+    }
+  },
+  "profile": {
+    "nickname": {
+      "label": "Nickname",
+      "placeholder": "Enter your nickname",
+      "checking": "Checking...",
+      "available": "This nickname is available",
+      "unavailable": "This nickname is already taken",
+      "checkFailed": "Failed to check nickname. Please try again"
+    },
+    "gender": {
+      "label": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "others": "Others"
+    }
+  },
+  "optional": {
+    "region": {
+      "label": "Region",
+      "placeholder": "e.g., Seoul"
+    },
+    "shortBio": {
+      "label": "Bio",
+      "placeholder": "Introduce yourself"
+    }
+  },
+  "interests": {
+    "loading": "Loading interests...",
+    "loadFailed": "Failed to load interests"
+  },
+  "buttons": {
+    "next": "Next",
+    "previous": "Back",
+    "complete": "Complete"
+  },
+  "retry": "Retry"
+}

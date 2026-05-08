@@ -1,0 +1,68 @@
+{
+  "walkthrough": {
+    "skip": "건너뛰기",
+    "start": "시작하기",
+    "page1": {
+      "title": "환영합니다",
+      "description": "Duologue에 오신 것을 환영합니다"
+    },
+    "page2": {
+      "title": "매칭하세요",
+      "description": "새로운 친구와 매칭되어 게임을 즐기세요"
+    },
+    "page3": {
+      "title": "즐기세요",
+      "description": "다양한 미니게임으로 친밀도를 높이세요"
+    }
+  },
+  "steps": {
+    "profile": {
+      "title": "프로필 설정",
+      "subtitle": "기본 정보를 입력해주세요"
+    },
+    "interests": {
+      "title": "관심사 선택",
+      "subtitle": "관심있는 주제를 선택해주세요"
+    },
+    "optional": {
+      "title": "추가 정보",
+      "subtitle": "프로필을 더 풍성하게 만들어보세요"
+    }
+  },
+  "profile": {
+    "nickname": {
+      "label": "닉네임",
+      "placeholder": "닉네임을 입력하세요",
+      "checking": "확인 중...",
+      "available": "사용 가능한 닉네임입니다",
+      "unavailable": "이미 사용 중인 닉네임입니다",
+      "checkFailed": "닉네임 확인에 실패했습니다. 다시 시도해주세요"
+    },
+    "gender": {
+      "label": "성별",
+      "male": "남성",
+      "female": "여성",
+      "others": "기타"
+    }
+  },
+  "optional": {
+    "region": {
+      "label": "지역",
+      "placeholder": "예: 서울특별시"
+    },
+    "shortBio": {
+      "label": "한줄소개",
+      "placeholder": "자신을 소개해주세요"
+    }
+  },
+  "interests": {
+    "loading": "관심사 목록을 불러오는 중...",
+    "loadFailed": "관심사 목록을 불러오는데 실패했습니다"
+  },
+  "buttons": {
+    "next": "다음",
+    "previous": "이전",
+    "complete": "완료"
+  },
+  "retry": "다시 시도"
+}

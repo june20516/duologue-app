@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>seed-design icons preview (local)</title>
+<style>
+  :root, [data-theme="dark"] {
+    --bg: #0f1115; --panel: #161922; --border: #262b36;
+    --text: #e6e8ee; --muted: #8b93a7; --accent: #ff7a00;
+    --card-bg: #161922; --input-bg: #0b0d12;
+  }
+  [data-theme="light"] {
+    --bg: #f5f6f8; --panel: #ffffff; --border: #e3e6ec;
+    --text: #1a1d24; --muted: #6b7280; --accent: #ff7a00;
+    --card-bg: #ffffff; --input-bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif; }
+  header { position: sticky; top: 0; z-index: 10; background: var(--panel); border-bottom: 1px solid var(--border); padding: 12px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 14px; margin: 0 8px 0 0; font-weight: 600; }
+  header .meta { color: var(--muted); font-size: 12px; }
+  input[type=search] { flex: 1; min-width: 220px; padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); background: var(--input-bg); color: var(--text); }
+  .seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  .seg button { background: transparent; color: var(--text); border: 0; padding: 7px 12px; cursor: pointer; font-size: 13px; }
+  .seg button.active { background: var(--accent); color: #111; font-weight: 600; }
+  main { padding: 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 10px; padding: 12px 8px; display: flex; flex-direction: column; align-items: center; gap: 8px; cursor: pointer; transition: border-color .15s; }
+  .card:hover { border-color: var(--accent); }
+  .card .iconwrap { width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; }
+  .card svg { width: 36px; height: 36px; fill: currentColor; color: var(--text); }
+  .card .name { font-size: 11px; color: var(--muted); word-break: break-all; text-align: center; line-height: 1.3; }
+  .card.copied { border-color: var(--accent); }
+  .card.copied .name { color: var(--accent); }
+  .empty { color: var(--muted); text-align: center; padding: 60px 20px; }
+  .loading { color: var(--muted); padding: 40px; text-align: center; }
+</style>
+</head>
+<body data-theme="dark">
+<header>
+  <h1>seed-design icons</h1>
+  <div class="seg" id="filter">
+    <button data-type="all" class="active">All</button>
+    <button data-type="mono">Monochrome</button>
+    <button data-type="multi">Multicolor</button>
+  </div>
+  <div class="seg" id="theme">
+    <button data-theme="dark" class="active">Dark</button>
+    <button data-theme="light">Light</button>
+  </div>
+  <input id="q" type="search" placeholder="이름 검색 (예: arrow, chat, person)" />
+  <span class="meta" id="count">로딩 중…</span>
+</header>
+<main>
+  <div id="grid" class="grid"><div class="loading">아이콘 데이터를 가져오는 중입니다…</div></div>
+</main>
+<script>
+const MONO_URL = "../docs/references/seed-design/icons/monochrome.json";
+const MULTI_URL = "../docs/references/seed-design/icons/multicolor.json";
+
+let allItems = [];
+let currentType = "all";
+
+async function load() {
+  const [mono, multi] = await Promise.all([
+    fetch(MONO_URL).then(r => r.json()),
+    fetch(MULTI_URL).then(r => r.json()),
+  ]);
+  const monoArr = Object.entries(mono).map(([name, v]) => ({ name, svg: v.svg, type: "mono" }));
+  const multiArr = Object.entries(multi).map(([name, v]) => ({ name, svg: v.svg, type: "multi" }));
+  allItems = [...monoArr, ...multiArr];
+  render();
+}
+
+function render() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const filtered = allItems.filter(i => {
+    if (currentType !== "all" && i.type !== currentType) return false;
+    if (q && !i.name.toLowerCase().includes(q)) return false;
+    return true;
+  });
+  document.getElementById("count").textContent = filtered.length + " / " + allItems.length;
+  const grid = document.getElementById("grid");
+  if (filtered.length === 0) { grid.innerHTML = '<div class="empty">결과 없음</div>'; return; }
+  grid.innerHTML = filtered.map(i =>
+    '<div class="card" data-name="' + i.name + '"><div class="iconwrap">' + i.svg + '</div><div class="name">' + i.name + '</div></div>'
+  ).join("");
+}
+
+document.getElementById("q").addEventListener("input", render);
+document.getElementById("filter").addEventListener("click", e => {
+  if (e.target.tagName !== "BUTTON") return;
+  currentType = e.target.dataset.type;
+  document.querySelectorAll("#filter button").forEach(b => b.classList.toggle("active", b === e.target));
+  render();
+});
+document.getElementById("theme").addEventListener("click", e => {
+  if (e.target.tagName !== "BUTTON") return;
+  document.body.dataset.theme = e.target.dataset.theme;
+  document.querySelectorAll("#theme button").forEach(b => b.classList.toggle("active", b === e.target));
+});
+document.getElementById("grid").addEventListener("click", e => {
+  const card = e.target.closest(".card");
+  if (!card) return;
+  navigator.clipboard.writeText(card.dataset.name).then(() => {
+    card.classList.add("copied");
+    setTimeout(() => card.classList.remove("copied"), 800);
+  });
+});
+
+load().catch(err => {
+  document.getElementById("grid").innerHTML = '<div class="empty">로드 실패: ' + err.message + '<br>먼저 <code>yarn sync:seed</code>를 실행해 아이콘 JSON을 생성하세요.</div>';
+});
+</script>
+</body>
+</html>
