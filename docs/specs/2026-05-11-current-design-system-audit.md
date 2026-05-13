@@ -74,7 +74,18 @@
 
 ---
 
-## 3. 핵심 제약 — Tamagui 호환성
+## 3. 핵심 원칙 및 제약
+
+### 네이밍 컨벤션 — Tamagui 기준
+
+**Tamagui 네이밍 패턴을 기준으로 삼고, seed-design은 구조·케이스 참고용으로만 사용한다.**
+
+- 토큰/테마 키 이름은 Tamagui 컨벤션을 따른다 (`primaryPress`, `colorOnPrimary`, `backgroundSoft` 등)
+- seed-design은 "어떤 상태·케이스가 필요한가"를 파악하는 데만 활용한다
+- seed-design 아이디어 중 우리 체계와 맞지 않는 것은 버린다
+- 현재 테마(`primaryHover`, `colorOnPrimary`, `primarySurface` 등)가 이미 이 방향으로 작성되어 있음
+
+### Tamagui 호환성
 
 ### 테마 키
 
