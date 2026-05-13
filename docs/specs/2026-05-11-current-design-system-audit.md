@@ -74,7 +74,44 @@
 
 ---
 
-## 3. 갭 요약 (Phase별 인풋)
+## 3. 핵심 제약 — Tamagui 호환성
+
+### 테마 키
+
+`defaultConfig` light 테마가 정의하는 키 중 우리 테마와 **겹치는 것 7개:**
+
+```
+background, color, shadowColor,
+borderColor, borderColorHover, borderColorFocus, placeholderColor
+```
+
+이는 **의도적 오버라이드**이며 정상이다. Tamagui 빌트인 컴포넌트가 이 키를 읽을 때 우리 값을 사용하게 된다.
+
+우리 테마에 **없는** Tamagui 인터랙션 키들:
+
+```
+backgroundHover, backgroundPress, backgroundFocus
+colorHover, colorPress, colorFocus
+borderColorPress, accentBackground, accentColor, outlineColor
+```
+
+이 키들이 undefined여도 현재까지 문제없는 이유: 우리 컴포넌트가 `hoverStyle`/`pressStyle` prop을 명시적으로 지정해 테마 키를 우회하기 때문. 새 시맨틱 키 추가는 충돌 없이 순수 추가.
+
+### 토큰 키 (진짜 위험 지점)
+
+Tamagui `defaultConfig`의 실제 토큰 키 체계:
+- `space`: `$0`, `$0.25`, `$0.5` ... `$20`, `$true` (+ 음수 변형)
+- `size`: `$0`, `$0.25` ... `$20`, `$true`
+- `radius`: `'0'`, `'1'` ... `'12'`, `'true'` (숫자 문자열, `$` 없음)
+
+**규칙:**
+- 이 숫자 키들을 절대 제거하거나 값을 바꾸지 않는다.
+- 새 시맨틱 키(`r-sm`, `r-md` 등)는 Tamagui 기본값 위에 **추가(add)** 만 한다.
+- 타이포그래피 스케일 키 변경 시 Tamagui 숫자 키를 alias로 유지한다.
+
+---
+
+## 4. 갭 요약 (Phase별 인풋)
 
 ### Phase 1-A — 시맨틱 토큰 구조 재설계
 - `tokens.ts`에 시맨틱 키 정의 필요 (현재 테마에만 존재)
