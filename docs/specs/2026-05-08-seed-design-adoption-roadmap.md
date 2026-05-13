@@ -51,6 +51,8 @@
 
 각 컴포넌트는 독립 sub-project. seed-design 화이트리스트에 등재된 19개 중 duologue 우선순위 높은 것부터:
 
+> **Phase 1-A에서 이관된 작업이 있음.** [Phase 1-A spec § 11](2026-05-13-phase-1a-semantic-tokens.md#11-phase-2로-이관되는-항목-deferred)에 컴포넌트의 원시 토큰 직참조 제거, `*Background` → `*Surface` 호출 교체 항목이 명시되어 있다. 아래 2-B/2-D sub-project 시작 시 해당 § 11 항목들이 작업 범위에 포함됐는지 체크.
+
 - **2-A. Button 계열** (`action-button`, `text-button`, `toggle-button`, `chip` 참고)
   - 현재 사용 중인 button 형태들을 seed-design state·variant 패턴으로 재구성
   - props: `variant`, `size`, `tone`, `isLoading`, `isDisabled`
