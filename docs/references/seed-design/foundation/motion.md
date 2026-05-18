@@ -1,7 +1,7 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/foundation/motion
-fetched: 2026-05-08T06:33:24.769Z
+fetched: 2026-05-18T04:15:39.393Z
 -->
 
 Foundation
@@ -70,6 +70,10 @@ cubic-bezier(0.03, 0.4, 0.1, 1)
 
 cubic-bezier(0.35, 0, 0.95, 0.55)
 
+[$timing-function.pressed-scale](/docs/foundation/design-token/%24timing-function.pressed-scale)
+
+cubic-bezier(0, 0, 0.15, 1)
+
 ## [Duration](#duration)
 
 ### [Duration Tokens](#duration-tokens)
@@ -103,6 +107,10 @@ cubic-bezier(0.35, 0, 0.95, 0.55)
 300ms
 
 [$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+
+[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+
+[$duration.pressed-scale](/docs/foundation/design-token/%24duration.pressed-scale)
 
 [$duration.d3](/docs/foundation/design-token/%24duration.d3)
 

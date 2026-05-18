@@ -1,7 +1,7 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/foundation/design-token-reference
-fetched: 2026-05-08T06:33:24.286Z
+fetched: 2026-05-18T04:15:39.010Z
 -->
 
 Foundation
@@ -1074,6 +1074,10 @@ Top Navigation과 Page Title 사이의 간격입니다.
 
 [$duration.d3](/docs/foundation/design-token/%24duration.d3)
 
+[$duration.pressed-scale](/docs/foundation/design-token/%24duration.pressed-scale)
+
+[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+
 [$font-size.t1](/docs/foundation/design-token/%24font-size.t1)
 
 0.6875rem (11px)
@@ -1413,6 +1417,10 @@ cubic-bezier(0.03, 0.4, 0.1, 1)
 [$timing-function.exit-expressive](/docs/foundation/design-token/%24timing-function.exit-expressive)
 
 cubic-bezier(0.35, 0, 0.95, 0.55)
+
+[$timing-function.pressed-scale](/docs/foundation/design-token/%24timing-function.pressed-scale)
+
+cubic-bezier(0, 0, 0.15, 1)
 
 Last updated on
 

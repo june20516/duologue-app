@@ -1,7 +1,7 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/list
-fetched: 2026-05-08T06:33:26.779Z
+fetched: 2026-05-18T04:15:41.256Z
 -->
 
 [Components](/docs/components)Layout
@@ -232,7 +232,15 @@ borderRadiusTimingFunction
 
 [$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
 
-content
+contentScaleDuration
+
+[$duration.pressed-scale](/docs/foundation/design-token/%24duration.pressed-scale)
+
+contentScaleTimingFunction
+
+[$timing-function.pressed-scale](/docs/foundation/design-token/%24timing-function.pressed-scale)
+
+body
 
 gap
 
@@ -348,11 +356,19 @@ color
 
 marginX
 
+pressed 시 배경 레이어는 좌우 폭이 marginX만큼 줄어들고, 배경 레이어 위 요소들이 위치하는 레이아웃 레이어는 scale로 인해 전체적으로 줄어드는 형태로 두 레이어가 별개로 작동합니다. 이 값은 OS 동작 줄이기 설정의 영향을 받지 않습니다.
+
 [$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
 
 cornerRadius
 
 [$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+
+contentScale
+
+pressed 시 배경 레이어는 좌우 폭이 marginX만큼 줄어들고, 배경 레이어 위 요소들이 위치하는 레이아웃 레이어는 scale로 인해 전체적으로 줄어드는 형태로 두 레이어가 별개로 작동합니다. OS 동작 줄이기 등의 설정이 켜진 경우 이 값을 1로 변경하여 사용합니다.
+
+0.97
 
 highlighted
 

@@ -1,7 +1,7 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/chip
-fetched: 2026-05-08T06:33:26.193Z
+fetched: 2026-05-18T04:15:40.710Z
 -->
 
 [Components](/docs/components)Controls
@@ -762,7 +762,7 @@ size
 
 [$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
 
-### layout=withText
+### size=small, layout=withText
 
 상태
 
@@ -771,6 +771,50 @@ size
 속성
 
 값
+
+enabled
+
+root
+
+minWidth
+
+44px
+
+### size=medium, layout=withText
+
+상태
+
+슬롯
+
+속성
+
+값
+
+enabled
+
+root
+
+minWidth
+
+[$dimension.x12](/docs/foundation/design-token/%24dimension.x12)
+
+### size=large, layout=withText
+
+상태
+
+슬롯
+
+속성
+
+값
+
+enabled
+
+root
+
+minWidth
+
+[$dimension.x13](/docs/foundation/design-token/%24dimension.x13)
 
 ### size=small, layout=iconOnly
 
