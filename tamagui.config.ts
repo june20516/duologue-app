@@ -78,6 +78,7 @@ const lightTheme = {
   borderColor: tokens.color.gray300,
   borderColorHover: tokens.color.lime,
   borderColorFocus: tokens.color.purple,
+  borderColorError: tokens.color.error,
 
   inputBackground: tokens.color.offWhite,
   inputBackgroundDisabled: tokens.color.gray100,
@@ -89,7 +90,15 @@ const lightTheme = {
   error: tokens.color.error,
   errorBackground: tokens.color.errorLight,
   warning: tokens.color.warning,
+  warningBackground: tokens.color.warningLight,
   info: tokens.color.info,
+  infoBackground: tokens.color.infoLight,
+
+  // TEMP: alias of *Background. Remove after Phase 2-D Toast cleanup (docs/tasks/pending/phase2-d-toast-semantic-cleanup.md)
+  successLight: tokens.color.successLight,
+  errorLight: tokens.color.errorLight,
+  warningLight: tokens.color.warningLight,
+  infoLight: tokens.color.infoLight,
 };
 
 const darkTheme = {
@@ -134,6 +143,7 @@ const darkTheme = {
   borderColor: tokens.color.gray800,
   borderColorHover: tokens.color.aqua, // 네온 느낌 강조
   borderColorFocus: tokens.color.aqua,
+  borderColorError: tokens.color.error,
 
   inputBackground: tokens.color.gray900,
   inputBackgroundDisabled: tokens.color.gray800,
@@ -145,7 +155,15 @@ const darkTheme = {
   error: tokens.color.error,
   errorBackground: tokens.color.errorDark,
   warning: tokens.color.warning,
+  warningBackground: tokens.color.warningDark,
   info: tokens.color.info,
+  infoBackground: tokens.color.infoDark,
+
+  // TEMP: alias of *Background. Remove after Phase 2-D Toast cleanup (docs/tasks/pending/phase2-d-toast-semantic-cleanup.md)
+  successLight: tokens.color.successDark,
+  errorLight: tokens.color.errorDark,
+  warningLight: tokens.color.warningDark,
+  infoLight: tokens.color.infoDark,
 };
 
 // ========================================
