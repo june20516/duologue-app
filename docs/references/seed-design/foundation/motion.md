@@ -1,18 +1,16 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/foundation/motion
-fetched: 2026-05-08T06:33:24.769Z
+fetched: 2026-08-31T04:58:58.072Z
 -->
 
-Foundation
+FoundationsLLMS.txt
 
 # Motion
 
 모션은 유저 인터페이스의 표현력을 높이고 쉽게 사용할 수 있도록 도와줍니다.
 
-LLMs.txt
-
-다른 도구로 열기
+![Motion cover image](/og/foundations/motion.webp)
 
 ## [매크로 / 마이크로 모션](#매크로--마이크로-모션)
 
@@ -46,29 +44,33 @@ enter, exit 모션에서 특히 강조되어야 하는 움직임에 사용합니
 
 값
 
-[$timing-function.linear](/docs/foundation/design-token/%24timing-function.linear)
+[$timing-function.linear](/foundations/design-token/reference/%24timing-function.linear)
 
 cubic-bezier(0, 0, 1, 1)
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 cubic-bezier(0.35, 0, 0.35, 1)
 
-[$timing-function.enter](/docs/foundation/design-token/%24timing-function.enter)
+[$timing-function.enter](/foundations/design-token/reference/%24timing-function.enter)
 
 cubic-bezier(0, 0, 0.15, 1)
 
-[$timing-function.exit](/docs/foundation/design-token/%24timing-function.exit)
+[$timing-function.exit](/foundations/design-token/reference/%24timing-function.exit)
 
 cubic-bezier(0.35, 0, 1, 1)
 
-[$timing-function.enter-expressive](/docs/foundation/design-token/%24timing-function.enter-expressive)
+[$timing-function.enter-expressive](/foundations/design-token/reference/%24timing-function.enter-expressive)
 
 cubic-bezier(0.03, 0.4, 0.1, 1)
 
-[$timing-function.exit-expressive](/docs/foundation/design-token/%24timing-function.exit-expressive)
+[$timing-function.exit-expressive](/foundations/design-token/reference/%24timing-function.exit-expressive)
 
 cubic-bezier(0.35, 0, 0.95, 0.55)
+
+[$timing-function.pressed-scale](/foundations/design-token/reference/%24timing-function.pressed-scale)
+
+cubic-bezier(0, 0, 0.15, 1)
 
 ## [Duration](#duration)
 
@@ -78,46 +80,38 @@ cubic-bezier(0.35, 0, 0.95, 0.55)
 
 값
 
-[$duration.d1](/docs/foundation/design-token/%24duration.d1)
+[$duration.d1](/foundations/design-token/reference/%24duration.d1)
 
 50ms
 
-[$duration.d2](/docs/foundation/design-token/%24duration.d2)
+[$duration.d2](/foundations/design-token/reference/%24duration.d2)
 
 100ms
 
-[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+[$duration.d3](/foundations/design-token/reference/%24duration.d3)
 
 150ms
 
-[$duration.d4](/docs/foundation/design-token/%24duration.d4)
+[$duration.d4](/foundations/design-token/reference/%24duration.d4)
 
 200ms
 
-[$duration.d5](/docs/foundation/design-token/%24duration.d5)
+[$duration.d5](/foundations/design-token/reference/%24duration.d5)
 
 250ms
 
-[$duration.d6](/docs/foundation/design-token/%24duration.d6)
+[$duration.d6](/foundations/design-token/reference/%24duration.d6)
 
 300ms
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
-[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+[$duration.d3](/foundations/design-token/reference/%24duration.d3)
+
+[$duration.pressed-scale](/foundations/design-token/reference/%24duration.pressed-scale)
+
+[$duration.d3](/foundations/design-token/reference/%24duration.d3)
 
 Last updated on
 
-[
-
-Logo
-
-당근 로고는 당근의 브랜드 가치를 표현하는 디자인 요소입니다.
-
-](/docs/foundation/logo)[
-
-Radius
-
-Radius는 컴포넌트 혹은 콘텐츠 모서리의 둥글기를 표현합니다.
-
-](/docs/foundation/radius)
+[이전 문서Layout](/foundations/layout)[다음 문서Radius](/foundations/radius)

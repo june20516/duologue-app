@@ -1,18 +1,18 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/foundation/design-token
-fetched: 2026-05-08T06:33:24.039Z
+fetched: 2026-08-31T04:58:57.362Z
 -->
 
-Foundation
+FoundationsLLMS.txt
 
 # Design Token
 
 디자인 토큰은 디자인 결정을 사람과 기계가 이해할 수 있는 방식으로 인코딩하는 방법입니다.
 
-LLMs.txt
+![Design Token cover image](/og/foundations/design-token.webp)
 
-다른 도구로 열기
+OverviewReference
 
 ## [디자인 토큰이 무엇인가요?](#디자인-토큰이-무엇인가요)
 
@@ -22,7 +22,7 @@ LLMs.txt
 
 ## [SEED 디자인 토큰의 구성](#seed-디자인-토큰의-구성)
 
-![Token Semantics](/_next/static/media/token-semantics.61570577.png)
+![Token Semantics](/docs/token-semantics.png)
 
 **Raw values**는 어떤 디스플레이 장치에 그릴 수 있는 실제 값을 의미합니다. `1px`, `1dp`, `1rem`, `1vw` 와 같이 크기를 나타내는 값, `#fff`, `rgba(123, 123, 123, 1)` 처럼 색상을 나타내는 값, `"Noto Sans KR"` 같은 폰트를 나타내는 값 등이 모두 해당됩니다.
 
@@ -40,28 +40,16 @@ SEED 디자인 토큰은 유연성을 위해 크게 2단계로 계층화하여 �
 
 ### [색상 토큰](#색상-토큰)
 
-![Color Token Example](/_next/static/media/token-example-1.2a850b63.png)
+![Color Token Example](/docs/token-example-1.png)
 
 `fg.brand` 토큰과 `bg.brand` 토큰은 모든 서비스에서 배경과 텍스트에 동일한 브랜드 색상을 사용할 수 있도록 돕습니다.
 
 ### [간격 토큰](#간격-토큰)
 
-![Spacing Token Example](/_next/static/media/token-example-2.837ae40d.png)
+![Spacing Token Example](/docs/token-example-2.png)
 
 화면 가장자리와 콘텐츠 사이의 간격을 나타내는 `global-gutter` 토큰은 모든 서비스에서 동일한 간격을 사용할 수 있도록 돕습니다.
 
 Last updated on
 
-[
-
-Progress Board
-
-플랫폼별 컴포넌트 구현 상태를 확인합니다.
-
-](/docs/progress-board)[
-
-Design Token Reference
-
-SEED 디자인 토큰의 전체 목록을 제공합니다.
-
-](/docs/foundation/design-token-reference)
+[이전 문서Overview](/foundations)[다음 문서Reference](/foundations/design-token/reference)

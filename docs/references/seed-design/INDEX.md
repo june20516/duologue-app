@@ -51,8 +51,8 @@ duologue-app이 seed-design을 **참조 자료**로 활용하기 위한 로컬 �
 ## Icons
 
 - 미리보기: [tools/seed-icons-preview.html](../../../tools/seed-icons-preview.html)
-- 데이터: `icons/monochrome.json` (652개), `icons/multicolor.json` (81개)
-- 패키지 버전: `@karrotmarket/icon-data@1.33.0`
+- 데이터: `icons/monochrome.json` (676개), `icons/multicolor.json` (100개)
+- 패키지 버전: `@karrotmarket/icon-data@1.47.0`
 - 브랜드성 아이콘(logo/karrot/daangn 키워드)은 자동 제외됨.
 
 ## 갱신

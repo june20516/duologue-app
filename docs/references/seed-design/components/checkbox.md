@@ -1,38 +1,18 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/checkbox
-fetched: 2026-05-08T06:33:26.027Z
+fetched: 2026-08-31T04:58:59.329Z
 -->
 
-[Components](/docs/components)Controls
+ComponentsLLMS.txt
 
 # Checkbox
 
 사용자가 하나 이상의 옵션을 선택할 수 있게 해주는 컴포넌트입니다. 목록에서 여러 항목을 선택하거나 약관 동의와 같은 선택적 작업에 사용됩니다.
 
-LLMs.txt
+Figma[React](/react/components/checkbox)[Lynx](/lynx/components/checkbox)iOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/checkbox)
-
-iOS
-
-Done
-
-Android
-
-Done
+![Checkbox cover image](/og/components/checkbox.webp)
 
 [
 
@@ -42,11 +22,15 @@ Checkbox Group을 Field 내부에서 사용하여 Checkbox Group Field로 활용
 
 
 
-](/docs/components/field)
+
+
+
+
+](/components/field)
 
 ## [Anatomy](#anatomy)
 
-![Checkbox의 Anatomy 이미지. Checkmark와 Label로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/01c8477a-ba59-4294-b501-b3b241d686ef)
+![Checkbox의 Anatomy 이미지. Checkmark와 Label로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8419b9e3-8b32-4622-82b0-9f446d06f6e8)
 
 Checkbox는 Checkmark와 Label로 구성됩니다. Checkmark는 개별 컴포넌트로 제공되어서 자유롭게 조합해서 사용할 수 있습니다.
 
@@ -54,25 +38,25 @@ Checkbox는 Checkmark와 Label로 구성됩니다. Checkmark는 개별 컴포넌
 
 ### [Size, Weight](#size-weight)
 
-![Checkbox의 Size와 Weight Property - Medium, Large 사이즈와 Regular, Bold 굵기](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3b96e33f-e9b3-406f-bb27-727f03c558c4)
+![Checkbox의 Size와 Weight Property - Medium, Large 사이즈와 Regular, Bold 굵기](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/babfb198-26c3-431e-b5f2-8938cfa11d01)
 
 Checkbox는 Medium, Large 사이즈로 제공됩니다. 강조해야 하거나 그룹으로 사용해야 하는 경우에 따라서 Weight를 조정해서 활용할 수 있습니다.
 
 ### [Tone](#tone)
 
-![Checkbox의 Tone Property - Neutral](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b12ac591-d429-40d2-85b4-581e39c3d4aa)
+![Checkbox의 Tone Property - Neutral](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6ba3746e-c9e8-4c22-9708-a3be5276e0bd)
 
 Checkbox는 Neutral을 기본으로 사용할 수 있습니다.
 
 ### [Shape](#shape)
 
-![Checkbox의 Shape Property - Square, Ghost](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0da34488-9c50-486d-aedb-374203fd2caa)
+![Checkbox의 Shape Property - Square, Ghost](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ba366d64-5060-4fcd-856e-f87a5caa5641)
 
 Checkbox는 Square, Ghost 두 가지 Shape으로 제공됩니다. Checkmark도 동일하게 제공되니 참고하세요.
 
 ### [State](#state)
 
-![Checkbox의 State - Selected, Unselected, Indeterminate 상태와 Enabled, Pressed, Disabled 조합](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/37157c66-496f-4604-a54c-5cfd8e323421)
+![Checkbox의 State - Selected, Unselected, Indeterminate 상태와 Enabled, Pressed, Disabled 조합](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/526a7db5-d582-4797-ad16-404cf4bde021)
 
 Checkbox는 선택(Selected), 미선택(Unselected), 불확실(Indeterminate) 상태를 가지며, 이 각각의 상태는 사용자의 상호작용에 따라 활성화(Enabled), 비활성화(Disabled), 눌림(Pressed)의 상태로 조합되어 표현됩니다.
 
@@ -80,23 +64,23 @@ Checkbox는 선택(Selected), 미선택(Unselected), 불확실(Indeterminate) �
 
 ### [Checkbox touch target](#checkbox-touch-target)
 
-![Checkbox의 Touch Target 영역 - Label 포함 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/dced875c-f638-4a0f-b02a-fa39c72e6838)
+![Checkbox의 Touch Target 영역 - Label 포함 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/47614a9e-21e7-4b9e-ac1c-2241092efbb8)
 
-![Checkbox의 Touch Target 영역 - Row 전체 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ae1f05b8-9192-4c2f-9e10-1ad80ffcfe2d)
+![Checkbox의 Touch Target 영역 - Row 전체 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ae59565d-0393-4571-b0e2-258ffb922182)
 
 Checkbox는 Label을 포함한 영역이 Target으로 동작합니다. List처럼 Checkmark를 조합해서 사용하는 경우 전체 Row가 Target 영역이 되어야 합니다.
 
 ### [Checkbox group 사용하기](#checkbox-group-사용하기)
 
-![Checkbox Group 사용 예시 - 부모 Checkbox와 자식 Checkbox 구성: 모든 항목 선택 안 됨](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2ffed117-82c9-4ea0-8553-5c9576bc2120)
+![Checkbox Group 사용 예시 - 부모 Checkbox와 자식 Checkbox 구성: 모든 항목 선택 안 됨](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2ce271c9-d015-4ada-9bf2-d17566c06dc4)
 
-![Checkbox Group 사용 예시 - 부모 Checkbox와 자식 Checkbox 구성: 모든 항목 선택됨](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9766221f-dc2d-4368-85ee-e0275e6fcd14)
+![Checkbox Group 사용 예시 - 부모 Checkbox와 자식 Checkbox 구성: 모든 항목 선택됨](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/dfedba2d-55b7-467f-a7e2-5e0a1d4f84ba)
 
-![Checkbox Group 사용 예시 - 부모 Checkbox와 자식 Checkbox 구성: 일부 항목 선택됨](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/846ee14c-7aa8-44bf-a476-6c0252233aa4)
+![Checkbox Group 사용 예시 - 부모 Checkbox와 자식 Checkbox 구성: 일부 항목 선택됨](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b94e4ac8-6ba0-4c55-8487-297cd137e9f1)
 
-![Checkbox Group 사용 예시 - 부모 Checkbox가 없는 구성](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/77f772e4-11bc-49d0-ab1e-8ecea6b4b5fb)
+![Checkbox Group 사용 예시 - 부모 Checkbox가 없는 구성](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6b47683b-b64c-4eb0-9f7f-ba0447903bde)
 
-![Checkbox Group 사용 예시 - 응용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/276a0697-ad5d-4446-815e-bcf9d9d6f8c3)
+![Checkbox Group 사용 예시 - 응용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e2f39429-204e-4ed5-a89b-0414b4b9ba9b)
 
 Checkbox는 여러 항목을 그룹으로 묶어서 제공할 수 있습니다. 그룹으로 묶이는 경우 필요에 따라서 부모 Checkbox를 최상단에 배치하세요.
 
@@ -104,17 +88,17 @@ Checkbox는 여러 항목을 그룹으로 묶어서 제공할 수 있습니다. 
 
 ### [Shape 결정하기](#shape-결정하기)
 
-![Checkbox Shape 선택 가이드 - Ghost](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9846f508-01db-42c9-bec6-c6389361b0b5)
+![Checkbox Shape 선택 가이드 - Ghost](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c5c443f4-52a5-4275-b0fc-70da655efcb2)
 
-![Checkbox Shape 선택 가이드 - Square](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0c1ca89e-ff01-466a-936f-2bbcf061b503)
+![Checkbox Shape 선택 가이드 - Square](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fe4eced0-51c7-4eae-b0fb-edd9df1aca3c)
 
 필수 선택 항목이 아니고, 3개 이하 항목으로 구성되는 경우 Ghost를 사용하는 것을 권장합니다. 필수 선택 항목이고 사용자가 해당 내용을 인지해야 하는 경우 명시적인 Square을 사용하세요.
 
 ### [Checkbox vs. Switch](#checkbox-vs-switch)
 
-![Checkbox와 Switch 비교표](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c71d3e58-3037-4f12-a772-cf98c15d8063)
+![Checkbox와 Switch 비교표](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f17f4163-60f2-4930-8723-66a5fd8d8ef3)
 
-Checkbox와 [Switch](/docs/components/switch)는 사용자의 선택 여부를 표시하는 컴포넌트입니다.
+Checkbox와 [Switch](/components/switch)는 사용자의 선택 여부를 표시하는 컴포넌트입니다.
 
 속성
 
@@ -160,7 +144,7 @@ root
 
 gapY
 
-[$dimension.x1](/docs/foundation/design-token/%24dimension.x1)
+[$dimension.x1](/foundations/design-token/reference/%24dimension.x1)
 
 ### [Checkbox](#checkbox)
 
@@ -180,15 +164,17 @@ label
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
 root
 
+root 전체가 누르는 영역이며, pressed 피드백은 Checkmark의 축소로 표현됩니다.
+
 gap
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 disabled
 
@@ -196,7 +182,7 @@ label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 #### weight=regular
 
@@ -214,7 +200,7 @@ label
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 #### weight=bold
 
@@ -232,7 +218,7 @@ label
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
 
 #### size=medium
 
@@ -248,19 +234,21 @@ enabled
 
 root
 
+root 전체가 누르는 영역이며, pressed 피드백은 Checkmark의 축소로 표현됩니다.
+
 minHeight
 
-[$dimension.x8](/docs/foundation/design-token/%24dimension.x8)
+[$dimension.x8](/foundations/design-token/reference/%24dimension.x8)
 
 label
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 #### size=large
 
@@ -276,19 +264,21 @@ enabled
 
 root
 
+root 전체가 누르는 영역이며, pressed 피드백은 Checkmark의 축소로 표현됩니다.
+
 minHeight
 
-[$dimension.x9](/docs/foundation/design-token/%24dimension.x9)
+[$dimension.x9](/foundations/design-token/reference/%24dimension.x9)
 
 label
 
 fontSize
 
-[$font-size.t5](/docs/foundation/design-token/%24font-size.t5)
+[$font-size.t5](/foundations/design-token/reference/%24font-size.t5)
 
 lineHeight
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 ### [Checkmark](#checkmark)
 
@@ -308,11 +298,21 @@ root
 
 colorDuration
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
 colorTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
+
+pressed
+
+root
+
+scaleScope
+
+감싸는 컴포넌트가 자체 pressed 피드백을 주는 경우(List Item 등)에는 이 값이 적용되지 않습니다.
+
+self
 
 #### variant=square
 
@@ -336,9 +336,9 @@ strokeWidth
 
 strokeColor
 
-[$color.stroke.neutral-weak](/docs/foundation/design-token/%24color.stroke.neutral-weak)
+[$color.stroke.neutral-weak](/foundations/design-token/reference/%24color.stroke.neutral-weak)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (weak)
+요소의 외곽을 그려 형태를 만드는 선입니다. 카드, 인풋 필드, 아웃라인 버튼처럼 선 자체가 요소의 경계를 정의할 때 사용됩니다. (weak)
 
 pressed
 
@@ -346,7 +346,7 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 enabled, selected
 
@@ -366,19 +366,19 @@ root
 
 color
 
-[$color.bg.disabled](/docs/foundation/design-token/%24color.bg.disabled)
+[$color.bg.disabled](/foundations/design-token/reference/%24color.bg.disabled)
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
 
 icon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 disabled, selected
 
@@ -386,7 +386,7 @@ icon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 #### variant=square, tone=brand
 
@@ -406,7 +406,7 @@ root
 
 color
 
-[$color.bg.brand-solid](/docs/foundation/design-token/%24color.bg.brand-solid)
+[$color.bg.brand-solid](/foundations/design-token/reference/%24color.bg.brand-solid)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (solid)
 
@@ -414,7 +414,7 @@ icon
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 pressed, selected
 
@@ -422,7 +422,7 @@ root
 
 color
 
-[$color.bg.brand-solid-pressed](/docs/foundation/design-token/%24color.bg.brand-solid-pressed)
+[$color.bg.brand-solid-pressed](/foundations/design-token/reference/%24color.bg.brand-solid-pressed)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (solid-pressed)
 
@@ -444,7 +444,7 @@ root
 
 color
 
-[$color.bg.neutral-inverted](/docs/foundation/design-token/%24color.bg.neutral-inverted)
+[$color.bg.neutral-inverted](/foundations/design-token/reference/%24color.bg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -452,7 +452,7 @@ icon
 
 color
 
-[$color.fg.neutral-inverted](/docs/foundation/design-token/%24color.fg.neutral-inverted)
+[$color.fg.neutral-inverted](/foundations/design-token/reference/%24color.fg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -462,7 +462,7 @@ root
 
 color
 
-[$color.bg.neutral-inverted-pressed](/docs/foundation/design-token/%24color.bg.neutral-inverted-pressed)
+[$color.bg.neutral-inverted-pressed](/foundations/design-token/reference/%24color.bg.neutral-inverted-pressed)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted-pressed)
 
@@ -484,15 +484,15 @@ icon
 
 color
 
-[$color.fg.placeholder](/docs/foundation/design-token/%24color.fg.placeholder)
+[$color.fg.placeholder](/foundations/design-token/reference/%24color.fg.placeholder)
 
 colorDuration
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
 colorTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 pressed
 
@@ -500,7 +500,7 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 disabled
 
@@ -508,7 +508,7 @@ icon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 disabled, selected
 
@@ -516,7 +516,7 @@ icon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 #### variant=ghost, tone=brand
 
@@ -536,7 +536,7 @@ icon
 
 color
 
-[$color.fg.brand](/docs/foundation/design-token/%24color.fg.brand)
+[$color.fg.brand](/foundations/design-token/reference/%24color.fg.brand)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다.
 
@@ -546,7 +546,7 @@ root
 
 color
 
-[$color.palette.carrot-200](/docs/foundation/design-token/%24color.palette.carrot-200)
+[$color.palette.carrot-200](/foundations/design-token/reference/%24color.palette.carrot-200)
 
 #### variant=ghost, tone=neutral
 
@@ -566,7 +566,7 @@ icon
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -576,7 +576,7 @@ root
 
 color
 
-[$color.palette.gray-200](/docs/foundation/design-token/%24color.palette.gray-200)
+[$color.palette.gray-200](/foundations/design-token/reference/%24color.palette.gray-200)
 
 #### size=medium
 
@@ -594,11 +594,11 @@ root
 
 size
 
-[$dimension.x5](/docs/foundation/design-token/%24dimension.x5)
+[$dimension.x5](/foundations/design-token/reference/%24dimension.x5)
 
 cornerRadius
 
-[$radius.r1](/docs/foundation/design-token/%24radius.r1)
+[$radius.r1](/foundations/design-token/reference/%24radius.r1)
 
 #### size=large
 
@@ -616,11 +616,11 @@ root
 
 size
 
-[$dimension.x6](/docs/foundation/design-token/%24dimension.x6)
+[$dimension.x6](/foundations/design-token/reference/%24dimension.x6)
 
 cornerRadius
 
-[$radius.r1](/docs/foundation/design-token/%24radius.r1)
+[$radius.r1](/foundations/design-token/reference/%24radius.r1)
 
 #### variant=square, size=medium
 
@@ -704,16 +704,4 @@ size
 
 Last updated on
 
-[
-
-Reaction Button
-
-사용자가 콘텐츠에 대한 반응을 표현할 수 있게 해주는 컴포넌트입니다. 좋아요, 관심있어요 등의 감정적 피드백을 간편하게 제공할 때 사용됩니다.
-
-](/docs/components/reaction-button)[
-
-Chip
-
-사용자가 선택하거나 입력하는 값을 표시하는 컴포넌트입니다.
-
-](/docs/components/chip)
+[이전 문서Callout](/components/callout)[다음 문서Chip](/components/chip)

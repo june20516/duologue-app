@@ -1,52 +1,34 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/field
-fetched: 2026-05-08T06:33:26.478Z
+fetched: 2026-08-31T04:58:59.850Z
 -->
 
-[Components](/docs/components)Controls
+ComponentsLLMS.txt
 
 # Field
 
 사용자로부터 값을 입력받는 컨테이너 컴포넌트로, 일관된 레이블, 도움말, 오류 표기와 상태 피드백을 제공합니다.
 
-LLMs.txt
+FigmaReactLynxiOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-React
-
-Done
-
-Text Field 및 Slider 내부에서 사용
-
-iOS
-
-Done
-
-Android
-
-Done
+![Field cover image](/og/components/field.webp)
 
 ## [Anatomy](#anatomy)
 
-![Field의 Anatomy 이미지. Header, Input, Footer 세 영역으로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/dd3e7c5d-4a33-4ff5-bd6b-94d3db3a2f80)
+![Field의 Anatomy 이미지. Header, Input, Footer 세 영역으로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0daa1a7f-b6c7-4634-9b62-36352d2303d9)
 
 Field는 Header, Input, Footer 세 영역으로 구성됩니다.
 
 -   Header에는 Label, Requirement Mark, 필요 시 Suffix Slot에 Sub Action이 포함됩니다.
--   Input은 [Text Input](/docs/components/text-input), [Textarea](/docs/components/text-input#textarea), [Input Button](/docs/components/input-button) 등 실제 입력 UI가 들어오는 영역입니다.
+-   Input은 [Text Input](/components/text-input), [Textarea](/components/text-input#textarea), [Input Button](/components/input-button) 등 실제 입력 UI가 들어오는 영역입니다.
 -   Footer는 Helper Text, Error Message, Character Count를 통해 보조 정보를 제공합니다.
 
 ## [Properties](#properties)
 
 ### [Header Property](#header-property)
 
-![Field의 Header Property - Label Weight, Requirement Mark, Suffix Slot](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6d4cf60f-58ab-4f74-9207-3ed9820fc44c)
+![Field의 Header Property - Label Weight, Requirement Mark, Suffix Slot](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/57e9f589-143b-40bb-b432-3cba72e45e02)
 
 Label은 Medium과 Bold 두 가지 Weight를 제공합니다. Label 텍스트는 명사형으로 작성하고 마침표를 사용하지 않으며, 한 줄로 표현하는 것이 좋습니다. 필요한 경우에만 최대 두 줄까지 사용할 수 있습니다.
 
@@ -56,7 +38,7 @@ Suffix Slot은 Label 우측에 위치하며, Ghost Button이나 Icon을 통해 �
 
 ### [Input Slot](#input-slot)
 
-![Field의 Input Slot - 다양한 Input 컴포넌트를 배치할 수 있는 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c92fca89-da16-4d9b-b0ed-0e029f8d7bb7)
+![Field의 Input Slot - 다양한 Input 컴포넌트를 배치할 수 있는 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4a6d9e86-46ef-4f2b-9911-02f35fadcd13)
 
 Input Slot에는 실제 값을 입력받는 다양한 Input 컴포넌트를 배치할 수 있습니다.
 
@@ -70,7 +52,11 @@ Text Input을 포함한 Field
 
 
 
-](/docs/components/text-input)[
+
+
+
+
+](/components/text-input)[
 
 ### Textarea Field
 
@@ -78,7 +64,11 @@ Textarea를 포함한 Field
 
 
 
-](/docs/components/text-input#textarea)[
+
+
+
+
+](/components/text-input#textarea)[
 
 ### Checkbox Group Field
 
@@ -86,7 +76,11 @@ Checkbox Group을 포함한 Field
 
 
 
-](/docs/components/checkbox)[
+
+
+
+
+](/components/checkbox)[
 
 ### Radio Group Field
 
@@ -94,7 +88,11 @@ Radio Group을 포함한 Field
 
 
 
-](/docs/components/radio)[
+
+
+
+
+](/components/radio)[
 
 ### Select Box Group Field
 
@@ -102,7 +100,23 @@ Select Box Group을 포함한 Field
 
 
 
-](/docs/components/select-box)[
+
+
+
+
+](/components/select-box)[
+
+### Select Field
+
+Select를 포함한 Field
+
+
+
+
+
+
+
+](/components/select)[
 
 ### Slider Field
 
@@ -110,21 +124,29 @@ Slider를 포함한 Field
 
 
 
-](/docs/components/slider)[
 
-### Select Field (Field Button)
+
+
+
+](/components/slider)[
+
+### Field Button
 
 Input Button을 포함한 Field
 
 
 
-](/docs/components/input-button)
+
+
+
+
+](/components/input-button)
 
 특수한 포맷이나 마스킹 등의 기능이 필요한 경우, 포맷과 동작을 직접 정의해서 사용할 수 있습니다.
 
 ### [Footer Property](#footer-property)
 
-![Field의 Footer Property - Helper Text, Error Message, Character Count](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a95294f2-a038-4b87-acb8-539aeb10baa8)
+![Field의 Footer Property - Helper Text, Error Message, Character Count](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b8f868ec-4095-424a-84e5-f6109941347e)
 
 Footer 좌측에는 Helper Text와 Error Message가 위치하며, 우측에는 Character Count를 표시할 수 있습니다.
 
@@ -136,7 +158,7 @@ Character Count는 값이 있을 때 Neutral 컬러로 표시됩니다. 입력 �
 
 ### [Form의 구성](#form의-구성)
 
-![Form의 구성 요소 - Input, Field, Fieldset, Form](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/774db969-1076-494f-b725-29c383579b8e)
+![Form의 구성 요소 - Input, Field, Fieldset, Form](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/35b64cda-0e59-4c64-a75a-fd26dca4fd43)
 
 Field 컴포넌트를 사용하려면 먼저 Form의 기본 구조를 이해해야 합니다. Form은 사용자로부터 입력값을 받기 위한 구조로, 크게 네 가지 요소로 구성되어 있습니다.
 
@@ -153,31 +175,31 @@ Form은 Input에 입력된 값이 유효한지 검증(Validation)하고 값을 �
 
 #### [제출 시 검증 (Validation on Submit)](#제출-시-검증-validation-on-submit)
 
-![제출 시 검증의 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0ba41bbd-2f62-48e1-a3e1-e8572f928431)
+![제출 시 검증의 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2389bdf1-a927-429c-9125-368734a9af76)
 
 Submit 버튼을 클릭하면 검증을 진행합니다. Submit 버튼은 조건 충족 여부에 따라 활성화되거나 항상 활성화 상태로 유지될 수 있습니다. 기본적으로는 제출 시 전체 검증 방식을 사용합니다.
 
 #### [인라인 검증 (Inline validation)](#인라인-검증-inline-validation)
 
-![인라인 검증의 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/06250a20-9cc2-490c-8c98-b4f77b382c8e)
+![인라인 검증의 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a8029e80-4b49-4108-bbab-5987933e8c79)
 
 Field 단위로 검증을 진행합니다. Input 요소에서 Focus가 떠난 경우(blur) 또는 값이 변경될 때마다(change/update) 입력값을 검증합니다. 한 화면에 필드가 많아 오류 누적을 방지해야 하는 경우에 사용합니다.
 
 ### [이탈 시 안내](#이탈-시-안내)
 
-![이탈 시 안내 다이얼로그가 표시되는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fcd54420-f4fe-4188-a2de-4ed4d0347083)
+![이탈 시 안내 다이얼로그가 표시되는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0b7ef90f-40eb-46cb-bfe2-c762840f9963)
 
-작성, 수정 화면에 진입한 후에 다시 이탈하려는 경우 입력된 값이 지워질 수 있다는 경고 안내를 [Alert Dialog](/docs/components/alert-dialog) 등을 통해 표시해야 합니다.
+작성, 수정 화면에 진입한 후에 다시 이탈하려는 경우 입력된 값이 지워질 수 있다는 경고 안내를 [Alert Dialog](/components/alert-dialog) 등을 통해 표시해야 합니다.
 
-![이탈 시 안내 다이얼로그가 불필요한 예시: 값에 변경이 없는 경우, 자동 저장을 사용하는 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6d65eee5-55b6-484c-947e-bda1ac44a7d4)
+![이탈 시 안내 다이얼로그가 불필요한 예시: 값에 변경이 없는 경우, 자동 저장을 사용하는 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/776e29a5-50f0-48a0-b5dc-9f26e5b65815)
 
 값의 변화가 없거나 자동 저장 기능이 있는 경우에는 안내를 생략할 수 있습니다.
 
 ### [필수 입력 여부 표시하기](#필수-입력-여부-표시하기)
 
-![필수 입력 표시 - Requirement Mark 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/39db444d-8102-4584-8893-a0a7004cd0b8)
+![필수 입력 표시 - Requirement Mark 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b3a9bb54-eb6f-4643-925e-5ad04073eed5)
 
-![Requirement Mark와 Text 혼용 사용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b2c355bb-d75d-4789-a35c-ff4f1de6a851)
+![Requirement Mark와 Text 혼용 사용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1580751e-4e3c-4045-b6b6-911190d96c1b)
 
 Don’t
 
@@ -187,13 +209,13 @@ Don’t
 
 ### [단일 화면에서 Form 구성하기](#단일-화면에서-form-구성하기)
 
-![단일 화면 Form 구성 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a44627b8-a29b-44a4-b897-7744e80da8ad)
+![단일 화면 Form 구성 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/38dfd734-b0d7-433c-8ead-57bf5c3b572b)
 
 어떤 엔티티를 생성, 수정할 때 활용할 수 있는 UX 패턴입니다. Form은 엔티티의 데이터를 입력하거나 수정할 수 있도록 구성되어 있어야 합니다. 생성(Create) Form과 수정(Update) Form은 가능하면 동일한 구성을 유지해야 합니다.
 
 ### [단계별 Form 구성하기](#단계별-form-구성하기)
 
-![단계별 Form 구성 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1429d5bc-c60a-4f14-a831-3944de43bca8)
+![단계별 Form 구성 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8a4316a8-78d7-4ed7-876a-9d12899de351)
 
 이전 단계에서 선택한 옵션에 추가적인 데이터 입력이나 수정이 필요한 경우 활용할 수 있는 UX 패턴입니다. 모바일 화면이 여러 개의 Form, Input으로 복잡해지는 경우에도 활용할 수 있습니다.
 
@@ -219,17 +241,17 @@ root
 
 gap
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 header
 
 paddingX
 
-[$dimension.x0\_5](/docs/foundation/design-token/%24dimension.x0_5)
+[$dimension.x0\_5](/foundations/design-token/reference/%24dimension.x0_5)
 
 gap
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 indicatorIcon
 
@@ -237,7 +259,7 @@ indicatorIcon
 
 color
 
-[$color.fg.critical](/docs/foundation/design-token/%24color.fg.critical)
+[$color.fg.critical](/foundations/design-token/reference/%24color.fg.critical)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다.
 
@@ -257,23 +279,23 @@ indicatorText
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
 Field Label과의 조화를 위해 Field Label의 lineHeight와 동일한 값을 갖습니다.
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 paddingLeft
 
@@ -283,123 +305,123 @@ footer
 
 paddingX
 
-[$dimension.x0\_5](/docs/foundation/design-token/%24dimension.x0_5)
+[$dimension.x0\_5](/foundations/design-token/reference/%24dimension.x0_5)
 
 gap
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 description
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 descriptionIcon
 
 paddingRight
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 size
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 errorMessage
 
 color
 
-[$color.fg.critical](/docs/foundation/design-token/%24color.fg.critical)
+[$color.fg.critical](/foundations/design-token/reference/%24color.fg.critical)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다.
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 errorIcon
 
 paddingRight
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 color
 
-[$color.fg.critical](/docs/foundation/design-token/%24color.fg.critical)
+[$color.fg.critical](/foundations/design-token/reference/%24color.fg.critical)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다.
 
 size
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 characterCount
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 maxCharacterCount
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 invalid
 
@@ -407,7 +429,7 @@ characterCount
 
 color
 
-[$color.fg.critical](/docs/foundation/design-token/%24color.fg.critical)
+[$color.fg.critical](/foundations/design-token/reference/%24color.fg.critical)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다.
 
@@ -415,7 +437,7 @@ maxCharacterCount
 
 color
 
-[$color.fg.critical](/docs/foundation/design-token/%24color.fg.critical)
+[$color.fg.critical](/foundations/design-token/reference/%24color.fg.critical)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다.
 
@@ -437,17 +459,17 @@ root
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
 fontSize
 
-[$font-size.t5](/docs/foundation/design-token/%24font-size.t5)
+[$font-size.t5](/foundations/design-token/reference/%24font-size.t5)
 
 lineHeight
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 #### weight=medium
 
@@ -465,7 +487,7 @@ root
 
 fontWeight
 
-[$font-weight.medium](/docs/foundation/design-token/%24font-weight.medium)
+[$font-weight.medium](/foundations/design-token/reference/%24font-weight.medium)
 
 #### weight=bold
 
@@ -483,20 +505,8 @@ root
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
 
 Last updated on
 
-[
-
-Chip
-
-사용자가 선택하거나 입력하는 값을 표시하는 컴포넌트입니다.
-
-](/docs/components/chip)[
-
-Input Button
-
-입력 필드 형태의 버튼으로, 선택창이나 피커를 열 때 사용합니다. 선택이 완료되면 버튼 라벨에 선택된 값이 표시됩니다.
-
-](/docs/components/input-button)
+[이전 문서Divider](/components/divider)[다음 문서Floating Action Button](/components/floating-action-button)

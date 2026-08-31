@@ -1,42 +1,22 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/snackbar
-fetched: 2026-05-08T06:33:27.439Z
+fetched: 2026-08-31T04:59:00.764Z
 -->
 
-[Components](/docs/components)Feedback
+ComponentsLLMS.txt
 
 # Snackbar
 
 화면 하단에 일시적으로 나타나 상태나 결과를 안내하는 컴포넌트입니다.
 
-LLMs.txt
+Figma[React](/react/components/snackbar)iOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/snackbar)
-
-iOS
-
-Done
-
-Android
-
-Done
+![Snackbar cover image](/og/components/snackbar.webp)
 
 ## [Anatomy](#anatomy)
 
-![Snackbar의 Anatomy 이미지. Container, Text, Prefix Icon, Action으로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f6856e0a-4a99-47ef-9862-cc5e10795a3b)
+![Snackbar의 Anatomy 이미지. Container, Text, Prefix Icon, Action으로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/846dd408-4e39-499d-a959-dab021e3eab8)
 
 Snackbar 컴포넌트는 텍스트와 컨테이너로 구성되며 필요에 따라 Prefix Icon과 Action을 표시할 수 있습니다.
 
@@ -44,13 +24,13 @@ Snackbar 컴포넌트는 텍스트와 컨테이너로 구성되며 필요에 따
 
 ### [Variant](#variant)
 
-![Snackbar의 Variant Property - Default, Positive, Critical](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6d3dd0e1-9b89-41ee-a681-d2f357d4f682)
+![Snackbar의 Variant Property - Default, Positive, Critical](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b0643bd2-426f-4ada-ba72-36dea0e8f593)
 
 Snackbar 컴포넌트는 기본적인 메시지 전달을 위한 Default, 완료나 성공 메시지를 표현하는 Positive, 오류나 실패 메시지를 표현하는 Critical 총 세 가지 타입을 제공합니다.
 
 ### [Action Property](#action-property)
 
-![Snackbar의 Action Property - Text 버튼](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4272551a-c9ce-4a19-ad19-8f769fcc4f84)
+![Snackbar의 Action Property - Text 버튼](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c00070de-46a2-45b2-9a41-a8c288947c7e)
 
 Text로 구성된 보조 Action을 표시할 수 있습니다.
 
@@ -58,7 +38,7 @@ Text로 구성된 보조 Action을 표시할 수 있습니다.
 
 ### [Snackbar 사용하기](#snackbar-사용하기)
 
-![Snackbar 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/10338645-eafd-4152-9065-836e7782622b)
+![Snackbar 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/72296171-afd1-469e-97fd-222868827116)
 
 Snackbar는 텍스트를 통해 간결한 피드백을 제공하는 컴포넌트입니다.
 
@@ -72,29 +52,29 @@ Snackbar는 낮은 심각도의 상태를 공유하는 용도로만 사용해야
 
 사용자의 결정이 필요한 중요한 선택
 
-[Bottom Sheet](/docs/components/bottom-sheet), [Alert Dialog](/docs/components/alert-dialog)
+[Bottom Sheet](/components/bottom-sheet), [Alert Dialog](/components/alert-dialog)
 
 지속적으로 표시되어야 하는 경고
 
-[Page Banner](/docs/components/page-banner), [Callout](/docs/components/callout)
+[Page Banner](/components/page-banner), [Callout](/components/callout)
 
 여러 단계 안내나 긴 텍스트
 
-[Help Bubble](/docs/components/help-bubble), [Callout](/docs/components/callout)
+[Help Bubble](/components/help-bubble), [Callout](/components/callout)
 
 ### [Snackbar의 위치와 레이아웃](#snackbar의-위치와-레이아웃)
 
-![Snackbar 위치와 레이아웃 - Safe Area](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b2d64fb0-889b-47fc-bab3-ac8b56316af2)
+![Snackbar 위치와 레이아웃 - Safe Area](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2b66d3e3-db7a-420f-a31b-ffccc072065a)
 
 Snackbar는 기본적으로 화면 하단 중앙에 배치되며, 컴포넌트 자체에 여백을 포함합니다. 배치 시 OS의 세이프 에어리어를 고려해야 합니다.
 
-![Snackbar 위치와 레이아웃 - Floating Action Button 위에 표시된 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0ed776c5-e814-4b75-8e05-b0fe0d3df54c)
+![Snackbar 위치와 레이아웃 - Floating Action Button 위에 표시된 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d7e94e86-74ed-4f5e-ad2b-037675c91155)
 
-화면에 [Floating Action Button](/docs/components/floating-action-button)이 있을 때 Snackbar가 나타나면, Snackbar는 항상 [Floating Action Button](/docs/components/floating-action-button) 위에 표시됩니다.
+화면에 [Floating Action Button](/components/floating-action-button)이 있을 때 Snackbar가 나타나면, Snackbar는 항상 [Floating Action Button](/components/floating-action-button) 위에 표시됩니다.
 
 텍스트가 길어 줄바꿈이 발생할 경우, 아이콘과 보조 버튼은 중앙 정렬됩니다.
 
-![Snackbar 최대 너비 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/05def133-d149-4b02-b44d-848e4a8eb5cc)
+![Snackbar 최대 너비 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/264ac4c5-fe3e-4b0c-a66f-a7e83629e8a4)
 
 Snackbar에는 최대 너비가 지정되어 있으며, 화면 너비가 이를 초과할 경우 화면 중앙에 배치됩니다.
 
@@ -102,49 +82,61 @@ Snackbar에는 최대 너비가 지정되어 있으며, 화면 너비가 이를 
 
 #### [간결하게 작성하기](#간결하게-작성하기)
 
-![Snackbar 내용으로 '게시글을 저장했어요'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fa34b292-e9ea-4702-9ff5-a0fc26f6188f)
+![Snackbar 내용으로 '게시글을 저장했어요'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6cd05714-1526-4616-b584-842037c99e93)
 
 Do
 
-좋은 예
+결과를 짧고 분명하게 전달합니다.
 
-![Snackbar 내용으로 '업로드 처리가 완료되었습니다'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/23b9a228-3fd3-45e6-9294-35aab2a26b13)
+![Snackbar 내용으로 '게시글 저장 처리가 완료되었습니다'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f406e4dc-8894-45fe-9de9-ab0656567632)
 
 Don’t
 
-나쁜 예
+길고 시스템 관점의 표현이라 한눈에 들어오지 않습니다.
 
-메시지 내용은 3단어 이하로 간단하고 짧게 작성하는 것을 권장합니다. 명사+동사 형식으로 일관성 있게 표현하고, 사용자 액션에 대한 결과를 우선적으로 표시하세요. 시각적 간결함을 위해 마침표는 생략해주세요.
+메시지는 핵심만 짧게 작성합니다. 명사+동사 형식으로 사용자 액션의 결과를 먼저 보여주면 한눈에 이해할 수 있습니다.
 
-#### [행동 유도 문구 활용하기](#행동-유도-문구-활용하기)
+#### [마침표는 문장 수에 따라](#마침표는-문장-수에-따라)
 
-![Snackbar 내용으로 '방해금지 시간을 변경했어요'가, Action 레이블로 '되돌리기'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bd088ce5-496f-4958-be8b-b550ec7c0450)
+![Snackbar 내용으로 '주문을 취소했어요. 환불은 3일 안에 처리돼요.'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5da9838e-9a05-4800-9690-c15fa925bb94)
 
 Do
 
-좋은 예
+두 문장 이상이면 모든 문장에 마침표를 붙입니다.
 
-![Snackbar 내용으로 '네트워크 문제로 인해 연결이 끊어져 연결이 해제되었습니다'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7ef7ce1c-5fda-42b3-9836-32c763b52153)
+![Snackbar 내용으로 '주문을 취소했어요 환불은 3일 안에 처리돼요'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/96bdbcea-ce7a-4b0c-9357-7dbd5ae54e4b)
 
 Don’t
 
-나쁜 예
+문장이 둘인데 마침표가 없어 읽기 어렵습니다.
 
-사용자가 취할 수 있는 액션은 동사 원형으로 표현해 즉각적인 이해를 돕습니다. "되돌리기", "보기", "확인하기" 등의 명확한 버튼을 제공합니다.
+한 문장이면 마침표를 생략하고, 두 문장 이상이면 모든 문장 끝에 마침표를 붙입니다.
 
-#### [긍정문 사용하기](#긍정문-사용하기)
+#### [긍정문으로 표현하기](#긍정문으로-표현하기)
 
-명확하고 긍정적인 표현으로 혼란을 방지합니다. "실패하지 않았어요" 등의 이중 부정보다 "업로드 완료"처럼 직접적인 표현을 사용합니다.
+![Snackbar 내용으로 '업로드를 완료했어요'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d8204f1b-056a-4997-8416-30289be37e4e)
+
+Do
+
+무엇이 됐는지 바로 알 수 있습니다.
+
+![Snackbar 내용으로 '업로드에 실패하지 않았어요'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/37746fdd-1a6d-4200-b201-1e959d21d738)
+
+Don’t
+
+이중 부정이라 결과를 한 번 더 해석해야 합니다.
+
+명확하고 긍정적인 표현으로 혼란을 방지합니다. "실패하지 않았어요"와 같은 이중 부정보다 "업로드를 완료했어요"처럼 직접적으로 표현합니다.
 
 ### [Snackbar의 동작](#snackbar의-동작)
 
-![Snackbar 동작 - 4초 후 자동 닫힘, Snackbar 내용이 긴 경우 4초보다 길게 설정](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/05a2a9c4-d532-45db-8300-468c23b87e82)
+![Snackbar 동작 - 4초 후 자동 닫힘, Snackbar 내용이 긴 경우 4초보다 길게 설정](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/de05b69a-460b-4335-8ef7-84529a2c0ccd)
 
 Snackbar는 기본적으로 4초 동안 표시됩니다. 메시지 내용이 길 경우, 사용자가 충분히 인지할 수 있도록 표시 시간을 적절히 조정해주세요.
 
-![Snackbar 동작 - 사용자가 터치를 유지하는 경우 타이머 일시정지](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/64c82ee0-9b9c-4e20-8c7b-0618a5de99e3)
+![Snackbar 동작 - 사용자가 터치를 유지하는 경우 타이머 일시정지](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1c44c4ec-c5f8-4815-9a86-b46c22675019)
 
-![한 화면에 3개의 Snackbar가 동시에 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/77d87a6d-2a86-4c55-87fc-26c9ecb3687d)
+![한 화면에 3개의 Snackbar가 동시에 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3ad488d4-b5ca-479d-b31b-964de3a2ca93)
 
 Don’t
 
@@ -156,9 +148,9 @@ Don’t
 
 ### [액션 사용하기](#액션-사용하기)
 
-![Snackbar Action 레이블로 '되돌리기'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9aa82a43-df03-4b19-a1cd-82e7e8d93dd0)
+![Snackbar Action 레이블로 '되돌리기'가 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8e1f895d-4b95-4d15-8fc3-7e716b6fafc1)
 
-![Snackbar Action 레이블로 '확인'이 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5237de89-fd64-42de-89fb-31ff8ef11e6d)
+![Snackbar Action 레이블로 '확인'이 표시된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e714d733-b89a-473a-9e69-e91c5e782cb5)
 
 Don’t
 
@@ -188,31 +180,31 @@ region
 
 paddingX
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 paddingY
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 offsetDuration
 
-[$duration.d4](/docs/foundation/design-token/%24duration.d4)
+[$duration.d4](/foundations/design-token/reference/%24duration.d4)
 
 offsetTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 root
 
 color
 
-[$color.bg.neutral-inverted](/docs/foundation/design-token/%24color.bg.neutral-inverted)
+[$color.bg.neutral-inverted](/foundations/design-token/reference/%24color.bg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
 cornerRadius
 
-[$radius.r2](/docs/foundation/design-token/%24radius.r2)
+[$radius.r2](/foundations/design-token/reference/%24radius.r2)
 
 minHeight
 
@@ -220,15 +212,15 @@ minHeight
 
 maxWidth
 
-560px
+464px
 
 paddingX
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 paddingY
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 enterOpacity
 
@@ -240,11 +232,11 @@ enterScale
 
 enterDuration
 
-[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+[$duration.d3](/foundations/design-token/reference/%24duration.d3)
 
 enterTimingFunction
 
-[$timing-function.enter](/docs/foundation/design-token/%24timing-function.enter)
+[$timing-function.enter](/foundations/design-token/reference/%24timing-function.enter)
 
 exitOpacity
 
@@ -256,41 +248,41 @@ exitScale
 
 exitDuration
 
-[$duration.d2](/docs/foundation/design-token/%24duration.d2)
+[$duration.d2](/foundations/design-token/reference/%24duration.d2)
 
 exitTimingFunction
 
-[$timing-function.exit](/docs/foundation/design-token/%24timing-function.exit)
+[$timing-function.exit](/foundations/design-token/reference/%24timing-function.exit)
 
 content
 
 paddingX
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 gap
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 message
 
 color
 
-[$color.fg.neutral-inverted](/docs/foundation/design-token/%24color.fg.neutral-inverted)
+[$color.fg.neutral-inverted](/foundations/design-token/reference/%24color.fg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 prefixIcon
 
@@ -300,13 +292,13 @@ size
 
 paddingRight
 
-[$dimension.x0\_5](/docs/foundation/design-token/%24dimension.x0_5)
+[$dimension.x0\_5](/foundations/design-token/reference/%24dimension.x0_5)
 
 actionButton
 
 targetPaddingX
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 targetMinHeight
 
@@ -314,21 +306,29 @@ targetMinHeight
 
 color
 
-[$color.fg.brand](/docs/foundation/design-token/%24color.fg.brand)
+[$color.fg.brand](/foundations/design-token/reference/%24color.fg.brand)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다.
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
+
+pressed
+
+actionButton
+
+scaleScope
+
+self
 
 ### variant=default
 
@@ -356,7 +356,7 @@ prefixIcon
 
 color
 
-[$color.fg.positive](/docs/foundation/design-token/%24color.fg.positive)
+[$color.fg.positive](/foundations/design-token/reference/%24color.fg.positive)
 
 성공적인 작업, 확인, 또는 긍정적인 상태를 나타내는 데 사용됩니다.
 
@@ -376,22 +376,10 @@ prefixIcon
 
 color
 
-[$color.fg.critical](/docs/foundation/design-token/%24color.fg.critical)
+[$color.fg.critical](/foundations/design-token/reference/%24color.fg.critical)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다.
 
 Last updated on
 
-[
-
-Skeleton
-
-콘텐츠가 로딩되는 동안 이후 나타날 요소의 윤곽을 미리 보여주어 로딩 시간을 짧게 느끼게 하는 UI 요소입니다.
-
-](/docs/components/skeleton)[
-
-Alert Dialog
-
-사용자의 확인이 반드시 필요한 경우 강력한 표현 및 경고 수단으로 활용하는 컴포넌트입니다.
-
-](/docs/components/alert-dialog)
+[이전 문서Slider](/components/slider)[다음 문서Switch](/components/switch)

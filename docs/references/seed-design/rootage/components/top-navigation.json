@@ -18,12 +18,6 @@
             "color": {
               "type": "color"
             },
-            "strokeColor": {
-              "type": "color"
-            },
-            "strokeWidth": {
-              "type": "dimension"
-            },
             "gradient": {
               "type": "gradient"
             },
@@ -194,15 +188,6 @@
           }
         }
       },
-      "divider=true": {
-        "enabled": {
-          "root": {
-            "strokeColor": "$color.stroke.neutral-subtle",
-            "strokeWidth": "1px"
-          }
-        }
-      },
-      "divider=false": {},
       "titleLayout=titleOnly": {
         "enabled": {
           "title": {

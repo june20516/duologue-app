@@ -1,58 +1,38 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/segmented-control
-fetched: 2026-05-08T06:33:27.151Z
+fetched: 2026-08-31T04:59:00.491Z
 -->
 
-[Components](/docs/components)Controls
+ComponentsLLMS.txt
 
 # Segmented Control
 
 여러 옵션 중 하나를 선택하여 관련 콘텐츠를 즉시 필터링하거나 전환할 때 사용하는 컴포넌트입니다.
 
-LLMs.txt
+Figma[React](/react/components/segmented-control)iOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/segmented-control)
-
-iOS
-
-In Progress
-
-Android
-
-Not Ready
+![Segmented Control cover image](/og/components/segmented-control.webp)
 
 ## [Anatomy](#anatomy)
 
-![Segmented Control의 Anatomy 이미지. Container, Segment, Label, Badge (Optional)로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cf9782ce-22cf-4475-90e7-cd5c55dd94db)
+![Segmented Control의 Anatomy 이미지. Container, Segment, Label, Badge (Optional)로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a3c0d33e-b5a1-4dbb-a1c4-dd60f3d5b74c)
 
 Segmented Control은 전체를 감싸는 컨테이너(Container) 안에 여러 개의 세그먼트(Segment)가 자리 잡고 있으며, 각 세그먼트는 텍스트 레이블(Label)을 포함하여 구성됩니다.
 
-새로운 세그먼트 혹은 해당 세그먼트에 새로운 내용이 추가되는 경우 [Notification Badge](/docs/components/notification-badge)를 선택적으로 표시할 수 있습니다.
+새로운 세그먼트 혹은 해당 세그먼트에 새로운 내용이 추가되는 경우 [Notification Badge](/components/notification-badge)를 선택적으로 표시할 수 있습니다.
 
 ## [Properties](#properties)
 
 ### [Number of Controls](#number-of-controls)
 
-![Segmented Control의 Number of Controls - 2개, 3개, 4개](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2eaea74b-ef1d-4238-876b-e2d190a6e8e6)
+![Segmented Control의 Number of Controls - 2개, 3개, 4개](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b205e861-fdff-43a8-9923-0a010207e001)
 
 세그먼트화된 아이템은 2~4개의 세그먼트로 구성될 수 있습니다.
 
 ### [State](#state)
 
-![Segmented Control의 State - Selected-Enabled, Selected-Pressed, Pressed, Disabled, Selected-Disabled](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5a1873db-dc9a-4a7b-91b2-6ab2dc46cb6e)
+![Segmented Control의 State - Selected-Enabled, Selected-Pressed, Pressed, Disabled, Selected-Disabled](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7d54207f-d4f8-4635-abd1-c90c637efc66)
 
 Segmented Control은 Selected/Unselected 상태를 통해 세그먼트화된 아이템을 표시하며, Enabled, Pressed, Disabled와 같은 상호작용 상태를 함께 가집니다.
 
@@ -60,9 +40,9 @@ Segmented Control은 Selected/Unselected 상태를 통해 세그먼트화된 아
 
 ### [짧고 간단하게 작성하기](#짧고-간단하게-작성하기)
 
-![인기순, 추천순 Label을 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8c05c371-f4e6-4802-8eec-b3fb79f1771a)
+![인기순, 추천순 Label을 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/573c59a3-e5f0-4236-8ca7-fcff8aba38d9)
 
-![가장 인기있는 리뷰, 추천이 많은 리뷰 Label을 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1e51fd98-0b61-4499-850f-125f55f71d8e)
+![가장 인기있는 리뷰, 추천이 많은 리뷰 Label을 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/02c7b928-4b25-4fbf-b43d-fbc38ebc15a4)
 
 Don’t
 
@@ -72,19 +52,19 @@ Segment를 표현하는 라벨은 짧고 간결하게 작성해주세요.
 
 ### [4개 이하로 사용하기](#4개-이하로-사용하기)
 
-![3개의 선택지를 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6641d801-87d4-46f7-8f18-cf4dc6cc0753)
+![3개의 선택지를 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b2dac990-d8f9-44b6-87c3-545e0795ea2c)
 
-![5개의 선택지를 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1e19cde0-09d4-4ab6-827a-12987dcfb60c)
+![5개의 선택지를 포함하는 Segmented Control](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5128fef5-2069-4866-ab5b-5fc633b6bfb0)
 
 Don’t
 
 옵션을 5개 이상 사용하지 마세요.
 
-선택지가 너무 많아지면 사용자가 인식하기 어렵고, 모바일 환경에서는 터치 영역이 좁아져 사용성이 떨어집니다. 더 많은 옵션이 필요하면 [Radio](/docs/components/radio) Group, [Checkbox](/docs/components/checkbox) Group과 같은 다른 구성 요소를 사용하는 것이 좋습니다.
+선택지가 너무 많아지면 사용자가 인식하기 어렵고, 모바일 환경에서는 터치 영역이 좁아져 사용성이 떨어집니다. 더 많은 옵션이 필요하면 [Radio](/components/radio) Group, [Checkbox](/components/checkbox) Group과 같은 다른 구성 요소를 사용하는 것이 좋습니다.
 
 ### [한 화면에 한 개 이상 사용하지 않기](#한-화면에-한-개-이상-사용하지-않기)
 
-![한 화면에 2개의 Segmented Control이 사용된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0621209d-48e0-4b57-97e2-a24b38f3169e)
+![한 화면에 2개의 Segmented Control이 사용된 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c1e31f9a-60fb-4c8e-afd9-4ae1863f155e)
 
 Don’t
 
@@ -96,7 +76,7 @@ Segmented Control을 한 화면에 반복해서 사용하는 것은 권장되지
 
 ### [Segmented Control로 보기 전환하기](#segmented-control로-보기-전환하기)
 
-![지도, 거리뷰, 3D 중 지도 보기 중 전환하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9a0bd3ed-e590-47b7-8653-b0458b57ecb4)
+![지도, 거리뷰, 3D 중 지도 보기 중 전환하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f66eac7e-e9c1-40b7-87f8-7b238d794842)
 
 Segmented Control은 특정 콘텐츠 영역에 직접적인 영향을 미치는 상호작용에 사용해야 합니다.
 
@@ -104,21 +84,21 @@ Segmented Control은 특정 콘텐츠 영역에 직접적인 영향을 미치는
 
 ### [필터링으로 활용하기](#필터링으로-활용하기)
 
-![동네 필터링에 활용하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d496513c-10a6-49cf-b92c-b44f26e77b70)
+![동네 필터링에 활용하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d8b6a864-9ff0-470a-8f44-d5380461a233)
 
 연관된 콘텐츠 그룹을 필터링할 때 Segmented Control을 사용하면 사용자가 보기 내 콘텐츠의 범위를 좁히거나 넓히며 원하는 콘텐츠를 쉽게 찾을 수 있습니다.
 
 ### [보기 내에서 콘텐츠를 탐색하기](#보기-내에서-콘텐츠를-탐색하기)
 
-![선택한 항목별로 다른 내용을 표시하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6aecd104-a532-4bca-b304-a4ed7fc1e4bb)
+![선택한 항목별로 다른 내용을 표시하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cf2c868b-8f85-4471-98bb-80b8ac2fcc77)
 
 동일한 콘텐츠를 여러 다른 관점이나 기준으로 보여주고 싶을 때, Segmented Control로 각 기준을 손쉽게 전환하도록 만들 수 있습니다.
 
 ## [Segmented Control vs. Tabs](#segmented-control-vs-tabs)
 
-Segmented Control과 [Tabs](/docs/components/tabs)는 시각적으로 비슷해서 자주 혼동되지만, 목적과 사용법에 있어 명확한 차이가 있습니다.
+Segmented Control과 [Tabs](/components/tabs)는 시각적으로 비슷해서 자주 혼동되지만, 목적과 사용법에 있어 명확한 차이가 있습니다.
 
-**핵심적으로 [Tabs](/docs/components/tabs)는 탐색(Navigation)을 위한 것이고, Segmented Control은 조작(Manipulation)을 위한 것입니다.**
+**핵심적으로 [Tabs](/components/tabs)는 탐색(Navigation)을 위한 것이고, Segmented Control은 조작(Manipulation)을 위한 것입니다.**
 
 Segmented Control
 
@@ -148,9 +128,9 @@ Tabs
 
 선택 시 새로운 뷰가 로드됨
 
-![Tabs를 동네생활, 모임, 단지 간 화면 전환을 위해 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2b992e68-ec3f-44a0-a093-a70b68e1dc29)
+![Tabs를 동네생활, 모임, 단지 간 화면 전환을 위해 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/71c63c15-99d6-40ba-acfc-66eac9a938f4)
 
-![Segmented Control을 동네생활, 모임, 단지 간 화면 전환을 위해 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/76fe7b32-e461-4194-b9b7-97d53a67e36b)
+![Segmented Control을 동네생활, 모임, 단지 간 화면 전환을 위해 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/36cd05c1-d267-4621-8495-bdd54c981eb8)
 
 Don’t
 
@@ -176,15 +156,15 @@ root
 
 padding
 
-[$dimension.x1](/docs/foundation/design-token/%24dimension.x1)
+[$dimension.x1](/foundations/design-token/reference/%24dimension.x1)
 
 cornerRadius
 
-[$radius.full](/docs/foundation/design-token/%24radius.full)
+[$radius.full](/foundations/design-token/reference/%24radius.full)
 
 color
 
-[$color.bg.neutral-weak-alpha](/docs/foundation/design-token/%24color.bg.neutral-weak-alpha)
+[$color.bg.neutral-weak-alpha](/foundations/design-token/reference/%24color.bg.neutral-weak-alpha)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (weak-alpha) \`$color.layer.basement\` 위에서 컴포넌트의 가시성을 보장하기 위해 사용됩니다.
 
@@ -214,55 +194,55 @@ minHeight
 
 paddingX
 
-[$dimension.x6](/docs/foundation/design-token/%24dimension.x6)
+[$dimension.x6](/foundations/design-token/reference/%24dimension.x6)
 
 paddingY
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 cornerRadius
 
-[$radius.full](/docs/foundation/design-token/%24radius.full)
+[$radius.full](/foundations/design-token/reference/%24radius.full)
 
 gap
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 colorDuration
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
 colorTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 label
 
 fontSize
 
-[$font-size.t5](/docs/foundation/design-token/%24font-size.t5)
+[$font-size.t5](/foundations/design-token/reference/%24font-size.t5)
 
 lineHeight
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 colorDuration
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
 colorTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 pressed
 
@@ -270,7 +250,7 @@ root
 
 color
 
-[$color.bg.neutral-weak-pressed](/docs/foundation/design-token/%24color.bg.neutral-weak-pressed)
+[$color.bg.neutral-weak-pressed](/foundations/design-token/reference/%24color.bg.neutral-weak-pressed)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (weak-pressed)
 
@@ -280,9 +260,13 @@ strokeWidth
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
+
+scaleScope
+
+content
 
 selected
 
@@ -290,7 +274,7 @@ label
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -300,7 +284,7 @@ label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 ### [Segmented Control Indicator](#segmented-control-indicator)
 
@@ -320,13 +304,13 @@ root
 
 color
 
-[$color.palette.gray-00](/docs/foundation/design-token/%24color.palette.gray-00)
+[$color.palette.gray-00](/foundations/design-token/reference/%24color.palette.gray-00)
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
 
 strokeWidth
 
@@ -334,15 +318,15 @@ strokeWidth
 
 cornerRadius
 
-[$radius.full](/docs/foundation/design-token/%24radius.full)
+[$radius.full](/foundations/design-token/reference/%24radius.full)
 
 transformDuration
 
-[$duration.d4](/docs/foundation/design-token/%24duration.d4)
+[$duration.d4](/foundations/design-token/reference/%24duration.d4)
 
 transformTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 pressed
 
@@ -350,7 +334,7 @@ root
 
 color
 
-[$color.palette.gray-100](/docs/foundation/design-token/%24color.palette.gray-100)
+[$color.palette.gray-100](/foundations/design-token/reference/%24color.palette.gray-100)
 
 disabled
 
@@ -358,20 +342,8 @@ root
 
 color
 
-[$color.bg.disabled](/docs/foundation/design-token/%24color.bg.disabled)
+[$color.bg.disabled](/foundations/design-token/reference/%24color.bg.disabled)
 
 Last updated on
 
-[
-
-Radio
-
-여러 옵션 중 하나를 선택할 수 있도록 할 때 사용하는 컴포넌트입니다.
-
-](/docs/components/radio)[
-
-Select Box
-
-명확한 테두리를 가진 컨테이너를 활용하여, 정의된 목록 중 하나 이상의 옵션을 선택하는 UI 요소입니다.
-
-](/docs/components/select-box)
+[이전 문서Scroll Fog](/components/scroll-fog)[다음 문서Select Box](/components/select-box)

@@ -29,6 +29,13 @@
             },
             "gradient": {
               "type": "gradient"
+            },
+            "scaleScope": {
+              "type": "enum",
+              "values": [
+                "self",
+                "content"
+              ]
             }
           }
         },
@@ -97,9 +104,6 @@
             "size": {
               "type": "dimension"
             },
-            "targetSize": {
-              "type": "dimension"
-            },
             "color": {
               "type": "color"
             }
@@ -160,8 +164,12 @@
             "fontWeight": "$font-weight.regular"
           },
           "suffixIcon": {
-            "size": "$dimension.x4",
-            "targetSize": "$dimension.x10"
+            "size": "$dimension.x4"
+          }
+        },
+        "pressed": {
+          "root": {
+            "scaleScope": "self"
           }
         }
       },

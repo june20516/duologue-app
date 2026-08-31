@@ -1,18 +1,16 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/foundation/spacing
-fetched: 2026-05-08T06:20:32.711Z
+fetched: 2026-08-31T04:58:58.235Z
 -->
 
-Foundation
+FoundationsLLMS.txt
 
 # Spacing
 
 Spacing은 컴포넌트 혹은 콘텐츠 간의 간격을 표현합니다.
 
-LLMs.txt
-
-다른 도구로 열기
+![Spacing cover image](/og/foundations/spacing.webp)
 
 디자인에서 간격은 시각적 균형과 사용자 경험을 향상시키는 중요한 요소입니다. 본 가이드는 일관성 있고 효과적인 간격 시스템을 구축하기 위한 지침을 제공합니다.
 
@@ -30,7 +28,7 @@ LLMs.txt
 
 `nav-to-title`은 네비게이션 바 아래에 위치한 타이틀과 네비게이션 간의 간격을 정의합니다.
 
-![nav-to-title](/docs/foundation/spacing/nav-to-title.webp)
+![nav-to-title](/foundations/spacing/nav-to-title.webp)
 
 nav-to-title
 
@@ -38,7 +36,7 @@ nav-to-title
 
 `component-default`는 디자인 시스템에서 컴포넌트의 기본 간격을 정의하는 토큰입니다. 이는 버튼간의 간격, 카드, 폼 등 다양한 컴포넌트의 내부 요소 간 간격이나 컴포넌트 간의 기본 간격으로 사용되어 디자인의 일관성을 유지하는 데 도움을 줍니다.
 
-![component-default](/docs/foundation/spacing/component-default.webp)
+![component-default](/foundations/spacing/component-default.webp)
 
 component-default
 
@@ -50,7 +48,7 @@ component-default
 
 `global-gutter`는 모든 서비스에서 화면 가장자리와 콘텐츠 사이의 간격을 일정하게 유지함으로써 디자인의 일관성을 확보하고, 사용자 경험을 향상시키는 핵심 간격입니다. 이를 통해 반응형 디자인 및 다양한 UI 컴포넌트 간의 균형 잡힌 간격 조정이 가능합니다.
 
-![global-gutter](/docs/foundation/spacing/global-gutter.webp)
+![global-gutter](/foundations/spacing/global-gutter.webp)
 
 global-gutter
 
@@ -60,130 +58,118 @@ global-gutter
 
 값
 
-[$dimension.x0\_5](/docs/foundation/design-token/%24dimension.x0_5)
+[$dimension.x0\_5](/foundations/design-token/reference/%24dimension.x0_5)
 
 2px
 
-[$dimension.x1](/docs/foundation/design-token/%24dimension.x1)
+[$dimension.x1](/foundations/design-token/reference/%24dimension.x1)
 
 4px
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 6px
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 8px
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 10px
 
-[$dimension.x3](/docs/foundation/design-token/%24dimension.x3)
+[$dimension.x3](/foundations/design-token/reference/%24dimension.x3)
 
 12px
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 14px
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 16px
 
-[$dimension.x4\_5](/docs/foundation/design-token/%24dimension.x4_5)
+[$dimension.x4\_5](/foundations/design-token/reference/%24dimension.x4_5)
 
 18px
 
-[$dimension.x5](/docs/foundation/design-token/%24dimension.x5)
+[$dimension.x5](/foundations/design-token/reference/%24dimension.x5)
 
 20px
 
-[$dimension.x6](/docs/foundation/design-token/%24dimension.x6)
+[$dimension.x6](/foundations/design-token/reference/%24dimension.x6)
 
 24px
 
-[$dimension.x7](/docs/foundation/design-token/%24dimension.x7)
+[$dimension.x7](/foundations/design-token/reference/%24dimension.x7)
 
 28px
 
-[$dimension.x8](/docs/foundation/design-token/%24dimension.x8)
+[$dimension.x8](/foundations/design-token/reference/%24dimension.x8)
 
 32px
 
-[$dimension.x9](/docs/foundation/design-token/%24dimension.x9)
+[$dimension.x9](/foundations/design-token/reference/%24dimension.x9)
 
 36px
 
-[$dimension.x10](/docs/foundation/design-token/%24dimension.x10)
+[$dimension.x10](/foundations/design-token/reference/%24dimension.x10)
 
 40px
 
-[$dimension.x12](/docs/foundation/design-token/%24dimension.x12)
+[$dimension.x12](/foundations/design-token/reference/%24dimension.x12)
 
 48px
 
-[$dimension.x13](/docs/foundation/design-token/%24dimension.x13)
+[$dimension.x13](/foundations/design-token/reference/%24dimension.x13)
 
 52px
 
-[$dimension.x14](/docs/foundation/design-token/%24dimension.x14)
+[$dimension.x14](/foundations/design-token/reference/%24dimension.x14)
 
 56px
 
-[$dimension.x16](/docs/foundation/design-token/%24dimension.x16)
+[$dimension.x16](/foundations/design-token/reference/%24dimension.x16)
 
 64px
 
-[$dimension.spacing-x.between-chips](/docs/foundation/design-token/%24dimension.spacing-x.between-chips)
+[$dimension.spacing-x.between-chips](/foundations/design-token/reference/%24dimension.spacing-x.between-chips)
 
 Chip 사이의 수평 간격에 사용합니다.
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
-[$dimension.spacing-x.global-gutter](/docs/foundation/design-token/%24dimension.spacing-x.global-gutter)
+[$dimension.spacing-x.global-gutter](/foundations/design-token/reference/%24dimension.spacing-x.global-gutter)
 
 화면 전체에 적용되는 기본 수평 padding 값입니다.
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
-[$dimension.spacing-y.component-default](/docs/foundation/design-token/%24dimension.spacing-y.component-default)
+[$dimension.spacing-y.component-default](/foundations/design-token/reference/%24dimension.spacing-y.component-default)
 
 컴포넌트 간 수직 간격 토큰이 정의되지 않은 컴포넌트 사이의 수직 간격에 사용합니다.
 
-[$dimension.x3](/docs/foundation/design-token/%24dimension.x3)
+[$dimension.x3](/foundations/design-token/reference/%24dimension.x3)
 
-[$dimension.spacing-y.nav-to-title](/docs/foundation/design-token/%24dimension.spacing-y.nav-to-title)
+[$dimension.spacing-y.nav-to-title](/foundations/design-token/reference/%24dimension.spacing-y.nav-to-title)
 
 Top Navigation과 Page Title 사이의 간격입니다.
 
-[$dimension.x5](/docs/foundation/design-token/%24dimension.x5)
+[$dimension.x5](/foundations/design-token/reference/%24dimension.x5)
 
-[$dimension.spacing-y.screen-bottom](/docs/foundation/design-token/%24dimension.spacing-y.screen-bottom)
+[$dimension.spacing-y.screen-bottom](/foundations/design-token/reference/%24dimension.spacing-y.screen-bottom)
 
 화면 하단의 여백입니다.
 
-[$dimension.x14](/docs/foundation/design-token/%24dimension.x14)
+[$dimension.x14](/foundations/design-token/reference/%24dimension.x14)
 
-[$dimension.spacing-y.between-text](/docs/foundation/design-token/%24dimension.spacing-y.between-text)
+[$dimension.spacing-y.between-text](/foundations/design-token/reference/%24dimension.spacing-y.between-text)
 
 텍스트 요소 간의 수직 간격입니다.
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 Last updated on
 
-[
-
-Radius
-
-Radius는 컴포넌트 혹은 콘텐츠 모서리의 둥글기를 표현합니다.
-
-](/docs/foundation/radius)[
-
-State
-
-상태 표현은 컴포넌트 또는 상호작용 가능한 요소의 상태 또는 가능성을 사용자에게 전달합니다.
-
-](/docs/foundation/state)
+[이전 문서Radius](/foundations/radius)[다음 문서State](/foundations/state)

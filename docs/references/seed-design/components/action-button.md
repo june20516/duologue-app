@@ -1,42 +1,22 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/action-button
-fetched: 2026-05-08T06:33:25.157Z
+fetched: 2026-08-31T04:58:58.523Z
 -->
 
-[Components](/docs/components)Buttons
+ComponentsLLMS.txt
 
 # Action Button
 
 명확한 액션을 쉽게 수행할 수 있도록 돕는 기본 인터랙션 컴포넌트입니다.
 
-LLMs.txt
+Figma[React](/react/components/action-button)[Lynx](/lynx/components/action-button)iOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/action-button)
-
-iOS
-
-Done
-
-Android
-
-Done
+![Action Button cover image](/og/components/action-button.webp)
 
 ## [Anatomy](#anatomy)
 
-![Action Button의 Anatomy 이미지. Container, Label, Prefix Icon, Suffix Icon으로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7d68554f-9852-40df-96f3-3de56ddf3b8d)
+![Action Button의 Anatomy 이미지. Container, Label, Prefix Icon, Suffix Icon으로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2cbad6d7-a613-449a-bad9-e303c27434bb)
 
 Action Button은 Label을 감싸고 있는 Container로 구성되며, Prefix Icon과 Suffix Icon을 가질 수 있습니다.
 
@@ -44,7 +24,7 @@ Action Button은 Label을 감싸고 있는 Container로 구성되며, Prefix Ico
 
 ### [Size](#size)
 
-![Action Button의 Size Property - XSmall, Small, Medium, Large](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f9b453b7-2b04-408a-8b8d-9243d059154d)
+![Action Button의 Size Property - XSmall, Small, Medium, Large](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/35a66b08-b780-4990-ae81-c62b11780a76)
 
 Action Button은 XSmall, Small, Medium, Large 네 가지 사이즈로 제공됩니다.
 
@@ -52,7 +32,7 @@ Small과 Medium은 화면 중앙에서 범용적으로 사용되며, Large는 �
 
 ### [Layout](#layout)
 
-![Action Button의 Layout - Text Only, Icon + Text, Text + Icon, Icon Only](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0398dbf1-1589-45d9-a843-f10d428c7a10)
+![Action Button의 Layout - Text Only, Icon + Text, Text + Icon, Icon Only](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7984c439-975b-4f7d-b51d-f73a19b1abf5)
 
 Action Button은 라벨과 아이콘의 조합으로 구성되며, 아이콘은 버튼의 목적을 시각적으로 강조하거나 동작을 보조합니다.
 
@@ -62,7 +42,7 @@ Icon Only 레이아웃은 아이콘만으로 의미를 전달하기 때문에 �
 
 ### [Variant](#variant)
 
-![Action Button의 Variant - Neutral Solid, Brand Solid, Neutral Weak, Brand Outline, Neutral Outline, Critical Solid](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f4de319b-2471-4384-9f5e-caff9204d67c)
+![Action Button의 Variant - Neutral Solid, Brand Solid, Neutral Weak, Brand Outline, Neutral Outline, Critical Solid](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3e14828a-1ff9-46b3-97cf-0a5261c1e41e)
 
 Action Button은 Neutral Solid, Brand Solid, Neutral Weak, Brand Outline, Neutral Outline, Critical Solid, Ghost 총 7가지 Variant로 구성됩니다.
 
@@ -70,13 +50,13 @@ Figma에서 Ghost Variant는 별도 컴포넌트로 제공됩니다.
 
 ### [State](#state)
 
-![Action Button의 State - Enabled, Pressed, Loading, Disabled](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/95fc026c-677d-4bdd-8bce-a0209c20b027)
+![Action Button의 State - Enabled, Pressed, Loading, Disabled](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/04681e0e-de52-44ef-b56e-b7900cc0d91c)
 
 Action Button은 Enabled, Pressed, Loading, Disabled 상태를 가집니다.
 
 ### [Width](#width)
 
-![Action Button의 Width Property - Fill, Hug](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c4be6f02-eef8-4237-9f3a-6cdd2567b720)
+![Action Button의 Width Property - Fill, Hug](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/36987bc3-d945-477e-9a84-834cb28ffc2c)
 
 Action Button은 컨테이너의 전체 너비를 채우거나 콘텐츠에 맞게 조정할 수 있습니다. 각 Size마다 기본 최소 너비가 설정되어 있으며, 필요에 따라 최소 너비와 최대 너비를 지정할 수 있습니다.
 
@@ -84,7 +64,7 @@ Action Button은 컨테이너의 전체 너비를 채우거나 콘텐츠에 맞�
 
 ### [Hierarchy](#hierarchy)
 
-![Action Button Hierarchy - High emphasis, Medium emphasis, Low emphasis](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b2bf28f4-7ea1-446e-8352-61e2ce38d631)
+![Action Button Hierarchy - High emphasis, Medium emphasis, Low emphasis](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5d34eabd-4555-4b41-bd24-223ae72c987e)
 
 Action Button의 시각적 주목도는 배경색 대비에 따라 달라집니다. 화면에서 강조하려는 정도에 따라 적절한 Variant를 선택해서 사용해주세요.
 
@@ -133,11 +113,11 @@ Brand Outline, Neutral Outline을 조합하여 사용
 
 화면 내 중요도에 따라 적절한 Variant를 선택해서 사용합니다.
 
-![Action Button Brand Solid variant와 Neutral Solid Variant](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/44cd8da4-3242-4af9-a4de-365f1e0cd829)
+![Action Button Brand Solid variant와 Neutral Solid Variant](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/d468e8c9-03dc-40a9-9324-d03f858abc6a)
 
-![Action Button Critical Solid variant와 Neutral Weak Variant](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3c3c9e89-0132-4754-a9a1-859c7d443065)
+![Action Button Critical Solid variant와 Neutral Weak Variant](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bfde6090-ab69-41ae-b92b-b8a9395ad7e2)
 
-![Action Button Neutral Outline variant와 Brand Outline Variant](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e187b612-c657-4a6c-9663-5a50d4a25fb9)
+![Action Button Neutral Outline variant와 Brand Outline Variant](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1f72b7b8-5042-4ad5-9151-a08e7429e416)
 
 Variant
 
@@ -153,7 +133,7 @@ Brand Solid 다음으로 높은 위계를 가지며, 대부분의 화면에서 C
 
 **Critical Solid**
 
-삭제나 초기화처럼 되돌릴 수 없는 중요한 작업에 사용합니다. 사용자에게 위험을 분명하게 알려주는 역할을 하며, 주로 [Alert Dialog](/docs/components/alert-dialog)에서 사용됩니다.
+삭제나 초기화처럼 되돌릴 수 없는 중요한 작업에 사용합니다. 사용자에게 위험을 분명하게 알려주는 역할을 하며, 주로 [Alert Dialog](/components/alert-dialog)에서 사용됩니다.
 
 **Neutral Weak**
 
@@ -169,11 +149,11 @@ Solid 타입보다 중요도가 낮은 액션에 사용되며, Neutral Outline�
 
 ### [Brand 컬러는 꼭 필요한 곳에만 사용하기](#brand-컬러는-꼭-필요한-곳에만-사용하기)
 
-![Action Button Brand 컬러 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7c41bd5e-06e0-4d1d-8d89-b55c3b56841b)
+![Action Button Brand 컬러 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ae9fe09a-99f8-4cc8-9231-957279624d7e)
 
 Brand 컬러는 브랜드의 정체성과 가치를 전달하는 중요 자산으로, 로고, 대표 버튼, 핵심 메시지 등 브랜드 상징 요소에 집중 사용해야 합니다.
 
-![Action Button Brand 컬러 과다 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b3c0ed36-ddec-472d-a96a-1c34543922bf)
+![Action Button Brand 컬러 과다 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/439891d6-3fe9-4a5a-9f30-b6f174062256)
 
 Don’t
 
@@ -187,13 +167,13 @@ Action Button에서는 '채팅하기', '단골맺기'와 같이 사용자 간 �
 
 #### [Solid 조합](#solid-조합)
 
-![Action Button Solid 조합 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/26bd8b7d-dd71-4d8a-a057-5ffdaca44a0c)
+![Action Button Solid 조합 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/962260f8-6614-4424-ab56-4b2446568479)
 
 Neutral Weak와 Neutral Solid 또는 Brand Solid 버튼을 조합하면 액션의 위계를 명확하게 표현할 수 있습니다. 이 조합은 시각적 부담을 줄이면서도 직관적인 경험을 제공하며, 사용자가 의사결정을 빠르고 쉽게 내릴 수 있도록 돕습니다.
 
 #### [Outline 조합](#outline-조합)
 
-![Action Button Outline 조합 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1f494811-10b1-4022-b861-cc458e550fe6)
+![Action Button Outline 조합 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/770c40ab-05a7-4953-b647-21a203189744)
 
 Neutral Outline과 Brand Outline은 강조도가 낮은 서브 액션을 표현하는 데 적합합니다. 두 버튼을 나란히 조합하면 위계를 명확히 전달할 수 있습니다. 한 화면에 버튼이 여러 번 나타날 때 사용을 권장합니다.
 
@@ -201,17 +181,17 @@ Neutral Outline과 Brand Outline은 강조도가 낮은 서브 액션을 표현�
 
 2개 이상의 버튼을 조합하여 사용하는 경우 상황에 따라 적절한 레이아웃을 구성해야 합니다.
 
-![Action Button 배치 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bd5cb5ae-b794-4b48-bd66-c9a875925121)
+![Action Button 배치 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/81005d86-10c3-473c-b81d-90c2f95367c5)
 
 Solid 조합에서 Neutral Weak가 초기화, 닫기와 같이 Dismiss의 의미를 가질 경우 3:7 비율을 활용해 액션 위계를 명확히 표현하는 것을 권장합니다.
 
-![Neutral Weak Action Button을 나란히 배치한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/48726550-14f7-4dc7-afcc-e8aebed306cc)
+![Neutral Weak Action Button을 나란히 배치한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ddbfff55-881b-4ff8-ae41-bfb7504c6526)
 
 Do
 
 Neutral Weak 버튼을 나란히 사용할 수 있습니다.
 
-![](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4fdbda69-4124-4a7c-84c5-f7d9113c8e02)
+![](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/59a06126-1e86-4d2e-8de6-c34d6bc4e6b9)
 
 Don’t
 
@@ -225,13 +205,13 @@ Neutral Weak처럼 강조 위계가 낮은 Variant는 비슷한 위계의 액션
 
 ### [Label 작성하기](#label-작성하기)
 
-![Action Button의 Label로 '시작하기'를 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/61d93edd-2930-4f38-bfcd-e9cec29b900b)
+![Action Button의 Label로 '시작하기'를 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e804b0ba-d41d-45bb-b552-94acf75a65d0)
 
 Do
 
 사용자 행동을 중심으로 Label을 작성합니다.
 
-![Action Button의 Label로 '다음'을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c0087642-25b6-4da3-9673-e1b837d3f1bb)
+![Action Button의 Label로 '다음'을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f0e2c505-0792-438d-8836-4b32c76a22a1)
 
 Don’t
 
@@ -243,7 +223,7 @@ Don’t
 
 ### [긴 Label을 사용하는 경우](#긴-label을-사용하는-경우)
 
-![두 개의 Action Button을 좌우와 상하로 배치한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9e567529-aba8-4c0a-9995-ac5735cdc439)
+![두 개의 Action Button을 좌우와 상하로 배치한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5187ccc5-b128-437c-a320-02c11516adac)
 
 긴 Label이 필요하거나 번역했을 때 의도하지 않게 길어지는 경우, 폰트 스케일링으로 큰 텍스트를 사용하는 경우 Action Button 레이아웃이 Overflow될 수 있습니다.
 
@@ -251,19 +231,19 @@ Don’t
 
 ### [Icon의 사용](#icon의-사용)
 
-![Action Button의 Icon 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cba15f01-e153-4e34-ba9a-b7da04954f8b)
+![Action Button의 Icon 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6eb6b0a1-5cb2-470b-9736-8a8d82210d46)
 
 아이콘은 버튼의 동작을 시각적으로 표현하고 강조하는 데 도움을 줍니다.
 
 아이콘은 라벨의 앞이나 뒤에 배치할 수 있으며, Prefix는 주로 액션의 의미를 보조하고, Suffix는 Chevron처럼 동작을 보조하는 역할을 합니다.
 
-![Action Button에 불필요한 아이콘을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8d36cb65-5b5e-465d-aac7-a026de540f6a)
+![Action Button에 불필요한 아이콘을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6885c1c1-e630-4038-840c-9b704e561909)
 
 Don’t
 
 아이콘을 무분별하게 사용하지 않습니다.
 
-![Action Button에 라벨 앞과 뒤에 동시에 아이콘을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/24ab8b97-711c-4d98-8198-8d5923b51781)
+![Action Button에 라벨 앞과 뒤에 동시에 아이콘을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0cdc7808-97ab-4081-8611-26778a775fde)
 
 Don’t
 
@@ -273,9 +253,9 @@ Don’t
 
 ## [Action Button vs. Chip](#action-button-vs-chip)
 
-![Action Button과 Chip 비교 이미지](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/74921ce8-6c70-4f06-870f-6224be8fdb7a)
+![Action Button과 Chip 비교 이미지](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2c751b64-efab-4e7a-8400-27f8dff59cd0)
 
-Action Button과 [Chip](/docs/components/chip)은 유사한 형태를 가진 컴포넌트이지만, 사용 목적과 제공하는 기능에 차이가 있습니다.
+Action Button과 [Chip](/components/chip)은 유사한 형태를 가진 컴포넌트이지만, 사용 목적과 제공하는 기능에 차이가 있습니다.
 
 Action Button
 
@@ -311,6 +291,20 @@ Chip
 
 2개 이상 그룹으로 사용 권장
 
+## [더 알아보기](#더-알아보기)
+
+[
+
+### What's New in Action Button
+
+SEED Action Button은 기존 Box Button의 주요 문제를 해결하며, 사용자 경험과 접근성을 한층 더 강화했어요.
+
+
+
+
+
+](/updates/whats-new-in-action-button)
+
 ## [Specification](#specification)
 
 ### base
@@ -329,17 +323,25 @@ root
 
 colorDuration
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
 colorTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 label
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
+
+pressed
+
+root
+
+scaleScope
+
+self
 
 ### variant=brandSolid
 
@@ -359,7 +361,7 @@ root
 
 color
 
-[$color.bg.brand-solid](/docs/foundation/design-token/%24color.bg.brand-solid)
+[$color.bg.brand-solid](/foundations/design-token/reference/%24color.bg.brand-solid)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (solid)
 
@@ -367,7 +369,7 @@ label
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 icon
 
@@ -375,7 +377,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 prefixIcon
 
@@ -383,7 +385,7 @@ prefixIcon
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 suffixIcon
 
@@ -391,17 +393,17 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 progressCircle
 
 trackColor
 
-[$color.palette.static-white-alpha-300](/docs/foundation/design-token/%24color.palette.static-white-alpha-300)
+[$color.palette.static-white-alpha-300](/foundations/design-token/reference/%24color.palette.static-white-alpha-300)
 
 rangeColor
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 pressed
 
@@ -409,7 +411,7 @@ root
 
 color
 
-[$color.bg.brand-solid-pressed](/docs/foundation/design-token/%24color.bg.brand-solid-pressed)
+[$color.bg.brand-solid-pressed](/foundations/design-token/reference/%24color.bg.brand-solid-pressed)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (solid-pressed)
 
@@ -419,13 +421,13 @@ root
 
 color
 
-[$color.bg.disabled](/docs/foundation/design-token/%24color.bg.disabled)
+[$color.bg.disabled](/foundations/design-token/reference/%24color.bg.disabled)
 
 label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -433,7 +435,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -441,7 +443,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -449,7 +451,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -457,7 +459,7 @@ root
 
 color
 
-[$color.bg.brand-solid-pressed](/docs/foundation/design-token/%24color.bg.brand-solid-pressed)
+[$color.bg.brand-solid-pressed](/foundations/design-token/reference/%24color.bg.brand-solid-pressed)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (solid-pressed)
 
@@ -479,7 +481,7 @@ root
 
 color
 
-[$color.bg.neutral-inverted](/docs/foundation/design-token/%24color.bg.neutral-inverted)
+[$color.bg.neutral-inverted](/foundations/design-token/reference/%24color.bg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -487,7 +489,7 @@ label
 
 color
 
-[$color.fg.neutral-inverted](/docs/foundation/design-token/%24color.fg.neutral-inverted)
+[$color.fg.neutral-inverted](/foundations/design-token/reference/%24color.fg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -497,7 +499,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.neutral-inverted](/docs/foundation/design-token/%24color.fg.neutral-inverted)
+[$color.fg.neutral-inverted](/foundations/design-token/reference/%24color.fg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -507,7 +509,7 @@ prefixIcon
 
 color
 
-[$color.fg.neutral-inverted](/docs/foundation/design-token/%24color.fg.neutral-inverted)
+[$color.fg.neutral-inverted](/foundations/design-token/reference/%24color.fg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -517,7 +519,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.neutral-inverted](/docs/foundation/design-token/%24color.fg.neutral-inverted)
+[$color.fg.neutral-inverted](/foundations/design-token/reference/%24color.fg.neutral-inverted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted)
 
@@ -525,11 +527,11 @@ progressCircle
 
 trackColor
 
-[$color.palette.static-white-alpha-300](/docs/foundation/design-token/%24color.palette.static-white-alpha-300)
+[$color.palette.static-white-alpha-300](/foundations/design-token/reference/%24color.palette.static-white-alpha-300)
 
 rangeColor
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 pressed
 
@@ -537,7 +539,7 @@ root
 
 color
 
-[$color.bg.neutral-inverted-pressed](/docs/foundation/design-token/%24color.bg.neutral-inverted-pressed)
+[$color.bg.neutral-inverted-pressed](/foundations/design-token/reference/%24color.bg.neutral-inverted-pressed)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted-pressed)
 
@@ -547,13 +549,13 @@ root
 
 color
 
-[$color.bg.disabled](/docs/foundation/design-token/%24color.bg.disabled)
+[$color.bg.disabled](/foundations/design-token/reference/%24color.bg.disabled)
 
 label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -561,7 +563,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -569,7 +571,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -577,7 +579,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -585,7 +587,7 @@ root
 
 color
 
-[$color.bg.neutral-inverted-pressed](/docs/foundation/design-token/%24color.bg.neutral-inverted-pressed)
+[$color.bg.neutral-inverted-pressed](/foundations/design-token/reference/%24color.bg.neutral-inverted-pressed)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (inverted-pressed)
 
@@ -607,7 +609,7 @@ root
 
 color
 
-[$color.bg.neutral-weak](/docs/foundation/design-token/%24color.bg.neutral-weak)
+[$color.bg.neutral-weak](/foundations/design-token/reference/%24color.bg.neutral-weak)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (weak)
 
@@ -615,7 +617,7 @@ label
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -625,7 +627,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -635,7 +637,7 @@ prefixIcon
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -645,7 +647,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -653,11 +655,11 @@ progressCircle
 
 trackColor
 
-[$color.palette.gray-500](/docs/foundation/design-token/%24color.palette.gray-500)
+[$color.palette.gray-500](/foundations/design-token/reference/%24color.palette.gray-500)
 
 rangeColor
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -667,7 +669,7 @@ root
 
 color
 
-[$color.bg.neutral-weak-pressed](/docs/foundation/design-token/%24color.bg.neutral-weak-pressed)
+[$color.bg.neutral-weak-pressed](/foundations/design-token/reference/%24color.bg.neutral-weak-pressed)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (weak-pressed)
 
@@ -677,13 +679,13 @@ root
 
 color
 
-[$color.bg.disabled](/docs/foundation/design-token/%24color.bg.disabled)
+[$color.bg.disabled](/foundations/design-token/reference/%24color.bg.disabled)
 
 label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -691,7 +693,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -699,7 +701,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -707,7 +709,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -715,7 +717,7 @@ root
 
 color
 
-[$color.bg.neutral-weak-pressed](/docs/foundation/design-token/%24color.bg.neutral-weak-pressed)
+[$color.bg.neutral-weak-pressed](/foundations/design-token/reference/%24color.bg.neutral-weak-pressed)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (weak-pressed)
 
@@ -737,7 +739,7 @@ root
 
 color
 
-[$color.bg.critical-solid](/docs/foundation/design-token/%24color.bg.critical-solid)
+[$color.bg.critical-solid](/foundations/design-token/reference/%24color.bg.critical-solid)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다. (solid)
 
@@ -745,7 +747,7 @@ label
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 icon
 
@@ -753,7 +755,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 prefixIcon
 
@@ -761,7 +763,7 @@ prefixIcon
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 suffixIcon
 
@@ -769,17 +771,17 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 progressCircle
 
 trackColor
 
-[$color.palette.static-white-alpha-300](/docs/foundation/design-token/%24color.palette.static-white-alpha-300)
+[$color.palette.static-white-alpha-300](/foundations/design-token/reference/%24color.palette.static-white-alpha-300)
 
 rangeColor
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 pressed
 
@@ -787,7 +789,7 @@ root
 
 color
 
-[$color.bg.critical-solid-pressed](/docs/foundation/design-token/%24color.bg.critical-solid-pressed)
+[$color.bg.critical-solid-pressed](/foundations/design-token/reference/%24color.bg.critical-solid-pressed)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다. (solid-pressed)
 
@@ -797,13 +799,13 @@ root
 
 color
 
-[$color.bg.disabled](/docs/foundation/design-token/%24color.bg.disabled)
+[$color.bg.disabled](/foundations/design-token/reference/%24color.bg.disabled)
 
 label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -811,7 +813,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -819,7 +821,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -827,7 +829,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -835,7 +837,7 @@ root
 
 color
 
-[$color.bg.critical-solid-pressed](/docs/foundation/design-token/%24color.bg.critical-solid-pressed)
+[$color.bg.critical-solid-pressed](/foundations/design-token/reference/%24color.bg.critical-solid-pressed)
 
 오류, 경고 또는 중요한 문제를 나타내는 데 사용됩니다. (solid-pressed)
 
@@ -857,13 +859,13 @@ root
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
 
 strokeWidth
 
@@ -873,7 +875,7 @@ label
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -883,7 +885,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -893,7 +895,7 @@ prefixIcon
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -903,7 +905,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -911,11 +913,11 @@ progressCircle
 
 trackColor
 
-[$color.palette.gray-500](/docs/foundation/design-token/%24color.palette.gray-500)
+[$color.palette.gray-500](/foundations/design-token/reference/%24color.palette.gray-500)
 
 rangeColor
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -925,7 +927,7 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 disabled
 
@@ -933,19 +935,19 @@ root
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
 
 label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -953,7 +955,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -961,7 +963,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -969,7 +971,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -977,7 +979,7 @@ root
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 ### variant=brandOutline
 
@@ -997,13 +999,13 @@ root
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
 
 strokeWidth
 
@@ -1013,7 +1015,7 @@ label
 
 color
 
-[$color.fg.brand](/docs/foundation/design-token/%24color.fg.brand)
+[$color.fg.brand](/foundations/design-token/reference/%24color.fg.brand)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다.
 
@@ -1023,7 +1025,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.brand](/docs/foundation/design-token/%24color.fg.brand)
+[$color.fg.brand](/foundations/design-token/reference/%24color.fg.brand)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다.
 
@@ -1033,7 +1035,7 @@ prefixIcon
 
 color
 
-[$color.fg.brand](/docs/foundation/design-token/%24color.fg.brand)
+[$color.fg.brand](/foundations/design-token/reference/%24color.fg.brand)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다.
 
@@ -1043,7 +1045,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.brand](/docs/foundation/design-token/%24color.fg.brand)
+[$color.fg.brand](/foundations/design-token/reference/%24color.fg.brand)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다.
 
@@ -1051,11 +1053,11 @@ progressCircle
 
 trackColor
 
-[$color.palette.carrot-200](/docs/foundation/design-token/%24color.palette.carrot-200)
+[$color.palette.carrot-200](/foundations/design-token/reference/%24color.palette.carrot-200)
 
 rangeColor
 
-[$color.bg.brand-solid](/docs/foundation/design-token/%24color.bg.brand-solid)
+[$color.bg.brand-solid](/foundations/design-token/reference/%24color.bg.brand-solid)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (solid)
 
@@ -1065,7 +1067,7 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 disabled
 
@@ -1073,19 +1075,19 @@ root
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 strokeColor
 
-[$color.stroke.neutral-muted](/docs/foundation/design-token/%24color.stroke.neutral-muted)
+[$color.stroke.neutral-muted](/foundations/design-token/reference/%24color.stroke.neutral-muted)
 
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
+의미 단위가 바뀌는 경계를 나누는 선입니다. 섹션과 섹션 사이, 콘텐츠와 액션 영역 사이, 헤더와 본문 경계처럼 한 화면에 한두 번만 등장하는 구분에 사용됩니다. (muted)
 
 label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -1093,7 +1095,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -1101,7 +1103,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -1109,7 +1111,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -1117,7 +1119,7 @@ root
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 ### variant=ghost
 
@@ -1143,7 +1145,7 @@ label
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -1153,7 +1155,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -1163,7 +1165,7 @@ prefixIcon
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -1173,7 +1175,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -1181,11 +1183,11 @@ progressCircle
 
 trackColor
 
-[$color.palette.gray-500](/docs/foundation/design-token/%24color.palette.gray-500)
+[$color.palette.gray-500](/foundations/design-token/reference/%24color.palette.gray-500)
 
 rangeColor
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -1195,7 +1197,7 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 disabled
 
@@ -1209,7 +1211,7 @@ label
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 icon
 
@@ -1217,7 +1219,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
@@ -1225,7 +1227,7 @@ prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
@@ -1233,7 +1235,7 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 loading
 
@@ -1241,7 +1243,7 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 ### size=xsmall
 
@@ -1261,11 +1263,11 @@ root
 
 minHeight
 
-[$dimension.x8](/docs/foundation/design-token/%24dimension.x8)
+[$dimension.x8](/foundations/design-token/reference/%24dimension.x8)
 
 cornerRadius
 
-[$radius.full](/docs/foundation/design-token/%24radius.full)
+[$radius.full](/foundations/design-token/reference/%24radius.full)
 
 progressCircle
 
@@ -1296,15 +1298,15 @@ root
 
 gap
 
-[$dimension.x1](/docs/foundation/design-token/%24dimension.x1)
+[$dimension.x1](/foundations/design-token/reference/%24dimension.x1)
 
 paddingX
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 paddingY
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 prefixIcon
 
@@ -1312,7 +1314,7 @@ prefixIcon
 
 size
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 suffixIcon
 
@@ -1320,17 +1322,17 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 size
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 label
 
 fontSize
 
-[$font-size.t3](/docs/foundation/design-token/%24font-size.t3)
+[$font-size.t3](/foundations/design-token/reference/%24font-size.t3)
 
 lineHeight
 
-[$line-height.t3](/docs/foundation/design-token/%24line-height.t3)
+[$line-height.t3](/foundations/design-token/reference/%24line-height.t3)
 
 ### size=xsmall, layout=iconOnly
 
@@ -1351,15 +1353,15 @@ root
 
 minWidth
 
-[$dimension.x8](/docs/foundation/design-token/%24dimension.x8)
+[$dimension.x8](/foundations/design-token/reference/%24dimension.x8)
 
 paddingX
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 paddingY
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 icon
 
@@ -1367,7 +1369,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 size
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 ### size=small
 
@@ -1387,11 +1389,11 @@ root
 
 minHeight
 
-[$dimension.x9](/docs/foundation/design-token/%24dimension.x9)
+[$dimension.x9](/foundations/design-token/reference/%24dimension.x9)
 
 cornerRadius
 
-[$radius.r2](/docs/foundation/design-token/%24radius.r2)
+[$radius.r2](/foundations/design-token/reference/%24radius.r2)
 
 progressCircle
 
@@ -1422,15 +1424,15 @@ root
 
 gap
 
-[$dimension.x1](/docs/foundation/design-token/%24dimension.x1)
+[$dimension.x1](/foundations/design-token/reference/%24dimension.x1)
 
 paddingX
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 paddingY
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 prefixIcon
 
@@ -1438,7 +1440,7 @@ prefixIcon
 
 size
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 suffixIcon
 
@@ -1446,17 +1448,17 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 size
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 label
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 ### size=small, layout=iconOnly
 
@@ -1477,15 +1479,15 @@ root
 
 minWidth
 
-[$dimension.x9](/docs/foundation/design-token/%24dimension.x9)
+[$dimension.x9](/foundations/design-token/reference/%24dimension.x9)
 
 paddingX
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 paddingY
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 icon
 
@@ -1493,7 +1495,7 @@ layout=iconOnly에서 사용되는 아이콘 슬롯입니다.
 
 size
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 ### size=medium
 
@@ -1513,11 +1515,11 @@ root
 
 minHeight
 
-[$dimension.x10](/docs/foundation/design-token/%24dimension.x10)
+[$dimension.x10](/foundations/design-token/reference/%24dimension.x10)
 
 cornerRadius
 
-[$radius.r2](/docs/foundation/design-token/%24radius.r2)
+[$radius.r2](/foundations/design-token/reference/%24radius.r2)
 
 progressCircle
 
@@ -1548,15 +1550,15 @@ root
 
 gap
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 paddingX
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 paddingY
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 prefixIcon
 
@@ -1564,7 +1566,7 @@ prefixIcon
 
 size
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 suffixIcon
 
@@ -1572,17 +1574,17 @@ Chevron처럼 동작을 보조하는 역할입니다. prefixIcon과 함께 사�
 
 size
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x4](/foundations/design-token/reference/%24dimension.x4)
 
 label
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 ### size=medium, layout=iconOnly
 
@@ -1603,15 +1605,15 @@ root
 
 minWidth
 
-[$dimension.x10](/docs/foundation/design-token/%24dimension.x10)
+[$dimension.x10](/foundations/design-token/reference/%24dimension.x10)
 
 paddingX
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 paddingY
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 icon
 
@@ -1639,11 +1641,11 @@ root
 
 minHeight
 
-[$dimension.x13](/docs/foundation/design-token/%24dimension.x13)
+[$dimension.x13](/foundations/design-token/reference/%24dimension.x13)
 
 cornerRadius
 
-[$radius.r3](/docs/foundation/design-token/%24radius.r3)
+[$radius.r3](/foundations/design-token/reference/%24radius.r3)
 
 progressCircle
 
@@ -1674,15 +1676,15 @@ root
 
 gap
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 paddingX
 
-[$dimension.x5](/docs/foundation/design-token/%24dimension.x5)
+[$dimension.x5](/foundations/design-token/reference/%24dimension.x5)
 
 paddingY
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 prefixIcon
 
@@ -1704,11 +1706,11 @@ label
 
 fontSize
 
-[$font-size.t6](/docs/foundation/design-token/%24font-size.t6)
+[$font-size.t6](/foundations/design-token/reference/%24font-size.t6)
 
 lineHeight
 
-[$line-height.t6](/docs/foundation/design-token/%24line-height.t6)
+[$line-height.t6](/foundations/design-token/reference/%24line-height.t6)
 
 ### size=large, layout=iconOnly
 
@@ -1729,15 +1731,15 @@ root
 
 minWidth
 
-[$dimension.x13](/docs/foundation/design-token/%24dimension.x13)
+[$dimension.x13](/foundations/design-token/reference/%24dimension.x13)
 
 paddingX
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 paddingY
 
-[$dimension.x3\_5](/docs/foundation/design-token/%24dimension.x3_5)
+[$dimension.x3\_5](/foundations/design-token/reference/%24dimension.x3_5)
 
 icon
 
@@ -1749,16 +1751,4 @@ size
 
 Last updated on
 
-[
-
-Components
-
-SEED 디자인 시스템의 모든 컴포넌트를 둘러보세요.
-
-](/docs/components)[
-
-Contextual Floating Button
-
-화면 위에 떠 있으며 특정 상황에서만 나타나는 보조적인 동작을 위한 버튼입니다.
-
-](/docs/components/contextual-floating-button)
+[이전 문서Accordion](/components/accordion)[다음 문서Alert Dialog](/components/alert-dialog)
