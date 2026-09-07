@@ -15,14 +15,12 @@
             "paddingX": {
               "type": "dimension"
             },
+            "titleMinGap": {
+              "type": "dimension",
+              "description": "main과 left/right 영역 간 최소 간격입니다."
+            },
             "color": {
               "type": "color"
-            },
-            "strokeColor": {
-              "type": "color"
-            },
-            "strokeWidth": {
-              "type": "dimension"
             },
             "gradient": {
               "type": "gradient"
@@ -125,22 +123,28 @@
       }
     },
     "definitions": {
+      "base": {
+        "enabled": {
+          "root": {
+            "paddingX": "$dimension.x1_5"
+          }
+        }
+      },
       "theme=ios": {
         "enabled": {
           "root": {
             "height": "44px",
-            "paddingX": "$dimension.x4"
+            "titleMinGap": "$dimension.x2"
           }
         }
       },
       "theme=android": {
         "enabled": {
           "root": {
-            "height": "56px",
-            "paddingX": "$dimension.x4"
+            "height": "56px"
           },
           "main": {
-            "paddingLeft": "16px"
+            "paddingLeft": "$dimension.x1_5"
           }
         }
       },
@@ -194,15 +198,6 @@
           }
         }
       },
-      "divider=true": {
-        "enabled": {
-          "root": {
-            "strokeColor": "$color.stroke.neutral-subtle",
-            "strokeWidth": "1px"
-          }
-        }
-      },
-      "divider=false": {},
       "titleLayout=titleOnly": {
         "enabled": {
           "title": {
