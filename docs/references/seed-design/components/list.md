@@ -1,22 +1,28 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/list
-fetched: 2026-05-08T06:33:26.779Z
+fetched: 2026-09-21T04:26:58.144Z
 -->
 
-[Components](/docs/components)Layout
+ComponentsLLMS.txt
 
 # List
 
 가로 행으로 구성된 콘텐츠를 표현하는 컴포넌트입니다.
 
-LLMs.txt
+List Item
 
-다른 도구로 열기
+Figma[React](/react/components/list)[Lynx](/lynx/components/list)iOSAndroid
+
+List Header
+
+Figma[React](/react/components/list)[Lynx](/lynx/components/list)iOSAndroid
+
+![List cover image](/og/components/list.webp)
 
 ## [Anatomy](#anatomy)
 
-![List의 Anatomy 이미지. List Item은 Suffix, Prefix, Title, Detail로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/297df7db-1fb7-4dd0-8300-c1f1e003f366)
+![List의 Anatomy 이미지. List Item은 Suffix, Prefix, Title, Detail로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4e38b1c0-5bf4-44a0-a0f3-4ea448a46954)
 
 List Item은 Suffix, Prefix, Title, Detail로 구성됩니다.
 
@@ -26,41 +32,41 @@ List Item은 Suffix, Prefix, Title, Detail로 구성됩니다.
 
 ### [Align Property](#align-property)
 
-![List Item의 Single Line과 Multi Line Variants](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3bd85d00-8679-4859-9f82-c07319c4851b)
+![List Item의 Single Line과 Multi Line Variants](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/af579f18-34cd-4a7d-81c2-5df2ac5e2be9)
 
 Align의 기본값은 Center입니다. Prefix와 Suffix가 콘텐츠 영역의 수직 중앙에 정렬됩니다. Title과 Detail이 한 줄로 짧게 표시되는 경우에 적합합니다.
 
-![List Item을 상단으로 정렬한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/46349841-565c-49f0-b9a2-f096aacfc2dd)
+![List Item을 상단으로 정렬한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9319acf8-6863-41f1-8003-3b058a2b30f4)
 
 Align을 Top으로 설정하면 Prefix와 Suffix가 콘텐츠 영역의 상단에 고정됩니다. Title이 길어져 두 줄 이상으로 넘어가거나, Detail 텍스트가 많아질 때 사용합니다.
 
 ### [Highlighted Property](#highlighted-property)
 
-![List의 Highlighted Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c1b0d4b6-1078-4771-814d-f5fdc424c000)
+![List의 Highlighted Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bffe1816-ace5-4d95-826b-025393bbe2b4)
 
 List 컴포넌트의 Highlighted prop은 새로운 알림이나 업데이트처럼 사용자의 주목이 필요한 항목을 시각적으로 강조할 때 사용합니다.
 
 ### [List State](#list-state)
 
-![List의 State - Enabled, Pressed, Disabled](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fd6d15be-7b67-46fc-a708-f7d80bb08103)
+![List의 State - Enabled, Pressed, Disabled](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/78d207b7-25e5-421e-bb25-ccd3f55e0c95)
 
 List 컴포넌트는 Enabled, Pressed, Disabled 상태를 제공합니다.
 
 ### [Prefix Property](#prefix-property)
 
-![List의 Prefix Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/66413bdc-daa5-4d27-80bf-5d7916c0c55a)
+![List의 Prefix Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/143d5d82-fe2d-4d64-88ae-8fe93452e7c3)
 
 Prefix Slot은 List 좌측에 위치합니다. List Item 컴포넌트는 Prefix에 여러 가지 타입을 프리셋 형태로 제공합니다. 포함된 타입 이외에 다른 요소를 사용하고 싶은 경우 Custom Child Swap을 통해서 변경해주세요.
 
 ### [Suffix Property](#suffix-property)
 
-![List의 Suffix Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fdc6de46-37c9-4ebb-81c9-8c6abddcbe33)
+![List의 Suffix Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8adf5a4a-f3db-4a2c-85b7-adb9f95303d4)
 
 Suffix는 List 우측에 위치합니다. List Item 컴포넌트는 Suffix에 여러 가지 타입을 프리셋 형태로 제공합니다. 포함된 타입 이외에 다른 요소를 사용하고 싶은 경우 Custom Child Swap을 통해서 변경해주세요.
 
 ### [Detail Property](#detail-property)
 
-![List의 Detail Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/af71fce5-4e40-4394-ab8f-bd5ad4e70724)
+![List의 Detail Property](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7cf99388-10a0-4c9d-a06c-1e3b6de0b667)
 
 Detail은 List 제목 하단에 위치합니다. Sub Text, Tag Group을 기본으로 제공하며 사용처 필요에 따라서 Custom해서 사용할 수 있습니다.
 
@@ -68,9 +74,9 @@ Detail은 List 제목 하단에 위치합니다. Sub Text, Tag Group을 기본�
 
 ### [List, List Item 사용하기](#list-list-item-사용하기)
 
-![List와 List Item 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a3a6cb20-0b45-4d11-be5a-e0a08746f790)
+![List와 List Item 사용 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0b731711-3ed0-4de3-9ab0-556221ab480b)
 
-![List의 List Item 중 하나가 Pressed 상태인 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/868eb4d6-a60b-49f9-9236-a8e5bedd60a0)
+![List의 List Item 중 하나가 Pressed 상태인 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/1c2380f3-4a63-41d4-9967-e918b62e8b75)
 
 List Item은 정보를 가로 행으로 묶어서 표현되는 컴포넌트로 사용자가 빠르게 인지하고 단순한 액션을 필요로 할 때 사용해야 합니다. List는 여러개의 List Item을 묶어서 연속된 열로 표현해야할 때 사용합니다.
 
@@ -78,25 +84,25 @@ List의 부모 컨테이너는 사용처의 의도에 맞게 자유롭게 사용
 
 ### [List Header로 묶어서 사용하기](#list-header로-묶어서-사용하기)
 
-![List Header로 묶어서 사용하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ed94f1e9-7f46-450c-be00-b2509eab9a88)
+![List Header로 묶어서 사용하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/15a0f050-14b7-4b5b-8094-b4756e2490fc)
 
 List를 그룹 단위로 묶어서 표현할 수 있도록 List Header 컴포넌트를 제공합니다.
 
 ### [List Item 클리커블 사용하지 않기](#list-item-클리커블-사용하지-않기)
 
-![List Item 클리커블을 사용하지 않는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/984c582c-8b21-4b03-89e2-ff56d9f720cf)
+![List Item 클리커블을 사용하지 않는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cd5fb8c2-f1da-4151-b195-8ff1ee3d60e5)
 
 List Item은 클리커블 동작을 기본으로 포함하고 있습니다. 사용처에서는 의도와 플로우, 맥락에 따라서 클리커블을 직접 제거해서 사용할 수 있습니다.
 
 ### [List Item 내부 간격 조정](#list-item-내부-간격-조정)
 
-![List Item 상하 padding 간격 조정 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6b128cc7-2bec-4c17-ad6c-8b926ef11110)
+![List Item 상하 padding 간격 조정 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3bac9680-86a4-4ba8-b7fb-609fc56630a4)
 
-![List Item 좌우 padding 간격 조정 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3e755312-aee0-4423-aa60-a93ff041307a)
+![List Item 좌우 padding 간격 조정 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b37b819a-9956-4844-8d19-8a68c8116e08)
 
-![List Item 내부 간격 조정 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e7b1bbc0-f2df-4b29-9df0-0e43a64963d6)
+![List Item 내부 간격 조정 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bb40b25e-aed8-424f-814f-b2f5d1213ba0)
 
-![한 List 안에서 List Item 간 정렬이 다른 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/eb9fca1b-86a1-49e0-a26d-8ea5edfef2cf)
+![한 List 안에서 List Item 간 정렬이 다른 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/80e86b6c-0fc4-4540-b1a9-45a1070c02e6)
 
 Don’t
 
@@ -110,17 +116,17 @@ List Item는 높이, 넓이 패딩 간격을 갖고 있으며, 사용처 의도�
 
 ### [List Item 클리커블](#list-item-클리커블)
 
-![List Item 클릭 타겟 영역이 하나인 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/24d6573a-0f65-4786-9cb7-f602de770e34)
+![List Item 클릭 타겟 영역이 하나인 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/472e5780-7513-4b3f-a3e2-ca00d8f74e35)
 
 List Item은 기본으로 클릭 동작을 제공하며 여러개의 상호작용 가능한 요소와 조합되어 사용할 수 있습니다. List에서 제공하는 Button 컴포넌트 이외에 다른 요소를 Custom하게 사용할 경우 별도 Spec으로 동작 명세를 정의해주세요.
 
-![List Item 클릭 타겟 영역이 두 개인 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cc476b16-c71b-4303-830c-4fa218b0eaba)
+![List Item 클릭 타겟 영역이 두 개인 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/81e237f7-03a9-408b-8a66-6438b84d2047)
 
-![List Item 클릭 타겟 영역이 세 개 이상인 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7739d7fb-93f0-4fca-b82d-5d6ed290cb73)
+![List Item 클릭 타겟 영역이 세 개 이상인 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c838a7c5-c749-4825-aa77-a631c6724e74)
 
-![Help Bubble 등 Floating 요소를 하는 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7b49e463-3973-4b9a-9770-767d5ff9c445)
+![Help Bubble 등 Floating 요소를 하는 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b85d0bb2-b43a-487d-9c3b-0b0c47043dd6)
 
-![List Item에 여러 상호작용 요소를 과도하게 배치한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/62ad6822-99b0-4ce2-8b91-9511b1823efb)
+![List Item에 여러 상호작용 요소를 과도하게 배치한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/87cff0de-07d4-4c37-918c-7ce60183d347)
 
 Don’t
 
@@ -128,9 +134,19 @@ Don’t
 
 **List Item은 표현 공간에 제약이 있기 때문에 복잡하게 상호작용 요소를 조합하지 마세요.**
 
+### [Switch/Checkmark/Radiomark 사용 시](#switchcheckmarkradiomark-사용-시)
+
+List Item의 prefix나 suffix에 [Switchmark](/components/switch#switchmark), [Checkmark](/components/checkbox#checkmark), [Radiomark](/components/radio#radio-mark)를 넣을 때는 List Item 전체를 하나의 클릭 영역으로 사용하여 행 어디를 눌러도 동작이 일어나도록 합니다. 이 경우 prefix/suffix에 [Action Button](/components/action-button)과 같이 자체 클릭 영역이 필요한 요소를 함께 넣지 않습니다.
+
+![List Item suffix에 Switchmark를 배치하고 행 전체를 클릭 영역으로 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/664fb08c-8d50-4cc6-a398-4b6d9d3cd387)
+
+약관과 같이 별도 화면에서 확인해야 하는 정보가 있는 경우, 레이블 텍스트 안에 하이퍼링크를 사용하되, 행 동작으로 탭이 전파되지 않도록 처리합니다.
+
+![약관 동의 Bottom Sheet에서 각 약관 항목의 '보기' 하이퍼링크로 약관을 별도 화면에서 확인하도록 하고, 체크박스 행 동작과 분리한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/edbeb355-b862-474f-a158-7abdf0d117a4)
+
 ### [Concentric Radius](#concentric-radius)
 
-![Concentric Radius 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e4ef4a4e-4626-4971-a83b-561dad1d721f)
+![Concentric Radius 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e3b69f7a-72c0-4e00-9fb8-ed0257a85dea)
 
 List Item을 포함하는 컨테이너의 모서리 반경(radius)에 맞춰 항목의 pressed-inset radius를 유연하게 조정할 수 있습니다.
 
@@ -140,45 +156,25 @@ List Item을 포함하는 컨테이너의 모서리 반경(radius)에 맞춰 항
 
 ### [List Item을 Select로 Custom하기](#list-item을-select로-custom하기)
 
-![Bottom Sheet와 조합하여 사용하는 경우 - Checkmark](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6b125636-73da-4e84-86cc-180f9607ac16)
+![Bottom Sheet와 조합하여 사용하는 경우 - Checkmark](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7e2fff2e-18a6-41aa-ba29-e6383daa1fa8)
 
-![Bottom Sheet와 조합하여 사용하는 경우 - Radio Mark](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b465dc9b-80e7-43fc-a778-70d5291c4a9d)
+![Bottom Sheet와 조합하여 사용하는 경우 - Radio Mark](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f66c2b78-fca5-41cd-a407-a35cff59ac00)
 
-![List 내부에 Radio Mark를 사용한 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2afe0ff8-f18c-47bb-8e98-1062a243e89f)
+![List 내부에 Radio Mark를 사용한 경우](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b95788fa-b42c-43cd-b6ba-c534281f10fa)
 
-List Item에 [Checkbox](/docs/components/checkbox), Radio Mark를 조합한다면 Select로 사용할 수 있습니다. Checkbox는 Multi Select (복수 선택), Radio Mark는 Single Select (단일 선택)을 의미합니다.
+List Item에 [Checkbox](/components/checkbox), Radio Mark를 조합한다면 Select로 사용할 수 있습니다. Checkbox는 Multi Select (복수 선택), Radio Mark는 Single Select (단일 선택)을 의미합니다.
 
 Single Select을 사용할 경우 List Item이 반드시 2개 이상 포함되어 있어야 올바르게 Select를 구성할 수 있습니다.
 
-![List Item에 Checkbox, Radio Mark를 혼합하여 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3719cb09-0726-4911-a9ab-faf48f7374d4)
+![List Item에 Checkbox, Radio Mark를 혼합하여 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/844060ca-3dc0-4b84-b2fb-a1b53f29b267)
 
 Don’t
 
 Single Select(Radio)는 반드시 2개 이상 항목으로 구성되어야 합니다. Single, Multi Select를 하나의 그룹에서 혼합해서 사용하지 마세요.
 
-## [Specification & Platform Status](#specification--platform-status)
+## [Specification](#specification)
 
 ### [List Item](#list-item)
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/list)
-
-iOS
-
-Done
-
-Android
-
-Done
 
 #### base
 
@@ -196,97 +192,97 @@ root
 
 paddingY
 
-[$dimension.x3](/docs/foundation/design-token/%24dimension.x3)
+[$dimension.x3](/foundations/design-token/reference/%24dimension.x3)
 
 paddingX
 
-[$dimension.spacing-x.global-gutter](/docs/foundation/design-token/%24dimension.spacing-x.global-gutter)
+[$dimension.spacing-x.global-gutter](/foundations/design-token/reference/%24dimension.spacing-x.global-gutter)
 
 화면 전체에 적용되는 기본 수평 padding 값입니다.
 
 color
 
-[$color.bg.transparent](/docs/foundation/design-token/%24color.bg.transparent)
+[$color.bg.transparent](/foundations/design-token/reference/%24color.bg.transparent)
 
 colorDuration
 
-[$duration.color-transition](/docs/foundation/design-token/%24duration.color-transition)
+[$duration.color-transition](/foundations/design-token/reference/%24duration.color-transition)
 
 colorTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 marginDuration
 
-[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+[$duration.d3](/foundations/design-token/reference/%24duration.d3)
 
 marginTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 borderRadiusDuration
 
-[$duration.d3](/docs/foundation/design-token/%24duration.d3)
+[$duration.d3](/foundations/design-token/reference/%24duration.d3)
 
 borderRadiusTimingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
-content
+body
 
 gap
 
-[$dimension.x0\_5](/docs/foundation/design-token/%24dimension.x0_5)
+[$dimension.x0\_5](/foundations/design-token/reference/%24dimension.x0_5)
 
 paddingRight
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 title
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
 fontSize
 
-[$font-size.t5](/docs/foundation/design-token/%24font-size.t5)
+[$font-size.t5](/foundations/design-token/reference/%24font-size.t5)
 
 lineHeight
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 detail
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 fontSize
 
-[$font-size.t3](/docs/foundation/design-token/%24font-size.t3)
+[$font-size.t3](/foundations/design-token/reference/%24font-size.t3)
 
 lineHeight
 
-[$line-height.t3](/docs/foundation/design-token/%24line-height.t3)
+[$line-height.t3](/foundations/design-token/reference/%24line-height.t3)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 prefix
 
 paddingRight
 
-[$dimension.x3](/docs/foundation/design-token/%24dimension.x3)
+[$dimension.x3](/foundations/design-token/reference/%24dimension.x3)
 
 prefixIcon
 
@@ -296,7 +292,7 @@ size
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -304,27 +300,27 @@ suffix
 
 gap
 
-[$dimension.x1](/docs/foundation/design-token/%24dimension.x1)
+[$dimension.x1](/foundations/design-token/reference/%24dimension.x1)
 
 suffixText
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
 fontSize
 
-[$font-size.t5](/docs/foundation/design-token/%24font-size.t5)
+[$font-size.t5](/foundations/design-token/reference/%24font-size.t5)
 
 lineHeight
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 suffixIcon
 
@@ -334,7 +330,7 @@ size
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
@@ -344,15 +340,21 @@ root
 
 color
 
-[$color.bg.transparent-pressed](/docs/foundation/design-token/%24color.bg.transparent-pressed)
+[$color.bg.transparent-pressed](/foundations/design-token/reference/%24color.bg.transparent-pressed)
 
 marginX
 
-[$dimension.x1\_5](/docs/foundation/design-token/%24dimension.x1_5)
+pressed 시 배경 레이어는 좌우 폭이 marginX만큼 줄어들고, 배경 레이어 위 요소들이 위치하는 레이아웃 레이어는 scale로 인해 전체적으로 줄어드는 형태로 두 레이어가 별개로 작동합니다. 이 값은 OS 동작 줄이기 설정의 영향을 받지 않습니다.
+
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 cornerRadius
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
+
+scaleScope
+
+content
 
 highlighted
 
@@ -360,7 +362,7 @@ root
 
 color
 
-[$color.bg.brand-weak](/docs/foundation/design-token/%24color.bg.brand-weak)
+[$color.bg.brand-weak](/foundations/design-token/reference/%24color.bg.brand-weak)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (weak)
 
@@ -370,7 +372,7 @@ root
 
 color
 
-[$color.bg.brand-weak-pressed](/docs/foundation/design-token/%24color.bg.brand-weak-pressed)
+[$color.bg.brand-weak-pressed](/foundations/design-token/reference/%24color.bg.brand-weak-pressed)
 
 브랜드와 관련된 요소들이 즉각적으로 인식될 수 있도록 돕습니다. 화면에서 가장 중요한 액션을 강조하는데 사용할 수 있습니다. (weak-pressed)
 
@@ -380,47 +382,27 @@ title
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 detail
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 prefixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 suffixIcon
 
 color
 
-[$color.fg.disabled](/docs/foundation/design-token/%24color.fg.disabled)
+[$color.fg.disabled](/foundations/design-token/reference/%24color.fg.disabled)
 
 ### [List Header](#list-header)
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/list)
-
-iOS
-
-Done
-
-Android
-
-Done
 
 #### base
 
@@ -438,25 +420,25 @@ root
 
 paddingX
 
-[$dimension.spacing-x.global-gutter](/docs/foundation/design-token/%24dimension.spacing-x.global-gutter)
+[$dimension.spacing-x.global-gutter](/foundations/design-token/reference/%24dimension.spacing-x.global-gutter)
 
 화면 전체에 적용되는 기본 수평 padding 값입니다.
 
 paddingY
 
-[$dimension.x2](/docs/foundation/design-token/%24dimension.x2)
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
 
 gap
 
-[$dimension.x2\_5](/docs/foundation/design-token/%24dimension.x2_5)
+[$dimension.x2\_5](/foundations/design-token/reference/%24dimension.x2_5)
 
 fontSize
 
-[$font-size.t4](/docs/foundation/design-token/%24font-size.t4)
+[$font-size.t4](/foundations/design-token/reference/%24font-size.t4)
 
 lineHeight
 
-[$line-height.t4](/docs/foundation/design-token/%24line-height.t4)
+[$line-height.t4](/foundations/design-token/reference/%24line-height.t4)
 
 #### variant=mediumWeak
 
@@ -474,11 +456,11 @@ root
 
 fontWeight
 
-[$font-weight.medium](/docs/foundation/design-token/%24font-weight.medium)
+[$font-weight.medium](/foundations/design-token/reference/%24font-weight.medium)
 
 color
 
-[$color.fg.neutral-subtle](/docs/foundation/design-token/%24color.fg.neutral-subtle)
+[$color.fg.neutral-subtle](/foundations/design-token/reference/%24color.fg.neutral-subtle)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
 
@@ -498,26 +480,14 @@ root
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
 Last updated on
 
-[
-
-Bottom Sheet
-
-화면 하단에서 올라오는 모달 컴포넌트입니다. 추가 정보나 액션 목록을 제공하면서도 현재 컨텍스트를 유지할 때 사용됩니다.
-
-](/docs/components/bottom-sheet)[
-
-Menu Sheet
-
-사용자의 작업과 관련된 선택지를 제공하는 시트 형태의 컴포넌트입니다.
-
-](/docs/components/menu-sheet)
+[이전 문서Input Button](/components/input-button)[다음 문서Manner Temp & Manner Temp Badge](/components/manner-temp)
