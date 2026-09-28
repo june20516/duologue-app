@@ -1,42 +1,22 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/skeleton
-fetched: 2026-05-08T06:33:27.289Z
+fetched: 2026-09-28T04:52:52.342Z
 -->
 
-[Components](/docs/components)Feedback
+ComponentsLLMS.txt
 
 # Skeleton
 
 콘텐츠가 로딩되는 동안 이후 나타날 요소의 윤곽을 미리 보여주어 로딩 시간을 짧게 느끼게 하는 UI 요소입니다.
 
-LLMs.txt
+Figma[React](/react/components/skeleton)iOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-](/react/components/skeleton)
-
-iOS
-
-Done
-
-Android
-
-Done
+![Skeleton cover image](/og/components/skeleton.webp)
 
 ## [Anatomy](#anatomy)
 
-![Skeleton의 Anatomy 이미지. Background와 Corner Radius로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a4195ffe-dbcc-448c-a55d-38f2c94ff4fd)
+![Skeleton의 Anatomy 이미지. Background와 Corner Radius로 구성됩니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c9387fd6-ac13-4c60-9162-d313322d62bf)
 
 Skeleton은 background, Corner radius로 구성되며 로딩 시작 시 shimmer animation이 나타납니다.
 
@@ -44,7 +24,7 @@ Skeleton은 background, Corner radius로 구성되며 로딩 시작 시 shimmer 
 
 ### [Size](#size)
 
-![Skeleton의 Size - Width와 Height를 자유롭게 조절할 수 있습니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/74dc9516-f083-4822-af73-932be9df51e0)
+![Skeleton의 Size - Width와 Height를 자유롭게 조절할 수 있습니다.](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f7d1a22f-b449-485f-96a2-e88f4bd4def7)
 
 Skeleton의 너비(Width)와 높이(Height)는 자유롭게 조절할 수 있습니다.
 
@@ -52,7 +32,7 @@ Skeleton의 너비(Width)와 높이(Height)는 자유롭게 조절할 수 있습
 
 ### [Radius](#radius)
 
-![Skeleton의 Radius Property - 0, 8, 16, 9999](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/dfff4cd2-9344-4652-bc06-3259af569ff3)
+![Skeleton의 Radius Property - 0, 8, 16, 9999](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/97fbfaf3-fb61-4203-a299-e4cd521d6e2b)
 
 Skeleton의 Radius 값은 표현하려는 콘텐츠의 형태에 따라 0, 8, 16, 9999를 사용합니다.
 
@@ -68,19 +48,19 @@ Radius
 
 16
 
-**[Avatar](/docs/components/avatar) (원형)**
+**[Avatar](/components/avatar) (원형)**
 
 9999
 
 ### [Tone](#tone)
 
-![Skeleton의 Tone Property - Neutral, Magic](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/52606cfe-bac4-428e-b968-af8521f4e896)
+![Skeleton의 Tone Property - Neutral, Magic](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/afc9f1d3-457c-471d-8cfc-f7cb4d6e5220)
 
-일반 콘텐츠는 **neutral**, AI 활용 콘텐츠는 **magic** 스타일을 사용합니다.
+일반 콘텐츠는 neutral, AI 활용 콘텐츠는 magic 스타일을 사용합니다.
 
 ### [Animation](#animation)
 
-![Skeleton의 Animation - Shimmer 애니메이션](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0dd1d973-2181-404f-ab07-551ce9a9f99d)
+![Skeleton의 Animation - Shimmer 애니메이션](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/64910042-c7c1-44fe-bcb3-f4343227d89e)
 
 Skeleton은 로딩 중임을 나타내기 위해 시머(Shimmer) 애니메이션을 기본으로 제공합니다.
 
@@ -92,17 +72,21 @@ SEED React Skeleton을 통해 Skeleton의 Shimmer 애니메이션을 확인합�
 
 
 
+
+
+
+
 ](/react/components/skeleton)
 
 ## [Guidelines](#guidelines)
 
 ### [Skeleton의 사용](#skeleton의-사용)
 
-![Skeleton 사용 예시 - 검색 화면에서의 활용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c69c1d52-e3c2-42af-bd5e-191caa441f73)
+![Skeleton 사용 예시 - 검색 화면에서의 활용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4604eab1-1a66-4c6a-b9a9-4026ef9be4a6)
 
-![Skeleton 사용 예시 - 게시글 상세 화면에서의 활용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/3d8b5ea2-db47-4c53-b21a-dd1007b8ed9e)
+![Skeleton 사용 예시 - 게시글 상세 화면에서의 활용](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e0964e6d-200e-4619-9112-9e060eeadeb5)
 
-![Skeleton과 Progress Circle을 함께 사용하여 로딩 상태를 나타낸 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/154033e3-4513-45a1-b392-e1d56e35e668)
+![Skeleton과 Progress Circle을 함께 사용하여 로딩 상태를 나타낸 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/5b56d413-83a8-4641-bb1f-a663f4ee6a06)
 
 Don’t
 
@@ -114,9 +98,9 @@ Skeleton은 주로 목록이나 카드 뷰, 리스트 뷰 등 반복되는 데�
 
 ### [상황에 맞는 Tone 사용하기](#상황에-맞는-tone-사용하기)
 
-![Tone 사용 예시 - Neutral](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/24d37ce9-3312-4b28-b4a9-b7af5a0530c1)
+![Tone 사용 예시 - Neutral](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/55b1cccc-4b2b-468d-bd47-6149a9166ac6)
 
-![Tone 사용 예시 - Magic](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e71b4e96-bd19-4dcd-8ddb-433f9e330884)
+![Tone 사용 예시 - Magic](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/c6d2e4c4-564f-431f-891e-1a01e19ab961)
 
 데이터 종류에 따라 Skeleton이 다른 색상으로 표시됩니다. 맥락에 알맞은 Tone을 선택하여 사용해주세요.
 
@@ -136,13 +120,13 @@ Tone
 
 ### [Skeleton vs. Progress Circle](#skeleton-vs-progress-circle)
 
-![로딩 상태를 나타내기 위해 Skeleton을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8d15d6fd-518e-4f49-a118-fd6eb2e9a2e6)
+![로딩 상태를 나타내기 위해 Skeleton을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8a86e1a0-98b8-497c-9afe-11b83854ec49)
 
-![로딩 상태를 나타내기 위해 Progress Circle을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/fa2707ef-e54d-4205-ae9c-70208c511a33)
+![로딩 상태를 나타내기 위해 Progress Circle을 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ee3e0634-f3f1-421a-9eba-d41011ffe6fc)
 
-Skeleton과 [Progress Circle](/docs/components/progress-circle)은 콘텐츠 로딩 상태를 보여준다는 공통점 때문에 자주 혼동될 수 있습니다.
+Skeleton과 [Progress Circle](/components/progress-circle)은 콘텐츠 로딩 상태를 보여준다는 공통점 때문에 자주 혼동될 수 있습니다.
 
-Skeleton은 무엇이 로딩될지 콘텐츠의 구조를 보여주는 반면, [Progress Circle](/docs/components/progress-circle)은 '지금 로딩 중'이라는 상태 자체를 알려준다는 점에서 핵심적인 차이가 있습니다.
+Skeleton은 무엇이 로딩될지 콘텐츠의 구조를 보여주는 반면, [Progress Circle](/components/progress-circle)은 '지금 로딩 중'이라는 상태 자체를 알려준다는 점에서 핵심적인 차이가 있습니다.
 
 **Skeleton**
 
@@ -200,7 +184,7 @@ duration
 
 timingFunction
 
-[$timing-function.easing](/docs/foundation/design-token/%24timing-function.easing)
+[$timing-function.easing](/foundations/design-token/reference/%24timing-function.easing)
 
 ### radius=0
 
@@ -280,7 +264,7 @@ root
 
 cornerRadius
 
-[$radius.full](/docs/foundation/design-token/%24radius.full)
+[$radius.full](/foundations/design-token/reference/%24radius.full)
 
 ### tone=neutral
 
@@ -300,13 +284,13 @@ root
 
 color
 
-[$color.palette.gray-200](/docs/foundation/design-token/%24color.palette.gray-200)
+[$color.palette.gray-200](/foundations/design-token/reference/%24color.palette.gray-200)
 
 shimmer
 
 gradient
 
-[$gradient.shimmer-neutral](/docs/foundation/design-token/%24gradient.shimmer-neutral)
+[$gradient.shimmer-neutral](/foundations/design-token/reference/%24gradient.shimmer-neutral)
 
 Skeleton shimmer
 
@@ -328,28 +312,16 @@ root
 
 color
 
-[$color.bg.magic-weak](/docs/foundation/design-token/%24color.bg.magic-weak)
+[$color.bg.magic-weak](/foundations/design-token/reference/%24color.bg.magic-weak)
 
 shimmer
 
 gradient
 
-[$gradient.shimmer-magic](/docs/foundation/design-token/%24gradient.shimmer-magic)
+[$gradient.shimmer-magic](/foundations/design-token/reference/%24gradient.shimmer-magic)
 
 Skeleton AI shimmer
 
 Last updated on
 
-[
-
-Result Section
-
-데이터 로딩 결과, 사용자의 액션 완료 여부 등 사용자에 액션에 대한 결과를 제공하는 템플릿입니다. 주로 전체 화면이나 특정 영역을 차지하여 다음 액션을 유도하거나 현재 상황을 안내하는 역할을 합니다.
-
-](/docs/components/result-section)[
-
-Snackbar
-
-화면 하단에 일시적으로 나타나 상태나 결과를 안내하는 컴포넌트입니다.
-
-](/docs/components/snackbar)
+[이전 문서Side Panel](/components/side-panel)[다음 문서Slider](/components/slider)

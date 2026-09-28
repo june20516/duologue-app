@@ -41,6 +41,13 @@
             },
             "paddingY": {
               "type": "dimension"
+            },
+            "scaleScope": {
+              "type": "enum",
+              "values": [
+                "self",
+                "content"
+              ]
             }
           }
         },
@@ -173,6 +180,11 @@
           },
           "label": {
             "fontWeight": "$font-weight.bold"
+          }
+        },
+        "pressed": {
+          "root": {
+            "scaleScope": "self"
           }
         }
       },

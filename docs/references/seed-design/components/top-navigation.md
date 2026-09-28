@@ -1,46 +1,24 @@
 <!--
 자동 생성됨. 직접 편집하지 마세요.
 source: https://seed-design.io/docs/components/top-navigation
-fetched: 2026-05-08T06:33:28.155Z
+fetched: 2026-09-28T04:52:53.097Z
 -->
 
-[Components](/docs/components)Navigation
+ComponentsLLMS.txt
 
 # Top Navigation
 
 화면 상단에 위치하여 탐색 인터페이스를 제공하는 네비게이션 컴포넌트입니다.
 
-LLMs.txt
+Figma[React](/react/stackflow/app-screen)[Lynx](/lynx/components/app-bar)iOSAndroid
 
-다른 도구로 열기
-
-Figma
-
-Done
-
-[
-
-React
-
-Done
-
-Stackflow AppBar
-
-](/react/stackflow/app-screen)
-
-iOS
-
-Done
-
-Android
-
-Done
+![Top Navigation cover image](/og/components/top-navigation.webp)
 
 ## [Anatomy](#anatomy)
 
-![Top Navigation Anatomy - Root 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/439a3554-7287-4616-becc-087d078bfdeb)
+![Top Navigation Anatomy - Root 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/9a1a00d9-f8b8-4a44-94e8-44f81a2183e9)
 
-![Top Navigation Anatomy - Standard 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2ee63a15-313f-45dd-a78b-b66af4aa58a9)
+![Top Navigation Anatomy - Standard 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/684257ce-4407-42ea-81d9-e2ae149e4a1b)
 
 Top Navigation은 Root 타입과 Standard 타입, 두 가지로 나뉩니다. 각 타입은 별도의 구현체와 Figma 컴포넌트로 제공됩니다.
 
@@ -48,9 +26,9 @@ Top Navigation은 Root 타입과 Standard 타입, 두 가지로 나뉩니다. �
 
 ### [Title Type](#title-type)
 
-![Top Navigation Title Type - Root 타입의 Title 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/de75e3f1-43ce-4dc3-b8f4-af960b073d61)
+![Top Navigation Title Type - Root 타입의 Title 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/378b9fda-e9ce-48df-b623-12607796614d)
 
-![Top Navigation Title Type - Standard 타입의 Title 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4f57a142-5d5e-445c-becf-64b824111db6)
+![Top Navigation Title Type - Standard 타입의 Title 영역](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/afad3ed9-7226-428d-ba0f-f88010f64e24)
 
 Root Top Navigation의 Title 영역에는 Label만 표시하는 Text 타입과, 선택 시 동작이 있는 Button 타입을 선택하여 사용할 수 있습니다.
 
@@ -58,7 +36,7 @@ Standard Top Navigation의 경우 Title 영역을 Slot으로 구성하여 조금
 
 ### [Left Slot](#left-slot)
 
-![Top Navigation Left Slot - 뒤로가기와 닫기 버튼](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f8bc13c4-662e-4dcf-be9d-54804e84aef4)
+![Top Navigation Left Slot - 뒤로가기와 닫기 버튼](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ad07e422-16b4-43af-a0d5-2bc218034df9)
 
 Standard 타입 Top Navigation은 2-depth 이상의 화면에서 사용하며, 왼쪽에 네비게이션 액션을 배치할 수 있습니다. 뒤로가기와 닫기 버튼을 배치할 수 있으며, 두 버튼은 서로 다른 동작을 제공합니다. 각 버튼의 차이를 이해하고 정확한 용도에 맞게 사용해야 합니다.
 
@@ -66,11 +44,11 @@ Standard 타입 Top Navigation은 2-depth 이상의 화면에서 사용하며, �
 
 ### [Right Slot](#right-slot)
 
-![Top Navigation Right Slot - Root 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cc55e541-efdf-46e6-bc49-e50997160881)
+![Top Navigation Right Slot - Root 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/74a335da-6b9f-4ef0-943b-0fc0128790f1)
 
-![Top Navigation Right Slot - Standard 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/01b3fabd-9427-4ef6-a846-19e215b2436e)
+![Top Navigation Right Slot - Standard 타입](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/55402f4c-69e4-4a71-9030-ce45a13b249a)
 
-![타이틀 영역과 우측 Action 영역이 겹치는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6f04a4fb-6c73-43b3-8797-f7cb3f8eca08)
+![타이틀 영역과 우측 Action 영역이 겹치는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a6d2f3cc-09d7-48ad-89e5-6ecc87f39ad5)
 
 Don’t
 
@@ -80,17 +58,17 @@ Top Navigation 우측은 Slot으로 구성되어 Icon Button 또는 Text Button�
 
 ### [Notification Badge](#notification-badge)
 
-![Top Navigation Notification Badge - Icon Button에 Notification Badge 표시 예시 (Root 타입)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/4d9c0c35-08bf-4b28-b3ba-a7d3671b3774)
+![Top Navigation Notification Badge - Icon Button에 Notification Badge 표시 예시 (Root 타입)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/db1f2855-ae7e-4b7e-9994-395ec3c4eed0)
 
-![Top Navigation Notification Badge - Icon Button에 Notification Badge 표시 예시 (Standard 타입)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2d3095a4-2cf7-4360-bf75-11e2df1a476d)
+![Top Navigation Notification Badge - Icon Button에 Notification Badge 표시 예시 (Standard 타입)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e51ea68f-dc04-4f61-9dd0-9c9ba2295433)
 
-Icon Button에 [Notification Badge](/docs/components/notification-badge)를 표시할 수 있습니다. Small과 Large 사이즈 모두 사용 가능하며, Large 사이즈는 숫자 정보가 필요한 경우에 사용합니다.
+Icon Button에 [Notification Badge](/components/notification-badge)를 표시할 수 있습니다. Small과 Large 사이즈 모두 사용 가능하며, Large 사이즈는 숫자 정보가 필요한 경우에 사용합니다.
 
 ## [Guidelines](#guidelines)
 
 ### [Root Top Navigation과 Standard Top Navigation의 차이](#root-top-navigation과-standard-top-navigation의-차이)
 
-![Root Top Navigation과 Standard Top Navigation 비교](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/f5e0a7ff-c356-4fcf-88db-71bbeaba6ed7)
+![Root Top Navigation과 Standard Top Navigation 비교](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/bed1cbe4-bf8c-4e50-bd2b-78d51534b13e)
 
 Top Navigation은 Root 타입과 Standard 타입, 두 가지로 나뉩니다. 각 타입은 별도의 구현체와 Figma 컴포넌트로 제공됩니다.
 
@@ -144,7 +122,7 @@ X (Close)
 
 #### [뒤로가기 (Back)](#뒤로가기-back)
 
-![뒤로가기 동작 예시: 2 Depth 게시글 상세 화면에서 Back Button 클릭 → 이전 피드 또는 추천 영역으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/796387b2-e679-4bdc-b852-56ca79e13b6f)
+![뒤로가기 동작 예시: 2 Depth 게시글 상세 화면에서 Back Button 클릭 → 이전 피드 또는 추천 영역으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/afb19502-2892-429a-9640-87b416d2f53a)
 
 네비게이션 스택을 기반으로 현재 화면을 이전 화면으로 되돌립니다. 히스토리 기반(History Back)과 계층 기반(Hierarchy Back)으로 구분되며, 화면의 목적과 진입 경로에 따라 선택해서 사용합니다.
 
@@ -153,11 +131,11 @@ X (Close)
 
 #### [닫기 (Close)](#닫기-close)
 
-![닫기 동작 예시: 글쓰기 화면에서 Close Button 클릭 → 최초 진입점으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2f12b5b9-8e95-42fc-9f84-cba50f5ac1d9)
+![닫기 동작 예시: 글쓰기 화면에서 Close Button 클릭 → 최초 진입점으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/0a49f72a-9eea-405d-bdd0-da8db548c11a)
 
-현재 화면을 종료하고 상위 레이어로 복귀합니다. 페이지 히스토리를 거슬러 올라가는 것이 아니라, 열려있는 모달, [Bottom Sheet](/docs/components/bottom-sheet), 전체 화면 등을 닫는 동작입니다.
+현재 화면을 종료하고 상위 레이어로 복귀합니다. 페이지 히스토리를 거슬러 올라가는 것이 아니라, 열려있는 모달, [Bottom Sheet](/components/bottom-sheet), 전체 화면 등을 닫는 동작입니다.
 
--   모달/풀스크린 모달/[Bottom Sheet](/docs/components/bottom-sheet)처럼 레이어를 닫는 경우
+-   모달/풀스크린 모달/[Bottom Sheet](/components/bottom-sheet)처럼 레이어를 닫는 경우
 -   상태를 초기화하거나, 플로우를 종료하거나, 작업을 중단하는 경우
 
 ### [뒤로가기(Back)의 두 가지 동작: History Back vs. Hierarchy Back](#뒤로가기back의-두-가지-동작-history-back-vs-hierarchy-back)
@@ -196,7 +174,7 @@ Hierarchy Back
 
 #### [History Back (히스토리 기반 뒤로가기)](#history-back-히스토리-기반-뒤로가기)
 
-![히스토리 기반 뒤로가기 예시: 게시글 상세 화면에서 Back Button 클릭 → 이전 게시글 상세 추천 목록으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/62e661e2-625d-4742-85b9-938b8d6bebc7)
+![히스토리 기반 뒤로가기 예시: 게시글 상세 화면에서 Back Button 클릭 → 이전 게시글 상세 추천 목록으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/2d1a8037-9a6c-4d59-9aef-7667332de788)
 
 사용자가 실제로 거쳐온 페이지 순서대로 돌아가는 뒤로가기 방식입니다. 방문 기록을 기반으로 동작합니다.
 
@@ -205,7 +183,7 @@ Hierarchy Back
 
 #### [Hierarchy Back (계층 기반 뒤로가기)](#hierarchy-back-계층-기반-뒤로가기)
 
-![계층 기반 뒤로가기 예시: 알림 수신 설정 화면에서 Back Button 클릭 → 상위 설정 화면으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ca61a785-1182-48a2-b659-fb447bffe4bf)
+![계층 기반 뒤로가기 예시: 알림 수신 설정 화면에서 Back Button 클릭 → 상위 설정 화면으로 이동](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/13193e05-cbd0-4e98-8f21-6bccf912f7fa)
 
 앱의 정보구조(IA)에 따라 상위 레벨 화면으로 이동하는 뒤로가기 방식입니다. 앱 구조를 기반으로 동작합니다.
 
@@ -214,15 +192,15 @@ Hierarchy Back
 
 ### [타이틀 작성하기](#타이틀-작성하기)
 
-![Top Navigation Root 타입에서 Icon Button을 2개와 3개 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/62e8878c-33e0-41cf-8861-e12cbff80975)
+![Top Navigation Root 타입에서 Icon Button을 2개와 3개 사용한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/55ee4fab-2957-4f3d-82d9-789ccafb2864)
 
-![Top Navigation Root 타입 - KR & Global](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/48f5002d-2bd7-4f8f-95f3-3b284da35aaf)
+![Top Navigation Root 타입 - KR & Global](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7577bb82-0cda-456d-a997-2c407869edc9)
 
-![Top Navigation Standard 타입에서 Icon Button을 2개와 3개 사용한 예시 (iOS)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/ecb836dc-8a47-40ed-9e86-c4ee0251d906)
+![Top Navigation Standard 타입에서 Icon Button을 2개와 3개 사용한 예시 (iOS)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/30de1c97-c7d2-4040-9f75-b01b083f85b4)
 
-![Top Navigation Standard 타입에서 Icon Button을 2개와 3개 사용한 예시 (Android)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/6893c56f-8779-44f9-ad7b-da604facd3fc)
+![Top Navigation Standard 타입에서 Icon Button을 2개와 3개 사용한 예시 (Android)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/57a2e10e-9f24-4c61-98d6-17dfae2b1b95)
 
-![Top Navigation Standard 타입에서 Title 말줄임이 발생하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/e2b27d6d-c19d-42c5-8b95-6c3911a54faf)
+![Top Navigation Standard 타입에서 Title 말줄임이 발생하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/cb524631-5ca9-4697-a4ba-e814bf89564c)
 
 타이틀은 한 줄로 표시되도록 간결하게 작성합니다. 액션 개수에 따라 타이틀 길이가 자동 조정되며, 길어지면 말줄임으로 표시됩니다. 글로벌 앱에서는 말줄임 대신 그라디언트로 표시됩니다.
 
@@ -230,53 +208,31 @@ Hierarchy Back
 
 ### [우측 액션 영역 사용하기](#우측-액션-영역-사용하기)
 
-![우측 액션 영역에 Icon Button과 Text Button을 사용하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/b9e794e0-22c4-4871-b6cc-1fe5a10351a6)
+![우측 액션 영역에 Icon Button과 Text Button을 사용하는 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a4bcf699-ec12-45ac-b2ff-e8a121cbe414)
 
 Top Navigation 우측에는 화면에서 접근 가능한 보조 액션을 표시할 수 있습니다. 아이콘 버튼은 최대 2개까지 표시하는 것을 권장합니다. 필요시 3개까지 표시할 수 있으나, 타이틀 텍스트가 충분히 표시되지 않을 수 있으니 주의하세요. 텍스트 버튼은 1개만 표시할 수 있습니다.
 
-![우측 액션 영역에 Menu Sheet를 호출하는 더보기 버튼을 추가한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/7b3080f5-9b0f-4428-a7df-218fe15ab391)
+![우측 액션 영역에 Menu Sheet를 호출하는 더보기 버튼을 추가한 예시](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a40077cd-90f8-4ec9-82e9-7793ad2e53db)
 
 Do
 
 보조 액션이 많은 경우 중요한 액션만 노출하고 나머지는 숨기는 것이 좋습니다.
 
-액션이 3개를 초과하는 경우, 더보기 버튼과 [Menu Sheet](/docs/components/menu-sheet)를 조합하여 중요한 액션만 노출하고 나머지는 숨기는 것을 권장합니다.
+액션이 3개를 초과하는 경우, 더보기 버튼과 [Menu Sheet](/components/menu-sheet)를 조합하여 중요한 액션만 노출하고 나머지는 숨기는 것을 권장합니다.
 
 ### [스크롤 시 동작](#스크롤-시-동작)
 
-![스크롤 시 Top Navigation 고정 예시 (기본 스크롤 동작)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8ae09029-5534-4cfc-b123-e767274789e6)
+![스크롤 시 Top Navigation 고정 예시 (기본 스크롤 동작)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/a66c864d-cec8-4b70-9edd-e55cb93f6822)
 
 Top Navigation은 스크롤 시 항상 상단에 고정되는 동작을 기본으로 가집니다. 고정된 영역과 스크롤되는 영역을 구분하기 위해 별도의 시각적인 장치를 표시하지 않습니다.
 
-![스크롤 시 Top Navigation 배경 색상이 채워지는 예시 (배경이 투명한 Top Navigation의 스크롤 동작)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/94dafe18-26b8-4735-bbac-2619cd9b89e9)
+![스크롤 시 Top Navigation 배경 색상이 채워지는 예시 (배경이 투명한 Top Navigation의 스크롤 동작)](https://figma-alpha-api.s3.us-west-2.amazonaws.com/images/8dea00f5-3b75-47d5-806c-3cba492b379e)
 
 배경이 투명한 Top Navigation을 사용하는 경우 스크롤할 때 배경색이 채워지는 동작을 가집니다.
 
 ## [Specification](#specification)
 
-### theme=ios
-
-상태
-
-슬롯
-
-속성
-
-값
-
-enabled
-
-root
-
-height
-
-44px
-
-paddingX
-
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
-
-### theme=android
+### base
 
 상태
 
@@ -296,7 +252,39 @@ height
 
 paddingX
 
-[$dimension.x4](/docs/foundation/design-token/%24dimension.x4)
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
+
+### theme=ios
+
+상태
+
+슬롯
+
+속성
+
+값
+
+enabled
+
+root
+
+titleMinGap
+
+main과 left/right 영역 간 최소 간격입니다.
+
+[$dimension.x2](/foundations/design-token/reference/%24dimension.x2)
+
+### theme=android
+
+상태
+
+슬롯
+
+속성
+
+값
+
+enabled
 
 main
 
@@ -304,7 +292,7 @@ title과 subtitle을 포함하는 영역입니다.
 
 paddingLeft
 
-16px
+[$dimension.x1\_5](/foundations/design-token/reference/%24dimension.x1_5)
 
 ### tone=layer
 
@@ -324,7 +312,7 @@ root
 
 color
 
-[$color.bg.layer-default](/docs/foundation/design-token/%24color.bg.layer-default)
+[$color.bg.layer-default](/foundations/design-token/reference/%24color.bg.layer-default)
 
 basement 바로 위에 놓이는 기본 표면입니다. 대부분의 스크린 콘텐츠(List, TextField 등)가 이 레이어 위에서 표현됩니다.
 
@@ -332,7 +320,7 @@ title
 
 color
 
-[$color.fg.neutral](/docs/foundation/design-token/%24color.fg.neutral)
+[$color.fg.neutral](/foundations/design-token/reference/%24color.fg.neutral)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다.
 
@@ -340,7 +328,7 @@ subtitle
 
 color
 
-[$color.fg.neutral-muted](/docs/foundation/design-token/%24color.fg.neutral-muted)
+[$color.fg.neutral-muted](/foundations/design-token/reference/%24color.fg.neutral-muted)
 
 일반적인 콘텐츠에 사용되는 기본 색상입니다. (muted)
 
@@ -360,13 +348,13 @@ title
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 subtitle
 
 color
 
-[$color.palette.static-white](/docs/foundation/design-token/%24color.palette.static-white)
+[$color.palette.static-white](/foundations/design-token/reference/%24color.palette.static-white)
 
 ### tone=transparent, gradient=false
 
@@ -410,41 +398,7 @@ bleedBottom
 
 gradient가 표시될 때 하단 아래로 gradient가 확장되는 길이입니다.
 
-[$dimension.x5](/docs/foundation/design-token/%24dimension.x5)
-
-### divider=true
-
-상태
-
-슬롯
-
-속성
-
-값
-
-enabled
-
-root
-
-strokeColor
-
-[$color.stroke.neutral-subtle](/docs/foundation/design-token/%24color.stroke.neutral-subtle)
-
-일반적인 콘텐츠에 사용되는 기본 색상입니다. (subtle)
-
-strokeWidth
-
-1px
-
-### divider=false
-
-상태
-
-슬롯
-
-속성
-
-값
+[$dimension.x5](/foundations/design-token/reference/%24dimension.x5)
 
 ### titleLayout=titleOnly
 
@@ -462,15 +416,15 @@ title
 
 fontSize
 
-[$font-size.t6](/docs/foundation/design-token/%24font-size.t6)
+[$font-size.t6](/foundations/design-token/reference/%24font-size.t6)
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
 
 lineHeight
 
-[$line-height.t6](/docs/foundation/design-token/%24line-height.t6)
+[$line-height.t6](/foundations/design-token/reference/%24line-height.t6)
 
 maxFontSizeScale
 
@@ -504,15 +458,15 @@ title
 
 fontSize
 
-[$font-size.t5](/docs/foundation/design-token/%24font-size.t5)
+[$font-size.t5](/foundations/design-token/reference/%24font-size.t5)
 
 fontWeight
 
-[$font-weight.bold](/docs/foundation/design-token/%24font-weight.bold)
+[$font-weight.bold](/foundations/design-token/reference/%24font-weight.bold)
 
 lineHeight
 
-[$line-height.t5](/docs/foundation/design-token/%24line-height.t5)
+[$line-height.t5](/foundations/design-token/reference/%24line-height.t5)
 
 maxFontSizeScale
 
@@ -534,15 +488,15 @@ subtitle
 
 fontSize
 
-[$font-size.t2](/docs/foundation/design-token/%24font-size.t2)
+[$font-size.t2](/foundations/design-token/reference/%24font-size.t2)
 
 fontWeight
 
-[$font-weight.regular](/docs/foundation/design-token/%24font-weight.regular)
+[$font-weight.regular](/foundations/design-token/reference/%24font-weight.regular)
 
 lineHeight
 
-[$line-height.t2](/docs/foundation/design-token/%24line-height.t2)
+[$line-height.t2](/foundations/design-token/reference/%24line-height.t2)
 
 maxFontSizeScale
 
@@ -562,16 +516,4 @@ minLineHeightScale
 
 Last updated on
 
-[
-
-Tabs
-
-한 화면 내에서 콘텐츠를 탭 단위로 구분하여 전환할 수 있는 컴포넌트입니다.
-
-](/docs/components/tabs)[
-
-Action ChipDeprecated
-
-Next Page
-
-](/docs/components/action-chip)
+[이전 문서Time Picker](/components/time-picker)[다음 문서Wheel Picker](/components/wheel-picker)

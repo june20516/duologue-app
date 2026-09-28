@@ -39,6 +39,13 @@
             },
             "opacity": {
               "type": "number"
+            },
+            "scaleScope": {
+              "type": "enum",
+              "values": [
+                "self",
+                "content"
+              ]
             }
           }
         },
@@ -145,6 +152,11 @@
           },
           "icon": {
             "color": "$color.fg.neutral"
+          }
+        },
+        "pressed": {
+          "root": {
+            "scaleScope": "self"
           }
         }
       },
@@ -382,7 +394,27 @@
           }
         }
       },
-      "layout=withText": {},
+      "size=small,layout=withText": {
+        "enabled": {
+          "root": {
+            "minWidth": "44px"
+          }
+        }
+      },
+      "size=medium,layout=withText": {
+        "enabled": {
+          "root": {
+            "minWidth": "$dimension.x12"
+          }
+        }
+      },
+      "size=large,layout=withText": {
+        "enabled": {
+          "root": {
+            "minWidth": "$dimension.x13"
+          }
+        }
+      },
       "size=small,layout=iconOnly": {
         "enabled": {
           "root": {
