@@ -42,6 +42,11 @@
         "values": {
           "default": "$duration.d3"
         }
+      },
+      "$duration.pressed-scale": {
+        "values": {
+          "default": "$duration.d3"
+        }
       }
     }
   }

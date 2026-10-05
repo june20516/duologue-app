@@ -1,11 +1,11 @@
 {
   "package": "@karrotmarket/icon-data",
-  "version": "1.33.0",
+  "version": "1.50.0",
   "source": "https://www.npmjs.com/package/@karrotmarket/icon-data",
-  "fetched": "2026-05-08T06:35:01.441Z",
+  "fetched": "2026-10-05T05:06:29.437Z",
   "counts": {
-    "monochrome": 652,
-    "multicolor": 81
+    "monochrome": 690,
+    "multicolor": 100
   },
   "excludedBrandKeywords": [
     "logo",
