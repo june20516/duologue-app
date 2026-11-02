@@ -39,6 +39,13 @@
             },
             "opacity": {
               "type": "number"
+            },
+            "scaleScope": {
+              "type": "enum",
+              "values": [
+                "self",
+                "content"
+              ]
             }
           }
         },
@@ -146,6 +153,11 @@
           "icon": {
             "color": "$color.fg.neutral"
           }
+        },
+        "pressed": {
+          "root": {
+            "scaleScope": "self"
+          }
         }
       },
       "variant=solid": {
@@ -178,24 +190,24 @@
         },
         "selected": {
           "root": {
-            "color": "$color.bg.neutral-inverted"
+            "color": "$color.bg.neutral-solid"
           },
           "label": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           },
           "prefixIcon": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           },
           "suffixIcon": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           },
           "icon": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           }
         },
         "selected, pressed": {
           "root": {
-            "color": "$color.bg.neutral-inverted-pressed"
+            "color": "$color.bg.neutral-solid-pressed"
           }
         },
         "selected, disabled": {
@@ -236,24 +248,24 @@
         },
         "selected": {
           "root": {
-            "color": "$color.bg.neutral-inverted"
+            "color": "$color.bg.neutral-solid"
           },
           "label": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           },
           "prefixIcon": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           },
           "suffixIcon": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           },
           "icon": {
-            "color": "$color.fg.neutral-inverted"
+            "color": "$color.fg.on-neutral-solid"
           }
         },
         "selected, pressed": {
           "root": {
-            "color": "$color.bg.neutral-inverted-pressed"
+            "color": "$color.bg.neutral-solid-pressed"
           }
         },
         "selected, disabled": {
@@ -382,7 +394,27 @@
           }
         }
       },
-      "layout=withText": {},
+      "size=small,layout=withText": {
+        "enabled": {
+          "root": {
+            "minWidth": "44px"
+          }
+        }
+      },
+      "size=medium,layout=withText": {
+        "enabled": {
+          "root": {
+            "minWidth": "$dimension.x12"
+          }
+        }
+      },
+      "size=large,layout=withText": {
+        "enabled": {
+          "root": {
+            "minWidth": "$dimension.x13"
+          }
+        }
+      },
       "size=small,layout=iconOnly": {
         "enabled": {
           "root": {
